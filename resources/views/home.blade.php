@@ -9,7 +9,7 @@
 
 				<div class="panel-body">
 					You are logged in! <a href="{{url('/leila')}}">Leila's dev area | </a><a href="{{url('/helen')}}">Helen's dev area | </a><a href="{{url('/paul')}}">Paul's dev area </a> <br /> <br />
-                    Click ----> <a href="{{url('/demo')}}"><strong>here</strong></a> <---- for some DEMO fun!!
+                    Click ----> <a href="{{url('/demo')}}"><strong>here</strong></a> <---- for some DEMO fun!! YAY!!
                     
 				</div>
 			</div>
