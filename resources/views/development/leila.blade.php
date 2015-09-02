@@ -9,7 +9,7 @@ This is Leila's Dev Area. </br></br>
 Write html code below </br></br>
 
 user exp = {{$userData->userExp}} </br>
-kaola exp = {{$userData->kaolaExp}} </br>
+koala exp = {{$userData->kaolaExp}} </br>
 whale exp = {{$userData->whaleExp}} </br>
 same for wallaby wombat platypus cassowary frog turtle etc
 

@@ -11,18 +11,20 @@
 |
 */
 
+//=== Static Routes ===//
 Route::get('/', 'HomeController@index');
-
 Route::get('home', 'HomeController@index');
-
 Route::get('demo', 'HomeController@demo');
 
+//=== Private Development Routes ===//
 Route::get('leila', 'HomeController@leila');
 Route::get('helen', 'HomeController@helen'); 
 Route::get('paul', 'HomeController@paul');
 Route::get('admin', 'HomeController@admin');
 
-Route::post('expSave', 'HomeController@expSave');
+//=== Experience Routes ===//
+Route::post('expSave', 'ExpController@expSave');
+Route::any('addExp/{animal}/{value}', 'ExpController@addExp');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

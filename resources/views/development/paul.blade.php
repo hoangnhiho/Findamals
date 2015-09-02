@@ -11,5 +11,7 @@ Write html code below </br></br>
 user exp = {{$userData->userExp}} </br>
 kaola exp = {{$userData->kaolaExp}} </br>
 whale exp = {{$userData->whaleExp}} </br>
+wombat exp = {{$userData->wombatExp}} </br>
 same for wallaby wombat platypus cassowary frog turtle etc
+Hello world
 @endsection
