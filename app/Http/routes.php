@@ -20,6 +20,7 @@ Route::get('demo', 'HomeController@demo');
 Route::get('leila', 'HomeController@leila');
 Route::get('helen', 'HomeController@helen'); 
 Route::get('paul', 'HomeController@paul');
+Route::get('nhi', 'HomeController@nhi');
 Route::get('admin', 'HomeController@admin');
 
 //=== Experience Routes ===//

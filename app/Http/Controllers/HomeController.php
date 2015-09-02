@@ -47,9 +47,16 @@ class HomeController extends Controller {
      *
      */
     public function leila(){
-			$userData = Auth::user();
-		
+		$userData = Auth::user();
         return view('development.leila', compact('userData'));
+    }
+    /**
+     * Return Nhi's development view
+     *
+     */
+    public function nhi(){
+		$userData = Auth::user();
+        return view('development.nhi', compact('userData'));
     }
     /**
      * Return Helen's development view
