@@ -95,30 +95,4 @@ class HomeController extends Controller {
 		}
         return view('development.admin', compact('userData'));
     }
-    /**
-     * Return save exp
-     *
-     */
-    public static function expSave(Request $request){
-        if (Auth::check()){
-			$userData = Auth::user();
-			$userData->userExp = $request->input('userExp');
-			$userData->wallabyExp = $request->input('wallabyExp');
-			$userData->kaolaExp = $request->input('kaolaExp');
-			$userData->wombatExp = $request->input('wombatExp');
-			$userData->platypusExp = $request->input('platypusExp');
-			$userData->cassowaryExp = $request->input('cassowaryExp');
-			$userData->frogExp = $request->input('frogExp');
-			$userData->whaleExp = $request->input('whaleExp');
-			$userData->turtleExp = $request->input('turtleExp');
-			$userData->sharkExp = $request->input('sharkExp');
-			$userData->bilbyExp = $request->input('bilbyExp');
-			$userData->kangarooExp = $request->input('kangarooExp');
-			$userData->save();
-			$userData = Auth::user();
-		}
-        return redirect('/admin');
-    }
-    
-
 }

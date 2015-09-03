@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration {
             
             //=== Bush/woodlands ===//
             $table->integer('wallabyExp');
-            $table->integer('kaolaExp');
+            $table->integer('koalaExp');
             $table->integer('wombatExp');
             
             //=== Rainforest ===//

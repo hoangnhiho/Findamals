@@ -49,7 +49,7 @@ class ExpController extends Controller {
 			$userData = Auth::user();
 			$userData->userExp = $request->input('userExp');
 			$userData->wallabyExp = $request->input('wallabyExp');
-			$userData->kaolaExp = $request->input('kaolaExp');
+			$userData->koalaExp = $request->input('koalaExp');
 			$userData->wombatExp = $request->input('wombatExp');
 			$userData->platypusExp = $request->input('platypusExp');
 			$userData->cassowaryExp = $request->input('cassowaryExp');
@@ -60,7 +60,6 @@ class ExpController extends Controller {
 			$userData->bilbyExp = $request->input('bilbyExp');
 			$userData->kangarooExp = $request->input('kangarooExp');
 			$userData->save();
-			$userData = Auth::user();
 		}
         return redirect('/admin');
     }
@@ -84,6 +83,29 @@ class ExpController extends Controller {
 			return 'Something went WRONG. Syntax URL: http://deco1800-g52.uqcloud.net/addExp/kangaroo/10 will increase the kangaroos EXP by 10';
 		}
     }
+    /**
+     * Return admin page whilst reseting all animals and user exp
+     *
+     */
+    public static function resetExp(){
+        if (Auth::check()){
+			$userData = Auth::user();
+			$userData->userExp = 0;
+			$userData->wallabyExp = 0;
+			$userData->koalaExp = 0;
+			$userData->wombatExp = 0;
+			$userData->platypusExp = 0;
+			$userData->cassowaryExp = 0;
+			$userData->frogExp = 0;
+			$userData->whaleExp = 0;
+			$userData->turtleExp = 0;
+			$userData->sharkExp = 0;
+			$userData->bilbyExp = 0;
+			$userData->kangarooExp = 0;
+			$userData->save();
+		}
+        return redirect('/admin');
+    }
 
     /**
      * Return true|false checking if animal exists in 
@@ -91,7 +113,7 @@ class ExpController extends Controller {
      *
      */
     private static function checkAnimal($animal){
-		if ($animal == 'user' || $animal == 'wallaby' || $animal == 'kaola' || $animal == 'wombat' || $animal == 'platypus' || $animal == 'cassowary' || $animal == 'frog' || $animal == 'whale' || $animal == 'turtle' || $animal == 'shark' || $animal == 'bilby' || $animal == 'kangaroo')
+		if ($animal == 'user' || $animal == 'wallaby' || $animal == 'koala' || $animal == 'wombat' || $animal == 'platypus' || $animal == 'cassowary' || $animal == 'frog' || $animal == 'whale' || $animal == 'turtle' || $animal == 'shark' || $animal == 'bilby' || $animal == 'kangaroo')
 		{
 			return true;
 		}

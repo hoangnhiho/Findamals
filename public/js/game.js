@@ -230,7 +230,7 @@ Game.prototype = {
 		var canMove = this.canImove(x, null);	
 		if(canMove){
 			this.leftPos = x;
-			player.animate({'left': x + 'px'}, 10);
+			player.animate({'left': x + 'px'}, 20);
 		}
 		if(dir == 'left') {
 			this.startMoving('left', 2);
@@ -253,7 +253,7 @@ Game.prototype = {
 				}
 			}
 			this.topPos = y;
-			player.animate({'top': y + 'px'}, 10);
+			player.animate({'top': y + 'px'}, 20);
 		}
 		if(dir == 'up') {
 			this.startMoving('up', 4);

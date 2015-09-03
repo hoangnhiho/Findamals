@@ -25,9 +25,9 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label">Kaola Experience</label>
+							<label class="col-md-4 control-label">Koala Experience</label>
 							<div class="col-md-6">
-								<input type="number" class="form-control" name="kaolaExp" value="{{ $userData->kaolaExp }}">
+								<input type="number" class="form-control" name="koalaExp" value="{{ $userData->koalaExp }}">
 							</div>
 						</div>
 						<div class="form-group">
@@ -37,7 +37,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label">platypus Experience</label>
+							<label class="col-md-4 control-label">Platypus Experience</label>
 							<div class="col-md-6">
 								<input type="number" class="form-control" name="platypusExp" value="{{ $userData->platypusExp }}">
 							</div>

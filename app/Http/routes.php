@@ -26,8 +26,10 @@ Route::get('admin', 'HomeController@admin');
 //=== Experience Routes ===//
 Route::post('expSave', 'ExpController@expSave');
 Route::any('addExp/{animal}/{value}', 'ExpController@addExp');
+Route::any('resetExp','ExpController@resetExp');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
