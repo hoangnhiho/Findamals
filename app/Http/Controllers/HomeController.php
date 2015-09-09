@@ -48,7 +48,8 @@ class HomeController extends Controller {
      */
     public function leila(){
 		$userData = Auth::user();
-        return view('development.leila', compact('userData'));
+        $terrainValue = self::getTerrainValue();
+        return view('development.leila', compact('userData','terrainValue'));
     }
     /**
      * Return Nhi's development view
@@ -94,5 +95,34 @@ class HomeController extends Controller {
 			$userData = Auth::user();
 		}
         return view('development.admin', compact('userData'));
+    }
+    /**
+     * Returns unlock terrain number
+     *
+     */
+    public static function getTerrainValue(){
+        $userData = Auth::user();
+        $totalExp = self::totalExp();
+        if ($totalExp>=80) {
+            return 3;
+        } elseif ($totalExp>=40) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+    /**
+     * Returns total Exp
+     *
+     */
+    public static function totalExp(){
+        $userData = Auth::user();
+        $totalExp = intval($userData->koalaExp) + intval($userData->wallabyExp) 
+        + intval($userData->wombatExp) + intval($userData->platypusExp) 
+        + intval($userData->cassowaryExp) + intval($userData->frogExp) 
+        + intval($userData->whaleExp) + intval($userData->turtleExp) 
+        + intval($userData->sharkExp) + intval($userData->kangarooExp) + intval($userData->bilbyExp);
+
+        return $totalExp;
     }
 }

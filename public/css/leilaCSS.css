@@ -1,1 +1,64 @@
- 
+h1 {
+	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
+	margin-bottom: 30px;
+}
+
+body {
+	background-image: url('/images/grass-bg.png');
+	background-repeat: repeat;
+	background-color: #8CC624;
+}
+
+
+.exp {
+	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #FFB84D;
+	font-size: 1.4em;
+}
+
+.thumbnail {
+	background-color: transparent;
+	border: none;
+}
+
+.caption {
+	background-color: #D68533;
+	margin-top: 10px;
+	border: 5px ridge #EBA361;
+}
+
+.caption h3 {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	text-align: center;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.modal-body {
+	max-height: 85%;
+}
+
+.modal-dialog {
+	width: 85%;
+	top: 5%;
+}
+
+.img-small {
+	max-width: 250px;
+}
+
+.img-unknown {
+	opacity: 0.5;
+
+}
+
+@media screen and (min-width: 1024px) {
+	
+	.modal-dialog  {
+		width:900px;
+	}
+}
+
