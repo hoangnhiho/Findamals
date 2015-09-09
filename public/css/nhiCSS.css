@@ -1,0 +1,28 @@
+
+.gamePad {
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	z-index: 790;
+	box-shadow: 0 -1px 10px rgba(0,0,0,0.5);
+}
+#arrowUp {
+	left: 150px;
+	bottom: 150px;
+	background: url(../images/arrow-up.png) no-repeat;
+}
+#arrowDown {
+	left: 150px;
+	bottom: 60px;
+	background: url(../images/arrow-down.png) no-repeat;
+}
+#arrowLeft {
+	left: 60px;
+	bottom: 60px;
+	background: url(../images/arrow-left.png) no-repeat;
+}
+#arrowRight {
+	left: 240px;
+	bottom: 60px;
+	background: url(../images/arrow-right.png) no-repeat;
+}

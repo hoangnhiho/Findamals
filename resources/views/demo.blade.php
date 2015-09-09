@@ -40,7 +40,6 @@
             })();
         </script>
     </head>
-
 <body onload="startGame()">
 	<!-- Facebook like -->
 	<div id="fb-root"></div>

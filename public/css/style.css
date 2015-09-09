@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: 'SilkscreenBold';
+    font-family: 'SilkscreenBold'; 
     src: url('../fonts/slkscrb-webfont.eot');
     src: url('../fonts/slkscrb-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/slkscrb-webfont.woff') format('woff'),
