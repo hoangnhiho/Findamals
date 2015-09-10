@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+    	<meta charset="utf-8">
+    	<title>Findamals</title>
         <link href="http://fonts.googleapis.com/css?family=Lekton" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Molengo" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="/css/reset.css" />    
@@ -7,12 +10,21 @@
         <link type="text/css" rel="stylesheet" href="/css/nhiCSS.css" /> 
 
         <!-- Scripts -->
+        
         <script src="/js/jquery-1.6.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">	
+            $(document).bind("mobileinit", function () {
+        		$.event.special.tap.tapholdThreshold = 0;
+    		});
+		</script>
+        <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
         <script src="/js/jquery-ui.min.js"></script>
-        <script src="/js/jquery.spritely.js" type="text/javascript"></script>  
+        <script src="/js/jquery.spritely.js" type="text/javascript"></script> 
         <script src="/js/data.js" type="text/javascript"></script>  
         <script src="/js/nhiJS.js" type="text/javascript"></script>
-
+		
         <script type="text/javascript">	
             $(document).ready(function(){
                 $('#innerLoading .me').sprite({fps: 9, no_of_frames: 3}).spState(1);
@@ -26,7 +38,6 @@
                 })
             }
         </script>
-
         <!-- Google Analytics -->
         <script type="text/javascript">
             var _gaq = _gaq || [];
@@ -38,6 +49,7 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
+
         </script>
     </head>
 <body onload="startGame()">
@@ -341,10 +353,10 @@
 <img src="../images/wood.png" style="display: none;" />
 
 
-<div class ="gamePad" id = "arrowUp"></div>
-<div class ="gamePad" id = "arrowDown"></div>
-<div class ="gamePad" id = "arrowLeft"></div>
-<div class ="gamePad" id = "arrowRight"></div>
+<button type="button" class ="gamePad btn btn-default" id = "arrowUp"></button>
+<button type="button" class ="gamePad btn btn-default" id = "arrowDown"></button>
+<button type="button" class ="gamePad btn btn-default" id = "arrowLeft"> </button>
+<button type="button" class ="gamePad btn btn-default" id = "arrowRight"></button>
 
 
 </body>

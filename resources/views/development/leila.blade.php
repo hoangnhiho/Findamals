@@ -12,10 +12,11 @@
   <h1>My Collection {{$terrainValue}}</h1>
 
     <div class="row portfolio">
+    
     @if ($userData->koalaExp != 0)
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Koala</h3>
             <p class="exp">{{$userData->koalaExp}} EXP</p>
@@ -28,7 +29,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#">
-          <img class="img-responsive img-unknown" src="{{ asset('/images/unknown.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive img-unknown" src="{{ asset('/images/animals/unknown.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Unknown</h3>
             <p class="exp">0 EXP</p>
@@ -38,7 +39,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Koala</h3>
             <p class="exp">### EXP</p>
@@ -50,7 +51,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Really long animal name here</h3>
             <p class="exp">### EXP</p>
@@ -62,7 +63,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Koala</h3>
             <p class="exp">### EXP</p>
@@ -72,7 +73,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Really long animal name here</h3>
             <p class="exp">### EXP</p>
@@ -85,7 +86,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Animal name</h3>
             <p class="exp">### EXP</p>
@@ -95,7 +96,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Animal name</h3>
             <p class="exp">### EXP</p>
@@ -107,7 +108,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Animal name</h3>
             <p class="exp">### EXP</p>
@@ -119,7 +120,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Animal name</h3>
             <p class="exp">### EXP</p>
@@ -129,7 +130,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Animal name</h3>
             <p class="exp">### EXP</p>
@@ -139,7 +140,7 @@
 
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Animal name</h3>
             <p class="exp">### EXP</p>
@@ -164,7 +165,7 @@
             <h3 class="modal-title" id="modal-label">Koala</h4>
           </div>
           <div class="modal-body">
-            <img class="img-small" src="{{ asset('/images/koala.svg') }}" alt="The awesome description">
+            <img class="img-small" src="{{ asset('/images/animals/koala.svg') }}" alt="The awesome description">
             <p>Insert Koala info here...</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin condimentum scelerisque lacus non suscipit. Quisque sed placerat tellus, vitae aliquet libero. Duis iaculis vel lacus et convallis. Quisque vestibulum nisi augue, sit amet molestie ante accumsan at. Maecenas sodales, nisl id sollicitudin rhoncus, lacus felis lacinia turpis, bibendum tincidunt velit velit id enim. Phasellus tempus lacinia neque, quis egestas nisi consequat ac. Integer interdum lectus vitae risus consectetur, nec dapibus justo iaculis. Proin ex nisi, convallis scelerisque suscipit eu, interdum vel nulla. Vivamus auctor tellus non sapien laoreet tempor. Aliquam at porta massa, non sodales justo. Phasellus non lectus pulvinar est interdum aliquet.</p>
           </div>

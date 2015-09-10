@@ -44,47 +44,50 @@ Game.prototype = {
 		});				
 		var refreshIntervalId;
 		var speed = 40;
-		$('#arrowLeft').mousedown( function(event){
+
+		//=== Start of Arrow Controls ===//
+		$('#arrowLeft').bind('touchstart, mousedown', function(event){
 			refreshIntervalId = setInterval(function(){
       			me.moveX(me.leftPos - 5, 'left');
     		},speed);
 			event.preventDefault();
-		}).mouseup(function(){
+		}).bind( "touchend mouseup", function(){
 			clearInterval(refreshIntervalId);
 			if(player.attr('class') != '')
 				player.removeAttr('class').destroy();
 		});
-		$('#arrowRight').mousedown(function(event){
+		$('#arrowRight').bind('touchstart, mousedown',function(event){
 			refreshIntervalId = setInterval(function(){
 				me.moveX(me.leftPos + 5, 'right');
 			},speed);
 			event.preventDefault();
-			
-		}).mouseup(function(){
+		}).bind( "touchend mouseup", function(){
 			clearInterval(refreshIntervalId);
 			if(player.attr('class') != '')
 				player.removeAttr('class').destroy();
 		});	
-		$('#arrowUp').mousedown( function(event){
+		$('#arrowUp').bind('touchstart, mousedown', function(event){
 			refreshIntervalId = setInterval(function(){
 				me.moveY(me.topPos - 5, 'up');
 			},speed);
 			event.preventDefault();
-		}).mouseup(function(){
+		}).bind( "touchend mouseup", function(){
 			clearInterval(refreshIntervalId);
 			if(player.attr('class') != '')
 				player.removeAttr('class').destroy();
 		});	
-		$('#arrowDown').mousedown( function(event){
+		$('#arrowDown').bind('touchstart, mousedown',function(event){
 			refreshIntervalId = setInterval(function(){
 				me.moveY(me.topPos + 5, 'down');
 			},speed);
 			event.preventDefault();
-		}).mouseup(function(){
+		}).bind( "touchend mouseup", function(){
 			clearInterval(refreshIntervalId);
 			if(player.attr('class') != '')
 				player.removeAttr('class').destroy();
 		});	
+
+		//=== End of Arrow Controls ===//
 
 		$('.road, .bridge').unbind('click').bind('click', function(e){
 			var x = e.pageX - player.width() / 2;
@@ -166,7 +169,6 @@ Game.prototype = {
 
 				case 40: // Down
 					me.moveY(me.topPos + 5, 'down');
-					console.log('downbut');
 					event.preventDefault();
 				break;
 				
@@ -195,11 +197,11 @@ Game.prototype = {
 			me.shipSail();
 		});
 
-		$("#notifications").find('.close').live('click', function(){
+		$("#notifications").find('.close').on('click', function(){
 			me.hideNotificationBar();
 		});
 		
-		$("#dark, #closeLB").die('click').live('click', function(){
+		$("#dark, #closeLB").off('click').on('click', function(){
 			me.closeLightbox();
 		});
 	},

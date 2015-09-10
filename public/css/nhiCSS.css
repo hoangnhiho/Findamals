@@ -1,4 +1,8 @@
-
+ button
+{
+	-ms-touch-action: manipulation;	/* IE10  */
+	touch-action: manipulation;		/* IE11+ */
+}
 .gamePad {
 	position: fixed;
 	width: 80px;
@@ -17,6 +21,10 @@
 	background: url(../images/arrow-down.png) no-repeat;
 }
 #arrowLeft {
+	        -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; 
 	left: 60px;
 	bottom: 60px;
 	background: url(../images/arrow-left.png) no-repeat;
