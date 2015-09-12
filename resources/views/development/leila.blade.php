@@ -19,22 +19,15 @@
           <img class="img-responsive" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Koala</h3>
-            @if ($userData->koalaExp == 1)
-              <p class="exp">&#9733;</p>
-            @elseif($userData->koalaExp == 2)
-              <p class="exp">&#9733; &#9733;</p>
-            @elseif($userData->koalaExp == 3)
-              <p class="exp">&#9733; &#9733; &#9733;</p>
-              @elseif($userData->koalaExp == 4)
-              <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-              @elseif($userData->koalaExp == 5)
-              <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-              @elseif($userData->koalaExp == 6)
-              <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-              @else
-              <p class="exp">UNKNOWN STARS</p>
+            <p class="exp">
+            @if ($userData->koalaExp >= 1)
+              @for ($i=0; $i < $userData->koalaExp; $i++ )
+                &#9733; 
+              @endfor
+            @else
+              UNKNOWN STARS
             @endif
-            
+            </p>
           </div>
         </div>
       </div>
