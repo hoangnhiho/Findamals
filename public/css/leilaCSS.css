@@ -13,8 +13,12 @@ body {
 .exp {
 	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
 	text-align: center;
-	color: #FFB84D;
+	color: #FFCC00;
 	font-size: 1.4em;
+}
+
+.glyphicon .glyphicon-star {
+	color: #fff;
 }
 
 .thumbnail {

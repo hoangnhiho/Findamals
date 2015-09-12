@@ -16,48 +16,93 @@
     @if ($userData->koalaExp != 0)
       <div class="col-xs-4 col-sm-3 col-md-2">
         <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" >
           <div class="caption">
             <h3>Koala</h3>
+            <p class="exp">{{$userData->koalaExp}} <span class="glyphicon glyphicon-star"></span></p>            
+          </div>
+        </div>
+      </div>
+    @else
+      <div class="col-xs-4 col-sm-3 col-md-2">
+        <div class="thumbnail">
+          <img class="img-responsive" src="{{ asset('/images/animals/koala-empty.png') }}" alt="Findamals Missing Koala" >
+          <div class="caption">
+            <h3>Unknown</h3>
             <p class="exp">{{$userData->koalaExp}} EXP</p>
           </div>
         </div>
       </div>
-      @else
+    @endif
 
-      @endif
 
-      <div class="col-xs-4 col-sm-3 col-md-2">
-        <div class="thumbnail" data-toggle="modal" data-target="#">
-          <img class="img-responsive img-unknown" src="{{ asset('/images/animals/unknown.svg') }}" alt="Findamals Koala Character" >
-          <div class="caption">
-            <h3>Unknown</h3>
-            <p class="exp">0 EXP</p>
-         </div>
-        </div>
-      </div>
-
-      <div class="col-xs-4 col-sm-3 col-md-2">
-        <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
-          <div class="caption">
-            <h3>Koala</h3>
-            <p class="exp">### EXP</p>
+    @if ($userData->wallabyExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#wallabyModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/wallaby.png') }}" alt="Findamals Wallaby Character" >
+              <div class="caption">
+                <h3>Brush-tailed Rock Wallaby</h3>
+                <p class="exp">{{$userData->wallabyExp}} EXP</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive" src="{{ asset('/images/animals/wallaby-empty.png') }}" alt="Findamals Missing Wallaby" >
+              <div class="caption">
+                <h3>Unknown</h3>
+                <p class="exp">{{$userData->wallabyExp}} EXP</p>
+              </div>
+            </div>
+          </div>
+        @endif
+
+      @if ($userData->wombatExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#wombatModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/wombat.png') }}" alt="Findamals wombat Character" >
+              <div class="caption">
+                <h3>Northern Hairy-Nosed Wombat</h3>
+                <p class="exp">{{$userData->wombatExp}} EXP</p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive" src="{{ asset('/images/animals/wombat-empty.png') }}" alt="Findamals Missing wombat" >
+              <div class="caption">
+                <h3>Unknown</h3>
+                <p class="exp">{{$userData->wombatExp}} EXP</p>
+              </div>
+            </div>
+          </div>
+        @endif
 
       <div class="clearfix visible-xs"></div>
 
-      <div class="col-xs-4 col-sm-3 col-md-2">
-        <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
-          <img class="img-responsive" src="{{ asset('/images/animals/koala.svg') }}" alt="Findamals Koala Character" >
-          <div class="caption">
-            <h3>Really long animal name here</h3>
-            <p class="exp">### EXP</p>
+      @if ($userData->kangarooExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#kangarooModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/kangaroo.png') }}" alt="Findamals kangaroo Character" >
+              <div class="caption">
+                <h3>Red Kangaroo</h3>
+                <p class="exp">{{$userData->wombatExp}} EXP</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive" src="{{ asset('/images/animals/kangaroo-empty.png') }}" alt="Findamals Missing kangaroo" >
+              <div class="caption">
+                <h3>Unknown</h3>
+                <p class="exp">{{$userData->kangarooExp}} EXP</p>
+              </div>
+            </div>
+          </div>
+        @endif
 
       <div class="clearfix visible-sm"></div>
 

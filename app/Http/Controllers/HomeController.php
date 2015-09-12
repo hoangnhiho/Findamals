@@ -125,4 +125,14 @@ class HomeController extends Controller {
 
         return $totalExp;
     }
+    /**
+     * Displays animal's Exp stars on My Collection page
+     *
+     */
+    public static function displayStars(animal){
+        if(animal==1){
+            echo "<p class="exp"><span class="glyphicon glyphicon-star"></span></p>"
+        }
+
+    }
 }
