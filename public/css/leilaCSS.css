@@ -3,18 +3,37 @@ h1 {
 	margin-bottom: 30px;
 }
 
+h3 {
+	font-size: 1.3em;
+}
+
+h2 {
+	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	color: #EBA361;
+}
+
+.modal-title {
+	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
+	font-size: 2em;
+	color: #D68533;
+}
+
 body {
-	background-image: url('/images/grass-bg.png');
+	background-image: url('../images/grass-bg.png');
 	background-repeat: repeat;
 	background-color: #8CC624;
 }
 
+p {
+	font-size: 1.3em;
+}
 
 .exp {
 	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
 	text-align: center;
 	color: #FFCC00;
-	font-size: 1.4em;
+	font-size: 1.2em;
 }
 
 .glyphicon .glyphicon-star {
@@ -34,7 +53,6 @@ body {
 
 .caption h3 {
 	margin-top: 5px;
-	margin-bottom: 0px;
 	text-align: center;
 	color: #FFF;
 	font-weight: bold;
@@ -51,7 +69,8 @@ body {
 }
 
 .img-small {
-	max-width: 250px;
+	max-width: 200px;
+	margin-left: 30px;
 }
 
 .img-unknown {
