@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration {
             $table->integer('wallabyExp');
             $table->integer('koalaExp');
             $table->integer('wombatExp');
+            $table->integer('cockatooExp');
             
             //=== Rainforest ===//
             $table->integer('platypusExp');

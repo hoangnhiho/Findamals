@@ -34,3 +34,98 @@
 	bottom: 60px;
 	background: url(../images/arrow-right.png) no-repeat;
 }
+
+#mainRoad {
+	width: 100%;
+	height: 100%;			
+	top: 0;
+	z-index: 8;
+	left: 50%;
+	margin: 0 0 0 -100px;	
+	background: url(../images/bg.png) repeat;		
+}
+
+#wrapper {
+	border: 1px solid #c7c7c7;
+	margin: 0 auto;
+	width: 100%;
+	height: 1800px;
+	position: relative;
+	background: url(../images/bg.png) repeat;
+	overflow: hidden;
+}
+
+#startCave {
+	top: 0;
+	height: 75px;
+}
+
+#startCave::after {
+	position: absolute;
+	bottom: -23px;
+	left: 0;
+	background: url(../images/caveBottomBG.png) repeat;
+	height: 32px;
+	width: 100%;
+	z-index: 51;
+	content: "";
+	box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+
+#startCaveHole {
+	top: 69px;
+	border-bottom: none;
+	height: 28px;
+}
+
+#startCaveHoleTrack {
+	top: 0;
+	height: 68px;
+}
+
+/* Start Text */
+
+#startText {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	width: 200px;
+	margin: 0 0 0 -96px;
+	z-index: 20;
+	text-align: center;
+	-webkit-animation: fade 2.5s ease infinite;
+	-moz-animation: fade 2.5s ease infinite;
+	animation: fade 2.5s ease infinite;
+}
+
+#startText img {
+	width: 80px;
+	display: block;
+	margin: 0 auto 5px;
+	padding-right: 4px;
+}
+
+.flowers {
+	position: absolute;
+	z-index: 49;
+	width: 32px;
+	height: 28px;
+	background: url(../images/flowers.png) repeat left top;
+}
+
+.trees {
+	position: absolute;
+	z-index: 49;
+	width: 128px;
+	height: 230px;
+	background: url(../images/tree35.png) repeat left top; 
+}
+
+.trees.t1 {
+	top: 350px;
+	right: 300px;
+}
+
+.modal-backdrop{
+	z-index: 0;
+}

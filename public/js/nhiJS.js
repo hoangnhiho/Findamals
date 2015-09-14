@@ -2,6 +2,7 @@
 
 var Game = function() { 
 	this.player = $("#daniel");	
+	this.counter = 0;
 	this.topPos = 0;
 	this.leftPos = $(window).width() / 2 - this.player.width() / 2;
 	this.init();
@@ -89,7 +90,7 @@ Game.prototype = {
 
 		//=== End of Arrow Controls ===//
 
-		$('.road, .bridge').unbind('click').bind('click', function(e){
+		$('.road, .bridge, #wrapper').unbind('click').bind('click', function(e){
 			var x = e.pageX - player.width() / 2;
 			var y = e.pageY;
 			var canMove = me.canImove(x, y, true);
@@ -284,9 +285,11 @@ Game.prototype = {
 		}
 		if(dir == 'left') {
 			this.startMoving('left', 2);
+			console.log(this.counter++);
 		}
 		else {
 			this.startMoving('right', 3);
+			console.log(this.counter++);
 		}
 	},
 	
@@ -307,15 +310,21 @@ Game.prototype = {
 		}
 		if(dir == 'up') {
 			this.startMoving('up', 4);
+			console.log(this.counter++);
 		}
 		else {
 			this.startMoving('down', 1);
+			console.log(this.counter++);
 		}
 	},
 
 	startMoving: function(dir, state) {								
 		var player = this.player;
 		if(!player.hasClass(dir)) {
+			if (this.counter > 50){
+				$('#myModal').modal('show');
+				this.counter = 0;
+			}
 			player.addClass(dir);
 			player.sprite({fps: 9, no_of_frames: 3}).spState(state);						
 		}				

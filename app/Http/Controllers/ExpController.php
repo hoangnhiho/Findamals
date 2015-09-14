@@ -51,6 +51,7 @@ class ExpController extends Controller {
 			$userData->wallabyExp = $request->input('wallabyExp');
 			$userData->koalaExp = $request->input('koalaExp');
 			$userData->wombatExp = $request->input('wombatExp');
+			$userData->cockatooExp = $request->input('cockatooExp');
 			$userData->platypusExp = $request->input('platypusExp');
 			$userData->cassowaryExp = $request->input('cassowaryExp');
 			$userData->frogExp = $request->input('frogExp');
@@ -94,6 +95,7 @@ class ExpController extends Controller {
 			$userData->wallabyExp = 0;
 			$userData->koalaExp = 0;
 			$userData->wombatExp = 0;
+			$userData->cockatooExp = 0;
 			$userData->platypusExp = 0;
 			$userData->cassowaryExp = 0;
 			$userData->frogExp = 0;
@@ -113,7 +115,7 @@ class ExpController extends Controller {
      *
      */
     private static function checkAnimal($animal){
-		if ($animal == 'user' || $animal == 'wallaby' || $animal == 'koala' || $animal == 'wombat' || $animal == 'platypus' || $animal == 'cassowary' || $animal == 'frog' || $animal == 'whale' || $animal == 'turtle' || $animal == 'shark' || $animal == 'bilby' || $animal == 'kangaroo')
+		if ($animal == 'user' || $animal == 'wallaby' || $animal == 'koala' || $animal == 'wombat' || $animal == 'cockatoo' || $animal == 'platypus' || $animal == 'cassowary' || $animal == 'frog' || $animal == 'whale' || $animal == 'turtle' || $animal == 'shark' || $animal == 'bilby' || $animal == 'kangaroo')
 		{
 			return true;
 		}

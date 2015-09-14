@@ -3,6 +3,7 @@
 @section('content')
 <link href="{{ asset('/css/leilaCSS.css') }}" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="{{ asset('/js/leilaJS.js') }}"></script>
 
 
@@ -22,7 +23,7 @@
             <p class="exp">
             @if ($userData->koalaExp >= 1)
               @for ($i=0; $i < $userData->koalaExp; $i++ )
-                &#9733; 
+                &#9733;
               @endfor
             @else
               UNKNOWN STARS
@@ -45,25 +46,19 @@
 
     @if ($userData->wallabyExp != 0)
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail" data-toggle="modal" data-target="#wallabyModal">
+            <div class="thumbnail" data-toggle="modal" data-target="#modal-1">
               <img class="img-responsive" src="{{ asset('/images/animals/wallaby.png') }}" alt="Findamals Wallaby Character" >
               <div class="caption">
                 <h3>Brush-tailed Rock Wallaby</h3>
-                @if ($userData->wallabyExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->wallabyExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->wallabyExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->wallabyExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->wallabyExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->wallabyExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                <p class="exp">
+                @if ($userData->wallabyExp >= 1)
+                  @for ($i=0; $i < $userData->wallabyExp; $i++ )
+                    &#9733;
+                  @endfor
                 @else
-                <p class="exp">UNKNOWN STARS</p>
+                  UNKNOWN STARS
                 @endif
+                </p>
               </div>
             </div>
           </div>
@@ -84,21 +79,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/wombat.png') }}" alt="Findamals wombat Character" >
               <div class="caption">
                 <h3>Northern Hairy-Nosed Wombat</h3>
-                @if ($userData->wombatExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->wombatExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->wombatExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->wombatExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->wombatExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->wombatExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                <p class="exp">
+                  @if ($userData->wombatExp >= 1)
+                    @for ($i=0; $i < $userData->wombatExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
@@ -121,21 +110,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/kangaroo.png') }}" alt="Findamals kangaroo Character" >
               <div class="caption">
                 <h3>Red Kangaroo</h3>
-                @if ($userData->kangarooExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->kangarooExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->kangarooExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->kangarooExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->kangarooExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->kangarooExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                  <p class="exp">
+                    @if ($userData->kangarooExp >= 1)
+                      @for ($i=0; $i < $userData->kangarooExp; $i++ )
+                        &#9733;
+                      @endfor
+                    @else
+                      UNKNOWN STARS
+                    @endif
+                  </p>
               </div>
             </div>
           </div>
@@ -158,21 +141,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/platypus.png') }}" alt="Findamals platypus Character" >
               <div class="caption">
                 <h3>Platypus</h3>
-                @if ($userData->platypusExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->platypusExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->platypusExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->platypusExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->platypusExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->platypusExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                <p class="exp">
+                  @if ($userData->platypusExp >= 1)
+                    @for ($i=0; $i < $userData->platypusExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
@@ -193,21 +170,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/cassowary.png') }}" alt="Findamals cassowary Character" >
               <div class="caption">
                 <h3>Southern Cassowary</h3>
-                @if ($userData->cassowaryExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->cassowaryExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->cassowaryExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->cassowaryExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->cassowaryExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->cassowaryExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                <p class="exp">
+                  @if ($userData->cassowaryExp >= 1)
+                    @for ($i=0; $i < $userData->cassowaryExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
@@ -231,21 +202,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/frog.png') }}" alt="Findamals frog Character" >
               <div class="caption">
                 <h3>Common Mistfrog</h3>
-                @if ($userData->frogExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->frogExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->frogExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->frogExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->frogExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->frogExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                <p class="exp">
+                  @if ($userData->frogExp >= 1)
+                    @for ($i=0; $i < $userData->frogExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
@@ -266,21 +231,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/whale.png') }}" alt="Findamals whale Character" >
               <div class="caption">
                 <h3>Humpback Whale</h3>
-                @if ($userData->whaleExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->whaleExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->whaleExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->whaleExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->whaleExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->whaleExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                  <p class="exp">
+                    @if ($userData->whaleExp >= 1)
+                      @for ($i=0; $i < $userData->whaleExp; $i++ )
+                        &#9733;
+                      @endfor
+                    @else
+                      UNKNOWN STARS
+                    @endif
+                  </p>
               </div>
             </div>
           </div>
@@ -303,21 +262,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/turtle.png') }}" alt="Findamals turtle Character" >
               <div class="caption">
                 <h3>Loggerhead Turtle</h3>
-                @if ($userData->turtleExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->turtleExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->turtleExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->turtleExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->turtleExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->turtleExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                <p class="exp">
+                  @if ($userData->turtleExp >= 1 )
+                    @for ($i=0; $i < $userData->turtleExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
@@ -340,21 +293,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/shark.png') }}" alt="Findamals shark Character" >
               <div class="caption">
                 <h3>Grey Nurse Shark</h3>
-                @if ($userData->sharkExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->sharkExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->sharkExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->sharkExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->sharkExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->sharkExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                  <p class="exp">
+                  @if ($userData->sharkExp >= 1)
+                    @for ($i=0; $i < $userData->sharkExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
@@ -375,21 +322,15 @@
               <img class="img-responsive" src="{{ asset('/images/animals/bilby.png') }}" alt="Findamals bilby Character" >
               <div class="caption">
                 <h3>Greater Bilby</h3>
-                @if ($userData->bilbyExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->bilbyExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->bilbyExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->bilbyExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->bilbyExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->bilbyExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                  <p class="exp">
+                  @if ($userData->bilbyExp >= 1)
+                    @for ($i=0; $i < $userData->bilbyExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
@@ -404,34 +345,28 @@
           </div>
         @endif
 
-      @if ($userData->sharkExp != 0)
+      @if ($userData->cockatooExp != 0)
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail" data-toggle="modal" data-target="#sharkModal">
-              <img class="img-responsive" src="{{ asset('/images/animals/shark.png') }}" alt="Findamals shark Character" >
+            <div class="thumbnail" data-toggle="modal" data-target="#cockatooModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/cockatoo.png') }}" alt="Findamals cockatoo Character" >
               <div class="caption">
-                <h3>Extra Animal</h3>
-                @if ($userData->sharkExp == 1)
-                <p class="exp">&#9733;</p>
-                @elseif($userData->sharkExp == 2)
-                <p class="exp">&#9733; &#9733;</p>
-                @elseif($userData->sharkExp == 3)
-                <p class="exp">&#9733; &#9733; &#9733;</p>
-                @elseif($userData->sharkExp == 4)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->sharkExp == 5)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @elseif($userData->sharkExp == 6)
-                <p class="exp">&#9733; &#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                @else
-                <p class="exp">UNKNOWN STARS</p>
-                @endif
+                <h3>Major Mitchell Cockatoo</h3>
+                  <p class="exp">
+                  @if ($userData->cockatooExp >= 1)
+                    @for ($i=0; $i < $userData->cockatooExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
         @else
           <div class="col-xs-4 col-sm-3 col-md-2">
             <div class="thumbnail">
-              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/shark-empty.png') }}" alt="Findamals Missing shark" >
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/cockatoo-empty.png') }}" alt="Findamals Missing cockatoo" >
               <div class="caption">
                 <h3>Unknown</h3>
               </div>
@@ -448,61 +383,118 @@
 
 
     <!-- KOALA MODAL -->
-    <div class="modal fade" id="koalaModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
 
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h2 class="modal-title" id="modal-label">Koala</h2>
-          </div>
 
-          <div class="modal-body">
-            <img class="img-small pull-right" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character">
-            <p>Species:</p>
-            <p>Alternate names:</p>
-            <p>Nature Conservation Act (NCA) status:</p>
-            <p>Insert Koala info here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin condimentum scelerisque lacus non suscipit. Quisque sed placerat tellus, vitae aliquet libero. Duis iaculis vel lacus et convallis. Quisque vestibulum nisi augue, sit amet molestie ante accumsan at. </p>
-            
+    <div id="koalaModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h2 class="modal-title" id="modal-label">Koala</h2>
+              </div>
+              <div class="modal-body">
+                <img class="img-small pull-left" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character"
+                style="margin-top:-20px">
 
-            <div>
-              <h2> Photos</h2>
-              <img class="img-small" src="{{ asset('/images/animals/koala.png') }}" data-toggle="modal" data-target="#koalaImg1">
-            </div>
+                <p>Species:</p>
+                <p>Alternate names:</p>
+                <p>Nature Conservation Act (NCA) status:</p>
+                <p>Insert Koala info here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin condimentum scelerisque lacus non suscipit. Quisque sed placerat tellus, vitae aliquet libero. Duis iaculis vel lacus et convallis. Quisque vestibulum nisi augue, sit amet molestie ante accumsan at. </p>
+                <div>
+                <div class="clearfix"></div>
+                  <h2>Discoveries</h2>
+                  <p>Select an item below to see more</p>
 
-            <div>
-              <h2> Articles</h2>
-            </div>
+                  @if ($userData->koalaExp >= 1)
+                  <div class=" col-xs-6 col-sm-3 col-md-2">
+                  <img class="img-thumb" src="http://www.tilligerryhabitat.org.au/wp-content/uploads/2013/10/Koala_Baby.jpg" data-toggle="modal" data-target="#koalaimg1">
+                  </div>
+                  @endif
 
-          </div>
+                  @if ($userData->koalaExp >= 2)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="http://blog.queensland.com/wp-content/uploads/2012/10/Surprised-Koala3.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
 
-          
+                  @if ($userData->koalaExp >= 3)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="http://images.brisbanetimes.com.au/2011/09/29/2657667/KOALA_729-420x0.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
 
+                  @if ($userData->koalaExp >= 4)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="https://s-media-cache-ak0.pinimg.com/736x/f2/12/a3/f212a3fd057b7f5e9d9b77a26339e9ad.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
+
+                  @if ($userData->koalaExp >= 5)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="http://justcuteanimals.com/wp-content/uploads/2014/08/koala-ice-lollie-hat-funny-cool-animal-pictures-summer-pics.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
+
+                  @if ($userData->koalaExp >= 6)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="http://www.koalas.org/koalaalb.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
+                  
+                </div>
+              </div> <!-- end modal body -->
+            </div> <!-- end modal content -->
+        </div> <!-- end modal-dialog -->
+    </div> <!-- end koala modal -->
+
+
+  <div id="koalaimg1" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-discovery">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+          <h4 class="modal-title">Image Title</h4>
+        </div>
+        <div class="modal-body">
+
+         <div class="koala-content1">
+          <img class="img-responsive" src="http://www.tilligerryhabitat.org.au/wp-content/uploads/2013/10/Koala_Baby.jpg">
+        </div>
+
+        </div>
+        <div class="modal-footer">
+          <p>Caption here</p>
         </div>
       </div>
     </div>
-    
-    <div class="modal fade" id="koalaImg1" tabindex="-1" role="dialog">
-    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    <div class="modal-body"><p>test</p></div>
-      <p>test</p>
-    </div>
-     <div class="modal fade" id="koalaImg1" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          </div>
-          <div class="modal-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin condimentum scelerisque lacus non suscipit. Quisque sed placerat tellus, vitae aliquet libero. Duis iaculis vel lacus et convallis. Quisque vestibulum nisi augue, sit amet molestie ante accumsan at. </p>
-          </div>  
-
-        </div>
-      </div>
-    </div>
+  </div>
 
 
+<script type="text/javascript"> //http://gurde.com/stacked-bootstrap-modals/ Fix for Stacking multiple modals
 
+    $(document)  
+    .on('show.bs.modal', '.modal', function(event) {
+      $(this).appendTo($('body'));
+    })
+    .on('shown.bs.modal', '.modal.in', function(event) {
+      setModalsAndBackdropsOrder();
+    })
+    .on('hidden.bs.modal', '.modal', function(event) {
+      setModalsAndBackdropsOrder();
+    });
+
+    function setModalsAndBackdropsOrder() {  
+      var modalZIndex = 1040;
+      $('.modal.in').each(function(index) {
+        var $modal = $(this);
+        modalZIndex++;
+        $modal.css('zIndex', modalZIndex);
+        $modal.next('.modal-backdrop.in').addClass('hidden').css('zIndex', modalZIndex - 1);
+    });
+      $('.modal.in:visible:last').focus().next('.modal-backdrop.in').removeClass('hidden');
+    }
+
+</script>
 
 
 @endsection
