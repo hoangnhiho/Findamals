@@ -198,22 +198,42 @@
 
 
 <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Animal Attack</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-      	<button type="button" class="btn btn-danger" data-dismiss="modal">Fight</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>
-      </div>
-    </div>
-  </div>
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Animal Attack</h4>
+			</div>
+			<div class="modal-body">
+				<img class="" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" style="margin-top:-20px">
+				Fight me!! if you dare Mwahaha!!!
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" href="#myModal1">Fight</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="myModal1" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Animal Attack</h4>
+			</div>
+			<div class="modal-body">
+				Question 1: lalala
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Give up</button>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
+
 </html>

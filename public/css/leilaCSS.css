@@ -19,6 +19,10 @@ h2 {
 	color: #D68533;
 }
 
+.modal-footer p{
+	text-align: left;
+}
+
 body {
 	background-image: url('../images/grass-bg.png');
 	background-repeat: repeat;
@@ -59,29 +63,38 @@ p {
 	font-size: 1.5em;
 }
 
-.modal-body {
-	max-height: 85%;
-}
-
 .modal-dialog {
 	width: 85%;
-	top: 5%;
+	height: 80%;
+	margin:5% auto;
+}
+
+.modal-body {
+	max-height: 600px;
+}
+
+.modal-content {
+	height: 100%;
+	overflow: auto;
+}
+
+.modal-discovery {
+	width:500px;
+	max-width: 70%;
 }
 
 .img-small {
 	max-width: 200px;
-	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .img-unknown {
 	opacity: 0.5;
-
 }
 
-@media screen and (min-width: 1024px) {
-	
-	.modal-dialog  {
-		width:900px;
-	}
+.img-thumb {
+	max-width: 100%;
+	height: 120px;
+	margin: 10px 0;
 }
 

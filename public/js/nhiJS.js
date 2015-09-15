@@ -1,8 +1,7 @@
 
-
+var counter = 0;
 var Game = function() { 
 	this.player = $("#daniel");	
-	this.counter = 0;
 	this.topPos = 0;
 	this.leftPos = $(window).width() / 2 - this.player.width() / 2;
 	this.init();
@@ -47,47 +46,58 @@ Game.prototype = {
 		var speed = 40;
 
 		//=== Start of Arrow Controls ===//
+		console.log(counter);
 		$('#arrowLeft').bind('touchstart, mousedown', function(event){
-			refreshIntervalId = setInterval(function(){
-      			me.moveX(me.leftPos - 5, 'left');
-    		},speed);
-			event.preventDefault();
+			if (!me.checkDist()){
+				refreshIntervalId = setInterval(function(){
+	      			me.moveX(me.leftPos - 5, 'left');
+	    		},speed);
+				event.preventDefault();
+			}
 		}).bind( "touchend mouseup", function(){
 			clearInterval(refreshIntervalId);
 			if(player.attr('class') != '')
 				player.removeAttr('class').destroy();
 		});
 		$('#arrowRight').bind('touchstart, mousedown',function(event){
-			refreshIntervalId = setInterval(function(){
-				me.moveX(me.leftPos + 5, 'right');
-			},speed);
-			event.preventDefault();
+			if (!me.checkDist()){
+				refreshIntervalId = setInterval(function(){
+					me.moveX(me.leftPos + 5, 'right');
+				},speed);
+				event.preventDefault();
+			}
 		}).bind( "touchend mouseup", function(){
 			clearInterval(refreshIntervalId);
 			if(player.attr('class') != '')
 				player.removeAttr('class').destroy();
 		});	
 		$('#arrowUp').bind('touchstart, mousedown', function(event){
-			refreshIntervalId = setInterval(function(){
-				me.moveY(me.topPos - 5, 'up');
-			},speed);
-			event.preventDefault();
+			if (!me.checkDist()){
+				refreshIntervalId = setInterval(function(){
+					me.moveY(me.topPos - 5, 'up');
+				},speed);
+				event.preventDefault();
+			}
 		}).bind( "touchend mouseup", function(){
 			clearInterval(refreshIntervalId);
 			if(player.attr('class') != '')
 				player.removeAttr('class').destroy();
 		});	
 		$('#arrowDown').bind('touchstart, mousedown',function(event){
-			refreshIntervalId = setInterval(function(){
-				me.moveY(me.topPos + 5, 'down');
-			},speed);
-			event.preventDefault();
+			if (!me.checkDist()){
+				refreshIntervalId = setInterval(function(){
+					me.moveY(me.topPos + 5, 'down');
+				},speed);
+				event.preventDefault();
+			}
 		}).bind( "touchend mouseup", function(){
 			clearInterval(refreshIntervalId);
 			if(player.attr('class') != '')
 				player.removeAttr('class').destroy();
 		});	
+	
 
+		
 		//=== End of Arrow Controls ===//
 
 		$('.road, .bridge, #wrapper').unbind('click').bind('click', function(e){
@@ -153,24 +163,32 @@ Game.prototype = {
 				});
 			}
 			switch (event.keyCode) {
-				case 37: // Left					
-					me.moveX(me.leftPos - 5, 'left');
-					event.preventDefault();
+				case 37: // Left
+					if (!$('.modal').hasClass('in')){
+						me.moveX(me.leftPos - 5, 'left');
+						event.preventDefault();
+					}
 				break;
 
 				case 39: // Right
-					me.moveX(me.leftPos + 5, 'right');
-					event.preventDefault();
+					if (!$('.modal').hasClass('in')){
+						me.moveX(me.leftPos + 5, 'right');
+						event.preventDefault();
+					}
 				break;
 
 				case 38: // Up
-					me.moveY(me.topPos - 5, 'up');
-					event.preventDefault();
+					if (!$('.modal').hasClass('in')){
+						me.moveY(me.topPos - 5, 'up');
+						event.preventDefault();
+					}
 				break;
 
 				case 40: // Down
-					me.moveY(me.topPos + 5, 'down');
-					event.preventDefault();
+					if (!$('.modal').hasClass('in')){
+						me.moveY(me.topPos + 5, 'down');
+						event.preventDefault();
+					}
 				break;
 				
 				case 13: 
@@ -285,12 +303,13 @@ Game.prototype = {
 		}
 		if(dir == 'left') {
 			this.startMoving('left', 2);
-			console.log(this.counter++);
+			counter++;
 		}
 		else {
 			this.startMoving('right', 3);
-			console.log(this.counter++);
+			counter++;
 		}
+		
 	},
 	
 	moveY: function(y, dir) {
@@ -310,20 +329,27 @@ Game.prototype = {
 		}
 		if(dir == 'up') {
 			this.startMoving('up', 4);
-			console.log(this.counter++);
+			counter++;
 		}
 		else {
 			this.startMoving('down', 1);
-			console.log(this.counter++);
+			counter++;
 		}
 	},
-
+	checkDist: function() {								
+		if (counter > 50 ){
+			counter = 0;
+			$('#myModal').modal('show');
+			return true;
+		}else{return false;}
+	},
 	startMoving: function(dir, state) {								
 		var player = this.player;
 		if(!player.hasClass(dir)) {
-			if (this.counter > 50){
+			if (counter > 50){
+				$("#attack").val('1');
 				$('#myModal').modal('show');
-				this.counter = 0;
+				counter = 0;
 			}
 			player.addClass(dir);
 			player.sprite({fps: 9, no_of_frames: 3}).spState(state);						
