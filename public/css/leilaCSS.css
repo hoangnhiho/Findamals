@@ -29,8 +29,9 @@ body {
 	background-color: #8CC624;
 }
 
-p {
+p, li {
 	font-size: 1.3em;
+	line-height: 1.5em;
 }
 
 .exp {

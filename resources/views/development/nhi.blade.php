@@ -23,7 +23,8 @@
 
         <script src="/js/jquery-ui.min.js"></script>
         <script src="/js/jquery.spritely.js" type="text/javascript"></script> 
-        <script src="/js/data.js" type="text/javascript"></script>  
+        <script src="/js/data.js" type="text/javascript"></script> 
+        @include('include.hiddenVariables') 
         <script src="/js/nhiJS.js" type="text/javascript"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
@@ -142,7 +143,7 @@
 		<!-- Flowers -->
 		<div class="trees t1"></div>
 
-		<div class="flowers r1"></div>
+		<div class="flowers r1"></div> 
 		<div class="flowers r2"></div>
 		<div class="flowers r3"></div>
 		<div class="flowers r4"></div>
@@ -196,44 +197,7 @@
 <button type="button" class ="gamePad btn btn-default" id = "arrowLeft"> </button>
 <button type="button" class ="gamePad btn btn-default" id = "arrowRight"></button>
 
-
-<div id="myModal" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Animal Attack</h4>
-			</div>
-			<div class="modal-body">
-				<img class="" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" style="margin-top:-20px">
-				Fight me!! if you dare Mwahaha!!!
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" href="#myModal1">Fight</button>
-				<button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div id="myModal1" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Animal Attack</h4>
-			</div>
-			<div class="modal-body">
-				Question 1: lalala
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Give up</button>
-			</div>
-		</div>
-	</div>
-</div>
+@include('include.exploreModal')
 </body>
 
 </html>

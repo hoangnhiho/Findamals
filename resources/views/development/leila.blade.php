@@ -7,10 +7,9 @@
 <script src="{{ asset('/js/leilaJS.js') }}"></script>
 
 
-
   <div class="container">
 
-  <h1>My Collection {{$terrainValue}}</h1>
+  <h1>My Collection</h1>
 
     <div class="row portfolio">
     
@@ -393,15 +392,24 @@
                   <h2 class="modal-title" id="modal-label">Koala</h2>
               </div>
               <div class="modal-body">
-                <img class="img-small pull-left" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character"
-                style="margin-top:-20px">
+                <img class="img-small pull-right" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" style="margin-top:-20px">
 
-                <p>Species:</p>
-                <p>Alternate names:</p>
-                <p>Nature Conservation Act (NCA) status:</p>
-                <p>Insert Koala info here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin condimentum scelerisque lacus non suscipit. Quisque sed placerat tellus, vitae aliquet libero. Duis iaculis vel lacus et convallis. Quisque vestibulum nisi augue, sit amet molestie ante accumsan at. </p>
+
+                <!-- Content from Qld WildNet Database -->
+                <p>Status: <span id="status"></span></p>
+
+                <!-- Content from Wikipedia -->
+                <p id="koala" class="wiki"></p> 
+
+                <ul>
+                  <li>Koalas usually live in open eucalypt woodlands</li>
+                  <li>They can sleep up to 20 hours a day</li>
+                  <li>The koala is a worldwide symbol of Australia</li>
+                  <li>The biggest threat to koalas is the destruction of their habitat through urbanisation and agriculture</li>
+                </ul>
+
                 <div>
-                <div class="clearfix"></div>
+                
                   <h2>Discoveries</h2>
                   <p>Select an item below to see more</p>
 
@@ -468,6 +476,8 @@
       </div>
     </div>
   </div>
+
+
 
 
 <script type="text/javascript"> //http://gurde.com/stacked-bootstrap-modals/ Fix for Stacking multiple modals

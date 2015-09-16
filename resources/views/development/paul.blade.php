@@ -1,17 +1,34 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+    	<meta charset="utf-8">
+    	<title>Findamals</title>
         <link href="http://fonts.googleapis.com/css?family=Lekton" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Molengo" rel="stylesheet" type="text/css">
+        		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="/css/reset.css" />    
         <link type="text/css" rel="stylesheet" href="/css/style.css" /> 
+        <link type="text/css" rel="stylesheet" href="/css/paulCSS.css" /> 
 
         <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+        <script type="text/javascript">	
+            $(document).bind("mobileinit", function () {
+        		$.event.special.tap.tapholdThreshold = 0;
+    		});
+		</script>
+        <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-        <script src="/js/jquery-1.6.3.min.js"></script>
         <script src="/js/jquery-ui.min.js"></script>
-        <script src="/js/jquery.spritely.js" type="text/javascript"></script>  
+        <script src="/js/jquery.spritely.js" type="text/javascript"></script> 
         <script src="/js/data.js" type="text/javascript"></script>  
-        <script src="/js/game.js" type="text/javascript"></script>
+        <script src="/js/nhiJS.js" type="text/javascript"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+
 
         <script type="text/javascript">	
             $(document).ready(function(){
@@ -27,32 +44,8 @@
             }
         </script>
 
-        <!-- Google Analytics -->
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-23746310-1']);
-            _gaq.push(['_trackPageview']);
-
-            (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
     </head>
-
 <body onload="startGame()">
-	<!-- Facebook like -->
-	<div id="fb-root"></div>
-
-	<!-- Google +1 -->
-	<script type="text/javascript">
-	  (function() {
-	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-	    po.src = 'https://apis.google.com/js/plusone.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-	  })();
-	</script>
 
 	<!-- Loader -->
 	<div id="loadingGame"> 
@@ -80,14 +73,6 @@
 	<!-- Notifications Manager -->
 	<div id="notifications"><div class="inner"></div><span class="close">x</span></div>
 	
-	<!--
-	<div id="share">
-		<div class="fb-like" data-href="http://danielsternlicht.com/" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div>
-		<a href="https://twitter.com/share" data-url="http://danielsternlicht.com" data-count="vertical" data-via="dsternlicht" class="twitter-share-button">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		<div class="g-plusone" data-size="tall" data-href="http://danielsternlicht.com"></div>
-	</div>
-	-->
 	<div id="wrapper">			
 		
 		<!-- Main Text -->
@@ -109,156 +94,19 @@
 		
 		<!-- Main Road -->
 		<div id="mainRoad" class="road"></div>
-		<div id="leftFence"></div>
-		<div id="rightFence"></div>
+<!-- 		<div id="leftFence"></div>
+		<div id="rightFence"></div> -->
 		
 		<!-- Me -->
 		<div id="daniel"></div>
 		
 		<!-- Stop Station 1 -->
-		<div id="aboutRoad" class="road side"></div>
-		<div id="aboutHouse" class="house">
-			<div class="door"></div>
-			<div class="lightbox">
-				<div class="inner about">
-					<h2>Findamals</h2>
-					<img src="images/aboutImg.png" alt="Charizard" /> <!--http://orig04.deviantart.net/fa4b/f/2011/338/4/0/charizard_by_kawiko-d4i57kw.png-->
-					<article>
-						<p><strong>Hi There</strong>!</p>
-						<p>
-							We are <strong>Findamals </strong> and we're a highly motivated <strong>Front/Back End Developer</strong> 
-                            with a great passion for <br />UX and Web Design.
-						</p>
-                        <p>
-                            Findamals is web application using a touch-based interface primarily aimed at tablet devices. 
-                            However it also must be fully responsive and usable on mobile and desktop devices.
-                        </p>
-                        <p><strong>Tech:</strong>!</p>
-                        <p>
-                            Web App Language: PHP <br />
-                            Web App Frameworks: Laravel 5.0<br />
-                            Frontend Languages: HTML5, CSS3 and JavaScript<br />
-                            Frontend Frameworks/extensions: Bootstrap, jQuery and spritely.js<br />
-                            Backend database management system: mySQL<br />
-                            IDE: Brackets<br />
-                            Server/zone: uqcloud.net<br />
-                            APIs: Trove (Photo, Video, Article), Qld Wildlife (Names, Photo, Status), Wikipedia (intro text)<br />
-                        </p>
-                        <p>Cheers,<br />Findamals</p>
-                   </article>
-				</div>
-			</div>
-		</div>
-		<div id="aboutSign" class="sign"><span>About Findamals</span></div>
-		<div id="aboutHole" class="hole"></div>
+		<!-- <div id="aboutRoad" class="road side"></div> -->
 
-		<!-- Stop Station 2 -->
-		<div id="servicesRoad" class="road side"></div>
-		<div id="servicesHouse" class="house">
-			<div class="door"></div>
-			<div class="lightbox">
-				<div class="inner services">
-					<h2>Services & Skills</h2>
-					<section>
-						<h3>Things that I do</h3>
-						<div id="sWebsites" class="box clearfix">
-							<div class="icon"></div>
-							<h4>Beautiful Websites</h4>
-							<p>We design beautiful websites with a large emphasis for <strong>UX and UI design</strong>.</p>
-						</div>
-						<div id="sCode" class="box clearfix">
-							<div class="icon"></div>
-							<h4>Awesome Web Apps</h4>
-							<p>We enjoy developing web apps with great concepts. Clean code, Maintenance, Short schedules & Great results are the way we work.</p>
-						</div>
-						<div id="sThinking" class="box clearfix">
-							<div class="icon"></div>
-							<h4>Creative Direction</h4>
-							<p>If you have an idea for a new website or web app, we can help you expanding your idea and make it happen.</p>
-						</div>
-					</section>
-					<section id="skillsList">
-						<h3>How?</h3>
-						<ul>
-							<li>Photoshop</li>
-							<li>Illustrator</li>
-							<li>UX Touch</li>
-						</ul>
-						<ul>
-							<li>HTML5</li>
-							<li>CSS3</li>
-							<li>JavaScript, jQuery</li>
-							<li>Wordpress</li>
-							<li>PHP & MySQL</li>
-						</ul>
-						<ul>
-							<li>Research</li>
-							<li>Out Of The Box Thinking</li>
-							<li>Innovation</li>
-							<li>Web Trends Analyzing</li>
-						</ul>
-					</section>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-		<div id="servicesSign" class="sign"><span>Services & Skills</span></div>
-		<div id="servicesHole" class="hole"></div>
-		
-		<!-- Stop Station 3 -->
-		<div id="portfolioRoad" class="road side"></div>
-		<div id="portfolioHouse" class="house">
-			<div class="door"></div>
-			<div class="lightbox">
-				<div class="inner portfolio clearfix">
-					<h2>Findamals Team</h2>
-					<div class="portfolioBox">
-						<div class="inner">
-							<a class="portfolioImg" href="{{ url('/leila') }}" target="_blank">
-								 <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/11745801_10152890708392172_1281130369865680251_n.jpg?oh=7ae218480f153d83bfe0cc50cad072b6&oe=566B9F0A&__gda__=1446764658_65252261582bfeda0791ff00d6b1485c" alt="Leila" /> 
-							</a>
-							<h4>Leila</h4>
-							<p>Project leader, time management, front and back-end development, UX, art direction, documentation, final check on documentation</p>
-						</div>
-					</div>
-					<div class="portfolioBox">
-						<div class="inner">
-							<a class="portfolioImg" href="{{ url('/helen') }}" target="_blank">
-								 <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c180.39.485.485/s160x160/298536_155002077974000_646502131_n.jpg?oh=f6f7d57830af4c917d356e309ff13efe&oe=5637AC1E&__gda__=1450583006_fe0bc3c629b3509beffb0630c1b4dbb3" alt="helen" /> 
-							</a>
-							<h4>Helen</h4>
-							<p>UX, UI, Visual design, user research and testing, documentation, front-end development, content management</p>
-						</div>
-					</div>
-					<div class="portfolioBox">
-						<div class="inner">
-							<a class="portfolioImg" href="{{ url('/paul') }}" target="_blank">
-								 <img src="https://scontent-lax3-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/p206x206/10399373_1024957919978_2662242_n.jpg?oh=380527360dcb5cbdc7258cab91c4ae3b&oe=56699CAF" alt="paul" /> 
-							</a>
-							<h4>Paul</h4>
-							<p>UX, UI, Visual design, user research and testing, documentation, front-end development</p>
-						</div>
-					</div>
-					<div class="portfolioBox">
-						<div class="inner">
-							<a class="portfolioImg" href="{{ url('/demo') }}" target="_blank">
-								 <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/p160x160/10846214_10152953124387269_8694827571637277011_n.jpg?oh=11f9854c0ea48d683cde3547c753ff36&oe=566C128D&__gda__=1451018840_2db0afa386c102b1e8b6d9804a9cb0ab" alt="nhi" /> 
-							</a>
-							<h4>Nhi</h4>
-							<p>Technical lead, front and back-end development, documentation</p>
-						</div>
-					</div>
-				
-					<div class="shelf"></div>
-				</div>
-			</div>
-		</div>
-		<div id="portfolioSign" class="sign"><span>Findmals Team Members</span></div>
-		<div id="portfolioHole" class="hole"></div>
 
 		<!-- View -->
-		<div id="rightTrees" class="trees"></div>
-		<div id="leftGrass" class="grass"></div>
+<!-- 		<div id="rightTrees" class="trees"></div>
+		<div id="leftGrass" class="grass"></div> -->
 
 		<!-- End Cave -->
 		<div id="endSea" class="sea"></div>		
@@ -292,7 +140,9 @@
 		</div>
 
 		<!-- Flowers -->
-		<div class="flowers r1"></div>
+		<div class="trees t1"></div>
+
+		<div class="flowers r1"></div> 
 		<div class="flowers r2"></div>
 		<div class="flowers r3"></div>
 		<div class="flowers r4"></div>
@@ -340,5 +190,50 @@
 
 <img src="../images/wood.png" style="display: none;" />
 
+
+<button type="button" class ="gamePad btn btn-default" id = "arrowUp"></button>
+<button type="button" class ="gamePad btn btn-default" id = "arrowDown"></button>
+<button type="button" class ="gamePad btn btn-default" id = "arrowLeft"> </button>
+<button type="button" class ="gamePad btn btn-default" id = "arrowRight"></button>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Animal Attack</h4>
+			</div>
+			<div class="modal-body">
+				<img class="" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" style="margin-top:-20px">
+				Fight me!! if you dare Mwahaha!!!
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" href="#myModal1">Fight</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="myModal1" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Animal Attack</h4>
+			</div>
+			<div class="modal-body">
+				Question 1: lalala
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Give up</button>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
+
 </html>

@@ -1,5 +1,29 @@
+var animalArray = [];
+animalArray.push("koala " + $('#koalaExp').val());
+animalArray.push("wallaby " + $('#wallabyExp').val());
+animalArray.push("wombat " + $('#wombatExp').val());
+animalArray.push("bilby " + $('#bilbyExp').val());
+animalArray.push("kangaroo " + $('#kangarooExp').val());
+
+// animalArray.push("cockatoo " + $('#cockatooExp').val();
+// animalArray.push("platypus " + $('#platypusExp').val();
+// animalArray.push("cassowary " + $('#cassowaryExp').val();
+// animalArray.push("frog " + $('#frogExp').val();
+// animalArray.push("whale " + $('#whaleExp').val();
+// animalArray.push("turtle " + $('#turtleExp').val();
+// animalArray.push("shark " + $('#sharkExp').val();
+
+// console.log(animalArray);
+// console.log(animalArray.length);
 
 var counter = 0;
+var stepAnimal = 30;
+var randnumber = 0;
+var tempString = "";
+var tempArray = [];
+var tempAnimal = "";
+var tempExp = "";
+
 var Game = function() { 
 	this.player = $("#daniel");	
 	this.topPos = 0;
@@ -46,7 +70,6 @@ Game.prototype = {
 		var speed = 40;
 
 		//=== Start of Arrow Controls ===//
-		console.log(counter);
 		$('#arrowLeft').bind('touchstart, mousedown', function(event){
 			if (!me.checkDist()){
 				refreshIntervalId = setInterval(function(){
@@ -337,25 +360,37 @@ Game.prototype = {
 		}
 	},
 	checkDist: function() {								
-		if (counter > 50 ){
+		if (counter > stepAnimal ){
 			counter = 0;
-			$('#myModal').modal('show');
+			this.activteModals();
 			return true;
 		}else{return false;}
 	},
 	startMoving: function(dir, state) {								
 		var player = this.player;
 		if(!player.hasClass(dir)) {
-			if (counter > 50){
-				$("#attack").val('1');
-				$('#myModal').modal('show');
+			if (counter > stepAnimal){
+				this.activteModals();
 				counter = 0;
 			}
 			player.addClass(dir);
 			player.sprite({fps: 9, no_of_frames: 3}).spState(state);						
 		}				
 	},
+	activteModals: function() {	
+		randnumber = this.getRandomInt(animalArray.length);
+		console.log(animalArray[randnumber]);
+		tempString = animalArray[randnumber];
+		tempArray = tempString.split(" ");
+		tempAnimal = "#" + tempArray[0] + "Quest" + tempArray[1];
+		//animalArray[randnumber] = tempArray[0] + ' ' + (parseInt(tempArray[1])+1).toString();
 
+		$('#acceptBtn').attr('href', tempAnimal);
+		$('#acceptModal').modal('show');
+	},
+	getRandomInt: function(max) {
+    	return Math.floor(Math.random() * (max));
+	},
 	openDoors: function(x, y) {
 		var player = this.player;
 		var elmLeft = x || this.leftPos;
