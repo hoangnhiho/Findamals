@@ -40,6 +40,7 @@
                     <li><a href="{{ url('/helen') }}">Helen</a></li>
                     <li><a href="{{ url('/paul') }}">Paul</a></li>
                     <li><a href="{{ url('/nhi') }}">Nhi</a></li>
+                    <li><a href="{{ url('/terrain1') }}">Terrain1</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

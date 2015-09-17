@@ -1,203 +1,510 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    	<meta charset="utf-8">
-    	<title>Findamals</title>
-        <link href="http://fonts.googleapis.com/css?family=Lekton" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Molengo" rel="stylesheet" type="text/css">
-        		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link type="text/css" rel="stylesheet" href="/css/reset.css" />    
-        <link type="text/css" rel="stylesheet" href="/css/style.css" /> 
-        <link type="text/css" rel="stylesheet" href="/css/nhiCSS.css" /> 
+@extends('app')
 
-        <!-- Scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        
-        <script type="text/javascript">	
-            $(document).bind("mobileinit", function () {
-        		$.event.special.tap.tapholdThreshold = 0;
-    		});
-		</script>
-        <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-        <script src="/js/jquery-ui.min.js"></script>
-        <script src="/js/jquery.spritely.js" type="text/javascript"></script> 
-        <script src="/js/data.js" type="text/javascript"></script> 
-        @include('include.hiddenVariables') 
-        <script src="/js/nhiJS.js" type="text/javascript"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+@section('content')
+<link href="{{ asset('/css/nhiCSS.css') }}" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="{{ asset('/js/nhiJS.js') }}"></script>
 
 
+  <div class="container">
+
+  <h1>My Collection</h1>
+
+    <div class="row portfolio">
+    
+    @if ($userData->koalaExp != 0)
+      <div class="col-xs-4 col-sm-3 col-md-2">
+        <div class="thumbnail" data-toggle="modal" data-target="#koalaModal">
+          <img class="img-responsive" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" >
+          <div class="caption">
+            <h3>Koala</h3>
+            <p class="exp">
+            @if ($userData->koalaExp >= 1)
+              @for ($i=0; $i < $userData->koalaExp; $i++ )
+                &#9733;
+              @endfor
+            @else
+              UNKNOWN STARS
+            @endif
+            </p>
+          </div>
+        </div>
+      </div>
+    @else
+      <div class="col-xs-4 col-sm-3 col-md-2">
+        <div class="thumbnail">
+          <img class="img-responsive img-unknown" src="{{ asset('/images/animals/koala-empty.png') }}" alt="Findamals Missing Koala" >
+          <div class="caption">
+            <h3>Unknown</h3>
+          </div>
+        </div>
+      </div>
+    @endif
 
 
-        <script type="text/javascript">	
-            $(document).ready(function(){
-                $('#innerLoading .me').sprite({fps: 9, no_of_frames: 3}).spState(1);
-                var game = new Game();
-            });	
+    @if ($userData->wallabyExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#modal-1">
+              <img class="img-responsive" src="{{ asset('/images/animals/wallaby.png') }}" alt="Findamals Wallaby Character" >
+              <div class="caption">
+                <h3>Brush-tailed Rock Wallaby</h3>
+                <p class="exp">
+                @if ($userData->wallabyExp >= 1)
+                  @for ($i=0; $i < $userData->wallabyExp; $i++ )
+                    &#9733;
+                  @endfor
+                @else
+                  UNKNOWN STARS
+                @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/wallaby-empty.png') }}" alt="Findamals Missing Wallaby" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
 
-            function startGame() {
-                $('html, body').animate({scrollTop: 0});
-                $('#loadingGame').fadeOut('fast', function(){
-                    $(this).remove();
-                })
-            }
-        </script>
+      @if ($userData->wombatExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#wombatModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/wombat.png') }}" alt="Findamals wombat Character" >
+              <div class="caption">
+                <h3>Northern Hairy-Nosed Wombat</h3>
+                <p class="exp">
+                  @if ($userData->wombatExp >= 1)
+                    @for ($i=0; $i < $userData->wombatExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/wombat-empty.png') }}" alt="Findamals Missing wombat" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
 
-    </head>
-<body onload="startGame()">
+      <div class="clearfix visible-xs"></div>
 
-	<!-- Loader -->
-	<div id="loadingGame"> 
-		<div id="innerLoading">
-			<div class="me"></div>
-			<p>Just a few moments</p>
-			<span>Don't go anywhere...</span>
-		</div>
-	</div>
+      @if ($userData->kangarooExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#kangarooModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/kangaroo.png') }}" alt="Findamals kangaroo Character" >
+              <div class="caption">
+                <h3>Red Kangaroo</h3>
+                  <p class="exp">
+                    @if ($userData->kangarooExp >= 1)
+                      @for ($i=0; $i < $userData->kangarooExp; $i++ )
+                        &#9733;
+                      @endfor
+                    @else
+                      UNKNOWN STARS
+                    @endif
+                  </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/kangaroo-empty.png') }}" alt="Findamals Missing kangaroo" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
 
-	<!-- Navigation -->
-	<nav>
-		<ul class="clearfix">
-			<li><a class="current" href="{{ url('/') }}">Finamals</a></li>
-			<li><a href="{{ url('/leila') }}">Leila</a></li>
-			<li><a href="{{ url('/helen') }}">Helen</a></li>
-			<li><a href="{{ url('/paul') }}">Paul</a></li>
-            <li><a href="#portfolioHouse">The Team</a></li> 
-            <li><a href="#aboutHouse">About us</a></li>
-            <li><a href="#howToPlay">?</a></li>
-            <li class="last"><a href="{{ url('/auth/logout') }}">Logout</a></li>
-		</ul>
-	</nav>
+      <div class="clearfix visible-sm"></div>
 
-	<!-- Notifications Manager -->
-	<div id="notifications"><div class="inner"></div><span class="close">x</span></div>
-	
-	<div id="wrapper">			
-		
-		<!-- Main Text -->
-		<hgroup id="myInfo">
-			<h1>FindAmals <br />weeee</h1>
-			<h2>Pokemon Wannabies</h2>
-		</hgroup>
+      @if ($userData->platypusExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#platypusModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/platypus.png') }}" alt="Findamals platypus Character" >
+              <div class="caption">
+                <h3>Platypus</h3>
+                <p class="exp">
+                  @if ($userData->platypusExp >= 1)
+                    @for ($i=0; $i < $userData->platypusExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/platypus-empty.png') }}" alt="Findamals Missing platypus" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
 
-		<!-- Start Text -->
-		<p id="startText">
-			<img src="images/keyboardArrows.png" alt="keyboard arrows" />
-			Start playing by using <br />the keyboard arrows
-		</p>
+      @if ($userData->cassowaryExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#cassowaryModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/cassowary.png') }}" alt="Findamals cassowary Character" >
+              <div class="caption">
+                <h3>Southern Cassowary</h3>
+                <p class="exp">
+                  @if ($userData->cassowaryExp >= 1)
+                    @for ($i=0; $i < $userData->cassowaryExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/cassowary-empty.png') }}" alt="Findamals Missing cassowary" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
 
-		<!-- Start Cave -->
-		<div id="startCave" class="cave"></div>		
-		<div id="startCaveHole" class="caveHole"></div>
-		<div id="startCaveHoleTrack" class="caveHoleTrack"></div>
-		
-		<!-- Main Road -->
-		<div id="mainRoad" class="road"></div>
-<!-- 		<div id="leftFence"></div>
-		<div id="rightFence"></div> -->
-		
-		<!-- Me -->
-		<div id="daniel"></div>
-		
-		<!-- Stop Station 1 -->
-		<!-- <div id="aboutRoad" class="road side"></div> -->
+      <div class="clearfix visible-xs"></div>
+      <div class="clearfix visible-md visible-lg"></div>
+
+      @if ($userData->frogExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#frogModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/frog.png') }}" alt="Findamals frog Character" >
+              <div class="caption">
+                <h3>Common Mistfrog</h3>
+                <p class="exp">
+                  @if ($userData->frogExp >= 1)
+                    @for ($i=0; $i < $userData->frogExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/frog-empty.png') }}" alt="Findamals Missing frog" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
+
+      @if ($userData->whaleExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#whaleModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/whale.png') }}" alt="Findamals whale Character" >
+              <div class="caption">
+                <h3>Humpback Whale</h3>
+                  <p class="exp">
+                    @if ($userData->whaleExp >= 1)
+                      @for ($i=0; $i < $userData->whaleExp; $i++ )
+                        &#9733;
+                      @endfor
+                    @else
+                      UNKNOWN STARS
+                    @endif
+                  </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/whale-empty.png') }}" alt="Findamals Missing whale" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
+
+      <div class="clearfix visible-sm"></div>
+
+      @if ($userData->turtleExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#turtleModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/turtle.png') }}" alt="Findamals turtle Character" >
+              <div class="caption">
+                <h3>Loggerhead Turtle</h3>
+                <p class="exp">
+                  @if ($userData->turtleExp >= 1 )
+                    @for ($i=0; $i < $userData->turtleExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/turtle-empty.png') }}" alt="Findamals Missing turtle" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
+
+      <div class="clearfix visible-xs"></div>
+
+      @if ($userData->sharkExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#sharkModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/shark.png') }}" alt="Findamals shark Character" >
+              <div class="caption">
+                <h3>Grey Nurse Shark</h3>
+                  <p class="exp">
+                  @if ($userData->sharkExp >= 1)
+                    @for ($i=0; $i < $userData->sharkExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/shark-empty.png') }}" alt="Findamals Missing shark" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
+
+      @if ($userData->bilbyExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#bilbyModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/bilby.png') }}" alt="Findamals bilby Character" >
+              <div class="caption">
+                <h3>Greater Bilby</h3>
+                  <p class="exp">
+                  @if ($userData->bilbyExp >= 1)
+                    @for ($i=0; $i < $userData->bilbyExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/bilby-empty.png') }}" alt="Findamals Missing bilby" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
+
+      @if ($userData->cockatooExp != 0)
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail" data-toggle="modal" data-target="#cockatooModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/cockatoo.png') }}" alt="Findamals cockatoo Character" >
+              <div class="caption">
+                <h3>Major Mitchell Cockatoo</h3>
+                  <p class="exp">
+                  @if ($userData->cockatooExp >= 1)
+                    @for ($i=0; $i < $userData->cockatooExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
+              </div>
+            </div>
+          </div>
+        @else
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/cockatoo-empty.png') }}" alt="Findamals Missing cockatoo" >
+              <div class="caption">
+                <h3>Unknown</h3>
+              </div>
+            </div>
+          </div>
+        @endif
+
+      <div class="clearfix visible-xs"></div>
+      
+
+    </div> <!-- end row div -->
+
+  </div> <!-- end container div -->
 
 
-		<!-- View -->
-<!-- 		<div id="rightTrees" class="trees"></div>
-		<div id="leftGrass" class="grass"></div> -->
-
-		<!-- End Cave -->
-		<div id="endSea" class="sea"></div>		
-		<div id="endBridge" class="bridge"></div>
-		<!-- <div id="endCaveHoleGlow"></div> -->
-		<div id="boat" class="isMoored">
-			<div class="meSail"></div>
-		</div>
-		<div id="contact">
-			<h1>Stay In Touch</h1>
-			<div id="mysocial">
-				<a href="http://il.linkedin.com/" target="_blank"><img src="images/social/linkedin.png" alt="LinkedIn" /></a>
-				<a href="https://plus.google.com/" target="_blank"><img src="images/social/google.png" alt="Google+" /></a>
-				<a href="http://twitter.com/" target="_blank"><img src="images/social/twitter.png" alt="Twitter" /></a>
-				<a href="http://facebook.com/" target="_blank"><img src="images/social/facebook.png" alt="Facebook" /></a>
-				<a href="mailto:fake@fakemail.com"><img src="images/social/gmail.png" alt="Gmail" /></a>
-			</div>
-			<p>Feel free to leave your comment about anything you want.</p>
-			<div id="comments">
-				<div id="disqus_thread"></div>
-				<script type="text/javascript">					
-					var disqus_shortname = 'FindAamals'; 									
-					(function() {
-						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-						dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-					})();
-				</script>
-				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-			</div>
-		</div>
-
-		<!-- Flowers -->
-		<div class="trees t1"></div>
-
-		<div class="flowers r1"></div> 
-		<div class="flowers r2"></div>
-		<div class="flowers r3"></div>
-		<div class="flowers r4"></div>
-		<div class="flowers r5"></div>
-		<div class="flowers r6"></div>
-		<div class="flowers r7"></div>
-		<div class="flowers r8"></div>
-		<div class="flowers r9"></div>
-		<div class="flowers r10"></div>
-		<div class="flowers r11"></div>
-		<div class="flowers r12"></div>
-		
-	</div>
-	
-	<div id="howToPlay">
-		<div class="lightbox">
-			<div class="inner howtoplay">
-				<h2>How To Play?</h2>
-				<article>					
-					<div id="htpArrows" class="box clearfix">
-						<div class="icon"></div>
-						<p>Move by using the keyboard arrows</p>
-					</div>
-					<div id="htpHouses" class="box clearfix">
-						<div class="icon"></div>
-						<p>Enter houses to get some information about me and my projects</p>
-					</div>
-					<div id="htpMouse" class="box clearfix">
-						<div class="icon"></div>
-						<p>Teleport yourself directly to a specific point in the portfolio by left click</p>
-					</div>
-					<div id="htpEsc" class="box clearfix">
-						<div class="icon"></div>
-						<p>Press the "Esc" key to leave buildings and close the notifications bar</p>
-					</div>
-					<div id="htpShare" class="box clearfix">
-						<div class="icon"></div>
-						<p>Share me with your friends :)</p> 
-					</div>
-      	</article>				
-			</div>
-			<!--<div style="text-align: center; margin-top: 10px;"><a href="http://compareninja.com" target="_blank"><img src="http://danielsternlicht.com/images/cnbanner.png"></a></div>-->
-		</div>
-	</div>
-
-<img src="../images/wood.png" style="display: none;" />
+    <!-- KOALA MODAL -->
 
 
-<button type="button" class ="gamePad btn btn-default" id = "arrowUp"></button>
-<button type="button" class ="gamePad btn btn-default" id = "arrowDown"></button>
-<button type="button" class ="gamePad btn btn-default" id = "arrowLeft"> </button>
-<button type="button" class ="gamePad btn btn-default" id = "arrowRight"></button>
+    <div id="koalaModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h2 class="modal-title" id="modal-label">Koala</h2>
+              </div>
+              <div class="modal-body">
+                <img class="img-small pull-right" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" style="margin-top:-20px">
 
-@include('include.exploreModal')
-</body>
 
-</html>
+                <!-- Content from Qld WildNet Database -->
+                <p>Status: <span id="status"></span></p>
+
+                <!-- Content from Wikipedia -->
+                <p id="koala" class="wiki"></p> 
+
+                <ul>
+                  <li>Koalas usually live in open eucalypt woodlands</li>
+                  <li>They can sleep up to 20 hours a day</li>
+                  <li>The koala is a worldwide symbol of Australia</li>
+                  <li>The biggest threat to koalas is the destruction of their habitat through urbanisation and agriculture</li>
+                </ul>
+
+                <div>
+                
+                  <h2>Discoveries</h2>
+                  <p>Select an item below to see more</p>
+
+                  @if ($userData->koalaExp >= 1)
+                  <div class=" col-xs-6 col-sm-3 col-md-2">
+                  <img class="img-thumb" src="http://blog.queensland.com/wp-content/uploads/2012/10/Surprised-Koala3.jpg" data-toggle="modal" data-target="#koalaimg1">
+                  </div>
+                  @endif
+
+                  @if ($userData->koalaExp >= 2)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="http://blog.queensland.com/wp-content/uploads/2012/10/Surprised-Koala3.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
+
+                  @if ($userData->koalaExp >= 3)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="http://images.brisbanetimes.com.au/2011/09/29/2657667/KOALA_729-420x0.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
+
+                  @if ($userData->koalaExp >= 4)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="https://s-media-cache-ak0.pinimg.com/736x/f2/12/a3/f212a3fd057b7f5e9d9b77a26339e9ad.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
+
+                  @if ($userData->koalaExp >= 5)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="http://justcuteanimals.com/wp-content/uploads/2014/08/koala-ice-lollie-hat-funny-cool-animal-pictures-summer-pics.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
+
+                  @if ($userData->koalaExp >= 6)
+                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <img class="img-thumb" src="http://www.koalas.org/koalaalb.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    </div>
+                  @endif
+                  
+                </div>
+              </div> <!-- end modal body -->
+            </div> <!-- end modal content -->
+        </div> <!-- end modal-dialog -->
+    </div> <!-- end koala modal -->
+
+
+  <div id="koalaimg1" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-discovery">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+          <h4 class="modal-title">Image Title</h4>
+        </div>
+        <div class="modal-body">
+
+         <div class="koala-content1">
+          <img class="img-responsive" src="">
+        </div>
+
+        </div>
+        <div class="modal-footer">
+          <p>Caption here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<script type="text/javascript"> 
+
+    $(document)  
+    .on('show.bs.modal', '.modal', function(event) {
+      $(this).appendTo($('body'));
+    })
+    .on('shown.bs.modal', '.modal.in', function(event) {
+      setModalsAndBackdropsOrder();
+    })
+    .on('hidden.bs.modal', '.modal', function(event) {
+      setModalsAndBackdropsOrder();
+    });
+
+    function setModalsAndBackdropsOrder() {  
+      var modalZIndex = 1040;
+      $('.modal.in').each(function(index) {
+        var $modal = $(this);
+        modalZIndex++;
+        $modal.css('zIndex', modalZIndex);
+        $modal.next('.modal-backdrop.in').addClass('hidden').css('zIndex', modalZIndex - 1);
+    });
+      $('.modal.in:visible:last').focus().next('.modal-backdrop.in').removeClass('hidden');
+    }
+
+</script>
+
+
+@endsection

@@ -3,7 +3,7 @@
 @section('content')
 <link href="{{ asset('/css/leilaCSS.css') }}" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
 <script src="{{ asset('/js/leilaJS.js') }}"></script>
 
 
@@ -381,128 +381,33 @@
   </div> <!-- end container div -->
 
 
-    <!-- KOALA MODAL -->
-
-
-    <div id="koalaModal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h2 class="modal-title" id="modal-label">Koala</h2>
-              </div>
-              <div class="modal-body">
-                <img class="img-small pull-right" src="{{ asset('/images/animals/koala.png') }}" alt="Findamals Koala Character" style="margin-top:-20px">
-
-
-                <!-- Content from Qld WildNet Database -->
-                <p>Status: <span id="status"></span></p>
-
-                <!-- Content from Wikipedia -->
-                <p id="koala" class="wiki"></p> 
-
-                <ul>
-                  <li>Koalas usually live in open eucalypt woodlands</li>
-                  <li>They can sleep up to 20 hours a day</li>
-                  <li>The koala is a worldwide symbol of Australia</li>
-                  <li>The biggest threat to koalas is the destruction of their habitat through urbanisation and agriculture</li>
-                </ul>
-
-                <div>
-                
-                  <h2>Discoveries</h2>
-                  <p>Select an item below to see more</p>
-
-                  @if ($userData->koalaExp >= 1)
-                  <div class=" col-xs-6 col-sm-3 col-md-2">
-                  <img class="img-thumb" src="http://www.tilligerryhabitat.org.au/wp-content/uploads/2013/10/Koala_Baby.jpg" data-toggle="modal" data-target="#koalaimg1">
-                  </div>
-                  @endif
-
-                  @if ($userData->koalaExp >= 2)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://blog.queensland.com/wp-content/uploads/2012/10/Surprised-Koala3.jpg" data-toggle="modal" data-target="#koalaimg1">
-                    </div>
-                  @endif
-
-                  @if ($userData->koalaExp >= 3)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://images.brisbanetimes.com.au/2011/09/29/2657667/KOALA_729-420x0.jpg" data-toggle="modal" data-target="#koalaimg1">
-                    </div>
-                  @endif
-
-                  @if ($userData->koalaExp >= 4)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="https://s-media-cache-ak0.pinimg.com/736x/f2/12/a3/f212a3fd057b7f5e9d9b77a26339e9ad.jpg" data-toggle="modal" data-target="#koalaimg1">
-                    </div>
-                  @endif
-
-                  @if ($userData->koalaExp >= 5)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://justcuteanimals.com/wp-content/uploads/2014/08/koala-ice-lollie-hat-funny-cool-animal-pictures-summer-pics.jpg" data-toggle="modal" data-target="#koalaimg1">
-                    </div>
-                  @endif
-
-                  @if ($userData->koalaExp >= 6)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://www.koalas.org/koalaalb.jpg" data-toggle="modal" data-target="#koalaimg1">
-                    </div>
-                  @endif
-                  
-                </div>
-              </div> <!-- end modal body -->
-            </div> <!-- end modal content -->
-        </div> <!-- end modal-dialog -->
-    </div> <!-- end koala modal -->
-
-
-  <div id="koalaimg1" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-discovery">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-          <h4 class="modal-title">Image Title</h4>
-        </div>
-        <div class="modal-body">
-
-         <div class="koala-content1">
-          <img class="img-responsive" src="http://www.tilligerryhabitat.org.au/wp-content/uploads/2013/10/Koala_Baby.jpg">
-        </div>
-
-        </div>
-        <div class="modal-footer">
-          <p>Caption here</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+   @include('collection.koalaCollection')
 
 
 
 <script type="text/javascript"> //http://gurde.com/stacked-bootstrap-modals/ Fix for Stacking multiple modals
 
-    $(document)  
-    .on('show.bs.modal', '.modal', function(event) {
-      $(this).appendTo($('body'));
-    })
-    .on('shown.bs.modal', '.modal.in', function(event) {
-      setModalsAndBackdropsOrder();
-    })
-    .on('hidden.bs.modal', '.modal', function(event) {
-      setModalsAndBackdropsOrder();
-    });
+    // $(document)  
+    // .on('show.bs.modal', '.modal', function(event) {
+    //   $(this).appendTo($('body'));
+    // })
+    // .on('shown.bs.modal', '.modal.in', function(event) {
+    //   setModalsAndBackdropsOrder();
+    // })
+    // .on('hidden.bs.modal', '.modal', function(event) {
+    //   setModalsAndBackdropsOrder();
+    // });
 
-    function setModalsAndBackdropsOrder() {  
-      var modalZIndex = 1040;
-      $('.modal.in').each(function(index) {
-        var $modal = $(this);
-        modalZIndex++;
-        $modal.css('zIndex', modalZIndex);
-        $modal.next('.modal-backdrop.in').addClass('hidden').css('zIndex', modalZIndex - 1);
-    });
-      $('.modal.in:visible:last').focus().next('.modal-backdrop.in').removeClass('hidden');
-    }
+    // function setModalsAndBackdropsOrder() {  
+    //   var modalZIndex = 1040;
+    //   $('.modal.in').each(function(index) {
+    //     var $modal = $(this);
+    //     modalZIndex++;
+    //     $modal.css('zIndex', modalZIndex);
+    //     $modal.next('.modal-backdrop.in').addClass('hidden').css('zIndex', modalZIndex - 1);
+    // });
+    //   $('.modal.in:visible:last').focus().next('.modal-backdrop.in').removeClass('hidden');
+    // }
 
 </script>
 
