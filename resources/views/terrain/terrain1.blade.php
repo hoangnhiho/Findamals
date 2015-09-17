@@ -98,9 +98,11 @@
 		<div id="daniel"></div>
 		
 		<!-- Stop Station 1 -->
-		<div id="aboutHouse" class="house">
-		</div>
+		<div id="aboutHouse" class="house"></div>
 
+		<div id="servicesHouse" class="house"></div>
+
+		<div id="trees1" class="house"></div>
 
 		<!-- View -->
 <!-- 		<div id="rightTrees" class="trees"></div>

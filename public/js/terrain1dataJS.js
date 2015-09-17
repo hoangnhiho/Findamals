@@ -2,9 +2,9 @@ var houses = [
 	{
 		name: 'About House',
 		id: '#aboutHouse',
-		width: 190,
-		height: 1000,
-		top: 100,
+		width: 1500,
+		height: 130,
+		top: 868,
 		left: 1,
 		right: null,
 		door: {
@@ -17,11 +17,11 @@ var houses = [
 	{
 		name: 'Services House',
 		id: '#servicesHouse',
-		width: 200,
-		height: 165,
-		top: 754,
-		left: null,
-		right: 50,
+		width: 0,
+		height: 0,
+		top: 1,
+		left: 1,
+		right: null,
 		door: {
 			width: 16,
 			height: 32,
@@ -51,14 +51,14 @@ var roads = [
 		name: 'About Road',
 		id: '#aboutRoad',
 		height: 200,
-		top: 500,
+		top: 900,
 		direction: 'left'
 	},
 	{
 		name: 'Services Road',
 		id: '#servicesRoad',
 		height: 200,
-		top: 784,
+		top: 900,
 		direction: 'right'
 	},
 	{

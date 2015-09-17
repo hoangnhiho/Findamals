@@ -18,7 +18,7 @@ animalArray.push("kangaroo " + $('#kangarooExp').val());
 
 var globalURL = 'http://deco1800-g52.uqcloud.net/';
 var counter = 0;
-var stepAnimal = 1000; //change no. of steps before animal appears
+var stepAnimal = 50; //change no. of steps before animal appears
 var randnumber = 0;
 var tempString = "";
 var tempArray = [];
@@ -124,7 +124,7 @@ Game.prototype = {
 		
 		//=== End of Arrow Controls ===//
 
-		$('.road, .bridge, #wrapper').unbind('click').bind('click', function(e){
+		$('.road, .bridge').unbind('click').bind('click', function(e){
 			var x = e.pageX - player.width() / 2;
 			var y = e.pageY;
 			var canMove = me.canImove(x, y, true);

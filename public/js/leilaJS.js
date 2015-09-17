@@ -3,6 +3,8 @@
 $(document).ready(function(){
 
 
+
+
     // GET ANIMALS WIKIPEDIA EXTRACTS 
     // https://en.wikipedia.org/wiki/Special%3aApiSandbox
 
@@ -17,6 +19,7 @@ $(document).ready(function(){
         }
     });
 
+
    // GET ANIMAL CONTENT FROM TROVE
 
    //KOALA
@@ -26,11 +29,20 @@ $(document).ready(function(){
             dataType: 'jsonp',
             success: function(results){
                 var thumbImg = results.work.identifier[1].value;
-                var mainImg = thumbImg.slice(0,-6);
-                var source = results.work.troveUrl;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
                 var contributor = results.work.contributor[0];
-                
+                var source = results.work.troveUrl;
+
+                // Display images
                 $('#koalaThumb1').attr('src', thumbImg);
+                $('#koalaContent1').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#koalaTitle1').append(title);
+                $('#koalaContrib1').append(contributor);
+                $('#koalaSource1').attr('href', source);
+                $('#koalaSource1').append(source);
                 }
             });
 

@@ -3,7 +3,7 @@
 @section('content')
 <link href="{{ asset('/css/leilaCSS.css') }}" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="{{ asset('/js/leilaJS.js') }}"></script>
 
 
@@ -375,7 +375,6 @@
 
       <div class="clearfix visible-xs"></div>
       
-
     </div> <!-- end row div -->
 
   </div> <!-- end container div -->
