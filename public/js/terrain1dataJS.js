@@ -14,27 +14,27 @@ var houses = [
 			top: 100
 		}
 	},
-	{
+	{//tree t2 (top-20)
 		name: 'Services House',
-		id: '#servicesHouse',
-		width: 0,
-		height: 0,
-		top: 1,
-		left: 1,
-		right: null,
+		id: '#test',
+		width: 128,
+		height: 240,
+		top: 180,
+		left: null,
+		right: 200,
 		door: {
-			width: 16,
-			height: 32,
-			left: 101,
-			top: 133
+			width: 36,
+			height: 0,
+			left: 0,
+			top: 0
 		}		
 	},
-	{
+	{//tree t1
 		name: 'Portfolio House',
 		id: '#portfolioHouse',
 		width: 128,
 		height: 240,
-		top: 350,
+		top: 330,
 		left: 300,
 		right: null,
 		door: {

@@ -133,7 +133,7 @@
 
 		<!-- Flowers -->
 		<div class="trees t1"></div>
-
+		<div class="trees t2"></div>
 		<div class="flowers r1"></div> 
 		<div class="flowers r2"></div>
 		<div class="flowers r3"></div>

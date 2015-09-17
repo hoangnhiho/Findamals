@@ -133,6 +133,10 @@ button
 	top: 350px;
 	left: 300px;
 }
+.trees.t2 {
+	top: 200px;
+	right: 200px;
+}
 
 .modal-backdrop{
 	z-index: 0;
