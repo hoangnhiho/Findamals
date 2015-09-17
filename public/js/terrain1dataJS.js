@@ -32,10 +32,10 @@ var houses = [
 	{
 		name: 'Portfolio House',
 		id: '#portfolioHouse',
-		width: 240,
-		height: 154,
-		top: 950,
-		left: 50,
+		width: 128,
+		height: 240,
+		top: 350,
+		left: 300,
 		right: null,
 		door: {
 			width: 32,
