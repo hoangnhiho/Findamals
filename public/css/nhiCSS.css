@@ -1,101 +1,199 @@
-h1 {
-	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
-	margin-bottom: 30px;
+@viewport {
+    width: extend-to-zoom 1024px;
+    min-zoom: 0.25;
+    max-zoom: 5;
 }
-
-h3 {
-	font-size: 1.3em;
+button
+{
+	-ms-touch-action: manipulation;	/* IE10  */
+	touch-action: manipulation;		/* IE11+ */
 }
-
-h2 {
-	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
-	color: #EBA361;
-}
-
-.modal-title {
-	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
-	font-size: 2em;
-	color: #D68533;
-}
-
-.modal-footer p{
-	text-align: left;
-}
-
-body {
-	background-image: url('../images/grass-bg.png');
-	background-repeat: repeat;
-	background-color: #8CC624;
-}
-
-p, li {
-	font-size: 1.3em;
-	line-height: 1.5em;
-}
-
-.exp {
-	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
-	text-align: center;
-	color: #FFCC00;
-	font-size: 1.2em;
-}
-
-.glyphicon .glyphicon-star {
-	color: #fff;
-}
-
-.thumbnail {
-	background-color: transparent;
+.gamePad {
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	z-index: 790;
 	border: none;
+
+/*	box-shadow: 0 -1px 10px rgba(0,0,0,0.5);
+*/}
+
+.gamepage:active {
+	border: none;
+	box-shadow:none;
+}
+#arrowUp {
+	left: 150px;
+	bottom: 150px;
+	background: url(../images/arrow-up.png) no-repeat;
+}
+#arrowDown {
+	left: 150px;
+	bottom: 60px;
+	background: url(../images/arrow-down.png) no-repeat;
+}
+#arrowLeft {
+	        -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; 
+	left: 60px;
+	bottom: 60px;
+	background: url(../images/arrow-left.png) no-repeat;
+}
+#arrowRight {
+	left: 240px;
+	bottom: 60px;
+	background: url(../images/arrow-right.png) no-repeat;
 }
 
-.caption {
-	background-color: #D68533;
-	margin-top: 10px;
-	border: 5px ridge #EBA361;
+#mainRoad {
+	position:absolute;
+	width:auto;
+	left:64px;
+	right:64px;
+	top  :0px;	
+	background: url(../images/bg.png) repeat;	
+	margin:0 0 0 0;	
 }
 
-.caption h3 {
-	margin-top: 5px;
+#wrapper {
+	border: 1px solid #c7c7c7;
+	margin: 0 auto;
+	width: 100%;
+	height: 1800px;
+	position: relative;
+	background: url(../images/bg.png) repeat;
+	overflow: hidden;
+}
+
+#startCave {
+	top: 0;
+	height: 75px;
+}
+
+#startCave::after {
+	position: absolute;
+	bottom: -23px;
+	left: 0;
+	background: url(../images/caveBottomBG.png) repeat;
+	height: 32px;
+	width: 100%;
+	z-index: 51;
+	content: "";
+	box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+
+#startCaveHole {
+	top: 69px;
+	border-bottom: none;
+	height: 28px;
+}
+
+#startCaveHoleTrack {
+	top: 0;
+	height: 68px;
+}
+
+/* Start Text */
+
+#startText {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	width: 200px;
+	margin: 0 0 0 -96px;
+	z-index: 20;
 	text-align: center;
-	color: #FFF;
-	font-weight: bold;
-	font-size: 1.5em;
+	-webkit-animation: fade 2.5s ease infinite;
+	-moz-animation: fade 2.5s ease infinite;
+	animation: fade 2.5s ease infinite;
 }
 
-.modal-dialog {
-	width: 85%;
-	height: 80%;
-	margin:5% auto;
+#startText img {
+	width: 80px;
+	display: block;
+	margin: 0 auto 5px;
+	padding-right: 4px;
 }
 
-.modal-body {
-	max-height: 600px;
+.flowers {
+	position: absolute;
+	z-index: 49;
+	width: 32px;
+	height: 28px;
+	background: url(../images/flowers.png) repeat left top;
 }
 
-.modal-content {
-	height: 100%;
-	overflow: auto;
+.trees {
+	position: absolute;
+	z-index: 49;
+	width: 128px;
+	height: 230px;
+	background: url(../images/tree35.png) repeat left top; 
 }
 
-.modal-discovery {
-	width:500px;
-	max-width: 70%;
+.trees.t1 {
+	top: 350px;
+	left: 300px;
+}
+.trees.t2 {
+	top: 250px;
+	right: 500px;
 }
 
-.img-small {
-	max-width: 200px;
-	margin-right: 30px;
+.modal-backdrop{
+	z-index: 0;
 }
-
-.img-unknown {
-	opacity: 0.5;
+.house {
+	cursor: default;
 }
-
-.img-thumb {
-	max-width: 100%;
-	height: 120px;
-	margin: 10px 0;
+#treeLeft {
+	background: url(../images/tree.png) repeat;
+	width: 64px;
+	height: 898px;
+	top: 100px;
+	left: 0px;
 }
-
+#treeLeft1 {
+	background: url(../images/tree.png) repeat;
+	width: 320px;
+	height: 68px;
+	top: 300px;
+	left: 64px;
+}
+#treeLeft2 {
+	background: url(../images/tree.png) repeat;
+	width: 192px;
+	height: 136px;
+	top: 794px;
+	left: 64px;
+}
+#treeRight {
+	background: url(../images/tree.png) repeat;
+	width: 64px;
+	height: 898px;
+	top: 100px;
+	right: 0px;
+}
+#treeRight1 {
+	background: url(../images/tree.png) repeat;
+	width: 256px;
+	height: 136px;
+	top: 100px;
+	right: 64px;
+}
+#treeRight2 {
+	background: url(../images/tree.png) repeat;
+	width: 512px;
+	height: 250px;
+	top: 480px;
+	right: 64px;
+}
+#treeFooter {
+	background: url(../images/tree.png) repeat;
+	width: 100%;
+	height: 70px;
+	top: 930px;
+	
+}
