@@ -1,10 +1,52 @@
-@extends('app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="_token" content="{!! csrf_token() !!}"/>
+  <title>Findamals</title>
 
-@section('content')
-<link href="{{ asset('/css/leilaCSS.css') }}" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="{{ asset('/js/leilaJS.js') }}"></script>
+  <link href="{{ asset('/css/app.css') }}" rel="stylesheet"> 
+  <link href="{{ asset('/css/leilaCSS.css') }}" rel="stylesheet"> 
+  <!-- Fonts -->
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+  <script src="{{ asset('/js/leilaJS.js') }}"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body>
+
+  <nav>
+      <ul>
+        <li><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></li>
+        <li><a href="{{ url('/terrain1') }}">Bush</a></li>
+        @if ($userData->totalExp >= 5)
+        <li><a href="{{ url('/terrain1') }}">RF</a></li>
+        @else 
+        <li class="locked">RF locked</li>
+        @endif
+        @if ($userData->totalExp >= 10)
+        <li><a href="{{ url('/terrain1') }}">Ocean</a></li>
+        @else 
+        <li class="locked" >Ocean locked</li>
+        @endif
+        <li><a class="current" href="{{ url('/leila') }}">Collection</a></li>
+        <li><a href="#howToPlay">?</a></li>
+        <li class="last"><a href="{{ url('/auth/logout') }}">Logout</a></li>
+      </ul>
+  </nav>
+
 
 
   <div class="container">
@@ -45,7 +87,7 @@
 
     @if ($userData->wallabyExp != 0)
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail" data-toggle="modal" data-target="#modal-1">
+            <div class="thumbnail" data-toggle="modal" data-target="#wallabyModal">
               <img class="img-responsive" src="{{ asset('/images/animals/wallaby.png') }}" alt="Findamals Wallaby Character" >
               <div class="caption">
                 <h3>Brush-tailed Rock Wallaby</h3>
@@ -381,6 +423,10 @@
 
 
    @include('collection.koalaCollection')
+   @include('collection.wallabyCollection')
+   @include('collection.wombatCollection')
+   @include('collection.kangarooCollection')
+   @include('collection.bilbyCollection')
 
 
 
@@ -411,4 +457,20 @@
 </script>
 
 
-@endsection
+  <!-- Scripts -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+      $.ajaxSetup({
+          headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+      });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

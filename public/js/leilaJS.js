@@ -2,9 +2,6 @@
 
 $(document).ready(function(){
 
-
-
-
     // GET ANIMALS WIKIPEDIA EXTRACTS 
     // https://en.wikipedia.org/wiki/Special%3aApiSandbox
 
@@ -13,9 +10,48 @@ $(document).ready(function(){
     url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Koala",
     dataType: 'jsonp',
     success: function(results){
-        // console.log(results.query.pages[17143].extract);
         var wikiExtract = results.query.pages[17143].extract;   
         $('#koala').append(wikiExtract);
+        }
+    });
+
+   // WALLABY
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Brush-tailed_rock-wallaby",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[392636].extract;   
+        $('#wallaby').append(wikiExtract);
+        }
+    });
+
+   // WOMBAT
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=Northern_hairy-nosed_wombat",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[2218814].extract;   
+        $('#wombat').append(wikiExtract);
+        }
+    });
+
+   // KANGAROO
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=Red_kangaroo",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[215506].extract;   
+        $('#kangaroo').append(wikiExtract);
+        }
+    });
+
+   // BILBY
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Greater_bilby",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[206151].extract;   
+        $('#bilby').append(wikiExtract);
         }
     });
 
