@@ -84,7 +84,6 @@ $(document).ready(function(){
 
 
 
-
    // GET ANIMALS Qld Wildlife Information
    // https://data.qld.gov.au/dataset/qld-wildlife-data-api/resource/773bef14-91d6-4ed5-9253-0146d937b2e6
 

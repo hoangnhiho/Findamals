@@ -12,8 +12,6 @@
 
                 <p>Status: Vulnerable</p>
 
-                <!-- Content from Wikipedia -->
-                <p id="koala" class="wiki"></p> 
 
                 <ul>
                   <li>Koalas usually live in open eucalypt woodlands</li>
@@ -22,9 +20,12 @@
                   <li>The biggest threat to koalas is the destruction of their habitat through urbanisation and agriculture</li>
                 </ul>
 
+                <!-- Content from Wikipedia -->
+                <p id="koala" class="wiki"></p> 
+
                 <div>
                 
-                  <h2>Discoveries</h2>
+                  <h3>Discoveries</h3>
                   <p>Select an item below to see more</p>
 
                   @if ($userData->koalaExp >= 1)
@@ -94,18 +95,18 @@
                   </div>
                 </div>
 
-                <div class="item">
+                <!-- <div class="item">
                   <img class="img-responsive" src="http://placehold.it/1200x600/fffccc/000&text=Two" alt="...">
                   <div class="carousel-caption">
                     Another Image
                   </div>
-                </div>
-                 <div class="item">
+                </div> -->
+                 <!-- <div class="item">
                   <img class="img-responsive" src="http://placehold.it/1200x600/fcf00c/000&text=Three" alt="...">
                   <div class="carousel-caption">
                     Another Image
                   </div>
-                </div>
+                </div> -->
               </div>
 
               <!-- Controls -->

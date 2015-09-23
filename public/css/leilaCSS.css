@@ -5,34 +5,44 @@ h1 {
 	margin-bottom: 30px;
 	color: #fff;
 	text-transform: uppercase;
+	font-size: 2.5em;
 	letter-spacing: 0.1em;
-}
-
-h3 {
-	font-size: 1.3em;
+	text-shadow: 2px 2px rgba(0,0,0,0.15);
 }
 
 h2 {
 	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
-	color: #1EBCDD;
+	font-size: 2em;
+	color: #81cc33;
 }
 
-.modal-title {
+h3 {
+	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	color: #ff9d00;
+}
+
+p {
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+
+/*.modal-title {
 	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
 	font-size: 2em;
 	color: #D68533;
-}
+}*/
 
 .modal-footer p{
 	text-align: left;
 }
 
 body {
-	/*background-image: url('../images/grass-bg.png');*/
-	/*background-repeat: repeat;*/
-	background-color: #3399FF;
+	background-color: #71c0df;
 	margin: auto;
+	background-image: url('../images/collection-bg.png');
+	background-size: cover;
 }
 
 p, li {
@@ -73,9 +83,8 @@ p, li {
 	text-align: center;
 	color:#FF9D00; 
 	font-weight: bold;
-	font-size: 1.4em;
-/*	text-transform: uppercase;
-*/	word-wrap: break-word;
+	font-size: 1.3em;
+	word-wrap: break-word;
 }
 
 .modal-dialog {

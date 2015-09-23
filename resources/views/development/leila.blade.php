@@ -31,16 +31,18 @@
       <ul>
         <li><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></li>
         <li><a href="{{ url('/terrain1') }}">Bush</a></li>
-        @if ($userData->totalExp >= 5)
+        @if ($terrainValue >= 2)
         <li><a href="{{ url('/terrain1') }}">RF</a></li>
         @else 
         <li class="locked">RF locked</li>
         @endif
-        @if ($userData->totalExp >= 10)
+
+        @if ($terrainValue == 3)
         <li><a href="{{ url('/terrain1') }}">Ocean</a></li>
         @else 
         <li class="locked" >Ocean locked</li>
         @endif
+
         <li><a class="current" href="{{ url('/leila') }}">Collection</a></li>
         <li><a href="#howToPlay">?</a></li>
         <li class="last"><a href="{{ url('/auth/logout') }}">Logout</a></li>
@@ -415,10 +417,13 @@
           </div>
         @endif
 
-      <div class="clearfix visible-xs"></div>
+      <div class="clearfix visible-xs last"></div>
+
+
       
     </div> <!-- end row div -->
 
+   
   </div> <!-- end container div -->
 
 
