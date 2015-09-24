@@ -70,49 +70,53 @@
   <!-- Notifications Manager -->
   <div id="notifications"><div class="inner"></div><span class="close">x</span></div>
   
-  <div id="wrapper">      
-    
-    <!-- Main Text -->
-    <hgroup id="myInfo">
-      <h1>FindAmals</h1>
-      <h2>Terrain 1 - Bushland</h2>
-    </hgroup>
+  <div id="wrapper">   
 
-    <!-- Start Text -->
-    <p id="startText">
-      <img src="images/keyboardArrows.png" alt="keyboard arrows" />
-      Start playing by using <br />the keyboard arrows
-    </p>
-
-    <!-- Start Cave -->
-    <div id="startCave" class="cave"></div>   
-    <div id="startCaveHole" class="caveHole"></div>
-    <div id="startCaveHoleTrack" class="caveHoleTrack"></div>
-    
     <!-- Main Road -->
     <div id="mainRoad" class="road"></div>
     
     <!-- Me -->
     <div id="daniel"></div>
     
-    <!-- Stop Station 1 -->
-    <div id="treeLeft" class="treeBorder"></div>
-    <div id="treeLeft1" class="colObject leftColObject"></div>
-    <div id="treeLeft2" class="colObject leftColObject"></div>
+    <!-- Trees -->
+    <div id="treeHeaderLeft" class="colObject leftColObject"></div>
+    <div id="treeHeaderRight" class="colObject rightColObject"></div>
 
+
+    <div id="treeLeft" class="treeBorder"></div>
     <div id="treeRight" class="treeBorder"></div>
+
+    <div id="treeLeft1" class="colObject leftColObject"></div>
+
+<!--     <div id="treeLeft1" class="colObject leftColObject"></div>
+    <div id="treeLeft2" class="colObject leftColObject"></div>
+-->
+    
     <div id="treeRight1" class="colObject rightColObject"></div>
     <div id="treeRight2" class="colObject rightColObject"></div>
-    <div id="treeFooter" class="colObject leftColObject"></div>
 
-    <!-- View -->
-<!--    <div id="rightTrees" class="trees"></div>
-    <div id="leftGrass" class="grass"></div> -->
+    <div id="treeFooterLeft" class="colObject leftColObject"></div>
+    <div id="treeFooterRight" class="colObject rightColObject"></div>
+
+    <!-- Caves -->
+    <div id="cave1" class="colObject rightColObject"></div>
+    <div id="cave2" class="colObject leftColObject"></div>
+    <div id="cave3" class="colObject rightColObject"></div>
+    <!-- Rocks -->
+    <div id="rock1" class="colObject leftColObject"></div>
+    <div id="rock2" class="colObject leftColObject"></div>
+    <div id="rock3" class="colObject rightColObject"></div>
+
+    <!-- Path -->
+    <div id="path" class="road"></div>
+
+    <div id="longGrass1" class="road"></div>
+    <div id="longGrass2" class="road"></div>
 
     <!-- End Cave -->
     <div id="endSea" class="sea"></div>   
     <div id="endBridge" class="bridge"></div>
-    <!-- <div id="endCaveHoleGlow"></div> -->
+
     <div id="boat" class="isMoored">
       <div class="meSail"></div>
     </div>
@@ -132,19 +136,6 @@
       </div>
     </div>
 
-    <!-- Flowers -->
-    <div class="flowers r1"></div> 
-    <div class="flowers r2"></div>
-    <div class="flowers r3"></div>
-    <div class="flowers r4"></div>
-    <div class="flowers r5"></div>
-    <div class="flowers r6"></div>
-    <div class="flowers r7"></div>
-    <div class="flowers r8"></div>
-    <div class="flowers r9"></div>
-    <div class="flowers r10"></div>
-    <div class="flowers r11"></div>
-    <div class="flowers r12"></div>
     
   </div>
   

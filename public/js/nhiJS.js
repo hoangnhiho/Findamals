@@ -12,16 +12,15 @@ animalArray.push("kangaroo " + $('#kangarooExp').val());
 // animalArray.push("whale " + $('#whaleExp').val();
 // animalArray.push("turtle " + $('#turtleExp').val();
 // animalArray.push("shark " + $('#sharkExp').val();
-
-var globalURL = 'http://deco1800-g52.uqcloud.net/';
+var globalURL = window.location.origin +'/';
 var counter = 0;
-var stepAnimal = 10000; //change no. of steps before animal appears
+var stepAnimal = 200; //change no. of steps before animal appears
 var randnumber = 0;
 var tempString = "";
 var tempArray = [];
 var tempAnimal = "";
 var tempExp = "";
-var keyboardSpeed = 8;
+var keyboardSpeed = 20;
 var refreshIntervalId1;
 
 var Game = function() { 
@@ -404,7 +403,7 @@ Game.prototype = {
         if (object.left == null){//walking down, hitting collision on right side.
             if (($(window).width() - object.right - object.width - 27) <= elmLeft && elmLeft <= ($(window).width() - object.right-9)){
                 if (object.top-32 <= elmTop && elmTop <= object.bottom){
-                    console.log('blocked');
+                    //console.log('blocked');
                     return false;
                 }
             }
@@ -412,7 +411,7 @@ Game.prototype = {
         if(object.right == null){
             if ((object.left - 27) <= elmLeft && elmLeft <= (object.left + object.width - 9)){
                 if ((object.top-32) <= elmTop && elmTop <= object.bottom){
-                    console.log('blocked');
+                    //console.log('blocked');
                     return false;
                 }
             }

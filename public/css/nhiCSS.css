@@ -144,19 +144,32 @@ button
 .house {
 	cursor: default;
 }
+
+#treeHeaderLeft {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 37%;
+	height: 70px;
+	top: 0px;
+	left: 64px;
+}
 #treeLeft {
-	background: url(../images/tree.png) repeat;
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: 100%;
 	width: 64px;
-	height: 898px;
-	top: 100px;
+	height: 1000px;
+	top: 0px;
 	left: 0px;
 }
+
+
 #treeLeft1 {
-	background: url(../images/tree.png) repeat;
-	width: 100px;
-	height: 68px;
-	top: 280px;
-	left: 150px;
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 30%;
+	height: 70px;
+	top: 70px;
+	left: 64px;
 }
 #treeLeft2 {
 	background: url(../images/tree.png) repeat;
@@ -165,34 +178,60 @@ button
 	top: 794px;
 	left: 64px;
 }
+
+#treeFooterLeft {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 37%;
+	height: 70px;
+	top: 930px;
+	left: 64px;
+}
+
+#treeHeaderRight {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 37%;
+	height: 70px;
+	top: 0px;
+	right: 64px;
+}
 #treeRight {
-	background: url(../images/tree.png) repeat;
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: 100%;
 	width: 64px;
-	height: 898px;
-	top: 100px;
+	height: 1000px;
+	top: 0px;
 	right: 0px;
 }
 #treeRight1 {
-	background: url(../images/tree.png) repeat;
-	width: 256px;
-	height: 136px;
-	top: 100px;
-	right: 64px;
+	background: url(../images/terrain1/tree2.png) repeat;
+	background-size: auto 100%;
+	width: 55px;
+	height: 70px;
+	top: 200px;
+	right: 400px;
 }
 #treeRight2 {
-	background: url(../images/tree.png) repeat;
-	width: 512px;
-	height: 250px;
-	top: 280px;
-	right: 164px;
+	background: url(../images/terrain1/tree2.png) repeat;
+	background-size: auto 100%;
+	width: 55px;
+	height: 70px;
+	top: 600px;
+	right: 400px;
 }
-#treeFooter {
-	background: url(../images/tree.png) repeat;
-	width: 100%;
+
+#treeFooterRight {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 37%;
 	height: 70px;
 	top: 930px;
-	
+	right: 64px;
 }
+
+
+
 .treeBorder{
 	position: absolute;
 	z-index: 56;
@@ -200,4 +239,85 @@ button
 .colObject{
 	position: absolute;
 	z-index: 56;
+}
+
+#cave1 {
+	background: url(../images/terrain1/cave.png);
+	background-size: auto 100%;
+	width: 75px;
+	height: 75px;
+	top: 130px;
+	right: 100px;
+}
+#cave2 {
+	background: url(../images/terrain1/cave.png);
+	background-size: auto 100%;
+	width: 75px;
+	height: 75px;
+	top: 230px;
+	left: 100px;
+}
+#cave3 {
+	background: url(../images/terrain1/cave.png);
+	background-size: auto 100%;
+	width: 75px;
+	height: 75px;
+	top: 730px;
+	right: 100px;
+}
+
+#path {
+	background: url(../images/terrain1/path.png);
+	background-size: 100%;
+	width: 200px;
+	height: 100%;			
+	top: 0;
+	z-index: 8;
+	left: 50%;
+	margin: 0 0 0 -100px;			
+}
+
+#rock1 {
+	background: url(../images/terrain1/rock1.png) repeat;
+	background-size: 100%;
+	width: 35px;
+	height: 600px;
+	top: 200px;
+	left: 300px;
+}
+#rock2 {
+	background: url(../images/terrain1/rock1.png) repeat;
+	background-size: 100%;
+	width: 35px;
+	height: 300px;
+	top: 400px;
+	left: 200px;
+}
+#rock3 {
+	background: url(../images/terrain1/rock1.png) repeat;
+	background-size: 100%;
+	width: 35px;
+	height: 600px;
+	top: 200px;
+	right: 300px;
+}
+
+#longGrass1{
+	background: url(../images/terrain1/longGrass.png) repeat;
+	background-size: 10% auto;
+	width: 200px;
+	height: 500px;
+	top: 100px;
+	right: 70px;
+	z-index: 20;
+}
+
+#longGrass2{
+	background: url(../images/terrain1/longGrass.png) repeat;
+	background-size: 10% auto;
+	width: 200px;
+	height: 200px;
+	top: 700px;
+	right: 70px;
+	z-index: 20;
 }
