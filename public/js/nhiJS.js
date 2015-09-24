@@ -13,17 +13,16 @@ animalArray.push("kangaroo " + $('#kangarooExp').val());
 // animalArray.push("turtle " + $('#turtleExp').val();
 // animalArray.push("shark " + $('#sharkExp').val();
 
-// console.log(animalArray);
-// console.log(animalArray.length);
-
 var globalURL = 'http://deco1800-g52.uqcloud.net/';
 var counter = 0;
-var stepAnimal = 50; //change no. of steps before animal appears
+var stepAnimal = 10000; //change no. of steps before animal appears
 var randnumber = 0;
 var tempString = "";
 var tempArray = [];
 var tempAnimal = "";
 var tempExp = "";
+var keyboardSpeed = 8;
+var refreshIntervalId1;
 
 var Game = function() { 
   this.player = $("#daniel"); 
@@ -35,31 +34,15 @@ var Game = function() {
 Game.constructor = Game;
 
 Game.prototype = {
-
   init: function() {
     // Center the player relative to the window width
     this.player.css('left', this.leftPos + 'px');
 
     // Add an event handler
     this.eventsHandler(); 
-
-    // How To play lighbox
-    this.howToPlay();
-    
     $('nav a:first').addClass('current');
-    
-    // Puts flowers
-    //this.putFlowers();
-  },
 
-  howToPlay: function() {
-    var isFirstTime = localStorage.getItem('isYourFirstTime');
-    if(!isFirstTime) {
-      this.lightboxInit('#howToPlay', false);
-      localStorage.setItem('isYourFirstTime', false); 
-    }
   },
-
   eventsHandler: function() {
     var me = this;
     var player = this.player;
@@ -74,7 +57,7 @@ Game.prototype = {
     $('#arrowLeft').bind('touchstart, mousedown', function(event){
       if (!me.checkDist()){
         refreshIntervalId = setInterval(function(){
-              me.moveX(me.leftPos - 5, 'left');
+              me.moveX(me.leftPos - keyboardSpeed, 'left');
           },speed);
         event.preventDefault();
       }
@@ -86,7 +69,7 @@ Game.prototype = {
     $('#arrowRight').bind('touchstart, mousedown',function(event){
       if (!me.checkDist()){
         refreshIntervalId = setInterval(function(){
-          me.moveX(me.leftPos + 5, 'right');
+          me.moveX(me.leftPos + keyboardSpeed, 'right');
         },speed);
         event.preventDefault();
       }
@@ -98,7 +81,7 @@ Game.prototype = {
     $('#arrowUp').bind('touchstart, mousedown', function(event){
       if (!me.checkDist()){
         refreshIntervalId = setInterval(function(){
-          me.moveY(me.topPos - 5, 'up');
+          me.moveY(me.topPos - keyboardSpeed, 'up');
         },speed);
         event.preventDefault();
       }
@@ -110,7 +93,7 @@ Game.prototype = {
     $('#arrowDown').bind('touchstart, mousedown',function(event){
       if (!me.checkDist()){
         refreshIntervalId = setInterval(function(){
-          me.moveY(me.topPos + 5, 'down');
+          me.moveY(me.topPos + keyboardSpeed, 'down');
         },speed);
         event.preventDefault();
       }
@@ -119,9 +102,6 @@ Game.prototype = {
       if(player.attr('class') != '')
         player.removeAttr('class').destroy();
     }); 
-  
-
-    
     //=== End of Arrow Controls ===//
 
     $('.road, .bridge').unbind('click').bind('click', function(e){
@@ -162,50 +142,37 @@ Game.prototype = {
         me.teleport($(window).width() / 2 - me.player.width() / 2, 100);
         return;
       }
-      else if(target == '#howToPlay') {
-        me.lightboxInit(target, false);
-        return;
-      }
-            else if(target == '#portfolioHouse') {
-        me.lightboxInit(target, false);
-        return;
-      }
       window.location = $(this).attr('href');//nhi added code
     });
 
-
-
-    $(window).unbind('keydown').bind('keydown', function(event) {
-      if(me.topPos > parseFloat($('#startText').css('top'))) {
-        $('#startText').fadeOut('fast', function(){
-          $(this).remove();
-        });
-      }
+    $(window).on('keydown', function(event) {
       switch (event.keyCode) {
         case 37: // Left
-          if (!$('.modal').hasClass('in')){
-            me.moveX(me.leftPos - 5, 'left');
-            event.preventDefault();
-          }
-        break;
+            if (!$('.modal').hasClass('in')){
+                //refreshIntervalId1 = setInterval(function(){
+                    me.moveX(me.leftPos - keyboardSpeed, 'left');
+                //},speed);
+                event.preventDefault();
+            }
+            break;
 
         case 39: // Right
           if (!$('.modal').hasClass('in')){
-            me.moveX(me.leftPos + 5, 'right');
+            me.moveX(me.leftPos + keyboardSpeed, 'right');
             event.preventDefault();
           }
         break;
 
         case 38: // Up
           if (!$('.modal').hasClass('in')){
-            me.moveY(me.topPos - 5, 'up');
+            me.moveY(me.topPos - keyboardSpeed, 'up');
             event.preventDefault();
           }
         break;
 
         case 40: // Down
           if (!$('.modal').hasClass('in')){
-            me.moveY(me.topPos + 5, 'down');
+            me.moveY(me.topPos + keyboardSpeed, 'down');
             event.preventDefault();
           }
         break;
@@ -223,9 +190,11 @@ Game.prototype = {
         break;
       }
       me.revealMenu(me.topPos);
-    }).keyup(function(){
+    }).on('keyup',function(){
+        //clearInterval(refreshIntervalId1);
       if(player.attr('class') != '')
         player.removeAttr('class').destroy();
+
     }); 
 
     $("#boat").unbind('click').bind('click', function(){
@@ -238,9 +207,6 @@ Game.prototype = {
       me.hideNotificationBar();
     });
     
-    $("#dark, #closeLB").off('click').on('click', function(){
-      me.closeLightbox();
-    });
   },
 
   showNotificationsBar: function(notification) {
@@ -335,10 +301,10 @@ Game.prototype = {
     if(canMove) {
       if(this.topPos >= 200) {
         if(dir == 'up') {
-          $('html, body').animate({scrollTop: $(document).scrollTop() - 5}, 10);
+          $('html, body').animate({scrollTop: $(document).scrollTop() - keyboardSpeed}, 10);
         }
         else {
-          $('html, body').animate({scrollTop: $(document).scrollTop() + 5}, 10);
+          $('html, body').animate({scrollTop: $(document).scrollTop() + keyboardSpeed}, 10);
         }
       }
       this.topPos = y;
@@ -387,53 +353,6 @@ Game.prototype = {
       return Math.floor(Math.random() * (max));
   },
   
-  inHouse: function(elmLeft, elmTop) {
-    var player = this.player;
-    var isInHouse = [];
-    for(i = 0; i < houses.length; i++) {
-      if(elmTop > houses[i].top && elmTop < houses[i].top + houses[i].height) {
-        if(houses[i].left && houses[i].left != null) {
-          if(elmLeft < houses[i].left + houses[i].width && elmLeft > houses[i].left - player.width() && elmTop < houses[i].top + houses[i].height) {
-            if(elmLeft > houses[i].left + houses[i].door.left - player.width() / 2 && elmLeft < houses[i].left + houses[i].door.width + houses[i].door.left - player.width() / 2) {
-              isInHouse.push(true);
-              if(elmTop <= houses[i].top + houses[i].height - 70) {
-                //this.lightboxInit(houses[i].id, true);
-                //isInHouse.push(false);
-              }
-            }
-            else {
-              isInHouse.push(false);
-            }
-          }       
-          else {
-            isInHouse.push(true);//horizontal true
-          }
-        }
-        else if(houses[i].right && houses[i].right != null) {
-          if(elmLeft > $(window).width() - houses[i].width - houses[i].right - player.width() && elmLeft < $(window).width() - houses[i].right && elmTop < houses[i].top + houses[i].height) {
-            if(elmLeft > $(window).width() - houses[i].width - houses[i].right + houses[i].door.left - 10  && elmLeft < $(window).width() - houses[i].right - houses[i].width + houses[i].door.left + houses[i].door.width - 10) {
-              isInHouse.push(true);
-              if(elmTop <= houses[i].top + houses[i].height - 70) {
-                //this.lightboxInit(houses[i].id, true);
-                //isInHouse.push(false);
-              }
-            }
-            else {
-              isInHouse.push(false);
-            }
-          }
-          else {
-            isInHouse.push(true);
-          }
-        }
-        else {
-          isInHouse.push(true);
-        }
-        break;
-      }     
-    }
-    return isInHouse;
-  },
 
   isRoad: function(elmLeft, elmTop) {
     var player = this.player;
@@ -476,6 +395,30 @@ Game.prototype = {
 
     return isOnRoad;
   },
+  isCollision: function(elmLeft, elmTop){
+    var player = this.player;
+    var isInHouse = [];
+    var object;
+    for(i = 0; i < colObjects.length; i++) {
+        object = colObjects[i];
+        if (object.left == null){//walking down, hitting collision on right side.
+            if (($(window).width() - object.right - object.width - 27) <= elmLeft && elmLeft <= ($(window).width() - object.right-9)){
+                if (object.top-32 <= elmTop && elmTop <= object.bottom){
+                    console.log('blocked');
+                    return false;
+                }
+            }
+        }
+        if(object.right == null){
+            if ((object.left - 27) <= elmLeft && elmLeft <= (object.left + object.width - 9)){
+                if ((object.top-32) <= elmTop && elmTop <= object.bottom){
+                    console.log('blocked');
+                    return false;
+                }
+            }
+        }
+    }
+  },
 
   canImove: function(moveLeft, moveTop, teleported) {
     var player = this.player;
@@ -486,13 +429,10 @@ Game.prototype = {
       return false;
     }
     
-    // Check if the player is around a house
-    var isHouse = this.inHouse(elmLeft, elmTop);     
-          console.log(isHouse + ' ' + counter); 
-    if(isHouse.indexOf(false) >= 0) {
+    var isColl =this.isCollision(elmLeft, elmTop);
+     if(isColl === false) {
       return false;
-    }
-
+    }       
     var isRoad = this.isRoad(elmLeft, elmTop);
     if(isRoad === false) {
       return false;
@@ -534,74 +474,6 @@ Game.prototype = {
     }
     else {
       return;
-    }
-  },
-
-  lightboxInit:  function(elm, effectMenu) {
-    var me = this;
-    if($("#dark").length < 1) {     
-      if(effectMenu) {
-        // Update the current menu
-        $('nav a').removeClass('current');
-        $('nav a[href="' + elm + '"]').addClass('current'); 
-      }
-      
-      // Get the relevant content
-      var content = $(elm).find('.lightbox').html();
-
-      // Creates the lightbox
-      $('<div id="dark"></div>').appendTo('body').fadeIn();
-      $('<div id="lightbox">' + content + '<span id="closeLB">x</span></div>').insertAfter("#dark").delay(1000).fadeIn();
-
-      $(window).unbind('keydown');
-      $('#wrapper').unbind('click');
-      
-      $(window).bind('keydown', function(e){
-        if(e.keyCode == 27) {
-          me.closeLightbox();
-        }
-      });
-    }   
-  },
-  
-  closeLightbox: function() {
-    var me = this;
-    $('#dark, #lightbox').fadeOut('fast', function(){
-      var canMove = me.canImove(me.leftPos, me.topPos + 80);
-      if(canMove) {       
-        me.startMoving('down', 1);
-        me.player.animate({'top': me.topPos + 80}, function(){
-          me.player.removeAttr('class').destroy();
-        });
-        me.topPos = me.topPos + 80;
-      }
-      $('#dark, #lightbox').remove();
-      me.eventsHandler();
-      $('html, body').animate({
-        scrollTop: me.topPos - 270
-      });
-    });
-  },
-
-  putFlowers: function() {
-    var me = this;
-    var height = $("#wrapper").height();
-    var width = $(window).width();
-    for(var i = 0; i < 20; i++) {
-      var x = Math.floor((Math.random() * width) + 1);
-      var y = Math.floor((Math.random() * height) + 1);
-      var canIput = [];
-      canIput.push(me.isRoad(x, y));
-      canIput.push(me.inHouse(x, y) != '' ?  me.inHouse(x, y) : true);
-      if(canIput.indexOf(false) >= 0) {
-        $('<div class="flowers"></div>').appendTo('#wrapper').css({
-          top: y,
-          left: x
-        });
-      }
-      else {
-        i--;
-      }
     }
   }
 

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta name="viewport" charset="utf-8">
+    <meta name="viewport" charset="utf-8"content="width=1024, initial-scale=1.5">
       <title>Findamals</title>
         <link href="http://fonts.googleapis.com/css?family=Lekton" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Molengo" rel="stylesheet" type="text/css">
             <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" /> 
         <link type="text/css" rel="stylesheet" href="/css/reset.css" />    
         <link type="text/css" rel="stylesheet" href="/css/style.css" /> 
         <link type="text/css" rel="stylesheet" href="/css/nhiCSS.css" /> 
@@ -26,7 +26,7 @@
         <script src="/js/nhiDataJS.js" type="text/javascript"></script> 
         @include('include.hiddenVariables') 
         <script src="/js/nhiJS.js" type="text/javascript"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap.min.js" type="text/javascript"></script>
 
 
 
@@ -91,21 +91,19 @@
     
     <!-- Main Road -->
     <div id="mainRoad" class="road"></div>
-<!--    <div id="leftFence"></div>
-    <div id="rightFence"></div> -->
     
     <!-- Me -->
     <div id="daniel"></div>
     
     <!-- Stop Station 1 -->
-    <div id="treeLeft" class="house"></div>
-    <div id="treeLeft1" class="house"></div>
-    <div id="treeLeft2" class="house"></div>
+    <div id="treeLeft" class="treeBorder"></div>
+    <div id="treeLeft1" class="colObject leftColObject"></div>
+    <div id="treeLeft2" class="colObject leftColObject"></div>
 
-    <div id="treeRight" class="house"></div>
-    <div id="treeRight1" class="house"></div>
-    <div id="treeRight2" class="house"></div>
-    <div id="treeFooter" class="house"></div>
+    <div id="treeRight" class="treeBorder"></div>
+    <div id="treeRight1" class="colObject rightColObject"></div>
+    <div id="treeRight2" class="colObject rightColObject"></div>
+    <div id="treeFooter" class="colObject leftColObject"></div>
 
     <!-- View -->
 <!--    <div id="rightTrees" class="trees"></div>

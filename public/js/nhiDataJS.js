@@ -1,9 +1,40 @@
-function getDistVal(element, type) {
-	if (type == 'width'){
-		return element.width;
-	}
-    //return p1 * p2;              // The function returns the product of p1 and p2
-}
+
+
+var colObjects=[];
+var tempObject;
+var tempRight;
+var tempLeft;
+$( window ).ready(function() {
+	$('.colObject').each(function(i, obj) {
+	    //console.log($(this).attr('id') + ": " + $(this).position().top);
+		if ($(this).hasClass( "leftColObject" )){
+			tempRight = null;
+			tempLeft = $(this).position().left;
+		}else if ($(this).hasClass("rightColObject")){
+			tempRight = $(this).css('right');
+			tempRight = parseInt(tempRight.substring(0, tempRight.length - 2));
+			tempLeft =null;
+		}
+
+		tempObject = {
+			width: $(this).width(),
+			height: $(this).height(),
+			top: $(this).position().top,
+			right: tempRight,
+			left: tempLeft,
+			bottom: $(this).position().top + $(this).height()
+		}
+		colObjects.push(tempObject);
+	});
+	//console.log(colObjects);
+});
+
+
+
+
+
+
+
 
 var houses = [ 
 	{//treeRight1
@@ -82,6 +113,7 @@ var houses = [
 		}
 	}
 ];
+
 
 var roads = [
 	{

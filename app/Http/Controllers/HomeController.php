@@ -115,9 +115,9 @@ class HomeController extends Controller {
     public static function getTerrainValue(){
         $userData = Auth::user();
         $totalExp = self::totalExp();
-        if ($totalExp>=80) {
+        if ($totalExp>=10) {
             return 3;
-        } elseif ($totalExp>=40) {
+        } elseif ($totalExp>=5) {
             return 2;
         } else {
             return 1;
