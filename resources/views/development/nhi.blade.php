@@ -87,10 +87,6 @@
     <div id="treeRight" class="treeBorder"></div>
 
     <div id="treeLeft1" class="colObject leftColObject"></div>
-
-<!--     <div id="treeLeft1" class="colObject leftColObject"></div>
-    <div id="treeLeft2" class="colObject leftColObject"></div>
--->
     
     <div id="treeRight1" class="colObject rightColObject"></div>
     <div id="treeRight2" class="colObject rightColObject"></div>
@@ -122,52 +118,13 @@
     </div>
     <div id="contact">
       <h1>Stay In Touch</h1>
-      <div id="mysocial">
-        <a href="http://il.linkedin.com/" target="_blank"><img src="images/social/linkedin.png" alt="LinkedIn" /></a>
-        <a href="https://plus.google.com/" target="_blank"><img src="images/social/google.png" alt="Google+" /></a>
-        <a href="http://twitter.com/" target="_blank"><img src="images/social/twitter.png" alt="Twitter" /></a>
-        <a href="http://facebook.com/" target="_blank"><img src="images/social/facebook.png" alt="Facebook" /></a>
-        <a href="mailto:fake@fakemail.com"><img src="images/social/gmail.png" alt="Gmail" /></a>
-      </div>
       <p>Feel free to leave your comment about anything you want.</p>
       <div id="comments">
-
         <noscript>Please enable JavaScript to view the <a>comments powered by Disqus.</a></noscript>
       </div>
     </div>
 
     
-  </div>
-  
-  <div id="howToPlay">
-    <div class="lightbox">
-      <div class="inner howtoplay">
-        <h2>How To Play?</h2>
-        <article>         
-          <div id="htpArrows" class="box clearfix">
-            <div class="icon"></div>
-            <p>Move by using the keyboard arrows</p>
-          </div>
-          <div id="htpHouses" class="box clearfix">
-            <div class="icon"></div>
-            <p>Enter houses to get some information about me and my projects</p>
-          </div>
-          <div id="htpMouse" class="box clearfix">
-            <div class="icon"></div>
-            <p>Teleport yourself directly to a specific point in the portfolio by left click</p>
-          </div>
-          <div id="htpEsc" class="box clearfix">
-            <div class="icon"></div>
-            <p>Press the "Esc" key to leave buildings and close the notifications bar</p>
-          </div>
-          <div id="htpShare" class="box clearfix">
-            <div class="icon"></div>
-            <p>Share me with your friends :)</p> 
-          </div>
-        </article>        
-      </div>
-      <!--<div style="text-align: center; margin-top: 10px;"><a href="http://compareninja.com" target="_blank"><img src="http://danielsternlicht.com/images/cnbanner.png"></a></div>-->
-    </div>
   </div>
 
 <img src="../images/wood.png" style="display: none;" />
