@@ -10,6 +10,7 @@
   <link type="text/css" rel="stylesheet" href="/css/reset.css" />    
   <link type="text/css" rel="stylesheet" href="/css/baseTerrainCSS.css" /> 
   <link type="text/css" rel="stylesheet" href="/css/terrain1CSS.css" /> 
+  <link type="text/css" rel="stylesheet" href="/css/exploreModalCSS.css" /> 
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
