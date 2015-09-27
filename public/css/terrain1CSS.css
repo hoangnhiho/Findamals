@@ -1,4 +1,4 @@
-
+/* Background image */
 #wrapper {
 	border: 1px solid #c7c7c7;
 	margin: 0 auto;
@@ -9,6 +9,8 @@
 	overflow: hidden;
 }
 
+/* ==== OBJECTS BELOW ====*/
+/* Trees Objects */
 #treeHeaderLeft {
 	background: url(../images/terrain1/tree1.png) repeat;
 	background-size: auto 100%;
@@ -99,7 +101,7 @@
 	z-index: 56;
 }
 
-
+/* Cave objects */
 #cave1 {
 	background: url(../images/terrain1/cave.png);
 	background-size: auto 100%;
@@ -125,6 +127,7 @@
 	right: 100px;
 }
 
+/* Path in middel */
 #path {
 	background: url(../images/terrain1/path.png);
 	background-size: 100%;
@@ -136,6 +139,7 @@
 	margin: 0 0 0 -100px;			
 }
 
+/* Rocks Objects */
 #rock1 {
 	background: url(../images/terrain1/rock1.png) repeat;
 	background-size: 100%;
@@ -161,6 +165,7 @@
 	right: 300px;
 }
 
+/* Long Grass Objects */
 #longGrass1{
 	background: url(../images/terrain1/longGrass.png) repeat;
 	background-size: 10% auto;

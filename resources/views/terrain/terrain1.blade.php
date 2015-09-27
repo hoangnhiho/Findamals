@@ -68,7 +68,8 @@
     <!-- Me -->
     <div id="daniel"></div>
 
-    <!-- OBJECTS BELOW -->
+	<!-- ====All OBJECTS BELOW==== -->
+    <!-- Collision OBJECTS BELOW -->
     <!-- Trees -->
     <div id="treeHeaderLeft" class="colObject leftColObject"></div>
     <div id="treeHeaderRight" class="colObject rightColObject"></div>
@@ -93,14 +94,17 @@
     <div id="rock1" class="colObject leftColObject"></div>
     <div id="rock2" class="colObject leftColObject"></div>
     <div id="rock3" class="colObject rightColObject"></div>
-
+	
+	<!-- Phaze OBJECTS BELOW -->
     <!-- Path -->
     <div id="path" class="phazeObject"></div>
 
+    <!-- Grass -->
     <div id="longGrass1" class="phazeObject"></div>
     <div id="longGrass2" class="phazeObject"></div>
 
-    <!-- End of Objects -->
+    <!-- ====End of ALL Objects==== -->
+
     <!-- Sea -->
     <div id="endSea" class="sea"></div>   
     <div id="endBridge" class="bridge"></div>
