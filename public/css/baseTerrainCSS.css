@@ -1,0 +1,743 @@
+@font-face {
+    font-family: 'SilkscreenNormal';
+    src: url('../fonts/slkscr-webfont.eot');
+    src: url('../fonts/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/slkscr-webfont.woff') format('woff'),
+         url('../fonts/slkscr-webfont.ttf') format('truetype'),
+         url('../fonts/slkscr-webfont.svg#SilkscreenNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+ 
+@font-face {
+    font-family: 'SilkscreenBold'; 
+    src: url('../fonts/slkscrb-webfont.eot');
+    src: url('../fonts/slkscrb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/slkscrb-webfont.woff') format('woff'),
+         url('../fonts/slkscrb-webfont.ttf') format('truetype'),
+         url('../fonts/slkscrb-webfont.svg#SilkscreenBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SilkscreenExpandedNormal';
+    src: url('../fonts/slkscre-webfont.eot');
+    src: url('../fonts/slkscre-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/slkscre-webfont.woff') format('woff'),
+         url('../fonts/slkscre-webfont.ttf') format('truetype'),
+         url('../fonts/slkscre-webfont.svg#SilkscreenExpandedNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SilkscreenExpandedBold';
+    src: url('../fonts/slkscreb-webfont.eot');
+    src: url('../fonts/slkscreb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/slkscreb-webfont.woff') format('woff'),
+         url('../fonts/slkscreb-webfont.ttf') format('truetype'),
+         url('../fonts/slkscreb-webfont.svg#SilkscreenExpandedBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+		
+		FONTS DEMO FOR USE
+		-------------------
+
+		h1.fontface {font: 60px/68px 'SilkscreenNormal', Arial, sans-serif;letter-spacing: 0;}
+
+		p.style1 {font: 18px/27px 'SilkscreenNormal', Arial, sans-serif;}
+		p.style2 {font: 18px/27px 'SilkscreenBold', Arial, sans-serif;}
+		p.style3 {font: 18px/27px 'SilkscreenExpandedNormal', Arial, sans-serif;}
+		p.style4 {font: 18px/27px 'SilkscreenExpandedBold', Arial, sans-serif;}
+
+*/
+
+ul,p,dl,hr,h1,h2,h3,h4,h5,h6,pre,table,address,fieldset, blockquote {
+	margin-bottom: 20px;
+}
+
+.clear {
+	float: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	display: block;
+	clear: both;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+
+body {
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	font: 11px/14px 'SilkscreenBold', Arial, sans-serif;
+}
+
+nav {
+	position: fixed;
+	/*top: -85px;*/
+	top: 0;
+	height: 55px;
+	left: 50%;
+	width: 960px;
+	margin: 10px 0 0 -480px;
+	text-align: center;	
+	color: #fff;
+	z-index: 800;
+	border: 3px solid #ffffff;
+	border-radius: 30px;		
+	background: #4f2e26;
+	background: -moz-linear-gradient(top,  #4f2e26 0%, #2A1410 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4f2e26), color-stop(100%,#2A1410));
+	background: -webkit-linear-gradient(top,  #4f2e26 0%,#2A1410 100%);
+	background: -o-linear-gradient(top,  #4f2e26 0%,#2A1410 100%);
+	background: -ms-linear-gradient(top,  #4f2e26 0%,#2A1410 100%);
+	background: linear-gradient(top,  #4f2e26 0%,#2A1410 100%);	
+	text-shadow: 0px -1px 0px rgba(000,000,000,0.2), 0px 1px 0px rgba(255,255,255,0.3);		
+	box-shadow: inset 0px 0px 1px rgba(014,138,196,1), 0 2px 5px rgba(0,0,0,0.4);
+	-webkit-transition: top 0.4s ease-in-out 0s;
+	-moz-transition: top 0.4s ease-in-out 0s;
+	transition: top 0.4s ease-in-out 0s;
+}
+
+nav.show {
+	top: 0;
+}
+
+nav ul {
+	width: 100%;
+	padding-left: 30px;
+}
+
+nav a {
+	float: left;
+	padding: 20px;
+	color: #fff;
+	text-decoration: none;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	text-shadow: 1px 1px 0 #000;
+}
+
+nav a:hover, nav a.current {
+	background: rgba(0,0,0,0.3);
+
+	text-decoration: none;
+}
+
+nav li.last a {
+	float: right;
+	margin-right: 30px;
+	padding: 10px;
+	margin: 10px 45px 10px 10px;
+}
+
+nav li.last a:hover {
+	border-radius: 50em;
+}
+
+#wrapper {
+	border: 1px solid #c7c7c7;
+	margin: 0 auto;
+	width: 100%;
+	height: 2500px;
+	position: relative;
+	background: url(../images/bg.png) repeat;
+	overflow: hidden;
+}
+
+
+
+@-webkit-keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;	
+	}
+}
+
+/* View */
+
+.sea {
+	position: absolute;
+	left: 0;
+	background: url(../images/sea.png) repeat;
+	width: 100%;
+	z-index: 50;
+}
+
+.bridge {
+	position: absolute;
+	left: 50%;
+	width: 210px;
+	background: url(../images/bridge.png) repeat-y;
+	margin: 0 0 0 -105px;
+	z-index: 52;
+}
+
+
+#endSea {
+	bottom: 0;
+	height: 800px;
+	-webkit-animation: seamove 6s linear infinite;
+	-moz-animation: seamove 6s linear infinite;
+	animation: seamove 6s linear infinite;
+}
+
+@-webkit-keyframes seamove {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 65px 0;
+	}
+}
+
+@-moz-keyframes seamove {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 65px 0;
+	}
+}
+
+@-keyframes seamove {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 65px 0;
+	}
+}
+
+#endSea::after {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	background: url(../images/seaStart.png) repeat center bottom;
+	height: 9px;
+	width: 100%;
+	z-index: 51;
+	content: "";
+	box-shadow: 0 4px 3px rgba(0,0,0,0.3);
+}
+
+
+@-webkit-keyframes glow {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	35% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	76% {
+		opacity: 1;
+	}
+	79% {
+		opacity: 0;
+	}
+	84% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes glow {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	35% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	76% {
+		opacity: 1;
+	}
+	79% {
+		opacity: 0;
+	}
+	84% {
+		opacity: 1;
+	}
+}
+
+@-keyframes glow {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	35% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	76% {
+		opacity: 1;
+	}
+	79% {
+		opacity: 0;
+	}
+	84% {
+		opacity: 1;
+	}
+}
+
+#endBridge {
+	bottom: 600px;
+	height: 200px;
+}
+
+#endBridge::after {
+	position: absolute;
+	bottom: -16px;
+	left: 0;
+	background: url(../images/endCaveAfterBG.png) repeat center bottom;
+	height: 16px;
+	width: 100%;
+	z-index: 51;
+	content: "";
+}
+
+#boat {
+	position: absolute;
+	z-index: 53;
+	bottom: 500px;
+	left: 50%;
+	width: 420px;
+	margin-left: -210px;
+	height: 194px;
+	cursor: pointer;
+	background: url(../images/boat.png) no-repeat center;	
+	-webkit-transition: all 5s linear 1.5s;
+	-moz-transition: all 5s linear 1.5s;
+	transition: all 5s linear 1.5s;
+}
+
+#boat.sail {
+	left: -20%;
+}
+
+#boat.sailBack {
+	left: 100%;
+	margin-left: 0;
+}
+
+#boat .meSail {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	background: url(../images/walkingMe.png) no-repeat 0 -32px;
+	top: 50px;
+	left: 70px;
+	display: none;
+	z-index: 54;
+}
+
+#boat .meSail::after {
+	background: rgba(0, 0, 0, 0.3);
+	width: 16px;
+	height: 19px;
+	content: "";
+	bottom: -8px;
+	left: 8px;
+	position: absolute;
+	border-radius: 75px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	z-index: 12;
+}
+
+#contact {
+	position: absolute;
+	bottom: 40px;
+	height: 500px;
+	left: 50%;
+	width: 800px;
+	margin-left: -400px;
+	z-index: 51;	
+	font-family: 'Lekton', Helvetica, Arial, sans-serif;
+	color: #fff;
+	opacity: 0;
+	-webkit-transition: all 1s linear 2.5s;
+	-moz-transition: all 1s linear 2.5s;
+	transition: all 1s linear 2.5s;
+}
+
+#contact > p {	
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+
+#contact.show {
+	opacity: 1;
+}
+
+#contact h1 {
+	font-family: 'SilkscreenNormal';
+	font-size: 52px;
+	margin-bottom: 40px;
+	text-shadow: 2px 2px 1px rgba(0,0,0,0.6);
+}
+
+
+#contact > div#comments {
+	background: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	position: relative;
+	color: #303030;
+	height: 300px;
+	overflow-y: auto;
+	font-size: 12px;
+	font-family: helvetica;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+#contact > div#comments a {
+	color: #909090;
+}
+
+#contact > div#comments a:hover {
+	color: #404040;
+}
+
+
+
+
+
+/* Me */
+
+#daniel {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	background: url(../images/walkingMe.png) no-repeat -32px 0;
+	top: 20px;
+	z-index: 53;
+}
+
+#daniel::after {
+	background: rgba(0, 0, 0, 0.3);
+	width: 16px;
+	height: 19px;
+	content: "";
+	bottom: -8px;
+	left: 8px;
+	position: absolute;
+	border-radius: 75px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	z-index: 12;
+}
+
+#daniel.down {			
+	background: url(../images/walkingMe.png) no-repeat -32px 0;
+}
+
+#daniel.up {
+	background: url(../images/walkingMe.png) 0 -96px;
+}
+
+#daniel.right {
+	background: url(../images/walkingMe.png) 0 -64px;
+}
+
+#daniel.left {
+	background: url(../images/walkingMe.png) 0 -32px;
+}
+
+
+/* Messages */
+
+#notifications {
+	position: fixed;
+	bottom: -60px;
+	left: 10%;
+	width: 80%;
+	height: 50px;
+	box-shadow: 0 -1px 10px rgba(0,0,0,0.5);
+	border-radius: 5px 5px 0 0;
+	z-index: 790;
+	text-shadow: 1px 1px 0 #fff;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e0e3e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e0e3e5));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e0e3e5 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#e0e3e5 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e0e3e5 100%);
+	background: linear-gradient(top,  #ffffff 0%,#e0e3e5 100%);	
+	-webkit-transition: bottom 0.4s ease-in-out 0s;
+	-moz-transition: bottom 0.4s ease-in-out 0s;
+	transition: bottom 0.4s ease-in-out 0s;
+}
+
+#notifications .inner {
+	padding: 20px 40px 20px 50px;
+}
+
+#notifications img {
+	height: 20px;
+	position: absolute;
+	left: 20px;
+	top: 15px;
+}
+
+#notifications .close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: #a7a7a7;
+	cursor: pointer;
+}
+
+#notifications .close:hover {
+	color: #444;
+}
+
+/* Loading game */
+
+#loadingGame {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #f7f7f7;
+	z-index: 999;
+}
+
+#innerLoading {
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -100px;
+	text-align: center;
+	font-family: 'Lekton', Helvetica, Arial, sans-serif;
+}
+
+#innerLoading p {
+	margin-bottom: 5px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#innerLoading span {
+	color: #909090;
+	font-size: 12px;
+}
+
+#innerLoading .me {
+	width: 32px;
+	height: 32px;
+	background: url(../images/walkingMe.png) no-repeat 0 0;
+	margin: 0 auto 10px;
+}
+
+#share {
+	position: fixed;
+	z-index: 700;
+	right: 0;
+	top: 20%;
+	width: 70px;
+	padding: 10px 5px;
+	background: #f7f7f7;
+	box-shadow: -1px 2px 3pc rgba(0,0,0,0.4);
+	border: 1px solid #e7e7e7;
+	text-align: center;
+	border-radius: 5px 0 0 5px;
+}
+
+/* IE Page */
+
+body.ie {
+	overflow: auto;
+}
+
+.ie #contactMeIE {
+	position: relative;
+}
+
+.ie #mysocial a {
+	background: #222 !important;
+}
+
+
+
+@viewport {
+    width: extend-to-zoom 1024px;
+    min-zoom: 0.25;
+    max-zoom: 5;
+}
+button
+{
+	-ms-touch-action: manipulation;	/* IE10  */
+	touch-action: manipulation;		/* IE11+ */
+}
+.gamePad {
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	z-index: 790;
+	border: none;
+
+/*	box-shadow: 0 -1px 10px rgba(0,0,0,0.5);
+*/}
+
+.gamepage:active {
+	border: none;
+	box-shadow:none;
+}
+#arrowUp {
+	left: 150px;
+	bottom: 150px;
+	background: url(../images/arrow-up.png) no-repeat;
+}
+#arrowDown {
+	left: 150px;
+	bottom: 60px;
+	background: url(../images/arrow-down.png) no-repeat;
+}
+#arrowLeft {
+	left: 60px;
+	bottom: 60px;
+	background: url(../images/arrow-left.png) no-repeat;
+}
+#arrowRight {
+	left: 240px;
+	bottom: 60px;
+	background: url(../images/arrow-right.png) no-repeat;
+}
+
+#mainRoad {
+	position:absolute;
+	width:auto;
+	height: 100%;
+	left:64px;
+	right:64px;
+	top  :0px;	
+	background: url(../images/bg.png) repeat;	
+	margin:0 0 0 0;	
+}
+
+.phazeObject {
+	position: absolute;
+	background: url(../images/road.png) repeat;
+}
+.phazeObject.side {
+	width: 50%;
+	height: 200px;
+	z-index: 1;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.phazeObject.side::before {
+	width: 100%;
+	top: -15px;
+	left: 0;
+	height: 15px;
+	background: url(../images/fenceHor.png) repeat-x top;
+	content: "";
+	position: absolute;
+}
+
+.phazeObject.side::after {
+	width: 100%;
+	bottom: -15px;
+	left: 0;
+	height: 15px;
+	background: url(../images/fenceHor.png) repeat-x top;
+	content: "";
+	position: absolute;
+}
+
+
+
+.modal-backdrop{
+	z-index: 0;
+}
+
+.colObject{
+	position: absolute;
+	z-index: 56;
+}

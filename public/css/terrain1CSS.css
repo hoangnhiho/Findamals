@@ -1,58 +1,4 @@
 
-button
-{
-	-ms-touch-action: manipulation;	/* IE10  */
-	touch-action: manipulation;		/* IE11+ */
-}
-.gamePad {
-	position: fixed;
-	width: 80px;
-	height: 80px;
-	z-index: 790;
-	border: none;
-
-/*	box-shadow: 0 -1px 10px rgba(0,0,0,0.5);
-*/}
-
-.gamepage:active {
-	border: none;
-	box-shadow:none;
-}
-#arrowUp {
-	left: 150px;
-	bottom: 150px;
-	background: url(../images/arrow-up.png) no-repeat;
-}
-#arrowDown {
-	left: 150px;
-	bottom: 60px;
-	background: url(../images/arrow-down.png) no-repeat;
-}
-#arrowLeft {
-	        -moz-user-select: none; 
-        -khtml-user-select: none; 
-        -webkit-user-select: none; 
-        -o-user-select: none; 
-	left: 60px;
-	bottom: 60px;
-	background: url(../images/arrow-left.png) no-repeat;
-}
-#arrowRight {
-	left: 240px;
-	bottom: 60px;
-	background: url(../images/arrow-right.png) no-repeat;
-}
-
-#mainRoad {
-	position:absolute;
-	width:auto;
-	left:185px;
-	right:185px;
-	top  :0px;	
-	background: url(../images/bg.png) repeat;	
-	margin:0 0 0 0;	
-}
-
 #wrapper {
 	border: 1px solid #c7c7c7;
 	margin: 0 auto;
@@ -63,105 +9,174 @@ button
 	overflow: hidden;
 }
 
-#startCave {
-	top: 0;
-	height: 75px;
+#treeHeaderLeft {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 37%;
+	height: 70px;
+	top: 0px;
+	left: 64px;
 }
-
-#startCave::after {
-	position: absolute;
-	bottom: -23px;
-	left: 0;
-	background: url(../images/caveBottomBG.png) repeat;
-	height: 32px;
-	width: 100%;
-	z-index: 51;
-	content: "";
-	box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-}
-
-#startCaveHole {
-	top: 69px;
-	border-bottom: none;
-	height: 28px;
-}
-
-#startCaveHoleTrack {
-	top: 0;
-	height: 68px;
-}
-
-/* Start Text */
-
-#startText {
-	position: absolute;
-	top: 100px;
-	left: 50%;
-	width: 200px;
-	margin: 0 0 0 -96px;
-	z-index: 20;
-	text-align: center;
-	-webkit-animation: fade 2.5s ease infinite;
-	-moz-animation: fade 2.5s ease infinite;
-	animation: fade 2.5s ease infinite;
-}
-
-#startText img {
-	width: 80px;
-	display: block;
-	margin: 0 auto 5px;
-	padding-right: 4px;
-}
-
-.flowers {
-	position: absolute;
-	z-index: 49;
-	width: 32px;
-	height: 28px;
-	background: url(../images/flowers.png) repeat left top;
-}
-
-.trees {
-	position: absolute;
-	z-index: 49;
-	width: 128px;
-	height: 230px;
-	background: url(../images/tree35.png) repeat left top; 
-}
-
-.trees.t1 {
-	top: 350px;
-	left: 300px;
-}
-.trees.t2 {
-	top: 200px;
-	right: 200px;
-}
-
-.modal-backdrop{
-	z-index: 0;
-}
-.house {
-	cursor: default;
-}
-#aboutHouse {
-	background: url(../images/tree.png) repeat;
-	width: 190px;
-	height: 898px;
-	top: 100px;
+#treeLeft {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: 100%;
+	width: 64px;
+	height: 1000px;
+	top: 0px;
 	left: 0px;
 }
-#servicesHouse {
+
+
+#treeLeft1 {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 30%;
+	height: 70px;
+	top: 70px;
+	left: 64px;
+}
+#treeLeft2 {
 	background: url(../images/tree.png) repeat;
-	width: 190px;
-	height: 898px;
-	top: 100px;
+	width: 192px;
+	height: 136px;
+	top: 794px;
+	left: 64px;
+}
+
+#treeFooterLeft {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 37%;
+	height: 70px;
+	top: 930px;
+	left: 64px;
+}
+
+#treeHeaderRight {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 37%;
+	height: 70px;
+	top: 0px;
+	right: 64px;
+}
+#treeRight {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: 100%;
+	width: 64px;
+	height: 1000px;
+	top: 0px;
 	right: 0px;
 }
-#trees1 {
-	background: url(../images/tree.png) repeat;
-	width: 100%;
-	height: 100px;
-	top: 898px;
-	
+#treeRight1 {
+	background: url(../images/terrain1/tree2.png) repeat;
+	background-size: auto 100%;
+	width: 55px;
+	height: 70px;
+	top: 200px;
+	right: 400px;
+}
+#treeRight2 {
+	background: url(../images/terrain1/tree2.png) repeat;
+	background-size: auto 100%;
+	width: 55px;
+	height: 70px;
+	top: 600px;
+	right: 400px;
+}
+
+#treeFooterRight {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 37%;
+	height: 70px;
+	top: 930px;
+	right: 64px;
+}
+
+.treeBorder{
+	position: absolute;
+	z-index: 56;
+}
+
+
+#cave1 {
+	background: url(../images/terrain1/cave.png);
+	background-size: auto 100%;
+	width: 75px;
+	height: 75px;
+	top: 130px;
+	right: 100px;
+}
+#cave2 {
+	background: url(../images/terrain1/cave.png);
+	background-size: auto 100%;
+	width: 75px;
+	height: 75px;
+	top: 230px;
+	left: 100px;
+}
+#cave3 {
+	background: url(../images/terrain1/cave.png);
+	background-size: auto 100%;
+	width: 75px;
+	height: 75px;
+	top: 730px;
+	right: 100px;
+}
+
+#path {
+	background: url(../images/terrain1/path.png);
+	background-size: 100%;
+	width: 200px;
+	height: 100%;			
+	top: 0;
+	z-index: 8;
+	left: 50%;
+	margin: 0 0 0 -100px;			
+}
+
+#rock1 {
+	background: url(../images/terrain1/rock1.png) repeat;
+	background-size: 100%;
+	width: 35px;
+	height: 600px;
+	top: 200px;
+	left: 300px;
+}
+#rock2 {
+	background: url(../images/terrain1/rock1.png) repeat;
+	background-size: 100%;
+	width: 35px;
+	height: 300px;
+	top: 400px;
+	left: 200px;
+}
+#rock3 {
+	background: url(../images/terrain1/rock1.png) repeat;
+	background-size: 100%;
+	width: 35px;
+	height: 600px;
+	top: 200px;
+	right: 300px;
+}
+
+#longGrass1{
+	background: url(../images/terrain1/longGrass.png) repeat;
+	background-size: 10% auto;
+	width: 200px;
+	height: 500px;
+	top: 100px;
+	right: 70px;
+	z-index: 20;
+}
+
+#longGrass2{
+	background: url(../images/terrain1/longGrass.png) repeat;
+	background-size: 10% auto;
+	width: 200px;
+	height: 200px;
+	top: 700px;
+	right: 70px;
+	z-index: 20;
 }

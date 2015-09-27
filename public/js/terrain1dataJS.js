@@ -1,71 +1,126 @@
+
+
+var colObjects=[];
+var tempObject;
+var tempRight;
+var tempLeft;
+$( window ).ready(function() {
+	$('.colObject').each(function(i, obj) {
+	    //console.log($(this).attr('id') + ": " + $(this).position().top);
+		if ($(this).hasClass( "leftColObject" )){
+			tempRight = null;
+			tempLeft = $(this).position().left;
+		}else if ($(this).hasClass("rightColObject")){
+			tempRight = $(this).css('right');
+			tempRight = parseInt(tempRight.substring(0, tempRight.length - 2));
+			tempLeft =null;
+		}
+
+		tempObject = {
+			width: $(this).width(),
+			height: $(this).height(),
+			top: $(this).position().top,
+			right: tempRight,
+			left: tempLeft,
+			bottom: $(this).position().top + $(this).height()
+		}
+		colObjects.push(tempObject);
+	});
+	//console.log(colObjects);
+});
+
+
+
+
+
+
+
+
 var houses = [ 
-	{
-		name: 'About House',
-		id: '#aboutHouse',
+	{//treeRight1
+		name: ' ',
+		id: '#',
+		width: 315,
+		height: 136,
+		top: 100,//css = 794
+		left: null,
+		right: 1,
+		door: {
+			width: 1,
+			height: 1,
+			left: 1,
+			top: 1
+		}		
+	},
+	{//treeleft1
+		name: ' ',
+		id: '#',
+		width: 310,
+		height: 95,
+		top: 270,
+		left: 67,
+		right: null,
+		door: {
+			width: 1,
+			height: 1,
+			left: 1,
+			top: 1
+		}		
+	},
+	{//treeRight2
+		name: ' ',
+		id: '#',
+		width: 565,
+		height: 275,
+		top: 450,//css = 794
+		left: null,
+		right: 1,
+		door: {
+			width: 1,
+			height: 1,
+			left: 1,
+			top: 1
+		}		
+	},
+	{//treeLeft2
+		name: ' ',
+		id: '#',
+		width: 187,
+		height: 136,
+		top: 760,//css = 794
+		left: 64,
+		right: null,
+		door: {
+			width: 1,
+			height: 1,
+			left: 1,
+			top: 1
+		}		
+	},
+	{ //top + 30, height css + 25, footer tree
+		name: ' ',
+		id: '#',
 		width: 1500,
-		height: 130,
-		top: 868,
+		height: 95,
+		top: 900,
 		left: 1,
 		right: null,
 		door: {
-			width: 36,
-			height: 39,
-			left: 41,
-			top: 100
+			width: 1,
+			height: 1,
+			left: 1,
+			top: 1
 		}
-	},
-	{//tree t2 (top-20)
-		name: 'Services House',
-		id: '#test',
-		width: 128,
-		height: 240,
-		top: 180,
-		left: null,
-		right: 200,
-		door: {
-			width: 36,
-			height: 0,
-			left: 0,
-			top: 0
-		}		
-	},
-	{//tree t1
-		name: 'Portfolio House',
-		id: '#portfolioHouse',
-		width: 128,
-		height: 240,
-		top: 330,
-		left: 300,
-		right: null,
-		door: {
-			width: 32,
-			height: 33,
-			left: 105,
-			top: 119
-		}		
 	}
 ];
+
 
 var roads = [
 	{
 		name: 'About Road',
 		id: '#aboutRoad',
-		height: 200,
-		top: 900,
-		direction: 'left'
-	},
-	{
-		name: 'Services Road',
-		id: '#servicesRoad',
-		height: 200,
-		top: 900,
-		direction: 'right'
-	},
-	{
-		name: 'Portfolio Road',
-		id: '#portfolioRoad',
-		height: 200,
-		top: 1000,
+		height: 1,
+		top: 1500,
 		direction: 'left'
 	}
 ];

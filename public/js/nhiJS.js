@@ -14,7 +14,7 @@ animalArray.push("kangaroo " + $('#kangarooExp').val());
 // animalArray.push("shark " + $('#sharkExp').val();
 var globalURL = window.location.origin +'/';
 var counter = 0;
-var stepAnimal = 200; //change no. of steps before animal appears
+var stepAnimal = 50; //change no. of steps before animal appears
 var randnumber = 0;
 var tempString = "";
 var tempArray = [];
@@ -103,7 +103,7 @@ Game.prototype = {
     }); 
     //=== End of Arrow Controls ===//
 
-    $('.road, .bridge').unbind('click').bind('click', function(e){
+    $('.road, .bridge, .phazeObject').unbind('click').bind('click', function(e){
       var x = e.pageX - player.width() / 2;
       var y = e.pageY;
       var canMove = me.canImove(x, y, true);
@@ -120,10 +120,6 @@ Game.prototype = {
       me.showNotificationsBar(notifications[3]);
     });
     
-    // $('.house').unbind('click').bind('click', function(){
-    //  var target = '#' + $(this).attr('id');
-    //  me.moveDirectToHouse(target);
-    // });
 
     $('nav a').click(function(e){
       e.preventDefault();
