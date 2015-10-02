@@ -7,11 +7,14 @@
   <meta name="_token" content="{!! csrf_token() !!}"/>
   <title>Findamals</title>
 
-  <link href="{{ asset('/css/app.css') }}" rel="stylesheet"> 
-  <link href="{{ asset('/css/leilaCSS.css') }}" rel="stylesheet"> 
+  <!-- CSS -->
+
+  <link type="text/css" href="{{ asset('/css/app.css') }}" rel="stylesheet"> 
+  <link type="text/css" href="{{ asset('/css/leilaCSS.css') }}" rel="stylesheet"> 
+  <link type="text/css" href="{{ asset('/css/navCSS.css') }}" rel="stylesheet"> 
   <!-- Fonts -->
-  <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+  <link type="text/css"href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' >
+  <link type="text/css"href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' >
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
   <script src="{{ asset('/js/leilaJS.js') }}"></script>
@@ -24,34 +27,38 @@
   <![endif]-->
 </head>
 
-
 <body>
-
-  <nav>
+<div id="wrapper"> 
+<div class="container">
+<div class="nav-container">
+  <nav class="nav">
       <ul>
         <li><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></li>
-        <li><a href="{{ url('/terrain1') }}">Bush</a></li>
+        <li><a href="{{ url('/terrain1') }}"><img src="{{ asset('/images/nav-bush-icon-active.png') }}" alt="bush terrain icon" class="nav-icon inactive"></a></li>
         @if ($terrainValue >= 2)
-        <li><a href="{{ url('/terrain1') }}">RF</a></li>
+        <li><a href="{{ url('/terrain2') }}"><img src="{{ asset('/images/nav-rainforest-icon-active.png') }}" alt="rainforest terrain icon" class="nav-icon inactive"></a></li>
         @else 
-        <li class="locked">RF locked</li>
+        <li class="locked"><img src="{{ asset('/images/nav-rainforest-icon-locked.png') }}" alt="rainforest terrain icon locked" class="nav-icon"></li>
         @endif
 
         @if ($terrainValue == 3)
-        <li><a href="{{ url('/terrain1') }}">Ocean</a></li>
+        <li><a href="{{ url('/terrain3') }}"><img src="{{ asset('/images/nav-ocean-icon-active.png') }}" alt="ocean terrain icon" class="nav-icon inactive"></a></li>
         @else 
-        <li class="locked" >Ocean locked</li>
+        <li class="locked" ><img src="{{ asset('/images/nav-ocean-icon-locked.png') }}" alt="ocean terrain icon locked" class="nav-icon"></li>
         @endif
 
-        <li><a class="current" href="{{ url('/leila') }}">Collection</a></li>
-        <li><a href="#howToPlay">?</a></li>
-        <li class="last"><a href="{{ url('/auth/logout') }}">Logout</a></li>
+        <li><a href="#"><img src="{{ asset('/images/nav-collection.png') }}" alt="animal collection icon" class="nav-icon"></a></li>
+        <li><a href="#"><img src="{{ asset('/images/nav-help.png') }}" alt="help icon" class="nav-icon inactive"></a></li>
+        <li class="last"><a href="#"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive"></a></li>
       </ul>
   </nav>
+</div>
+  
 
 
 
-  <div class="container">
+  <div class="content-wrapper">
+    
 
   <h1>My Collection</h1>
 
@@ -422,10 +429,11 @@
 
       
     </div> <!-- end row div -->
+    </div>  <!-- end content-wrapper -->
 
    
   </div> <!-- end container div -->
-
+</div>
 
    @include('collection.koalaCollection')
    @include('collection.wallabyCollection')
