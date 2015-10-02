@@ -2,6 +2,11 @@
 
 $(document).ready(function(){
 
+  $('.inactive').hover(
+       function(){ $(this).removeClass('inactive') },
+       function(){ $(this).addClass('inactive') }
+)
+
     // GET ANIMALS WIKIPEDIA EXTRACTS 
     // https://en.wikipedia.org/wiki/Special%3aApiSandbox
 
