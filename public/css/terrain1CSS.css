@@ -14,10 +14,11 @@
 #treeHeaderLeft {
 	background: url(../images/terrain1/tree1.png) repeat;
 	background-size: auto 100%;
-	width: 37%;
+	width: 35%;
 	height: 70px;
 	top: 0px;
 	left: 64px;
+	z-index: 60;
 }
 #treeLeft {
 	background: url(../images/terrain1/tree1.png) repeat;
@@ -32,35 +33,71 @@
 #treeLeft1 {
 	background: url(../images/terrain1/tree1.png) repeat;
 	background-size: auto 100%;
-	width: 30%;
+	width: 29%;
 	height: 70px;
 	top: 70px;
 	left: 64px;
 }
 #treeLeft2 {
-	background: url(../images/tree.png) repeat;
-	width: 192px;
-	height: 136px;
-	top: 794px;
+    background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 23.4%;
+	height: 70px;
+	top: 130px;
 	left: 64px;
 }
+#treeLeft3 {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 59px;
+	height: 70px;
+	top: 195px;
+	left: 400px;
+}
 
+#treeLeft4 {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 59px;
+	height: 70px;
+	top: 400px;
+	left: 400px;
+}
+#treeLeft5 {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 59px;
+	height: 70px;
+	top: 600px;
+	left: 400px;
+}
+#treeLeft6 {
+	background: url(../images/terrain1/tree2.png) repeat;
+	background-size: auto 100%;
+	width: 59px;
+	height: 70px;
+	top: 800px;
+	left: 400px;
+}
 #treeFooterLeft {
 	background: url(../images/terrain1/tree1.png) repeat;
 	background-size: auto 100%;
-	width: 37%;
+	width: 35%;
 	height: 70px;
 	top: 930px;
 	left: 64px;
+	z-index: 60;
+
 }
 
 #treeHeaderRight {
 	background: url(../images/terrain1/tree1.png) repeat;
 	background-size: auto 100%;
-	width: 37%;
+	width: 35%;
 	height: 70px;
 	top: 0px;
 	right: 64px;
+	z-index: 60;
 }
 #treeRight {
 	background: url(../images/terrain1/tree1.png) repeat;
@@ -71,29 +108,38 @@
 	right: 0px;
 }
 #treeRight1 {
-	background: url(../images/terrain1/tree2.png) repeat;
+	background: url(../images/terrain1/tree1.png) repeat;
 	background-size: auto 100%;
-	width: 55px;
+	width: 59px;
 	height: 70px;
-	top: 200px;
+	top: 300px;
 	right: 400px;
 }
 #treeRight2 {
-	background: url(../images/terrain1/tree2.png) repeat;
+	background: url(../images/terrain1/tree1.png) repeat;
 	background-size: auto 100%;
-	width: 55px;
+	width: 59px;
 	height: 70px;
-	top: 600px;
+	top: 500px;
+	right: 400px;
+}
+#treeRight3 {
+	background: url(../images/terrain1/tree1.png) repeat;
+	background-size: auto 100%;
+	width: 59px;
+	height: 70px;
+	top: 700px;
 	right: 400px;
 }
 
 #treeFooterRight {
 	background: url(../images/terrain1/tree1.png) repeat;
 	background-size: auto 100%;
-	width: 37%;
+	width: 35%;
 	height: 70px;
 	top: 930px;
 	right: 64px;
+	z-index: 60;
 }
 
 .treeBorder{
@@ -105,37 +151,37 @@
 #cave1 {
 	background: url(../images/terrain1/cave.png);
 	background-size: auto 100%;
-	width: 75px;
-	height: 75px;
+	width: 45px;
+	height: 45px;
 	top: 130px;
 	right: 100px;
 }
 #cave2 {
 	background: url(../images/terrain1/cave.png);
 	background-size: auto 100%;
-	width: 75px;
-	height: 75px;
+	width: 45px;
+	height: 45px;
 	top: 230px;
 	left: 100px;
 }
 #cave3 {
 	background: url(../images/terrain1/cave.png);
 	background-size: auto 100%;
-	width: 75px;
-	height: 75px;
-	top: 730px;
-	right: 100px;
+	width: 45px;
+	height: 45px;
+	top: 618px;
+	right: 340px;
 }
 
 /* Path in middel */
 #path {
 	background: url(../images/terrain1/path.png);
 	background-size: 100%;
-	width: 200px;
+	width: 215px;
 	height: 100%;			
 	top: 0;
 	z-index: 8;
-	left: 50%;
+	left: 49.5%;
 	margin: 0 0 0 -100px;			
 }
 
@@ -152,7 +198,7 @@
 	background: url(../images/terrain1/rock1.png) repeat;
 	background-size: 100%;
 	width: 35px;
-	height: 300px;
+	height: 280px;
 	top: 400px;
 	left: 200px;
 }
@@ -185,3 +231,23 @@
 	right: 70px;
 	z-index: 20;
 }
+#longGrass3{
+	background: url(../images/terrain1/longGrass.png) repeat;
+	background-size: 10% auto;
+	width: 200px;
+	height: 200px;
+	top: 700px;
+	left: 70px;
+	z-index: 20;
+}
+
+#blossom1{
+	background: url(../images/terrain1/blossom1.png) repeat;
+	background-size: 13% auto;
+	width: 230px;
+	height: 202px;
+	top: 198px;
+	left: 65px;
+	z-index: 20;
+}
+

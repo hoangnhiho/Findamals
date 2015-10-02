@@ -9,7 +9,7 @@
   <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" /> 
   <link type="text/css" rel="stylesheet" href="/css/reset.css" />    
   <link type="text/css" rel="stylesheet" href="/css/baseTerrainCSS.css" /> 
-  <link type="text/css" rel="stylesheet" href="/css/terrain1CSS.css" /> 
+  <link type="text/css" rel="stylesheet" href="/css/terrain2CSS.css" /> 
   <link type="text/css" rel="stylesheet" href="/css/exploreModalCSS.css" /> 
 
   <!-- Scripts -->
@@ -23,7 +23,7 @@
   <script src="/js/jquery.spritely.js" type="text/javascript"></script> 
   <script src="/js/terrain1dataJS.js" type="text/javascript"></script> 
   @include('include.hiddenVariables') 
-  <script src="/js/terrain1JS.js" type="text/javascript"></script>
+  <script src="/js/terrain2JS.js" type="text/javascript"></script>
   <script src="/js/bootstrap.min.js" type="text/javascript"></script>
   <script type="text/javascript"> 
     $(document).ready(function(){
@@ -82,7 +82,6 @@
     
     <div id="treeRight1" class="colObject rightColObject"></div>
     <div id="treeRight2" class="colObject rightColObject"></div>
-    <div id="treeRight3" class="colObject rightColObject"></div>
 
     <div id="treeFooterLeft" class="colObject leftColObject"></div>
     <div id="treeFooterRight" class="colObject rightColObject"></div>
@@ -91,7 +90,6 @@
     <div id="cave1" class="colObject rightColObject"></div>
     <div id="cave2" class="colObject leftColObject"></div>
     <div id="cave3" class="colObject rightColObject"></div>
-    <div id="cave4" class="colObject leftColObject"></div>
 
     <!-- Rocks -->
     <div id="rock1" class="colObject leftColObject"></div>
@@ -105,7 +103,6 @@
     <!-- Grass -->
     <div id="longGrass1" class="phazeObject"></div>
     <div id="longGrass2" class="phazeObject"></div>
-    <div id="longGrass3" class="phazeObject"></div>
 
     <!-- ====End of ALL Objects==== -->
 

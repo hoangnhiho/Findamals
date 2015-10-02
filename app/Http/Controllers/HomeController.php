@@ -81,7 +81,7 @@ class HomeController extends Controller {
     }
 
     /**
-     * Return Paul's development view
+     * Return terrain1 development view
      *
      */
     public function terrain1(){
@@ -89,6 +89,17 @@ class HomeController extends Controller {
             $userData = Auth::user();
         }
         return view('terrain.terrain1', compact('userData'));
+    }
+
+    /**
+     * Return terrain2 development view
+     *
+     */
+    public function terrain2(){
+        if (Auth::check()){
+            $userData = Auth::user();
+        }
+        return view('terrain.terrain2', compact('userData'));
     }
     
     /**

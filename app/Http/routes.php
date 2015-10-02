@@ -25,6 +25,7 @@ Route::get('admin', 'HomeController@admin');
 
 //=== Terrain Routes ===//
 Route::get('terrain1', 'HomeController@terrain1');
+Route::get('terrain2', 'HomeController@terrain2');
 
 //=== Experience Routes ===//
 Route::post('expSave', 'ExpController@expSave');

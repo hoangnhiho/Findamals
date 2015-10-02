@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: 'SilkscreenNormal';
     src: url('../fonts/slkscr-webfont.eot');
     src: url('../fonts/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
@@ -44,7 +44,7 @@
     font-weight: normal;
     font-style: normal;
 
-}
+}*/
 
 /*
 		
@@ -93,9 +93,8 @@ body {
 	font: 11px/14px 'SilkscreenBold', Arial, sans-serif;
 }
 
-nav {
+/*nav {
 	position: fixed;
-	/*top: -85px;*/
 	top: 0;
 	height: 55px;
 	left: 50%;
@@ -118,9 +117,9 @@ nav {
 	-webkit-transition: top 0.4s ease-in-out 0s;
 	-moz-transition: top 0.4s ease-in-out 0s;
 	transition: top 0.4s ease-in-out 0s;
-}
+}*/
 
-nav.show {
+/*nav.show {
 	top: 0;
 }
 
@@ -137,9 +136,9 @@ nav a {
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
 	text-shadow: 1px 1px 0 #000;
-}
+}*/
 
-nav a:hover, nav a.current {
+/*nav a:hover, nav a.current {
 	background: rgba(0,0,0,0.3);
 
 	text-decoration: none;
@@ -154,7 +153,7 @@ nav li.last a {
 
 nav li.last a:hover {
 	border-radius: 50em;
-}
+}*/
 
 #wrapper {
 	border: 1px solid #c7c7c7;
@@ -492,8 +491,8 @@ nav li.last a:hover {
 	width: 32px;
 	height: 32px;
 	background: url(../images/walkingMe.png) no-repeat -32px 0;
-	top: 20px;
-	z-index: 53;
+	top: 150px;
+	z-index: 250;
 }
 
 #daniel::after {
@@ -654,11 +653,14 @@ button
 	-ms-touch-action: manipulation;	/* IE10  */
 	touch-action: manipulation;		/* IE11+ */
 }
+.btn .btn-default{
+	border:none;
+}
 .gamePad {
 	position: fixed;
 	width: 80px;
 	height: 80px;
-	z-index: 790;
+	z-index: 400;
 	border: none;
 
 /*	box-shadow: 0 -1px 10px rgba(0,0,0,0.5);
