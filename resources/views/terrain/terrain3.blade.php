@@ -12,7 +12,9 @@
   <link type="text/css" rel="stylesheet" href="/css/terrain3CSS.css" /> 
   <link type="text/css" rel="stylesheet" href="/css/exploreModalCSS.css" /> 
   <link type="text/css" href="{{ asset('/css/navCSS.css') }}" rel="stylesheet">  
-
+  <link rel="stylesheet" type="text/css" href="css/modalWindowDefault.css" />
+  <link rel="stylesheet" type="text/css" href="css/modalWindowComponent.css" />
+  
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="{{ asset('/js/leilaJS.js') }}"></script>
@@ -21,6 +23,7 @@
       $.event.special.tap.tapholdThreshold = 0;
   });
   </script>
+  <script src="js/modernizr.custom.js"></script>
   <script src="/js/jquery-ui.min.js"></script>
   <script src="/js/jquery.spritely.js" type="text/javascript"></script> 
   <script src="/js/terrain1dataJS.js" type="text/javascript"></script> 
