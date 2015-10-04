@@ -148,7 +148,7 @@
 <button type="button" class ="gamePad btn btn-default" id = "arrowLeft"> </button>
 <button type="button" class ="gamePad btn btn-default" id = "arrowRight"></button>
 <button class="md-trigger" data-modal="modal-4">Blur</button>
-
+<!--$('#modal-4').addClass('md-show') $('#modal-4').removeClass('md-show')-->
 <div class="md-modal md-effect-4" id="modal-4">
   <div class="md-content">
     <h3>Modal Dialog</h3>
