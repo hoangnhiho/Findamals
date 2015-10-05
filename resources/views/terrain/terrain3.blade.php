@@ -151,7 +151,7 @@
 <!--$('#modal-4').addClass('md-show') $('#modal-4').removeClass('md-show')-->
 <div class="md-modal md-effect-4" id="modal-4">
   <div class="md-content">
-    <h3>Modal Dialog</h3>
+    <h3>Testing Modal</h3>
     <div>
       <p>This is a modal window. You can do the following things with it:</p>
       <ul>
