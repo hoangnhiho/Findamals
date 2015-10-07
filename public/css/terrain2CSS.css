@@ -122,39 +122,73 @@
 	z-index: 56;
 }
 
-/* Cave objects */
-#cave1 {
-	background: url(../images/terrain1/cave.png);
+/* Small palm trees*/
+#sm-palm-left1 {
+	background: url(../images/terrain2/rf-smallpalm.png) ;
 	background-size: auto 100%;
 	width: 75px;
-	height: 75px;
-	top: 130px;
+	height: 120px;
+	top: 300px;
+	left: 300px;
+}
+#sm-palm-left2 {
+	background: url(../images/terrain2/rf-smallpalm.png) ;
+	background-size: auto 100%;
+	width: 150px;
+	height: 120px;
+	top: 800px;
+	left: 70px;
+}
+#sm-palm-left3 {
+	background: url(../images/terrain2/rf-smallpalm.png) ;
+	background-size: auto 100%;
+	width: 150px;
+	height: 120px;
+	top: 1000px;
+	left: 390px;
+}
+#sm-palm-left4 {
+	background: url(../images/terrain2/rf-smallpalm.png) ;
+	background-size: auto 100%;
+	width: 75px;
+	height: 120px;
+	top: 1300px;
+	left: 300px;
+}
+#sm-palm-right1 {
+	background: url(../images/terrain2/rf-smallpalm.png) ;
+	background-size: auto 100%;
+	width: 150px;
+	height: 120px;
+	top: 700px;
+	right: 270px;
+}
+#sm-palm-right2 {
+	background: url(../images/terrain2/rf-smallpalm.png) ;
+	background-size: auto 100%;
+	width: 150px;
+	height: 120px;
+	top: 200px;
+	right: 70px;
+}
+#sm-palm-right3 {
+	background: url(../images/terrain2/rf-smallpalm.png) ;
+	background-size: auto 100%;
+	width: 75px;
+	height: 120px;
+	top: 1050px;
 	right: 100px;
 }
-#cave2 {
-	background: url(../images/terrain1/cave.png);
+#sm-palm-right4 {
+	background: url(../images/terrain2/rf-smallpalm.png) ;
 	background-size: auto 100%;
 	width: 75px;
-	height: 75px;
-	top: 230px;
-	left: 100px;
+	height: 120px;
+	top: 1250px;
+	right: 400px;
 }
-#cave3 {
-	background: url(../images/terrain1/cave.png);
-	background-size: auto 100%;
-	width: 75px;
-	height: 75px;
-	top: 730px;
-	right: 100px;
-}
-#cave4 {
-	background: url(../images/terrain1/cave.png);
-	background-size: auto 100%;
-	width: 75px;
-	height: 75px;
-	top: 530px;
-	left: 100px;
-}
+
+
 /* Path in middle */
 #path {
 	background: url(../images/terrain2/rf-path-middle.png);
@@ -168,7 +202,7 @@
 }
 
 /* Rocks Objects */
-#rock1 {
+/*#rock1 {
 	background: url(../images/terrain1/rock1.png) repeat;
 	background-size: 100%;
 	width: 35px;
@@ -200,29 +234,75 @@
 	height: 600px;
 	top: 600px;
 	right: 400px;
-}
+}*/
 
 /* Long Grass Objects */
-#longGrass1{
-	background: url(../images/terrain1/longGrass.png) repeat;
-	background-size: 10% auto;
-	width: 200px;
-	height: 500px;
-	top: 100px;
-	right: 70px;
+#longGrassright1{
+	background: url(../images/terrain2/rf-grass.png) repeat;
+	background-size: 50% auto;
+	width: 150px;
+	height: 110px;
+	top: 450px;
+	right: 80px;
 	z-index: 20;
 }
 
-#longGrass2{
-	background: url(../images/terrain1/longGrass.png) repeat;
-	background-size: 10% auto;
-	width: 200px;
-	height: 200px;
+#longGrassright2{
+	background: url(../images/terrain2/rf-grass.png) repeat;
+	background-size: 50% auto;
+	width: 150px;
+	height: 110px;
+	top: 1000px;
+	right: 400px;
+	z-index: 20;
+}
+#longGrassleft1{
+	background: url(../images/terrain2/rf-grass.png) repeat;
+	background-size: 50% auto;
+	width: 150px;
+	height: 110px;
 	top: 700px;
-	right: 70px;
+	left: 350px;
 	z-index: 20;
 }
 
+#longGrassleft2{
+	background: url(../images/terrain2/rf-grass.png) repeat;
+	background-size: 50% auto;
+	width: 150px;
+	height: 110px;
+	top: 1000px;
+	left: 120px;
+	z-index: 20;
+}
+
+/* Pond Objects */
+#pond1{
+	background: url(../images/terrain2/rf-pond.png) repeat;
+	background-size: auto 100%;
+	width: 180px;
+	height: 180px;
+	top: 430px;
+	left: 100px;
+}
+#pond2{
+	background: url(../images/terrain2/rf-pond.png) repeat;
+	background-size: auto 100%;
+	width: 180px;
+	height: 180px;
+	top: 1200px;
+	left: 150px;
+}
+#pond3{
+	background: url(../images/terrain2/rf-pond.png) repeat;
+	background-size: auto 100%;
+	width: 180px;
+	height: 180px;
+	top: 800px;
+	right: 100px;
+}
+
+/* Ocean Objects */
 .ocean {
 	position: absolute;
 	left: 0;

@@ -1,6 +1,7 @@
 
-
+var nearSecret = 0;
 var colObjects=[];
+var secretObjects=[];
 var tempObject;
 var tempRight;
 var tempLeft;
@@ -17,6 +18,7 @@ $( window ).ready(function() {
 		}
 
 		tempObject = {
+			id: this.id,
 			width: $(this).width(),
 			height: $(this).height(),
 			top: $(this).position().top,
@@ -25,15 +27,12 @@ $( window ).ready(function() {
 			bottom: $(this).position().top + $(this).height()
 		}
 		colObjects.push(tempObject);
+		if ($(this).hasClass( "secretObject" )){
+			secretObjects.push(tempObject);
+		}
 	});
-	//console.log(colObjects);
+	//console.log(secretObjects);
 });
-
-
-
-
-
-
 
 
 var houses = [ 

@@ -53,18 +53,6 @@
     </div>
   </div>
 
-  <!-- Navigation -->
-  <!-- <nav>
-    <ul class="clearfix">
-      <li><a class="current" href="{{ url('/') }}">Finamals</a></li>
-      <li><a href="{{ url('/leila') }}">Collection Page</a></li>
-            <li><a href="#">?</a></li>
-            <li class="last"><a href="{{ url('/auth/logout') }}">Logout</a></li>
-    </ul>
-  </nav> -->
-
-  
-
   <!-- Notifications Manager -->
   <div id="notifications"><div class="inner"></div><span class="close">x</span></div>
   
@@ -73,13 +61,23 @@
   <div class="nav-container">
     <nav class="nav">
         <ul>
-          <li><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></li>
-          <li><a href="#"><img src="{{ asset('/images/nav-bush-icon-active.png') }}" alt="bush terrain icon" class="nav-icon "></a></li>
-          <li><a href="{{ url('/terrain2') }}"><img src="{{ asset('/images/nav-rainforest-icon-active.png') }}" alt="rainforest terrain icon" class="nav-icon inactive"></a></li>
-          <li><a href="{{ url('/terrain3') }}"><img src="{{ asset('/images/nav-ocean-icon-active.png') }}" alt="ocean terrain icon" class="nav-icon inactive"></a></li>
-          <li><a href="{{ url('/leila') }}"><img src="{{ asset('/images/nav-collection.png') }}" alt="animal collection icon" class="nav-icon inactive"></a></li>
-          <li><a href="#"><img src="{{ asset('/images/nav-help.png') }}" alt="help icon" class="nav-icon inactive"></a></li>
-          <li class="last"><a href="#"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive"></a></li>
+        <li><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></li>
+        <li><a href="#"><img src="{{ asset('/images/nav-bush-icon-active.png') }}" alt="bush terrain icon" class="nav-icon"></a></li>
+        @if ($terrainValue >= 2)
+        <li><a href="{{ url('/terrain2') }}"><img src="{{ asset('/images/nav-rainforest-icon-active.png') }}" alt="rainforest terrain icon" class="nav-icon inactive"></a></li>
+        @else 
+        <li class="locked"><img src="{{ asset('/images/nav-rainforest-icon-locked.png') }}" alt="rainforest terrain icon locked" class="nav-icon"></li>
+        @endif
+
+        @if ($terrainValue == 3)
+        <li><a href="{{ url('/terrain3') }}"><img src="{{ asset('/images/nav-ocean-icon-active.png') }}" alt="ocean terrain icon" class="nav-icon inactive"></a></li>
+        @else 
+        <li class="locked" ><img src="{{ asset('/images/nav-ocean-icon-locked.png') }}" alt="ocean terrain icon locked" class="nav-icon"></li>
+        @endif
+
+        <li><a href="{{ url('/leila') }}"><img src="{{ asset('/images/nav-collection.png') }}" alt="animal collection icon" class="nav-icon inactive"></a></li>
+        <li><a href="#"><img src="{{ asset('/images/nav-help.png') }}" alt="help icon" class="nav-icon inactive"></a></li>
+        <li class="last"><a href="#"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive"></a></li>
       </ul>
     </nav>
   </div>
@@ -101,11 +99,11 @@
     <div id="treeLeft1" class="colObject leftColObject"></div>
     <div id="treeLeft2" class="colObject leftColObject"></div>
     <div id="treeLeft3" class="colObject leftColObject"></div>
-    <div id="treeLeft4" class="colObject leftColObject"></div>
+    <div id="treeLeft4" class="secretObject colObject leftColObject"></div>
     <div id="treeLeft5" class="colObject leftColObject"></div>
-    <div id="treeLeft6" class="colObject leftColObject"></div>
+    <div id="treeLeft6" class="secretObject colObject leftColObject"></div>
     
-    <div id="treeRight1" class="colObject rightColObject"></div>
+    <div id="treeRight1" class="secretObject colObject rightColObject"></div>
     <div id="treeRight2" class="colObject rightColObject"></div>
     <div id="treeRight3" class="colObject rightColObject"></div>
 
@@ -114,8 +112,8 @@
 
     <!-- Caves -->
     <div id="cave1" class="colObject rightColObject"></div>
-    <div id="cave2" class="colObject leftColObject"></div>
-    <div id="cave3" class="colObject rightColObject"></div>
+    <div id="cave2" class="secretObject colObject leftColObject"></div>
+    <div id="cave3" class="secretObject colObject rightColObject"></div>
     <div id="cave4" class="colObject leftColObject"></div>
 
     <!-- Rocks -->
@@ -166,5 +164,36 @@
 
 @include('include.exploreModal')
 </body>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+	$('.secretObject').click(function(e){
+		if (nearSecret==1){
+			tempString = animalArray[0];//0 is koala
+			if(this.id == 'treeRight1'){
+		    	tempString = animalArray[0];//0 is koala
+			}else if(this.id == 'treeLeft4'){
+				tempString = animalArray[1];//1 is wallaby
+			}else if(this.id == 'cave2'){
+				tempString = animalArray[2];//2 is wombat
+			}else if(this.id == 'cave3'){
+				tempString = animalArray[3];//3 is bilby
+			}else if(this.id == 'treeLeft6'){
+				tempString = animalArray[4];//4 is kangaroo
+			}
+
+    		tempArray = tempString.split(" ");
+		    tempAnimal = "#" + tempArray[0] + "Quest" + tempArray[1];
+		    var tempURL = globalURL + 'images/animals/' + tempArray[0] + ".png";
+		    $('#animalImg').attr('src', tempURL);
+		    $('#acceptBtn').attr('href', tempAnimal);
+		    $('#acceptModal').modal('show');
+		}
+		//console.log('clicked');
+	});
+});
+</script>
+
 
 </html>

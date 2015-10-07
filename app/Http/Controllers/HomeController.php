@@ -87,8 +87,10 @@ class HomeController extends Controller {
     public function terrain1(){
         if (Auth::check()){
             $userData = Auth::user();
+            $terrainValue = self::getTerrainValue();
+
         }
-        return view('terrain.terrain1', compact('userData'));
+        return view('terrain.terrain1', compact('userData','terrainValue'));
     }
 
     /**
@@ -98,8 +100,9 @@ class HomeController extends Controller {
     public function terrain2(){
         if (Auth::check()){
             $userData = Auth::user();
+            $terrainValue = self::getTerrainValue();
         }
-        return view('terrain.terrain2', compact('userData'));
+        return view('terrain.terrain2', compact('userData','terrainValue'));
     }
 
     /**
@@ -109,8 +112,9 @@ class HomeController extends Controller {
     public function terrain3(){
         if (Auth::check()){
             $userData = Auth::user();
+            $terrainValue = self::getTerrainValue();
         }
-        return view('terrain.terrain3', compact('userData'));
+        return view('terrain.terrain3', compact('userData','terrainValue'));
     }
     
     /**

@@ -1,20 +1,26 @@
+var terrainValue = window.location.pathname;
+terrainValue = terrainValue.substr(1);
 var animalArray = [];
-animalArray.push("koala " + $('#koalaExp').val());
-animalArray.push("wallaby " + $('#wallabyExp').val());
-animalArray.push("wombat " + $('#wombatExp').val());
-animalArray.push("bilby " + $('#bilbyExp').val());
-animalArray.push("kangaroo " + $('#kangarooExp').val());
+if (terrainValue == 'terrain1'){
+  animalArray.push("koala " + $('#koalaExp').val());
+  animalArray.push("wallaby " + $('#wallabyExp').val());
+  animalArray.push("wombat " + $('#wombatExp').val());
+  animalArray.push("bilby " + $('#bilbyExp').val());
+  animalArray.push("kangaroo " + $('#kangarooExp').val());
+}else if (terrainValue == 'terrain2'){
+  animalArray.push("cockatoo " + $('#cockatooExp').val());
+  animalArray.push("platypus " + $('#platypusExp').val());
+  animalArray.push("cassowary " + $('#cassowaryExp').val());
+  animalArray.push("frog " + $('#frogExp').val());
+}else if (terrainValue == 'terrain3'){
+  animalArray.push("whale " + $('#whaleExp').val());
+  animalArray.push("turtle " + $('#turtleExp').val());
+  animalArray.push("shark " + $('#sharkExp').val());
+}
 
-// animalArray.push("cockatoo " + $('#cockatooExp').val();
-// animalArray.push("platypus " + $('#platypusExp').val();
-// animalArray.push("cassowary " + $('#cassowaryExp').val();
-// animalArray.push("frog " + $('#frogExp').val();
-// animalArray.push("whale " + $('#whaleExp').val();
-// animalArray.push("turtle " + $('#turtleExp').val();
-// animalArray.push("shark " + $('#sharkExp').val();
 var globalURL = window.location.origin +'/';
 var counter = 0;
-var stepAnimal = 50; //change no. of steps before animal appears
+var stepAnimal = 100; //change no. of steps before animal appears
 var randnumber = 0;
 var tempString = "";
 var tempArray = [];
@@ -25,7 +31,7 @@ var refreshIntervalId1;
 
 var Game = function() { 
   this.player = $("#daniel"); 
-  this.topPos = 0;
+  this.topPos = 100;
   this.leftPos = $(window).width() / 2 - this.player.width() / 2;
   this.init();
 }
@@ -414,7 +420,32 @@ Game.prototype = {
         }
     }
   },
-
+  isSecret: function(elmLeft, elmTop){
+    var player = this.player;
+    var isInHouse = [];
+    var object;
+    nearSecret = 0;
+    for(i = 0; i < secretObjects.length; i++) {
+        object = secretObjects[i];
+        if (object.left == null){//walking down, hitting collision on right side.
+            if (($(window).width() - object.right - object.width - 57) <= elmLeft && elmLeft <= ($(window).width() - object.right+21)){
+                if (object.top-62 <= elmTop && elmTop <= object.bottom+30){
+                  //10 = distance of shake
+                  $( "#"+object.id ).effect( "shake", {times:2}, 10 );
+                  nearSecret = 1;
+                }
+            }
+        }
+        if(object.right == null){
+            if ((object.left - 57) <= elmLeft && elmLeft <= (object.left + object.width + 21)){
+                if ((object.top-62) <= elmTop && elmTop <= object.bottom+30){
+                    $( "#"+object.id ).effect( "shake", {times:2}, 10 );
+                    nearSecret = 1;
+                }
+            }
+        }
+    }
+  },
   canImove: function(moveLeft, moveTop, teleported) {
     var player = this.player;
     var elmLeft = moveLeft || this.leftPos;
@@ -423,11 +454,12 @@ Game.prototype = {
     if(player.css('display') == 'none' && !teleported) {
       return false;
     }
-    
+    var isSecret = this.isSecret(elmLeft, elmTop); 
     var isColl =this.isCollision(elmLeft, elmTop);
      if(isColl === false) {
       return false;
-    }       
+    }
+          
     var isRoad = this.isRoad(elmLeft, elmTop);
     if(isRoad === false) {
       return false;

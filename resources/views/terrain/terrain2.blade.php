@@ -25,7 +25,7 @@
   <script src="/js/jquery.spritely.js" type="text/javascript"></script> 
   <script src="/js/terrain1dataJS.js" type="text/javascript"></script> 
   @include('include.hiddenVariables') 
-  <script src="/js/terrain2JS.js" type="text/javascript"></script>
+  <script src="/js/terrain1JS.js" type="text/javascript"></script>
   <script src="/js/bootstrap.min.js" type="text/javascript"></script>
   <script type="text/javascript"> 
     $(document).ready(function(){
@@ -71,18 +71,24 @@
     <div class="nav-container">
       <nav class="nav">
         <ul>
-          <li><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></li>
-          <li><a href="{{ url('/terrain1') }}"><img src="{{ asset('/images/nav-bush-icon-active.png') }}" alt="bush terrain icon" class="nav-icon inactive"></a></li>
+        <li><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></li>
+        <li><a href="{{ url('/terrain1') }}"><img src="{{ asset('/images/nav-bush-icon-active.png') }}" alt="bush terrain icon" class="nav-icon inactive"></a></li>
+        @if ($terrainValue >= 2)
+        <li><a href="#"><img src="{{ asset('/images/nav-rainforest-icon-active.png') }}" alt="rainforest terrain icon" class="nav-icon"></a></li>
+        @else 
+        <li class="locked"><img src="{{ asset('/images/nav-rainforest-icon-locked.png') }}" alt="rainforest terrain icon locked" class="nav-icon"></li>
+        @endif
 
-          <li><a href="{{ url('/terrain2') }}"><img src="{{ asset('/images/nav-rainforest-icon-active.png') }}" alt="rainforest terrain icon" class="nav-icon "></a></li>
+        @if ($terrainValue == 3)
+        <li><a href="{{ url('/terrain3') }}"><img src="{{ asset('/images/nav-ocean-icon-active.png') }}" alt="ocean terrain icon" class="nav-icon inactive"></a></li>
+        @else 
+        <li class="locked" ><img src="{{ asset('/images/nav-ocean-icon-locked.png') }}" alt="ocean terrain icon locked" class="nav-icon"></li>
+        @endif
 
-          <li><a href="{{ url('/terrain3') }}"><img src="{{ asset('/images/nav-ocean-icon-active.png') }}" alt="ocean terrain icon" class="nav-icon inactive"></a></li>
-
-
-          <li><a href="{{ url('/leila') }}"><img src="{{ asset('/images/nav-collection.png') }}" alt="animal collection icon" class="nav-icon inactive"></a></li>
-          <li><a href="#"><img src="{{ asset('/images/nav-help.png') }}" alt="help icon" class="nav-icon inactive"></a></li>
-          <li class="last"><a href="#"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive"></a></li>
-        </ul>
+        <li><a href="{{ url('/leila') }}"><img src="{{ asset('/images/nav-collection.png') }}" alt="animal collection icon" class="nav-icon inactive"></a></li>
+        <li><a href="#"><img src="{{ asset('/images/nav-help.png') }}" alt="help icon" class="nav-icon inactive"></a></li>
+        <li class="last"><a href="#"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive"></a></li>
+      </ul>
       </nav>
     </div>
    </div>
@@ -112,26 +118,31 @@
     <div id="treeFooterLeft" class="colObject leftColObject"></div>
     <div id="treeFooterRight" class="colObject rightColObject"></div>
 
-    <!-- Caves -->
-    <div id="cave1" class="colObject rightColObject"></div>
-    <div id="cave2" class="colObject leftColObject"></div>
-    <div id="cave3" class="colObject rightColObject"></div>
-    <div id="cave4" class="colObject leftColObject"></div>
+    <!-- Small Palm Trees -->
+    <div id="sm-palm-left1" class="colObject leftColObject"></div>
+    <div id="sm-palm-left2" class="colObject leftColObject"></div>
+    <div id="sm-palm-left3" class="colObject leftColObject"></div>
+    <div id="sm-palm-left4" class="colObject leftColObject"></div>
 
-    <!-- Rocks -->
-    <div id="rock1" class="colObject leftColObject"></div>
-    <div id="rock2" class="colObject leftColObject"></div>
-    <div id="rock3" class="colObject rightColObject"></div>
-
-    <div id="rock4" class="phazeObject"></div>
+    <div id="sm-palm-right1" class="colObject rightColObject"></div>
+    <div id="sm-palm-right2" class="colObject rightColObject"></div>
+    <div id="sm-palm-right3" class="colObject rightColObject"></div>
+    <div id="sm-palm-right4" class="colObject rightColObject"></div>
 	
 	<!-- Phaze OBJECTS BELOW -->
     <!-- Path -->
     <div id="path" class="phazeObject"></div>
 
     <!-- Grass -->
-    <div id="longGrass1" class="phazeObject"></div>
-    <div id="longGrass2" class="phazeObject"></div>
+    <div id="longGrassright1" class="phazeObject"></div>
+    <div id="longGrassright2" class="phazeObject"></div>
+    <div id="longGrassleft1" class="phazeObject"></div>
+    <div id="longGrassleft2" class="phazeObject"></div>
+
+    <!-- Ponds -->
+    <div id="pond1" class="phazeObject"></div>
+    <div id="pond2" class="phazeObject"></div>
+    <div id="pond3" class="phazeObject"></div>
 
     <!-- ====End of ALL Objects==== -->
 
