@@ -100,6 +100,10 @@
     <div id="daniel"></div>
 
 	<!-- ====All OBJECTS BELOW==== -->
+
+    <!-- Last terrain: Ocean -->
+    <div id="startBush" class="bush"></div> 
+
     <!-- Collision OBJECTS BELOW -->
     
     <!-- Trees -->
@@ -128,6 +132,11 @@
     <div id="sm-palm-right2" class="colObject rightColObject"></div>
     <div id="sm-palm-right3" class="colObject rightColObject"></div>
     <div id="sm-palm-right4" class="colObject rightColObject"></div>
+
+    <!-- Ponds -->
+    <div id="pond1" class="colObject leftColObject"></div>
+    <div id="pond2" class="colObject leftColObject"></div>
+    <div id="pond3" class="colObject rightColObject"></div>
 	
 	<!-- Phaze OBJECTS BELOW -->
     <!-- Path -->
@@ -139,10 +148,7 @@
     <div id="longGrassleft1" class="phazeObject"></div>
     <div id="longGrassleft2" class="phazeObject"></div>
 
-    <!-- Ponds -->
-    <div id="pond1" class="phazeObject"></div>
-    <div id="pond2" class="phazeObject"></div>
-    <div id="pond3" class="phazeObject"></div>
+
 
     <!-- ====End of ALL Objects==== -->
 

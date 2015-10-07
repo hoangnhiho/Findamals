@@ -172,7 +172,7 @@ $( document ).ready(function() {
 	//this needs needs to be repetitively added to all terrain pages
 	$('.secretObject').click(function(e){
 		if (nearSecret==1){
-			tempString = animalArray[0];//0 is koala
+			tempString = animalArray[0];//0 is koala as default
 			if(this.id == 'treeRight1'){
 		    	tempString = animalArray[0];//0 is koala
 			}else if(this.id == 'treeLeft4'){
