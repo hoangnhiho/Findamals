@@ -26,7 +26,7 @@ var tempString = "";
 var tempArray = [];
 var tempAnimal = "";
 var tempExp = "";
-var keyboardSpeed = 20;
+var keyboardSpeed = 10;
 var refreshIntervalId1;
 
 var Game = function() { 

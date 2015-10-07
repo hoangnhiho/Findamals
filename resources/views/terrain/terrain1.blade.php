@@ -169,6 +169,7 @@
 <script type="text/javascript">
 
 $( document ).ready(function() {
+	//this needs needs to be repetitively added to all terrain pages
 	$('.secretObject').click(function(e){
 		if (nearSecret==1){
 			tempString = animalArray[0];//0 is koala
