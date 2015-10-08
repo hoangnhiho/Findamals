@@ -2,7 +2,8 @@
 var nearSecret = 0;
 var colObjects=[];
 var secretObjects=[];
-var tempObject;
+var terrainChangeObjects=[];
+var tempObject; 
 var tempRight;
 var tempLeft;
 $( window ).ready(function() {
@@ -31,7 +32,19 @@ $( window ).ready(function() {
 			secretObjects.push(tempObject);
 		}
 	});
-	//console.log(secretObjects);
+	$('.terrainChange').each(function(i, obj) {
+		tempObject = {
+			id: this.id,
+			width: $(this).width(),
+			height: $(this).height(),
+			top: $(this).position().top,
+			left: $(this).position().left - ($(this).width()/2),
+			bottom: $(this).position().top + $(this).height()
+		}
+		terrainChangeObjects.push(tempObject);
+
+	});
+
 });
 
 

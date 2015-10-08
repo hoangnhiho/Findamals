@@ -16,7 +16,6 @@
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="{{ asset('/js/leilaJS.js') }}"></script>
   <script type="text/javascript"> 
       $(document).bind("mobileinit", function () {
       $.event.special.tap.tapholdThreshold = 0;
@@ -138,21 +137,9 @@
     <!-- ====End of ALL Objects==== -->
 
     <!-- Sea -->
-    <div id="endSea" class="sea"></div>   
-    <div id="endBridge" class="bridge"></div>
+    <div id="endTerrain1" class=""></div>   
+    <div id="terrain2" class="terrainChange phazeObject"></div>
 
-    <div id="boat" class="isMoored">
-      <div class="meSail"></div>
-    </div>
-    <div id="contact">
-      <h1>Stay In Touch</h1>
-      <p>Feel free to leave your comment about anything you want.</p>
-      <div id="comments">
-        <noscript>Please enable JavaScript to view the <a>comments powered by Disqus.</a></noscript>
-      </div>
-    </div>
-
-    
   </div>
 
 <img src="../images/wood.png" style="display: none;" />
@@ -163,7 +150,7 @@
 <button type="button" class ="gamePad btn btn-default" id = "arrowLeft"> </button>
 <button type="button" class ="gamePad btn btn-default" id = "arrowRight"></button>
 
-@include('include.exploreModal')
+@include('include.exploreModal') 
 </body>
 
 <script type="text/javascript">

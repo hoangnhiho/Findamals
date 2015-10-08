@@ -109,7 +109,7 @@ Game.prototype = {
     }); 
     //=== End of Arrow Controls ===//
 
-    $('.road, .bridge, .phazeObject').unbind('click').bind('click', function(e){
+    $('.road, .terrainChange, .phazeObject').unbind('click').bind('click', function(e){
       var x = e.pageX - player.width() / 2;
       var y = e.pageY;
       var canMove = me.canImove(x, y, true);
@@ -410,7 +410,7 @@ Game.prototype = {
                 }
             }
         }
-        if(object.right == null){
+        if(object.right == null){ 
             if ((object.left - 27) <= elmLeft && elmLeft <= (object.left + object.width - 9)){
                 if ((object.top-32) <= elmTop && elmTop <= object.bottom){
                     //console.log('blocked');
@@ -446,6 +446,24 @@ Game.prototype = {
         }
     }
   },
+
+  isTerrainChange: function(elmLeft, elmTop){
+    var player = this.player;
+    var isInHouse = [];
+    var object;
+    nearSecret = 0;
+    for(i = 0; i < terrainChangeObjects.length; i++) {
+        object = terrainChangeObjects[i];
+          if ((object.left - 27) <= elmLeft && elmLeft <= (object.left + object.width - 9)){
+              if ((object.top-32) <= elmTop && elmTop <= object.bottom){
+                //console.log(globalURL + object.id);
+                window.location.href = globalURL + object.id;
+
+              }
+          }
+        
+    }
+  },
   canImove: function(moveLeft, moveTop, teleported) {
     var player = this.player;
     var elmLeft = moveLeft || this.leftPos;
@@ -454,6 +472,7 @@ Game.prototype = {
     if(player.css('display') == 'none' && !teleported) {
       return false;
     }
+    var terrainChange =this.isTerrainChange(elmLeft, elmTop);
     var isSecret = this.isSecret(elmLeft, elmTop); 
     var isColl =this.isCollision(elmLeft, elmTop);
      if(isColl === false) {
