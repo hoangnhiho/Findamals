@@ -137,7 +137,7 @@
     <!-- ====End of ALL Objects==== -->
 
     <!-- Sea -->
-    <div id="endTerrain1" class=""></div>   
+    <div id="endTerrain1" class="sea"></div>   
     <div id="terrain2" class="terrainChange phazeObject"></div>
 
   </div>
