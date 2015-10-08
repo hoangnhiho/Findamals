@@ -32,6 +32,7 @@ $( window ).ready(function() {
 			secretObjects.push(tempObject);
 		}
 	});
+
 	$('.terrainChange').each(function(i, obj) {
 		tempObject = {
 			id: this.id,
@@ -44,7 +45,6 @@ $( window ).ready(function() {
 		terrainChangeObjects.push(tempObject);
 
 	});
-
 });
 
 
