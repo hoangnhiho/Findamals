@@ -179,7 +179,6 @@ $( document ).ready(function() {
 		    $('#acceptBtn').attr('href', tempAnimal);
 		    $('#acceptModal').modal('show');
 		}
-		//console.log('clicked');
 	});
 });
 </script>
