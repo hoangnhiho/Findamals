@@ -29,7 +29,7 @@ function loadCollection(){
 				<h4 class="modal-title">Found Animal</h4>
 			</div>
 			<div class="modal-body">
-				<img class="" id="animalImg" src="http://orig02.deviantart.net/6e18/f/2010/255/3/b/battle_on_mt__silver_by_serain-d2yjudv.jpg" alt="Findamals Koala Character" style="width:100%">
+				<img class="" id="animalImg" src="http://orig02.deviantart.net/6e18/f/2010/255/3/b/battle_on_mt__silver_by_serain-d2yjudv.jpg" alt="Findamals Koala Character">
 				
 			</div>
 			<div class="modal-footer">

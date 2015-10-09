@@ -1,13 +1,31 @@
 #animalImg{
-	width: 50%;
+	width: 30%;
 	
 } 
 
-.btn-default{
-
+#acceptModal{
+    padding: 1em;  
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5em; 
+    margin-bottom: .5em; 
+    text-align: center; 
+    margin-left: 1em; 
+    margin-right: 1em; 
+    z-index:200;
+    
+}
+#acceptBtn{
+	border-radius: 40px;
 }
 
-.modal-body button {
-width: 200px;
+.modal-footer .btn + .btn {
+    border-radius: 40px;
 }
+
+
+
+
+
+
+
 

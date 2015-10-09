@@ -79,6 +79,7 @@
               UNKNOWN STARS
             @endif
             </p>
+            <button class="learnButton">Learn more </br>about me!</button>
           </div>
         </div>
       </div>

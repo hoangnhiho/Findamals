@@ -420,7 +420,7 @@ Game.prototype = {
         }
     }
   },
-  isSecret: function(elmLeft, elmTop){ 
+  isSecret: function(elmLeft, elmTop){
     var player = this.player;
     var isInHouse = [];
     var object;
@@ -456,7 +456,9 @@ Game.prototype = {
         object = terrainChangeObjects[i];
           if ((object.left - 27) <= elmLeft && elmLeft <= (object.left + object.width - 9)){
               if ((object.top-32) <= elmTop && elmTop <= object.bottom){
+                //console.log(globalURL + object.id);
                 window.location.href = globalURL + object.id;
+
               }
           }
         
