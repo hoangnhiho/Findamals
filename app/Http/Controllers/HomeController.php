@@ -116,7 +116,15 @@ class HomeController extends Controller {
         }
         return view('terrain.terrain3', compact('userData','terrainValue'));
     }
-    
+     /**
+     * Return My Collection development view
+     *
+     */
+    public function collection(){
+        $userData = Auth::user();
+        $terrainValue = self::getTerrainValue();
+        return view('collection.collection', compact('userData','terrainValue'));
+    }
     /**
      * Return demo view
      *

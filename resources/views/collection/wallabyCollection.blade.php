@@ -8,61 +8,164 @@
                   <h2 class="modal-title" id="modal-label">Brush-Tailed Rock Wallaby</h2>
               </div>
               <div class="modal-body">
-                <img class="img-small pull-right" src="{{ asset('/images/animals/wallaby.png') }}" alt="Findamals Wallaby Character" style="margin-top:-10px">
+                <img class="img-small pull-right" src="{{ asset('/images/animals/wallaby.png') }}" alt="Findamals Wallaby Character" style="margin-top:-40px">
 
+                <h3>Brush-Tailed Rock Wallaby  Facts</h3>
                 <p>Status: Near-Threatened</p>
-
-                <!-- Content from Wikipedia -->
-                <p id="wallaby" class="wiki"></p> 
 
                 <ul>
                   <li>Populations of Brush-Tailed Rock Wallabies have declined recently</li>
                   <li>Due to an escape in 1916, a small population exists in Oahu in Hawaii</li>
-                  
                 </ul>
 
                 <div>
                 
-                  <h2>Discoveries</h2>
+                  <h3>Discoveries</h3>
                   <p>Select an item below to see more</p>
 
                   @if ($userData->wallabyExp >= 1)
-                  <div class=" col-xs-6 col-sm-3 col-md-2">
-                  <img class="img-thumb" id="wallabyThumb1" data-toggle="modal" data-target="#wallabyContent">
-                  </div>
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#wallabyCarousel" data-slide-to="0"><img class="img-thumb active" id="wallabyThumb1" data-toggle="modal" data-target="#wallabyContent" data-slide-to="0"></a>
+                    </div>
                   @endif
 
                   @if ($userData->wallabyExp >= 2)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://blog.queensland.com/wp-content/uploads/2012/10/Surprised-Koala3.jpg" data-toggle="modal" data-target="#wallabyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#wallabyCarousel" data-slide-to="1"><img class="img-thumb active" id="wallabyThumb2" data-toggle="modal" data-target="#wallabyContent" data-slide-to="1"></a>
                     </div>
                   @endif
 
                   @if ($userData->wallabyExp >= 3)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://images.brisbanetimes.com.au/2011/09/29/2657667/KOALA_729-420x0.jpg" data-toggle="modal" data-target="#wallabyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#wallabyCarousel" data-slide-to="2"><img class="img-thumb active" id="wallabyThumb3" data-toggle="modal" data-target="#wallabyContent" data-slide-to="2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Petrogale_penicillata_4.jpg/1261px-Petrogale_penicillata_4.jpg"></a>
                     </div>
                   @endif
 
                   @if ($userData->wallabyExp >= 4)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="https://s-media-cache-ak0.pinimg.com/736x/f2/12/a3/f212a3fd057b7f5e9d9b77a26339e9ad.jpg" data-toggle="modal" data-target="#wallabyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#wallabyCarousel" data-slide-to="3">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#wallabyContent" data-slide-to="3">
+                          <p id="wallabyThumb4"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
 
                   @if ($userData->wallabyExp >= 5)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://justcuteanimals.com/wp-content/uploads/2014/08/koala-ice-lollie-hat-funny-cool-animal-pictures-summer-pics.jpg" data-toggle="modal" data-target="#wallabyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#wallabyCarousel" data-slide-to="4">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#wallabyContent" data-slide-to="4">
+                          <p id="wallabyThumb5"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
 
                   @if ($userData->wallabyExp >= 6)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://www.koalas.org/koalaalb.jpg" data-toggle="modal" data-target="#wallabyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#wallabyCarousel" data-slide-to="5">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#wallabyContent" data-slide-to="5">
+                          <p id="wallabyThumb6"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
                   
                 </div>
+                <div class="clearfix"></div>
+                <!-- Content from Wikipedia -->
+                <h3>More Information</h3>
+                <p id="wallaby" class="wiki"></p> 
+
+
+  <div id="wallabyContent" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-discovery">
+      <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            <h4 class="modal-title">wallaby Discoveries</h4>
+          </div> 
+
+          <div class="modal-body">
+
+            <div class="carouselContent">
+              <!-- http://bootsnipp.com/snippets/featured/carousel-inside-modal -->
+              <div id="wallabyCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                      <div class="item active">
+                        <img class="img-responsive" id="wallabyContent1" />
+
+                        <div class="carousel-caption">
+                          <p class="smlCaption" id="wallabyTitle1"></p>
+                          <p class="smlCaption" id="wallabyContrib1">Contributor: </p>
+                          <p class="smlCaption"> Source: <a id="wallabySource1"></a></p>
+                        </div>
+                      </div>
+
+                      @if ($userData->wallabyExp >= 2)
+                        <div class="item">
+                          <img class="img-responsive" id="wallabyContent2"/>
+                          <div class="carousel-caption">
+                            <p class="smlCaption" id="wallabyTitle2"></p>
+                            <p class="smlCaption" id="wallabyContrib2">Contributor: </p>
+                            <p class="smlCaption"> Source: <a id="wallabySource2"></a></p>
+                          </div>
+                        </div>
+                      @endif
+
+                      @if ($userData->wallabyExp >= 3)
+                        <div class="item">
+                          <img class="img-responsive" id="wallabyContent3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Petrogale_penicillata_4.jpg/1261px-Petrogale_penicillata_4.jpg" />
+                          <div class="carousel-caption">
+                            <p class="smlCaption" id="wallabyTitle3"></p>
+                            <p class="smlCaption" id="wallabyContrib3">Contributor: </p>
+                            <p class="smlCaption"> Source: <a id="wallabySource3"></a></p>
+                          </div>
+                        </div>
+                      @endif
+
+                      @if ($userData->wallabyExp >= 4)
+                        <div class="item">
+                          <p id="wallabyHeading1"></p>
+                          <p id="wallabySrc1"></p>
+                          <p id="wallabyText1"></p>
+                        </div>
+                      @endif
+
+                      @if ($userData->wallabyExp >= 5)
+                        <div class="item">
+                          <p id="wallabyHeading2"></p>
+                          <p id="wallabySrc2"></p>
+                          <p id="wallabyText2"></p>
+                        </div>
+                      @endif
+
+                      @if ($userData->wallabyExp >= 6)
+                        <div class="item">
+                          <p id="wallabyHeading3"></p>
+                          <p id="wallabySrc3"></p>
+                          <p id="wallabyText3"></p>
+                        </div>
+                      @endif
+
+                    </div><!-- end carousel-inner -->
+
+                      <!-- Controls -->
+                      @if ($userData->wallabyExp >= 2)
+                      <a class="left carousel-control" href="#wallabyCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#wallabyCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
+                      @endif
+
+              </div><!-- end wallaby-carousel -->
+            </div> <!-- end carousel-content -->
+
               </div> <!-- end modal body -->
             </div> <!-- end modal content -->
         </div> <!-- end modal-dialog -->
@@ -124,3 +227,5 @@
       </div>
     </div>
   </div>
+
+

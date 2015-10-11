@@ -26,39 +26,50 @@
                   <p>Select an item below to see more</p>
 
                   @if ($userData->koalaExp >= 1)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
                       <a href="#koalaCarousel" data-slide-to="0"><img class="img-thumb active" id="koalaThumb1" data-toggle="modal" data-target="#koalaContent" data-slide-to="0"></a>
                     </div>
                   @endif
 
                   @if ($userData->koalaExp >= 2)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                      <a href="#koalaCarousel" data-slide-to="1">
-                      <img class="img-thumb" src="http://blog.queensland.com/wp-content/uploads/2012/10/Surprised-Koala3.jpg" data-toggle="modal" data-target="#koalaContent"></a>
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#koalaCarousel" data-slide-to="1"><img class="img-thumb active" id="koalaThumb2" data-toggle="modal" data-target="#koalaContent" data-slide-to="1"></a>
                     </div>
                   @endif
 
                   @if ($userData->koalaExp >= 3)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                      <img class="img-thumb" src="http://images.brisbanetimes.com.au/2011/09/29/2657667/KOALA_729-420x0.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#koalaCarousel" data-slide-to="2"><img class="img-thumb active" id="koalaThumb3" data-toggle="modal" data-target="#koalaContent" data-slide-to="2"></a>
                     </div>
                   @endif
 
                   @if ($userData->koalaExp >= 4)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                      <img class="img-thumb" src="https://s-media-cache-ak0.pinimg.com/736x/f2/12/a3/f212a3fd057b7f5e9d9b77a26339e9ad.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#koalaCarousel" data-slide-to="3">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#koalaContent" data-slide-to="3">
+                          <p id="koalaThumb4"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
 
                   @if ($userData->koalaExp >= 5)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                      <img class="img-thumb" src="http://justcuteanimals.com/wp-content/uploads/2014/08/koala-ice-lollie-hat-funny-cool-animal-pictures-summer-pics.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#koalaCarousel" data-slide-to="4">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#koalaContent" data-slide-to="4">
+                          <p id="koalaThumb5"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
 
                   @if ($userData->koalaExp >= 6)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                      <img class="img-thumb" src="http://www.koalas.org/koalaalb.jpg" data-toggle="modal" data-target="#koalaimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#koalaCarousel" data-slide-to="5">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#koalaContent" data-slide-to="5">
+                          <p id="koalaThumb6"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
                   
@@ -87,7 +98,7 @@
 
             <div class="carouselContent">
               <!-- http://bootsnipp.com/snippets/featured/carousel-inside-modal -->
-              <div id="koalaCarousel" class="carousel slide" data-ride="carousel">
+              <div id="koalaCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
@@ -103,8 +114,47 @@
 
                       @if ($userData->koalaExp >= 2)
                         <div class="item">
-                          <img class="img-responsive" src="http://blog.queensland.com/wp-content/uploads/2012/10/Surprised-Koala3.jpg" alt="...">
-                          <div class="carousel-caption">Another Image</div>
+                          <img class="img-responsive" id="koalaContent2"/>
+                          <div class="carousel-caption">
+                            <p class="smlCaption" id="koalaTitle2"></p>
+                            <p class="smlCaption" id="koalaContrib2">Contributor: </p>
+                            <p class="smlCaption"> Source: <a id="koalaSource2"></a></p>
+                          </div>
+                        </div>
+                      @endif
+
+                      @if ($userData->koalaExp >= 3)
+                        <div class="item">
+                          <img class="img-responsive" id="koalaContent3"/>
+                          <div class="carousel-caption">
+                            <p class="smlCaption" id="koalaTitle3"></p>
+                            <p class="smlCaption" id="koalaContrib3">Contributor: </p>
+                            <p class="smlCaption"> Source: <a id="koalaSource3"></a></p>
+                          </div>
+                        </div>
+                      @endif
+
+                      @if ($userData->koalaExp >= 4)
+                        <div class="item">
+                          <p id="koalaHeading1"></p>
+                          <p id="koalaSrc1"></p>
+                          <p id="koalaText1"></p>
+                        </div>
+                      @endif
+
+                      @if ($userData->koalaExp >= 5)
+                        <div class="item">
+                          <p id="koalaHeading2"></p>
+                          <p id="koalaSrc2"></p>
+                          <p id="koalaText2"></p>
+                        </div>
+                      @endif
+
+                      @if ($userData->koalaExp >= 6)
+                        <div class="item">
+                          <p id="koalaHeading3"></p>
+                          <p id="koalaSrc3"></p>
+                          <p id="koalaText3"></p>
                         </div>
                       @endif
 
