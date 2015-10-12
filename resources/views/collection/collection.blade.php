@@ -435,12 +435,12 @@
    
   </div> <!-- end container div -->
 </div>
+@include('collection.kangarooCollection')
+@include('collection.bilbyCollection')
+@include('collection.wombatCollection')
+@include('collection.koalaCollection')
+@include('collection.wallabyCollection')
 
-   @include('collection.koalaCollection')
-   @include('collection.wallabyCollection')
-   @include('collection.wombatCollection')
-   @include('collection.kangarooCollection')
-   @include('collection.bilbyCollection')
 
 
 

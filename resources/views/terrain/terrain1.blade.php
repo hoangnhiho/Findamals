@@ -160,6 +160,10 @@
 <script type="text/javascript">
 
 $( document ).ready(function() {
+	if (parseInt($('#koalaExp').val()) + parseInt($('#wallabyExp').val()) + parseInt($('#wombatExp').val()) 
+		+ parseInt($('#bilbyExp').val()) + parseInt($('#kangarooExp').val()) == 0 ){
+		$('#howToPlay').modal('show');  
+	} 
 	//this needs needs to be repetitively added to all terrain pages
 	$('.secretObject').click(function(e){
 		if (nearSecret==1){
