@@ -84,7 +84,7 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-            <h4 class="modal-title">wallaby Discoveries</h4>
+            <h4 class="modal-title">Wallaby Discoveries</h4>
           </div> 
 
           <div class="modal-body">
