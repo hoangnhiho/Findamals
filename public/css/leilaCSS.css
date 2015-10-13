@@ -153,7 +153,7 @@ p, li {
 }
 
 .article-thumb {
-	background-color: #000;
+	background-color: #1ebcdd;
 	overflow: hidden;
 }
 
@@ -165,19 +165,43 @@ p, li {
 	padding: 10px;
 }
 
+.articleText {
+	font-size: 1.1em;
+	padding: 10px;
+}
+.articleInfo{
+	font-size: 1.4em;
+	text-align: center;
+	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
+	color: #81cc33;
+	padding: 10px;
+}
+
+
 /*************  Carousel controls  *************/
 
 .carousel-control {
 	background-image: none;
-	bottom: 50px;
-	color: #333;
 	opacity: 1;
 	position: relative;
-
+	top:-5px;
+	padding: 0 30px 0 30px;
+	margin: -10px 0 0 0;
+	font-size: 24px;
+	text-shadow: none;
+	color: #CCC;
 }
 .carousel-control.right{
 	background-image: none;
+
 }
 .carousel-control.left{
 	background-image: none;
+}
+.carousel-control:hover {
+	color: #81cc33;
+}
+
+.carousel-control:active {
+	color: #81cc33;	
 }

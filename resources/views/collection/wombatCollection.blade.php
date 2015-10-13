@@ -94,19 +94,21 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-            <h4 class="modal-title">@if ($userData->wombatExp >= 2)
-                      <a class="left carousel-control" href="#wombatCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>@endif Wombat Discoveries</h4>
-            <!-- Controls -->
-                      @if ($userData->wombatExp >= 2)
-                      <a class="left carousel-control" href="#wombatCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#wombatCarousel" role="button" data-slide="next">
+            <h4 class="modal-title">
+
+                @if ($userData->wombatExp >= 2)
+                  <a class="left carousel-control" href="#wombatCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>@endif 
+                  Wombat Discoveries 
+                  @if ($userData->wombatExp >= 2)
+                  <a class="right carousel-control" href="#wombatCarousel" role="button" data-slide="next">
                         <span class="glyphicon glyphicon-chevron-right"></span>
                       </a>
-                      @endif
+                  @endif
+
+            </h4>
+
           </div> 
 
           <div class="modal-body">
@@ -123,13 +125,13 @@
                         <div class="carousel-caption">
                           <p class="smlCaption" id="wombatTitle1">Haarnasenwombat (Lasiorhinus krefftii) </p>
                           <p class="smlCaption" id="wombatContrib1">Contributor: Eva Hejda  </p>
-                          <p class="smlCaption"> Source: Wikimedia <a id="wombatSource1" href="http://fotos.naturspot.de/">Naturspot</a></p>
+                          <p class="smlCaption"> Source: Wikimedia <a id="wombatSource1" href="http://fotos.naturspot.de/" target="_blank">Naturspot</a></p>
                         </div>
                       </div>
 
                       @if ($userData->wombatExp >= 2)
                         <div class="item">
-                          <img class="img-responsive" id="wombatContent2" src="https://upload.wikimedia.org/wikipedia/commons/7/76/King_Island_wombats.jpg" />
+                          <img class="img-responsive" id="wombatContent2" src="https://upload.wikimedia.org/wikipedia/commons/7/76/King_Island_wombats.jpg" target="_blank"/>
                           <div class="carousel-caption">
                             <p class="smlCaption" id="wombatTitle2">Illustration of the now extinct wombats of King Island, Tasmania.</p>
                             <p class="smlCaption" id="wombatContrib2">Contributor: Charles-Alexandre Lesueur</p>
@@ -140,7 +142,7 @@
 
                       @if ($userData->wombatExp >= 3)
                         <div class="item">
-                          <img class="img-responsive" id="wombatContent3" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Lasiorhinus_latifrons_3_Gould.jpg" />
+                          <img class="img-responsive" id="wombatContent3" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Lasiorhinus_latifrons_3_Gould.jpg" target="_blank"/>
                           <div class="carousel-caption">
                             <p class="smlCaption" id="wombatTitle3">Lasiorhinus latifrons - hairy-nosed wombat, 1863</p>
                             <p class="smlCaption" id="wombatContrib3">Contributor: John Gould (1804–1881)</p>
@@ -151,25 +153,25 @@
 
                       @if ($userData->wombatExp >= 4)
                         <div class="item">
-                          <p id="wombatHeading1"></p>
-                          <p id="wombatSrc1"></p>
-                          <p id="wombatText1"></p>
+                          <p id="wombatHeading1" class="articleInfo"></p>
+                          <p id="wombatSrc1" class="articleInfo"></p>
+                          <p id="wombatText1" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->wombatExp >= 5)
                         <div class="item">
-                          <p id="wombatHeading2"></p>
-                          <p id="wombatSrc2"></p>
-                          <p id="wombatText2"></p>
+                          <p id="wombatHeading2" class="articleInfo"></p>
+                          <p id="wombatSrc2" class="articleInfo"></p>
+                          <p id="wombatText2" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->wombatExp >= 6)
                         <div class="item">
-                          <p id="wombatHeading3"></p>
-                          <p id="wombatSrc3"></p>
-                          <p id="wombatText3"></p>
+                          <p id="wombatHeading3" class="articleInfo"></p>
+                          <p id="wombatSrc3" class="articleInfo"></p>
+                          <p id="wombatText3" class="articleText"></p>
                         </div>
                       @endif
 

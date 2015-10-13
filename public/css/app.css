@@ -898,7 +898,7 @@ a {
   text-decoration: none;
 }
 a:hover,
-a:focus {
+/*a:focus*/ {
   color: #23527c;
   text-decoration: underline;
 }
@@ -5822,8 +5822,8 @@ button.close {
 .carousel-control:hover,
 .carousel-control:focus {
   outline: 0;
-  color: #ffffff;
-  text-decoration: none;
+/*  color: #ffffff;
+*/  text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -5910,8 +5910,8 @@ button.close {
   .carousel-control .icon-next {
     width: 30px;
     height: 30px;
-    margin-top: -15px;
-    font-size: 30px;
+/*    margin-top: -15px;
+*/    font-size: 20px;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {

@@ -92,7 +92,19 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-            <h4 class="modal-title">Koala Discoveries</h4>
+            <h4 class="modal-title">
+              @if ($userData->koalaExp >= 2)
+                <a class="left carousel-control" href="#koalaCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+              @endif
+            Koala Discoveries
+            @if ($userData->koalaExp >= 2)
+              <a class="right carousel-control" href="#koalaCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            @endif
+            </h4>
           </div> 
 
           <div class="modal-body">
@@ -109,7 +121,7 @@
                         <div class="carousel-caption">
                           <p class="smlCaption" id="koalaTitle1"></p>
                           <p class="smlCaption" id="koalaContrib1">Contributor: </p>
-                          <p class="smlCaption"> Source: <a id="koalaSource1"></a></p>
+                          <p class="smlCaption"> Source: <a id="koalaSource1" target="_blank"></a></p>
                         </div>
                       </div>
 
@@ -119,7 +131,7 @@
                           <div class="carousel-caption">
                             <p class="smlCaption" id="koalaTitle2"></p>
                             <p class="smlCaption" id="koalaContrib2">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="koalaSource2"></a></p>
+                            <p class="smlCaption"> Source: <a id="koalaSource2" target="_blank"></a></p>
                           </div>
                         </div>
                       @endif
@@ -130,46 +142,36 @@
                           <div class="carousel-caption">
                             <p class="smlCaption" id="koalaTitle3"></p>
                             <p class="smlCaption" id="koalaContrib3">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="koalaSource3"></a></p>
+                            <p class="smlCaption"> Source: <a id="koalaSource3" target="_blank"></a></p>
                           </div>
                         </div>
                       @endif
 
                       @if ($userData->koalaExp >= 4)
                         <div class="item">
-                          <p id="koalaHeading1"></p>
-                          <p id="koalaSrc1"></p>
-                          <p id="koalaText1"></p>
+                          <p id="koalaHeading1"  class="articleInfo"></p>
+                          <p id="koalaSrc1" class="articleInfo"></p>
+                          <p id="koalaText1" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->koalaExp >= 5)
                         <div class="item">
-                          <p id="koalaHeading2"></p>
-                          <p id="koalaSrc2"></p>
-                          <p id="koalaText2"></p>
+                          <p id="koalaHeading2" class="articleInfo"></p>
+                          <p id="koalaSrc2" class="articleInfo"></p>
+                          <p id="koalaText2" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->koalaExp >= 6)
                         <div class="item">
-                          <p id="koalaHeading3"></p>
-                          <p id="koalaSrc3"></p>
-                          <p id="koalaText3"></p>
+                          <p id="koalaHeading3" class="articleInfo"></p>
+                          <p id="koalaSrc3" class="articleInfo"></p>
+                          <p id="koalaText3" class="articleText"></p>
                         </div>
                       @endif
 
                     </div><!-- end carousel-inner -->
-
-                      <!-- Controls -->
-                      @if ($userData->koalaExp >= 2)
-                      <a class="left carousel-control" href="#koalaCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#koalaCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                      @endif
 
               </div><!-- end koala-carousel -->
             </div> <!-- end carousel-content -->

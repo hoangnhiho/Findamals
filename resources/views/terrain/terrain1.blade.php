@@ -29,7 +29,8 @@
   <script src="/js/bootstrap.min.js" type="text/javascript"></script>
   <script type="text/javascript"> 
     $(document).ready(function(){
-    	$('[data-toggle="tooltip"]').tooltip(); 
+    	$('[data-toggle="tooltip"]').tooltip();
+    	$('[data-toggle="modal"]').tooltip();
         $('#innerLoading .me').sprite({fps: 9, no_of_frames: 3}).spState(1);
         var game = new Game();
     $('.inactive').hover(

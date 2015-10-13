@@ -94,7 +94,20 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-            <h4 class="modal-title">kangaroo Discoveries</h4>
+            <h4 class="modal-title">
+              @if ($userData->kangarooExp >= 2)
+                      <a class="left carousel-control" href="#kangarooCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+              @endif
+            Red Kangaroo Discoveries
+            @if ($userData->kangarooExp >= 2)
+              <a class="right carousel-control" href="#kangarooCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            @endif
+            </h4>
+
           </div> 
 
           <div class="modal-body">
@@ -111,7 +124,7 @@
                         <div class="carousel-caption">
                           <p class="smlCaption" id="kangarooTitle1"> </p>
                           <p class="smlCaption" id="kangarooContrib1">Contributor:  </p>
-                          <p class="smlCaption"> Source: <a id="kangarooSource1"> </a></p>
+                          <p class="smlCaption"> Source: <a id="kangarooSource1" target="_blank"> </a></p>
                         </div>
                       </div>
 
@@ -121,7 +134,7 @@
                           <div class="carousel-caption">
                             <p class="smlCaption" id="kangarooTitle2"></p>
                             <p class="smlCaption" id="kangarooContrib2">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="kangarooSource2" ></a></p>
+                            <p class="smlCaption"> Source: <a id="kangarooSource2" target="_blank"></a></p>
                           </div>
                         </div>
                       @endif
@@ -132,46 +145,37 @@
                           <div class="carousel-caption">
                             <p class="smlCaption" id="kangarooTitle3"></p>
                             <p class="smlCaption" id="kangarooContrib3">Contributor:)</p>
-                            <p class="smlCaption"> Source: <a id="kangarooSource3"></a></p>
+                            <p class="smlCaption"> Source: <a id="kangarooSource3" target="_blank"></a></p>
                           </div>
                         </div>
                       @endif
 
                       @if ($userData->kangarooExp >= 4)
                         <div class="item">
-                          <p id="kangarooHeading1"></p>
-                          <p id="kangarooSrc1"></p>
-                          <p id="kangarooText1"></p>
+                          <p id="kangarooHeading1" class="articleInfo"></p>
+                          <p id="kangarooSrc1" class="articleInfo"></p>
+                          <p id="kangarooText1" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->kangarooExp >= 5)
                         <div class="item">
-                          <p id="kangarooHeading2"></p>
-                          <p id="kangarooSrc2"></p>
-                          <p id="kangarooText2"></p>
+                          <p id="kangarooHeading2" class="articleInfo"></p>
+                          <p id="kangarooSrc2" class="articleInfo"></p>
+                          <p id="kangarooText2" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->kangarooExp >= 6)
                         <div class="item">
-                          <p id="kangarooHeading3"></p>
-                          <p id="kangarooSrc3"></p>
-                          <p id="kangarooText3"></p>
+                          <p id="kangarooHeading3" class="articleInfo"></p>
+                          <p id="kangarooSrc3" class="articleInfo"></p>
+                          <p id="kangarooText3" class="articleText"></p>
                         </div>
                       @endif
 
                     </div><!-- end carousel-inner -->
-
-                      <!-- Controls -->
-                      @if ($userData->kangarooExp >= 2)
-                      <a class="left carousel-control" href="#kangarooCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#kangarooCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                      @endif
+                     
 
               </div><!-- end kangaroo-carousel -->
             </div> <!-- end carousel-content -->

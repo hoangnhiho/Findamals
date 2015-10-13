@@ -93,7 +93,20 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-            <h4 class="modal-title">bilby Discoveries</h4>
+            <h4 class="modal-title">
+              @if ($userData->bilbyExp >= 2)
+                <a class="left carousel-control" href="#bilbyCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                @endif
+              Bilby Discoveries
+                @if ($userData->bilbyExp >= 2)
+                  <a class="right carousel-control" href="#bilbyCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                @endif
+
+            </h4>
           </div> 
 
           <div class="modal-body">
@@ -110,7 +123,7 @@
                         <div class="carousel-caption">
                           <p class="smlCaption" id="bilbyTitle1"> </p>
                           <p class="smlCaption" id="bilbyContrib1">Contributor:  </p>
-                          <p class="smlCaption"> Source: <a id="bilbySource1"> </a></p>
+                          <p class="smlCaption"> Source: <a id="bilbySource1" target="_blank"> </a></p>
                         </div>
                       </div>
 
@@ -120,7 +133,7 @@
                           <div class="carousel-caption">
                             <p class="smlCaption" id="bilbyTitle2">Illustration from "A hand-book to the marsupialia and monotremata"</p>
                             <p class="smlCaption" id="bilbyContrib2">Contributor: Lydekker, Richard, 1896</p>
-                            <p class="smlCaption"> Source: <a id="bilbySource2" href="http://www.flickr.com/photos/biodivlibrary/6008353807" ></a>Flickr</p>
+                            <p class="smlCaption"> Source: <a id="bilbySource2" href="http://www.flickr.com/photos/biodivlibrary/6008353807" target="_blank">Flickr</a></p>
                           </div>
                         </div>
                       @endif
@@ -131,46 +144,37 @@
                           <div class="carousel-caption">
                             <p class="smlCaption" id="bilbyTitle3">Bilby Dec 2000, David Fleay Wildlife Park, Gold Coast</p>
                             <p class="smlCaption" id="bilbyContrib3">Contributor: Bernard DUPONT</p>
-                            <p class="smlCaption"> Source: <a id="bilbySource3" href="https://www.flickr.com/photos/berniedup/9996143106/">Flickr</a></p>
+                            <p class="smlCaption"> Source: <a id="bilbySource3" href="https://www.flickr.com/photos/berniedup/9996143106/" target="_blank">Flickr</a></p>
                           </div>
                         </div>
                       @endif
 
                       @if ($userData->bilbyExp >= 4)
                         <div class="item">
-                          <p id="bilbyHeading1"></p>
-                          <p id="bilbySrc1"></p>
-                          <p id="bilbyText1"></p>
+                          <p id="bilbyHeading1" class="articleInfo"></p>
+                          <p id="bilbySrc1" class="articleInfo"></p>
+                          <p id="bilbyText1" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->bilbyExp >= 5)
                         <div class="item">
-                          <p id="bilbyHeading2"></p>
-                          <p id="bilbySrc2"></p>
-                          <p id="bilbyText2"></p>
+                          <p id="bilbyHeading2" class="articleInfo"></p>
+                          <p id="bilbySrc2" class="articleInfo"></p>
+                          <p id="bilbyText2" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->bilbyExp >= 6)
                         <div class="item">
-                          <p id="bilbyHeading3"></p>
-                          <p id="bilbySrc3"></p>
-                          <p id="bilbyText3"></p>
+                          <p id="bilbyHeading3" class="articleInfo"></p>
+                          <p id="bilbySrc3" class="articleInfo"></p>
+                          <p id="bilbyText3" class="articleText"></p>
                         </div>
                       @endif
 
                     </div><!-- end carousel-inner -->
-
-                      <!-- Controls -->
-                      @if ($userData->bilbyExp >= 2)
-                      <a class="left carousel-control" href="#bilbyCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#bilbyCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                      @endif
+                    
 
               </div><!-- end bilby-carousel -->
             </div> <!-- end carousel-content -->

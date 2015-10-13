@@ -21,6 +21,7 @@
   <script type="text/javascript"> 
     $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();
+      $('[data-toggle="modal"]').tooltip();
       $('.inactive').hover(
        function(){ $(this).removeClass('inactive') },
        function(){ $(this).addClass('inactive') }
@@ -445,12 +446,13 @@
         <h4 class="modal-title">How to play</h4>
       </div>
       <div class="modal-body">
-        <p>Use arrow keys to navigate your avatar and explore the terrains.</p>
+              <img src="images/howToPlay.PNG" style="width:100%;">
+      <!--  <p>Use arrow keys to navigate your avatar and explore the terrains.</p>
         <p>If an object moves, <strong>CLICK IT!!</strong></p>
         <p>Meet animals and get to know them better by learning amazing facts and them and their habitats.</p>
-        <p>Play quizzes to earn stars, add animals to your collection and discover interesting photos and articles!</p>
-        <p>Unlock and explore terrains with your stars. Find animals to collect by exploring and tapping on objects in the terrain</p>
-      </div>
+        <p>Answer questions and earn stars.</p>
+        <p>Unlock terrains with your stars. Explore even more terrains and meet more amazing animals</p>
+       --></div> 
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>

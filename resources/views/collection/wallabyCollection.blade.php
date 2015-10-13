@@ -90,7 +90,19 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-            <h4 class="modal-title">Wallaby Discoveries</h4>
+            <h4 class="modal-title">
+              @if ($userData->wallabyExp >= 2)
+                <a class="left carousel-control" href="#wallabyCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+              @endif
+            Wallaby Discoveries
+              @if ($userData->wallabyExp >= 2)
+              <a class="right carousel-control" href="#wallabyCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+              @endif
+            </h4>
           </div> 
 
 
@@ -106,13 +118,13 @@
                         <div class="carousel-caption">
                           <p class="smlCaption" id="wallabyTitle1"></p>
                           <p class="smlCaption" id="wallabyContrib1">Contributor: </p>
-                          <p class="smlCaption"> Source: <a id="wallabySource1"></a></p>
+                          <p class="smlCaption"> Source: <a id="wallabySource1" target="_blank"></a></p>
                         </div>
                       </div>
 
                       @if ($userData->wallabyExp >= 2)
                         <div class="item">
-                          <img class="img-responsive" id="wallabyContent2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Petrogale_penicillata_with_radio_tracking_collar_-_journal.pone.0063017.g001A.png/1599px-Petrogale_penicillata_with_radio_tracking_collar_-_journal.pone.0063017.g001A.png" />
+                          <img class="img-responsive" id="wallabyContent2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Petrogale_penicillata_with_radio_tracking_collar_-_journal.pone.0063017.g001A.png/1599px-Petrogale_penicillata_with_radio_tracking_collar_-_journal.pone.0063017.g001A.png" target="_blank"/>
                           <div class="carousel-caption">
                             <p class="smlCaption" id="wallabyTitle2">A wild brush-tailed rock-wallaby meets an animal released from a captive breeding program (on right, with radio tracking collar)</p>
                             <p class="smlCaption" id="wallabyContrib2">Contributor: Hugh McGregor</p>
@@ -123,7 +135,7 @@
 
                       @if ($userData->wallabyExp >= 3)
                         <div class="item">
-                          <img class="img-responsive" id="wallabyContent3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Petrogale_penicillata_4.jpg/1261px-Petrogale_penicillata_4.jpg" />
+                          <img class="img-responsive" id="wallabyContent3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Petrogale_penicillata_4.jpg/1261px-Petrogale_penicillata_4.jpg" target="_blank"/>
                           <div class="carousel-caption">
                             <p class="smlCaption" id="wallabyTitle3">Petrogale penicillata; Featherdale Wildlife Park, Australia</p>
                             <p class="smlCaption" id="wallabyContrib3">Contributor: May Wong</p>
@@ -134,39 +146,30 @@
 
                       @if ($userData->wallabyExp >= 4)
                         <div class="item">
-                          <p id="wallabyHeading1"></p>
-                          <p id="wallabySrc1"></p>
-                          <p id="wallabyText1"></p>
+                          <p id="wallabyHeading1" class="articleInfo"></p>
+                          <p id="wallabySrc1" class="articleInfo"></p>
+                          <p id="wallabyText1" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->wallabyExp >= 5)
                         <div class="item">
-                          <p id="wallabyHeading2"></p>
-                          <p id="wallabySrc2"></p>
-                          <p id="wallabyText2"></p>
+                          <p id="wallabyHeading2" class="articleInfo"></p>
+                          <p id="wallabySrc2" class="articleInfo"></p>
+                          <p id="wallabyText2" class="articleText"></p>
                         </div>
                       @endif
 
                       @if ($userData->wallabyExp >= 6)
                         <div class="item">
-                          <p id="wallabyHeading3"></p>
-                          <p id="wallabySrc3"></p>
-                          <p id="wallabyText3"></p>
+                          <p id="wallabyHeading3"class="articleInfo"></p>
+                          <p id="wallabySrc3" class="articleInfo"></p>
+                          <p id="wallabyText3" class="articleText"></p>
                         </div>
                       @endif
 
                     </div><!-- end carousel-inner -->
-
-                      <!-- Controls -->
-                      @if ($userData->wallabyExp >= 2)
-                      <a class="left carousel-control" href="#wallabyCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#wallabyCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                      @endif
+                     
 
               </div><!-- end wallaby-carousel -->
             </div> <!-- end carousel-content -->
