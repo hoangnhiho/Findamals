@@ -10,10 +10,8 @@
               <div class="modal-body">
                 <img class="img-small pull-right" src="{{ asset('/images/animals/bilby.png') }}" alt="Findamals bilby Character" style="margin-top:-20px">
 
+                <h3>Greater Bilby Facts</h3>
                 <p>Status: Vulnerable</p>
-
-                <!-- Content from Wikipedia -->
-                <p id="bilby" class="wiki"></p> 
 
                 <ul>
                   <li>The fur  of a Greater Bilby is blue-grey with patches of tan and is very soft.</li>
@@ -25,46 +23,64 @@
 
                 <div>
                 
-                  <h2>Discoveries</h2>
+                  <h3>Discoveries</h3>
                   <p>Select an item below to see more</p>
 
                   @if ($userData->bilbyExp >= 1)
-                  <div class=" col-xs-6 col-sm-3 col-md-2">
-                  <img class="img-thumb" id="bilbyThumb1" data-toggle="modal" data-target="#bilbyContent">
-                  </div>
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#bilbyCarousel" data-slide-to="0"><img class="img-thumb active portrait-img" id="bilbyThumb1" data-toggle="modal" data-target="#bilbyContent" data-slide-to="0" ></a>
+                    </div>
                   @endif
 
                   @if ($userData->bilbyExp >= 2)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://blog.queensland.com/wp-content/uploads/2012/10/Surprised-Koala3.jpg" data-toggle="modal" data-target="#bilbyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#bilbyCarousel" data-slide-to="1"><img class="img-thumb active" id="bilbyThumb2" data-toggle="modal" data-target="#bilbyContent" data-slide-to="1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/A_hand-book_to_the_marsupialia_and_monotremata_%28Plate_XX%29_%286008353807%29.jpg/1600px-A_hand-book_to_the_marsupialia_and_monotremata_%28Plate_XX%29_%286008353807%29.jpg"></a>
                     </div>
                   @endif
 
                   @if ($userData->bilbyExp >= 3)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://images.brisbanetimes.com.au/2011/09/29/2657667/KOALA_729-420x0.jpg" data-toggle="modal" data-target="#bilbyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#bilbyCarousel" data-slide-to="2"><img class="img-thumb active" id="bilbyThumb3" data-toggle="modal" data-target="#bilbyContent" data-slide-to="2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Greater_Bilby_%28Macrotis_lagotis%29_%289996143106%29.jpg/1600px-Greater_Bilby_%28Macrotis_lagotis%29_%289996143106%29.jpg"></a>
                     </div>
                   @endif
 
                   @if ($userData->bilbyExp >= 4)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="https://s-media-cache-ak0.pinimg.com/736x/f2/12/a3/f212a3fd057b7f5e9d9b77a26339e9ad.jpg" data-toggle="modal" data-target="#bilbyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#bilbyCarousel" data-slide-to="3">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#bilbyContent" data-slide-to="3">
+                          <p id="bilbyThumb4"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
 
                   @if ($userData->bilbyExp >= 5)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://justcuteanimals.com/wp-content/uploads/2014/08/koala-ice-lollie-hat-funny-cool-animal-pictures-summer-pics.jpg" data-toggle="modal" data-target="#bilbyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#bilbyCarousel" data-slide-to="4">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#bilbyContent" data-slide-to="4">
+                          <p id="bilbyThumb5"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
 
                   @if ($userData->bilbyExp >= 6)
-                    <div class=" col-xs-6 col-sm-3 col-md-2">
-                    <img class="img-thumb" src="http://www.koalas.org/koalaalb.jpg" data-toggle="modal" data-target="#bilbyimg1">
+                    <div class="grow col-xs-6 col-sm-3 col-md-2">
+                      <a href="#bilbyCarousel" data-slide-to="5">
+                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#bilbyContent" data-slide-to="5">
+                          <p id="bilbyThumb6"></p>
+                        </div>
+                      </a>
                     </div>
                   @endif
                   
                 </div>
+
+                <div class="clearfix"></div>
+
+                <!-- Content from Wikipedia -->
+                <h3>More Information</h3>
+                <p id="bilby" class="wiki"></p> 
               </div> <!-- end modal body -->
             </div> <!-- end modal content -->
         </div> <!-- end modal-dialog -->
@@ -74,55 +90,95 @@
   <div id="bilbyContent" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-discovery">
       <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-          <h4 class="modal-title">Bilby Discoveries</h4>
-        </div>
-        <div class="modal-body">
 
-         <div class="carouselContent">
-        <!--     //http://bootsnipp.com/snippets/featured/carousel-inside-modal -->
-          <div id="bilbyCarousel" class="carousel slide" data-ride="carousel">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            <h4 class="modal-title">bilby Discoveries</h4>
+          </div> 
 
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="item active">
-                  <img class="img-responsive" id="bilbyContent1" >
-                  <div class="carousel-caption">
-                    <p class="smlCaption" id="bilbyTitle1"></p>
-                    <p class="smlCaption" id="bilbyContrib1">Contributor: </p>
-                    <p class="smlCaption"> Source: <a id="bilbySource1"></p></a>
-                  </div>
-                </div>
+          <div class="modal-body">
 
-                <div class="item">
-                  <img class="img-responsive" src="http://placehold.it/1200x600/fffccc/000&text=Two" alt="...">
-                  <div class="carousel-caption">
-                    Another Image
-                  </div>
-                </div>
-                 <div class="item">
-                  <img class="img-responsive" src="http://placehold.it/1200x600/fcf00c/000&text=Three" alt="...">
-                  <div class="carousel-caption">
-                    Another Image
-                  </div>
-                </div>
-              </div>
+            <div class="carouselContent">
+              <!-- http://bootsnipp.com/snippets/featured/carousel-inside-modal -->
+              <div id="bilbyCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
-              <!-- Controls -->
-              <a class="left carousel-control" href="#bilbyCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="right carousel-control" href="#bilbyCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-            </div>
-        </div>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                      <div class="item active">
+                        <img class="img-responsive" id="bilbyContent1"  />
 
-        </div>
-        <!-- <div class="modal-footer">
-          <p>Caption here</p>
-        </div> -->
-      </div>
-    </div>
-  </div>
+                        <div class="carousel-caption">
+                          <p class="smlCaption" id="bilbyTitle1"> </p>
+                          <p class="smlCaption" id="bilbyContrib1">Contributor:  </p>
+                          <p class="smlCaption"> Source: <a id="bilbySource1"> </a></p>
+                        </div>
+                      </div>
+
+                      @if ($userData->bilbyExp >= 2)
+                        <div class="item">
+                          <img class="img-responsive" id="bilbyContent2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/A_hand-book_to_the_marsupialia_and_monotremata_%28Plate_XX%29_%286008353807%29.jpg/1600px-A_hand-book_to_the_marsupialia_and_monotremata_%28Plate_XX%29_%286008353807%29.jpg" />
+                          <div class="carousel-caption">
+                            <p class="smlCaption" id="bilbyTitle2">Illustration from "A hand-book to the marsupialia and monotremata"</p>
+                            <p class="smlCaption" id="bilbyContrib2">Contributor: Lydekker, Richard, 1896</p>
+                            <p class="smlCaption"> Source: <a id="bilbySource2" href="http://www.flickr.com/photos/biodivlibrary/6008353807" ></a>Flickr</p>
+                          </div>
+                        </div>
+                      @endif
+
+                      @if ($userData->bilbyExp >= 3)
+                        <div class="item">
+                          <img class="img-responsive" id="bilbyContent3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Greater_Bilby_%28Macrotis_lagotis%29_%289996143106%29.jpg/1600px-Greater_Bilby_%28Macrotis_lagotis%29_%289996143106%29.jpg" />
+                          <div class="carousel-caption">
+                            <p class="smlCaption" id="bilbyTitle3">Bilby Dec 2000, David Fleay Wildlife Park, Gold Coast</p>
+                            <p class="smlCaption" id="bilbyContrib3">Contributor: Bernard DUPONT</p>
+                            <p class="smlCaption"> Source: <a id="bilbySource3" href="https://www.flickr.com/photos/berniedup/9996143106/">Flickr</a></p>
+                          </div>
+                        </div>
+                      @endif
+
+                      @if ($userData->bilbyExp >= 4)
+                        <div class="item">
+                          <p id="bilbyHeading1"></p>
+                          <p id="bilbySrc1"></p>
+                          <p id="bilbyText1"></p>
+                        </div>
+                      @endif
+
+                      @if ($userData->bilbyExp >= 5)
+                        <div class="item">
+                          <p id="bilbyHeading2"></p>
+                          <p id="bilbySrc2"></p>
+                          <p id="bilbyText2"></p>
+                        </div>
+                      @endif
+
+                      @if ($userData->bilbyExp >= 6)
+                        <div class="item">
+                          <p id="bilbyHeading3"></p>
+                          <p id="bilbySrc3"></p>
+                          <p id="bilbyText3"></p>
+                        </div>
+                      @endif
+
+                    </div><!-- end carousel-inner -->
+
+                      <!-- Controls -->
+                      @if ($userData->bilbyExp >= 2)
+                      <a class="left carousel-control" href="#bilbyCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#bilbyCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
+                      @endif
+
+              </div><!-- end bilby-carousel -->
+            </div> <!-- end carousel-content -->
+          </div> <!-- end modal-body -->
+
+
+      </div> <!-- end modal-content -->
+    </div> <!-- end modal-dialog -->
+  </div> <!-- end bilbyContent -->
+
+

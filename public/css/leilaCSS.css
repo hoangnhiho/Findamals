@@ -31,6 +31,13 @@ h3 {
 	color: #ff9d00;
 }
 
+h4 {
+	text-align: center;
+	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+	color: #ff9d00;
+}
+
 p {
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	font-size: 1.4em;
@@ -95,6 +102,24 @@ p, li {
 	color: #fff;
 }
 
+.carousel-caption {
+	position: relative;
+	color: #333;
+	margin-top: 20px;
+	padding-bottom: 0;
+	margin-bottom: 0; 
+	left: 0;
+	text-shadow: none;
+	font-size: 1.5em;
+}
+
+.carousel-caption  a {
+	color: #ff9d00;
+}
+.carousel-caption  a:hover {
+	font-weight: bold;
+}
+
 /*************  IMAGES  *************/
 .img-small {
 	max-width: 200px;
@@ -108,7 +133,10 @@ p, li {
 	height: 120px;
 	margin: 10px 0 20px 0;
 	border-radius: 20px;
-	padding: 10px;
+}
+
+.portrait-img{
+	width: 100%;
 }
 
 .thumbnail {
@@ -134,6 +162,22 @@ p, li {
 	font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
 	color: #fff;
 	text-align: center;
+	padding: 10px;
 }
 
+/*************  Carousel controls  *************/
 
+.carousel-control {
+	background-image: none;
+	bottom: 50px;
+	color: #333;
+	opacity: 1;
+	position: relative;
+
+}
+.carousel-control.right{
+	background-image: none;
+}
+.carousel-control.left{
+	background-image: none;
+}

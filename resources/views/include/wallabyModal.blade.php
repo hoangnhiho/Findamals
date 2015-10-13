@@ -1,5 +1,5 @@
 <!-- Wallaby Modal-->
-<div id="wallabyQuest0" class="modal fade" role="dialog">
+<div id="wallabyQuest0" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<div id="wallabyQuest1" class="modal fade" role="dialog">
+<div id="wallabyQuest1" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -43,7 +43,7 @@
 	</div>
 </div>
 
-<div id="wallabyQuest2" class="modal fade" role="dialog">
+<div id="wallabyQuest2" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -65,7 +65,7 @@
 	</div>
 </div>
 
-<div id="wallabyQuest3" class="modal fade" role="dialog">
+<div id="wallabyQuest3" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -87,7 +87,7 @@
 	</div>
 </div>
 
-<div id="wallabyQuest4" class="modal fade" role="dialog">
+<div id="wallabyQuest4" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -109,7 +109,7 @@
 	</div>
 </div>
 
-<div id="wallabyQuest5" class="modal fade" role="dialog">
+<div id="wallabyQuest5" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">

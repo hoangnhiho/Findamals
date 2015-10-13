@@ -1,8 +1,5 @@
  <!-- COLLECTION: WOMBAT MODAL -->
 
-
-   <!-- COLLECTION: wombat MODAL -->
-
     <div id="wombatModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -31,19 +28,19 @@
 
                   @if ($userData->wombatExp >= 1)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#wombatCarousel" data-slide-to="0"><img class="img-thumb active" id="wombatThumb1" data-toggle="modal" data-target="#wombatContent" data-slide-to="0"></a>
+                      <a href="#wombatCarousel" data-slide-to="0"><img class="img-thumb active" id="wombatThumb1" data-toggle="modal" data-target="#wombatContent" data-slide-to="0" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Haarnasenwombat_%28Lasiorhinus_krefftii%29.jpg"></a>
                     </div>
                   @endif
 
                   @if ($userData->wombatExp >= 2)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#wombatCarousel" data-slide-to="1"><img class="img-thumb active" id="wombatThumb2" data-toggle="modal" data-target="#wombatContent" data-slide-to="1"></a>
+                      <a href="#wombatCarousel" data-slide-to="1"><img class="img-thumb active" id="wombatThumb2" data-toggle="modal" data-target="#wombatContent" data-slide-to="1" src="https://upload.wikimedia.org/wikipedia/commons/7/76/King_Island_wombats.jpg"></a>
                     </div>
                   @endif
 
                   @if ($userData->wombatExp >= 3)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#wombatCarousel" data-slide-to="2"><img class="img-thumb active" id="wombatThumb3" data-toggle="modal" data-target="#wombatContent" data-slide-to="2"></a>
+                      <a href="#wombatCarousel" data-slide-to="2"><img class="img-thumb active" id="wombatThumb3" data-toggle="modal" data-target="#wombatContent" data-slide-to="2" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Lasiorhinus_latifrons_3_Gould.jpg"></a>
                     </div>
                   @endif
 
@@ -78,6 +75,7 @@
                   @endif
                   
                 </div>
+
                 <div class="clearfix"></div>
 
                 <!-- Content from Wikipedia -->
@@ -96,7 +94,19 @@
 
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-            <h4 class="modal-title">wombat Discoveries</h4>
+            <h4 class="modal-title">@if ($userData->wombatExp >= 2)
+                      <a class="left carousel-control" href="#wombatCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>@endif Wombat Discoveries</h4>
+            <!-- Controls -->
+                      @if ($userData->wombatExp >= 2)
+                      <a class="left carousel-control" href="#wombatCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#wombatCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
+                      @endif
           </div> 
 
           <div class="modal-body">
@@ -108,33 +118,33 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
                       <div class="item active">
-                        <img class="img-responsive" id="wombatContent1" />
+                        <img class="img-responsive portrait-img" id="wombatContent1" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Haarnasenwombat_%28Lasiorhinus_krefftii%29.jpg" />
 
                         <div class="carousel-caption">
-                          <p class="smlCaption" id="wombatTitle1"></p>
-                          <p class="smlCaption" id="wombatContrib1">Contributor: </p>
-                          <p class="smlCaption"> Source: <a id="wombatSource1"></a></p>
+                          <p class="smlCaption" id="wombatTitle1">Haarnasenwombat (Lasiorhinus krefftii) </p>
+                          <p class="smlCaption" id="wombatContrib1">Contributor: Eva Hejda  </p>
+                          <p class="smlCaption"> Source: Wikimedia <a id="wombatSource1" href="http://fotos.naturspot.de/">Naturspot</a></p>
                         </div>
                       </div>
 
                       @if ($userData->wombatExp >= 2)
                         <div class="item">
-                          <img class="img-responsive" id="wombatContent2"/>
+                          <img class="img-responsive" id="wombatContent2" src="https://upload.wikimedia.org/wikipedia/commons/7/76/King_Island_wombats.jpg" />
                           <div class="carousel-caption">
-                            <p class="smlCaption" id="wombatTitle2"></p>
-                            <p class="smlCaption" id="wombatContrib2">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="wombatSource2"></a></p>
+                            <p class="smlCaption" id="wombatTitle2">Illustration of the now extinct wombats of King Island, Tasmania.</p>
+                            <p class="smlCaption" id="wombatContrib2">Contributor: Charles-Alexandre Lesueur</p>
+                            <p class="smlCaption"> Source: <a id="wombatSource2" href="http://www.flickr.com/photos/biodivlibrary/7979792552/in/set-72157631519809640/">Flickr</a></p>
                           </div>
                         </div>
                       @endif
 
                       @if ($userData->wombatExp >= 3)
                         <div class="item">
-                          <img class="img-responsive" id="wombatContent3"/>
+                          <img class="img-responsive" id="wombatContent3" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Lasiorhinus_latifrons_3_Gould.jpg" />
                           <div class="carousel-caption">
-                            <p class="smlCaption" id="wombatTitle3"></p>
-                            <p class="smlCaption" id="wombatContrib3">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="wombatSource3"></a></p>
+                            <p class="smlCaption" id="wombatTitle3">Lasiorhinus latifrons - hairy-nosed wombat, 1863</p>
+                            <p class="smlCaption" id="wombatContrib3">Contributor: John Gould (1804–1881)</p>
+                            <p class="smlCaption"> Source: <a id="wombatSource3" href="http://www.museum.vic.gov.au/bioinformatics/mammals/images/Pha_las2.htm">"Mammals of Australia", Vol. I Plate 59</a></p>
                           </div>
                         </div>
                       @endif
@@ -165,15 +175,7 @@
 
                     </div><!-- end carousel-inner -->
 
-                      <!-- Controls -->
-                      @if ($userData->wombatExp >= 2)
-                      <a class="left carousel-control" href="#wombatCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#wombatCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                      @endif
+                      
 
               </div><!-- end wombat-carousel -->
             </div> <!-- end carousel-content -->

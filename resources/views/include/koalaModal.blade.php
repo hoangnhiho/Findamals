@@ -1,5 +1,5 @@
 <!-- Koala Modal-->
-<div id="koalaQuest0" class="modal fade" role="dialog">
+<div id="koalaQuest0" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<div id="koalaQuest1" class="modal fade" role="dialog">
+<div id="koalaQuest1" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -43,7 +43,7 @@
 	</div>
 </div>
 
-<div id="koalaQuest2" class="modal fade" role="dialog">
+<div id="koalaQuest2" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -65,7 +65,7 @@
 	</div>
 </div>
 
-<div id="koalaQuest3" class="modal fade" role="dialog">
+<div id="koalaQuest3" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -87,7 +87,7 @@
 	</div>
 </div>
 
-<div id="koalaQuest4" class="modal fade" role="dialog">
+<div id="koalaQuest4" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -109,7 +109,7 @@
 	</div>
 </div>
 
-<div id="koalaQuest5" class="modal fade" role="dialog">
+<div id="koalaQuest5" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">

@@ -1,5 +1,5 @@
 <!-- Kangaroo Modal-->
-<div id="kangarooQuest0" class="modal fade" role="dialog">
+<div id="kangarooQuest0" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<div id="kangarooQuest1" class="modal fade" role="dialog">
+<div id="kangarooQuest1" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -43,7 +43,7 @@
 	</div>
 </div>
 
-<div id="kangarooQuest2" class="modal fade" role="dialog">
+<div id="kangarooQuest2" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -65,7 +65,7 @@
 	</div>
 </div>
 
-<div id="kangarooQuest3" class="modal fade" role="dialog">
+<div id="kangarooQuest3" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -87,7 +87,7 @@
 	</div>
 </div>
 
-<div id="kangarooQuest4" class="modal fade" role="dialog">
+<div id="kangarooQuest4" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -109,7 +109,7 @@
 	</div>
 </div>
 
-<div id="kangarooQuest5" class="modal fade" role="dialog">
+<div id="kangarooQuest5" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">

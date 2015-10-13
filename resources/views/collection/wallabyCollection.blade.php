@@ -10,7 +10,7 @@
               <div class="modal-body">
                 <img class="img-small pull-right" src="{{ asset('/images/animals/wallaby.png') }}" alt="Findamals Wallaby Character" style="margin-top:-40px">
 
-                <h3>Brush-Tailed Rock Wallaby  Facts</h3>
+                <h3>Brush-Tailed Rock Wallaby Facts</h3>
                 <p>Status: Near-Threatened</p>
 
                 <ul>
@@ -31,7 +31,7 @@
 
                   @if ($userData->wallabyExp >= 2)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#wallabyCarousel" data-slide-to="1"><img class="img-thumb active" id="wallabyThumb2" data-toggle="modal" data-target="#wallabyContent" data-slide-to="1"></a>
+                      <a href="#wallabyCarousel" data-slide-to="1"><img class="img-thumb active" id="wallabyThumb2" data-toggle="modal" data-target="#wallabyContent" data-slide-to="1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Petrogale_penicillata_with_radio_tracking_collar_-_journal.pone.0063017.g001A.png/1599px-Petrogale_penicillata_with_radio_tracking_collar_-_journal.pone.0063017.g001A.png"></a>
                     </div>
                   @endif
 
@@ -72,10 +72,16 @@
                   @endif
                   
                 </div>
+
                 <div class="clearfix"></div>
                 <!-- Content from Wikipedia -->
                 <h3>More Information</h3>
                 <p id="wallaby" class="wiki"></p> 
+
+              </div> <!-- end modal body -->
+            </div> <!-- end modal content -->
+        </div> <!-- end modal-dialog -->
+    </div> <!-- end wallaby modal -->
 
 
   <div id="wallabyContent" class="modal" tabindex="-1" role="dialog">
@@ -87,7 +93,6 @@
             <h4 class="modal-title">Wallaby Discoveries</h4>
           </div> 
 
-          <div class="modal-body">
 
             <div class="carouselContent">
               <!-- http://bootsnipp.com/snippets/featured/carousel-inside-modal -->
@@ -96,7 +101,7 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
                       <div class="item active">
-                        <img class="img-responsive" id="wallabyContent1" />
+                        <img class="img-responsive  portrait-img" id="wallabyContent1" />
 
                         <div class="carousel-caption">
                           <p class="smlCaption" id="wallabyTitle1"></p>
@@ -107,11 +112,11 @@
 
                       @if ($userData->wallabyExp >= 2)
                         <div class="item">
-                          <img class="img-responsive" id="wallabyContent2"/>
+                          <img class="img-responsive" id="wallabyContent2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Petrogale_penicillata_with_radio_tracking_collar_-_journal.pone.0063017.g001A.png/1599px-Petrogale_penicillata_with_radio_tracking_collar_-_journal.pone.0063017.g001A.png" />
                           <div class="carousel-caption">
-                            <p class="smlCaption" id="wallabyTitle2"></p>
-                            <p class="smlCaption" id="wallabyContrib2">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="wallabySource2"></a></p>
+                            <p class="smlCaption" id="wallabyTitle2">A wild brush-tailed rock-wallaby meets an animal released from a captive breeding program (on right, with radio tracking collar)</p>
+                            <p class="smlCaption" id="wallabyContrib2">Contributor: Hugh McGregor</p>
+                            <p class="smlCaption"> Source: <a id="wallabySource2" href="https://dx.doi.org/10.1371/journal.pone.0063017">Into the Wild: Dissemination of Antibiotic Resistance Determinants via a Species Recovery Program</a></p>
                           </div>
                         </div>
                       @endif
@@ -120,9 +125,9 @@
                         <div class="item">
                           <img class="img-responsive" id="wallabyContent3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Petrogale_penicillata_4.jpg/1261px-Petrogale_penicillata_4.jpg" />
                           <div class="carousel-caption">
-                            <p class="smlCaption" id="wallabyTitle3"></p>
-                            <p class="smlCaption" id="wallabyContrib3">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="wallabySource3"></a></p>
+                            <p class="smlCaption" id="wallabyTitle3">Petrogale penicillata; Featherdale Wildlife Park, Australia</p>
+                            <p class="smlCaption" id="wallabyContrib3">Contributor: May Wong</p>
+                            <p class="smlCaption"> Source: <a id="wallabySource3" href="https://www.flickr.com/photos/maywong_photos/4445135492/">Flickr</a></p>
                           </div>
                         </div>
                       @endif
@@ -165,67 +170,15 @@
 
               </div><!-- end wallaby-carousel -->
             </div> <!-- end carousel-content -->
-
-              </div> <!-- end modal body -->
-            </div> <!-- end modal content -->
-        </div> <!-- end modal-dialog -->
-    </div> <!-- end wallaby modal -->
+          </div> <!-- end modal-body -->
 
 
-  <div id="wallabyContent" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-discovery">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-          <h4 class="modal-title">Wallaby Discoveries</h4>
-        </div>
-        <div class="modal-body">
+      </div> <!-- end modal-content -->
+    </div> <!-- end modal-dialog -->
+  </div> <!-- end wallabyContent -->
 
-         <div class="carouselContent">
-        <!--     //http://bootsnipp.com/snippets/featured/carousel-inside-modal -->
-          <div id="wallabyCarousel" class="carousel slide" data-ride="carousel">
+       
 
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="item active">
-                  <img class="img-responsive" id="wallabyContent1" >
-                  <div class="carousel-caption">
-                    <p class="smlCaption" id="wallabyTitle1"></p>
-                    <p class="smlCaption" id="wallabyContrib1">Contributor: </p>
-                    <p class="smlCaption"> Source: <a id="wallabySource1"></p></a>
-                  </div>
-                </div>
 
-                <div class="item">
-                  <img class="img-responsive" src="http://placehold.it/1200x600/fffccc/000&text=Two" alt="...">
-                  <div class="carousel-caption">
-                    Another Image
-                  </div>
-                </div>
-                 <div class="item">
-                  <img class="img-responsive" src="http://placehold.it/1200x600/fcf00c/000&text=Three" alt="...">
-                  <div class="carousel-caption">
-                    Another Image
-                  </div>
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <a class="left carousel-control" href="#wallabyCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="right carousel-control" href="#wallabyCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-            </div>
-        </div>
-
-        </div>
-        <!-- <div class="modal-footer">
-          <p>Caption here</p>
-        </div> -->
-      </div>
-    </div>
-  </div>
-
+ 
 

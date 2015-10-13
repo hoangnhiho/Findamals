@@ -79,6 +79,7 @@
                 <!-- Content from Wikipedia -->
                 <h3>More Information</h3>
                 <p id="koala" class="wiki"></p> 
+                
               </div> <!-- end modal body -->
             </div> <!-- end modal content -->
         </div> <!-- end modal-dialog -->

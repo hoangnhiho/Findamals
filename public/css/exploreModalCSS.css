@@ -3,21 +3,13 @@
 } 
 
 #acceptModal {
-    padding: 1em;  
     font-family: Arial, Helvetica, 'sans-serif';
-    margin-top: 1em; 
-    margin-bottom: 1em; 
     text-align: center; 
-    margin-left: 1em; 
-    margin-right: 1em; 
     border-radius: 40px;
     z-index:2000;
 }
 
 
-#acceptBtn {
-	border-radius: 40px;
-}
 .modal-footer .btn {	
     border-radius: 40px;
 }
@@ -28,27 +20,19 @@
     border-color: #cccccc;
 }
 
-
+.modal {
+    margin-top: 100px;
+}
 
 .modal-dialog {
-	
-	padding: 1em;  
+	width: 400px;
     font-family: Arial, Helvetica, 'sans-serif';
-    margin-top: 3em; 
-    margin-bottom: .5em; 
     text-align: center; 
-    margin-left: 1em; 
-    margin-right: 1em;
     border-radius: 40px;  
     z-index:2000;
-
-
-    
 }
 
 .modal-content {
-	margin-top: 2em;
-	color: black;
 	border-radius: 40px; 
 	font-size: 30px;
 	
@@ -59,9 +43,32 @@
     border-radius: 40px;
     text-align: center;
     z-index: 1100;
+
 }
-    
+.modal-body h1{
+     margin: 0 0 0 0;
+ }
 
+.modal-footer {       
+    text-align: center;
+}
 
+#acceptModal .modal-dialog .modal-footer .btn{
+    width: 90px;
+}
 
+.animalQuest .modal-dialog .modal-body h1 {
+    font-size: 20px;
+}
 
+.animalQuest .modal-dialog .modal-body .btn {
+    text-align: left;
+    width: 90%;
+}
+.animalQuest .modal-dialog .modal-footer .btn {
+    width: 90%;
+}
+.modal-title{
+    font-weight: bold;
+    font-size: 24px;
+}

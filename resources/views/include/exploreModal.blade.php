@@ -15,7 +15,7 @@ function correctAns(animal){
 }
 function loadCollection(){
 	$(".modal").modal('hide');
-	window.location.replace("{{url('leila')}}");
+	window.location.replace("{{url('collection')}}");
 }
 
 </script>
@@ -67,9 +67,12 @@ function loadCollection(){
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Sorry, wrong answer :( </h4>
+				<h4 class="modal-title">Oops! Wrong answer</h4>
 			</div>
-
+			<div class="modal-body">
+				<img class="" id="animalImg" src="images/crying.png" alt="Findamals Koala Character">
+			
+			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" data-dismiss="modal">Return to game</button>
 				<a type="button" class="btn btn-default" onclick="loadCollection()">Go to Collection Page</a>
@@ -87,12 +90,13 @@ function loadCollection(){
 				<h4 class="modal-title">How to play</h4>
 			</div>
 			<div class="modal-body">
-				<p>Use arrow keys to navigate your avatar and explore the terrains.</p>
+			<img src="images/howToPlay.PNG" style="width:100%;">
+			<!-- 	<p>Use arrow keys to navigate your avatar and explore the terrains.</p>
 				<p>If an object moves, <strong>CLICK IT!!</strong></p>
 				<p>Meet animals and get to know them better by learning amazing facts and them and their habitats.</p>
 				<p>Answer questions and earn stars.</p>
 				<p>Unlock terrains with your stars. Explore even more terrains and meet more amazing animals</p>
-			</div>
+			 --></div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			</div>

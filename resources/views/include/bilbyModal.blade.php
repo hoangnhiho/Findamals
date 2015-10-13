@@ -1,5 +1,5 @@
 <!-- Bilby Modal-->
-<div id="bilbyQuest0" class="modal fade" role="dialog">
+<div id="bilbyQuest0" class="modal fade animalQuest animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<div id="bilbyQuest1" class="modal fade" role="dialog">
+<div id="bilbyQuest1" class="modal fade animalQuest animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -43,7 +43,7 @@
 	</div>
 </div>
 
-<div id="bilbyQuest2" class="modal fade" role="dialog">
+<div id="bilbyQuest2" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -65,7 +65,7 @@
 	</div>
 </div>
 
-<div id="bilbyQuest3" class="modal fade" role="dialog">
+<div id="bilbyQuest3" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -87,7 +87,7 @@
 	</div>
 </div>
 
-<div id="bilbyQuest4" class="modal fade" role="dialog">
+<div id="bilbyQuest4" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -109,7 +109,7 @@
 	</div>
 </div>
 
-<div id="bilbyQuest5" class="modal fade" role="dialog">
+<div id="bilbyQuest5" class="modal fade animalQuest" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">

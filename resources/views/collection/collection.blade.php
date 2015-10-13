@@ -61,8 +61,8 @@
   
   <div class="content-wrapper">
     
-  <h1>My Collection</h1>
-
+<!--   <h1>My Collection</h1>
+ -->
     <div class="row portfolio">
     
     @if ($userData->koalaExp != 0)
@@ -186,15 +186,15 @@
 
       <div class="clearfix visible-sm"></div>
 
-      @if ($userData->platypusExp != 0)
+      @if ($userData->bilbyExp != 0)
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail grow" data-toggle="modal" data-target="#platypusModal">
-              <img class="img-responsive" src="{{ asset('/images/animals/platypus.png') }}" alt="Findamals platypus Character" >
+            <div class="thumbnail grow" data-toggle="modal" data-target="#bilbyModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/bilby.png') }}" alt="Findamals bilby Character" >
               <div class="caption">
-                <h3>Platypus</h3>
-                <p class="exp">
-                  @if ($userData->platypusExp >= 1)
-                    @for ($i=0; $i < $userData->platypusExp; $i++ )
+                <h3>Greater Bilby</h3>
+                  <p class="exp">
+                  @if ($userData->bilbyExp >= 1)
+                    @for ($i=0; $i < $userData->bilbyExp; $i++ )
                       &#9733;
                     @endfor
                   @else
@@ -206,8 +206,8 @@
           </div>
         @else
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail ">
-              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/platypus-empty.png') }}" alt="Findamals Missing platypus" >
+            <div class="thumbnail">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/bilby-empty.png') }}" alt="Findamals Missing bilby" >
               <div class="caption">
                 <h3>Unknown</h3>
               </div>
@@ -276,28 +276,28 @@
           </div>
         @endif
 
-      @if ($userData->whaleExp != 0)
+      @if ($userData->platypusExp != 0)
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail grow" data-toggle="modal" data-target="#whaleModal">
-              <img class="img-responsive" src="{{ asset('/images/animals/whale.png') }}" alt="Findamals whale Character" >
+            <div class="thumbnail grow" data-toggle="modal" data-target="#platypusModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/platypus.png') }}" alt="Findamals platypus Character" >
               <div class="caption">
-                <h3>Humpback Whale</h3>
-                  <p class="exp">
-                    @if ($userData->whaleExp >= 1)
-                      @for ($i=0; $i < $userData->whaleExp; $i++ )
-                        &#9733;
-                      @endfor
-                    @else
-                      UNKNOWN STARS
-                    @endif
-                  </p>
+                <h3>Platypus</h3>
+                <p class="exp">
+                  @if ($userData->platypusExp >= 1)
+                    @for ($i=0; $i < $userData->platypusExp; $i++ )
+                      &#9733;
+                    @endfor
+                  @else
+                    UNKNOWN STARS
+                  @endif
+                </p>
               </div>
             </div>
           </div>
         @else
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail">
-              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/whale-empty.png') }}" alt="Findamals Missing whale" >
+            <div class="thumbnail ">
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/platypus-empty.png') }}" alt="Findamals Missing platypus" >
               <div class="caption">
                 <h3>Unknown</h3>
               </div>
@@ -307,15 +307,15 @@
 
       <div class="clearfix visible-sm"></div>
 
-      @if ($userData->turtleExp != 0)
+      @if ($userData->cockatooExp != 0)
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail grow" data-toggle="modal" data-target="#turtleModal">
-              <img class="img-responsive" src="{{ asset('/images/animals/turtle.png') }}" alt="Findamals turtle Character" >
+            <div class="thumbnail grow" data-toggle="modal" data-target="#cockatooModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/cockatoo.png') }}" alt="Findamals cockatoo Character" >
               <div class="caption">
-                <h3>Loggerhead Turtle</h3>
-                <p class="exp">
-                  @if ($userData->turtleExp >= 1 )
-                    @for ($i=0; $i < $userData->turtleExp; $i++ )
+                <h3>Major Mitchell Cockatoo</h3>
+                  <p class="exp">
+                  @if ($userData->cockatooExp >= 1)
+                    @for ($i=0; $i < $userData->cockatooExp; $i++ )
                       &#9733;
                     @endfor
                   @else
@@ -328,7 +328,7 @@
         @else
           <div class="col-xs-4 col-sm-3 col-md-2">
             <div class="thumbnail">
-              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/turtle-empty.png') }}" alt="Findamals Missing turtle" >
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/cockatoo-empty.png') }}" alt="Findamals Missing cockatoo" >
               <div class="caption">
                 <h3>Unknown</h3>
               </div>
@@ -367,28 +367,29 @@
           </div>
         @endif
 
-      @if ($userData->bilbyExp != 0)
+        
+        @if ($userData->whaleExp != 0)
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail grow" data-toggle="modal" data-target="#bilbyModal">
-              <img class="img-responsive" src="{{ asset('/images/animals/bilby.png') }}" alt="Findamals bilby Character" >
+            <div class="thumbnail grow" data-toggle="modal" data-target="#whaleModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/whale.png') }}" alt="Findamals whale Character" >
               <div class="caption">
-                <h3>Greater Bilby</h3>
+                <h3>Humpback Whale</h3>
                   <p class="exp">
-                  @if ($userData->bilbyExp >= 1)
-                    @for ($i=0; $i < $userData->bilbyExp; $i++ )
-                      &#9733;
-                    @endfor
-                  @else
-                    UNKNOWN STARS
-                  @endif
-                </p>
+                    @if ($userData->whaleExp >= 1)
+                      @for ($i=0; $i < $userData->whaleExp; $i++ )
+                        &#9733;
+                      @endfor
+                    @else
+                      UNKNOWN STARS
+                    @endif
+                  </p>
               </div>
             </div>
           </div>
         @else
           <div class="col-xs-4 col-sm-3 col-md-2">
             <div class="thumbnail">
-              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/bilby-empty.png') }}" alt="Findamals Missing bilby" >
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/whale-empty.png') }}" alt="Findamals Missing whale" >
               <div class="caption">
                 <h3>Unknown</h3>
               </div>
@@ -396,15 +397,15 @@
           </div>
         @endif
 
-      @if ($userData->cockatooExp != 0)
+        @if ($userData->turtleExp != 0)
           <div class="col-xs-4 col-sm-3 col-md-2">
-            <div class="thumbnail grow" data-toggle="modal" data-target="#cockatooModal">
-              <img class="img-responsive" src="{{ asset('/images/animals/cockatoo.png') }}" alt="Findamals cockatoo Character" >
+            <div class="thumbnail grow" data-toggle="modal" data-target="#turtleModal">
+              <img class="img-responsive" src="{{ asset('/images/animals/turtle.png') }}" alt="Findamals turtle Character" >
               <div class="caption">
-                <h3>Major Mitchell Cockatoo</h3>
-                  <p class="exp">
-                  @if ($userData->cockatooExp >= 1)
-                    @for ($i=0; $i < $userData->cockatooExp; $i++ )
+                <h3>Loggerhead Turtle</h3>
+                <p class="exp">
+                  @if ($userData->turtleExp >= 1 )
+                    @for ($i=0; $i < $userData->turtleExp; $i++ )
                       &#9733;
                     @endfor
                   @else
@@ -417,7 +418,7 @@
         @else
           <div class="col-xs-4 col-sm-3 col-md-2">
             <div class="thumbnail">
-              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/cockatoo-empty.png') }}" alt="Findamals Missing cockatoo" >
+              <img class="img-responsive img-unknown" src="{{ asset('/images/animals/turtle-empty.png') }}" alt="Findamals Missing turtle" >
               <div class="caption">
                 <h3>Unknown</h3>
               </div>
@@ -447,8 +448,8 @@
         <p>Use arrow keys to navigate your avatar and explore the terrains.</p>
         <p>If an object moves, <strong>CLICK IT!!</strong></p>
         <p>Meet animals and get to know them better by learning amazing facts and them and their habitats.</p>
-        <p>Answer questions and earn stars.</p>
-        <p>Unlock terrains with your stars. Explore even more terrains and meet more amazing animals</p>
+        <p>Play quizzes to earn stars, add animals to your collection and discover interesting photos and articles!</p>
+        <p>Unlock and explore terrains with your stars. Find animals to collect by exploring and tapping on objects in the terrain</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -457,10 +458,11 @@
   </div>
 </div>
 @include('collection.kangarooCollection')
+@include('collection.wallabyCollection')
 @include('collection.bilbyCollection')
 @include('collection.wombatCollection')
 @include('collection.koalaCollection')
-@include('collection.wallabyCollection')
+
 
 
 
