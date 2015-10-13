@@ -38,7 +38,8 @@ class AuthController extends Controller {
 	    {
 			$usersTable->save();
 			$tempName =$usersTable->name;
-	        return redirect()->intended($this->redirectPath());
+	        //return redirect()->intended($this->redirectPath());
+	        return redirect('/terrain1');
 	    }
 	    return redirect($this->loginPath())
 	                ->withInput($request->only('name', 'remember'))
