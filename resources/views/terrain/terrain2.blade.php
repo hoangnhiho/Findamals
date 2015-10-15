@@ -64,8 +64,9 @@
     </div>
   </div>
 
-  
-
+  <audio autoplay loop>
+        <source src="/music/music1.mp3">
+  </audio>
 
   <!-- Notifications Manager -->
   <div id="notifications"><div class="inner"></div><span class="close">x</span></div>
