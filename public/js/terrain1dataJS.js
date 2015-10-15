@@ -79,14 +79,6 @@ $( window ).ready(function() {
 
 });
 
-
-
-
-
-
-
-
-
 var houses = [ 
 	{//treeRight1
 		name: ' ',

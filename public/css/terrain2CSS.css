@@ -3,7 +3,7 @@
 	border: 1px solid #c7c7c7;
 	margin: 0 auto;
 	width: 100%;
-	height: 1620px;
+	height: 1820px;
 	position: relative;
 	background: url(../images/terrain2/rf-bg.png) repeat;
 	overflow: hidden;
@@ -28,15 +28,15 @@
 	background-size: auto 100%;
 	width: 37%;
 	height: 80px;
-	top: 160px;
+	top: 110px;
 	left: 50px;
 }
 #treeLeft {
 	background: url(../images/terrain2/tree-1.png) repeat;
 	background-size: 100%;
 	width: 40px;
-	height: 1350px;
-	top: 160px;
+	height: 1400px;
+	top: 110px;
 	left: 0px;
 }
 
@@ -46,7 +46,7 @@
 	background-size: auto 100%;
 	width: 30%;
 	height: 80px;
-	top: 220px;
+	top: 170px;
 	left: 70px;
 }
 #treeLeft2 {
@@ -54,7 +54,7 @@
 	background-size: auto 100%;
 	width: 25%;
 	height: 80px;
-	top: 280px;
+	top: 230px;
 	left: 46px;
 }
 
@@ -66,21 +66,29 @@
 	top: 1440px;
 	left: 64px;
 }
-
+#treeFooterLeftAll{
+	background: url(../images/terrain2/tree-1.png) repeat;
+	background-size: auto 100%;
+	width: 95%;
+	height: 70px;
+	top: 1440px;
+	left: 40px;	
+	z-index: 201;
+}
 #treeHeaderRight {
 	background: url(../images/terrain2/tree-1.png) repeat;
 	background-size: auto 100%;
 	width: 37%;
 	height: 70px;
-	top: 160px;
+	top: 110px;
 	right: 50px;
 }
 #treeRight {
 	background: url(../images/terrain2/tree-1.png) repeat;
 	background-size: 100%;
 	width: 40px;
-	height: 1350px;
-	top: 160px;
+	height: 1400px;
+	top: 110px;
 	right: 0px;
 }
 #treeRight1 {
@@ -88,7 +96,7 @@
 	background-size: auto 100%;
 	width: 30%;
 	height: 80px;
-	top: 220px;
+	top: 170px;
 	right: 70px;
 }
 #treeRight2 {
@@ -96,7 +104,7 @@
 	background-size: auto 100%;
 	width: 25%;
 	height: 80px;
-	top: 280px;
+	top: 230px;
 	right: 46px;
 }
 #treeRight3 {
@@ -120,6 +128,57 @@
 .treeBorder{
 	position: absolute;
 	z-index: 56;
+}
+
+/* Big palm trees*/
+#palm-left1 {
+	background: url(../images/terrain2/rf-palm.png) ;
+	background-size: auto 100%;
+	width: 80px;
+	height: 160px;
+	top: 360px;
+	left: 420px;
+}
+#palm-left2 {
+	background: url(../images/terrain2/rf-palm.png) ;
+	background-size: auto 100%;
+	width: 80px;
+	height: 160px;
+	top: 550px;
+	left: 150px;
+	z-index: 99;
+}
+#palm-left3 {
+	background: url(../images/terrain2/rf-palm.png) ;
+	background-size: auto 100%;
+	width: 80px;
+	height: 160px;
+	top: 1230px;
+	left: 400px;
+}
+#palm-right1 {
+	background: url(../images/terrain2/rf-palm.png) ;
+	background-size: auto 100%;
+	width: 80px;
+	height: 160px;
+	top: 480px;
+	right: 260px;
+}
+#palm-right2 {
+	background: url(../images/terrain2/rf-palm.png) ;
+	background-size: auto 100%;
+	width: 80px;
+	height: 160px;
+	top: 790px;
+	right: 420px;
+}
+#palm-right3 {
+	background: url(../images/terrain2/rf-palm.png) ;
+	background-size: auto 100%;
+	width: 80px;
+	height: 160px;
+	top: 1250px;
+	right: 120px;
 }
 
 /* Small palm trees*/
@@ -278,8 +337,8 @@
 }
 
 #endOcean {
-	bottom: 0;
-	height: 100px;
+	top: 1510px;
+	height: 310px;
 	-webkit-animation: seamove 6s linear infinite;
 	-moz-animation: seamove 6s linear infinite;
 	animation: seamove 6s linear infinite;
@@ -308,6 +367,30 @@
 
 #startBush {
 	top: 0;
-	height: 150px;
+	height: 100px;
 }
 
+/* Terrain transitions */
+#terrain1 {
+	position: absolute;
+	left: 50%;
+	width: 210px;
+	background: url(../images/terrain1/path.png);
+	background-size: 100%;
+	margin: 0 0 0 -105px;
+	z-index: 52;
+	top: 0px;
+	height: 100px;
+}
+
+#terrain3{
+	position: absolute;
+	left: 50%;
+	width: 300px;
+	background: url(../images/terrain1/path.png);
+	background-size: 100%;
+	margin: 0 0 0 -150px;
+	z-index: 52;
+	bottom: 0px;
+	height: 300px;	
+}

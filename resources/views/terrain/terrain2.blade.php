@@ -28,9 +28,17 @@
   <script src="/js/bootstrap.min.js" type="text/javascript"></script>
   <script type="text/javascript"> 
     $(document).ready(function(){
+      var tempNextTerrainCheck = 0;
+      for (i = 0; i < animalArrayObjects.length; i++) { 
+        tempNextTerrainCheck = tempNextTerrainCheck + parseInt(animalArrayObjects[i].exp);
+      }
+      if (tempNextTerrainCheck == 5){// 5 is set statically, need to change when unlocking
+        $('#unlockModal').modal('show');
+      }
       $('[data-toggle="tooltip"]').tooltip(); 
-        $('#innerLoading .me').sprite({fps: 9, no_of_frames: 3}).spState(1);
-        var game = new Game();
+      $('[data-toggle="modal"]').tooltip();
+      $('#innerLoading .me').sprite({fps: 9, no_of_frames: 3}).spState(1);
+      var game = new Game();
       $('.inactive').hover(
        function(){ $(this).removeClass('inactive') },
        function(){ $(this).addClass('inactive') }
@@ -99,7 +107,7 @@
 
     <!-- Last terrain: Ocean -->
     <div id="startBush" class="bush"></div> 
-
+    <div id="terrain1" class="terrainChange phazeObject"></div>
     <!-- Collision OBJECTS BELOW -->
     
     <!-- Trees -->
@@ -115,8 +123,20 @@
     <div id="treeRight1" class="colObject rightColObject"></div>
     <div id="treeRight2" class="colObject rightColObject"></div>
 
-    <div id="treeFooterLeft" class="colObject leftColObject"></div>
-    <div id="treeFooterRight" class="colObject rightColObject"></div>
+    @if ($terrainValue == 3)
+      <div id="treeFooterLeft" class="colObject leftColObject"></div> 
+      <div id="treeFooterRight" class="colObject rightColObject"></div>
+    @else
+      <div id="treeFooterLeftAll" class="colObject leftColObject"></div>
+    @endif
+    <!-- Big Palm Trees -->
+    <div id="palm-left1" class="secretObject colObject leftColObject"></div>
+    <div id="palm-left2" class="colObject leftColObject"></div>
+    <div id="palm-left3" class="colObject leftColObject"></div>
+
+    <div id="palm-right1" class="colObject rightColObject"></div>
+    <div id="palm-right2" class="colObject rightColObject"></div>
+    <div id="palm-right3" class="colObject rightColObject"></div>
 
     <!-- Small Palm Trees -->
     <div id="sm-palm-left1" class="colObject leftColObject"></div>
@@ -131,8 +151,8 @@
 
     <!-- Ponds -->
     <div id="pond1" class="colObject leftColObject"></div>
-    <div id="pond2" class="colObject leftColObject"></div>
-    <div id="pond3" class="colObject rightColObject"></div>
+    <div id="pond2" class="secretObject colObject leftColObject"></div>
+    <div id="pond3" class="secretObject colObject rightColObject"></div>
 	
 	<!-- Phaze OBJECTS BELOW -->
     <!-- Path -->
@@ -141,7 +161,7 @@
     <!-- Grass -->
     <div id="longGrassright1" class="phazeObject"></div>
     <div id="longGrassright2" class="phazeObject"></div>
-    <div id="longGrassleft1" class="phazeObject"></div>
+    <div id="longGrassleft1" class="secretObject colObject leftColObject"></div>
     <div id="longGrassleft2" class="phazeObject"></div>
 
 
@@ -149,7 +169,9 @@
     <!-- ====End of ALL Objects==== -->
 
     <!-- Next terrain: Ocean -->
-    <div id="endOcean" class="ocean"></div>   
+    <div id="endOcean" class="ocean"></div>  
+    <div id="terrain3" class="terrainChange phazeObject"></div>
+ 
 
     
   </div>
@@ -164,5 +186,36 @@
 
 @include('include.exploreModal')
 </body>
+<script type="text/javascript">
 
+$( document ).ready(function() {
+  //this needs needs to be repetitively added to all terrain pages
+  $('.secretObject').click(function(e){
+    if (nearSecret==1){
+      tempString = animalArray[0];//0 is cockatoo as default
+      if(this.id == 'palm-left1'){
+        randnumber = 0;
+        tempString = animalArray[randnumber];//0 is cockatoo
+      }else if(this.id == 'pond3'){
+        randnumber = 1;
+        tempString = animalArray[randnumber];//1 is platypus
+      }else if(this.id == 'longGrassleft1'){
+        randnumber = 2;
+        tempString = animalArray[randnumber];//2 is cassowary
+      }else if(this.id == 'pond2'){
+        randnumber = 3;
+        tempString = animalArray[randnumber];//3 is frog
+      }
+
+        tempArray = tempString.split(" ");
+        tempAnimal = "#" + tempArray[0] + "Quest" + tempArray[1];
+        var tempURL = globalURL + 'images/animals/' + tempArray[0] + ".png";
+        $('#animalImg').attr('src', tempURL);
+        $('#acceptBtn').attr('href', tempAnimal);
+        $('#acceptModal').modal('show');
+    }
+  });
+
+});
+</script>
 </html>
