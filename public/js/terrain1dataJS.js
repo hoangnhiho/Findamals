@@ -6,6 +6,11 @@ var terrainChangeObjects=[];
 var tempObject; 
 var tempRight;
 var tempLeft;
+
+var terrainValue = window.location.pathname;
+terrainValue = terrainValue.substr(1);
+var animalArrayObjects = [];
+
 $( window ).ready(function() {
 	$('.colObject').each(function(i, obj) {
 	    //console.log($(this).attr('id') + ": " + $(this).position().top);
@@ -45,7 +50,41 @@ $( window ).ready(function() {
 
 	});
 
+	if (terrainValue == 'terrain1'){
+		$('.T1AnimalExp').each(function(i, obj) {
+			tempObject = {
+				name: this.id,
+				exp: $(this).val()
+			}
+			animalArrayObjects.push(tempObject);
+		});
+	}else if (terrainValue == 'terrain2'){
+		$('.T2AnimalExp').each(function(i, obj) {
+			tempObject = {
+				name: this.id,
+				exp: $(this).val()
+			}
+			animalArrayObjects.push(tempObject);
+		});
+	}else if (terrainValue == 'terrain3'){
+		$('.T3AnimalExp').each(function(i, obj) {
+			tempObject = {
+				name: this.id,
+				exp: $(this).val()
+			}
+			animalArrayObjects.push(tempObject);
+		});
+	}
+	
+
 });
+
+
+
+
+
+
+
 
 
 var houses = [ 

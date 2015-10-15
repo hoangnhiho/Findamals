@@ -1,8 +1,7 @@
 <script>
 function correctAns(animal){
 	animalArray[randnumber] = tempArray[0] + ' ' + (parseInt(tempArray[1])+1).toString();
-	// console.log(animalArray[randnumber]);
-	// console.log(animalArray);
+	animalArrayObjects[randnumber].exp = (parseInt(tempArray[1])+1).toString();
 	var url = "{{url('addExp')}}" + "/" + animal + "/1";
 	$.ajax({
 		url : url,
@@ -12,6 +11,18 @@ function correctAns(animal){
 			$("#winModalTitle").html("YAY Winning!!! Point added " + animal);
 		}
 	});
+	var tempNextTerrainCheck = 0;
+	for (i = 0; i < animalArrayObjects.length; i++) { 
+		tempNextTerrainCheck = tempNextTerrainCheck + parseInt(animalArrayObjects[i].exp);
+	}
+	if (tempNextTerrainCheck == 5){
+		if (terrainValue == 'terrain1'){
+			window.location.replace("{{url('terrain1')}}");
+		}else if (terrainValue == 'terrain2'){
+			window.location.replace("{{url('terrain2')}}");
+		}
+		
+	}
 }
 function loadCollection(){
 	$(".modal").modal('hide');
@@ -20,12 +31,16 @@ function loadCollection(){
 
 </script>
 
+<!-- Fonts -->
+  <link type="text/css"href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' >
+  <link type="text/css"href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' >
+  
 <!-- Accept or Flee Modal-->
 <div id="acceptModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">Found Animal</h4>
 			</div>
 			<div class="modal-body">
@@ -39,19 +54,31 @@ function loadCollection(){
 		</div>
 	</div>
 </div>
-
-@include('include.koalaModal')
-@include('include.wallabyModal')
-@include('include.wombatModal')
-@include('include.bilbyModal')
-@include('include.kangarooModal')
+@if ($_SERVER['REQUEST_URI'] == '/terrain1')
+	@include('include.koalaModal')
+	@include('include.wallabyModal')
+	@include('include.wombatModal')
+	@include('include.bilbyModal')
+	@include('include.kangarooModal')
+@elseif ($_SERVER['REQUEST_URI'] == '/terrain2')
+	@include('include.cockatooModal')
+	@include('include.platypusModal')
+	@include('include.cassowaryModal')
+	@include('include.frogModal')
+@elseif ($_SERVER['REQUEST_URI'] == '/terrain3')
+	@include('include.whaleModal')
+	@include('include.turtleModal')
+	@include('include.sharkModal')
+@else
+	<!-- SOMETHING WENT WRONG!!! -->
+@endif
 
 <!-- Correct / Incorrection Modals -->
 <div id="correntAns" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title" id="winModalTitle"></h4>
 			</div>
 			<div class="modal-footer">
@@ -66,7 +93,7 @@ function loadCollection(){
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">Oops! Wrong answer</h4>
 			</div>
 			<div class="modal-body">
@@ -86,7 +113,7 @@ function loadCollection(){
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">How to play</h4>
 			</div>
 			<div class="modal-body">
@@ -97,6 +124,25 @@ function loadCollection(){
 				<p>Answer questions and earn stars.</p>
 				<p>Unlock terrains with your stars. Explore even more terrains and meet more amazing animals</p>
 			 --></div>
+			<div class="modal-footer">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Accept or Flee Modal-->
+<div id="unlockModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				 
+				<h4 class="modal-title">Contraguations!!! Next Terrain has been unlocked!!</h4>
+			</div>
+			<div class="modal-body">
+				<img class="" id="animalImg" src="images/aboutImg.png" alt="Findamals Koala Character">
+				
+			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			</div>

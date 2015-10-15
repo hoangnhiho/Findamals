@@ -29,14 +29,22 @@
   <script src="/js/bootstrap.min.js" type="text/javascript"></script>
   <script type="text/javascript"> 
     $(document).ready(function(){
+		var tempNextTerrainCheck = 0;
+		for (i = 0; i < animalArrayObjects.length; i++) { 
+			tempNextTerrainCheck = tempNextTerrainCheck + parseInt(animalArrayObjects[i].exp);
+		}
+		if (tempNextTerrainCheck == 5){// 5 is set statically, need to change when unlocking
+			$('#unlockModal').modal('show');
+		}
     	$('[data-toggle="tooltip"]').tooltip();
     	$('[data-toggle="modal"]').tooltip();
         $('#innerLoading .me').sprite({fps: 9, no_of_frames: 3}).spState(1);
         var game = new Game();
-    $('.inactive').hover(
-       function(){ $(this).removeClass('inactive') },
-       function(){ $(this).addClass('inactive') }
-      )
+	    $('.inactive').hover(
+	       function(){ $(this).removeClass('inactive') },
+	       function(){ $(this).addClass('inactive') }
+		)
+
     }); 
 
     function startGame() {
@@ -58,6 +66,9 @@
     </div>
   </div>
 
+	<audio autoplay loop>
+	      <source src="/music/music1.mp3">
+	</audio>
   <!-- Notifications Manager -->
   <div id="notifications"><div class="inner"></div><span class="close">x</span></div>
   
@@ -112,8 +123,13 @@
     <div id="treeRight2" class="colObject rightColObject"></div>
     <div id="treeRight3" class="colObject rightColObject"></div>
 
-    <div id="treeFooterLeft" class="colObject leftColObject"></div>
-    <div id="treeFooterRight" class="colObject rightColObject"></div>
+    @if ($terrainValue == 1)
+		<div id="treeFooterLeftAll" class="colObject leftColObject"></div>
+    @else
+    	<div id="treeFooterLeft" class="colObject leftColObject"></div>
+    	<div id="treeFooterRight" class="colObject rightColObject"></div>
+    @endif
+
 
     <!-- Caves -->
     <div id="cave1" class="colObject rightColObject"></div>
@@ -170,15 +186,20 @@ $( document ).ready(function() {
 		if (nearSecret==1){
 			tempString = animalArray[0];//0 is koala as default
 			if(this.id == 'treeRight1'){
-		    	tempString = animalArray[0];//0 is koala
+				randnumber = 0;
+		    	tempString = animalArray[randnumber];//0 is koala
 			}else if(this.id == 'treeLeft4'){
-				tempString = animalArray[1];//1 is wallaby
+				randnumber = 1;
+				tempString = animalArray[randnumber];//1 is wallaby
 			}else if(this.id == 'cave2'){
-				tempString = animalArray[2];//2 is wombat
+				randnumber = 2;
+				tempString = animalArray[randnumber];//2 is wombat
 			}else if(this.id == 'cave3'){
-				tempString = animalArray[3];//3 is bilby
+				randnumber = 3;
+				tempString = animalArray[randnumber];//3 is bilby
 			}else if(this.id == 'treeLeft6'){
-				tempString = animalArray[4];//4 is kangaroo
+				randnumber = 4;
+				tempString = animalArray[randnumber];//4 is kangaroo
 			}
 
     		tempArray = tempString.split(" ");
@@ -189,6 +210,7 @@ $( document ).ready(function() {
 		    $('#acceptModal').modal('show');
 		}
 	});
+
 });
 </script>
 

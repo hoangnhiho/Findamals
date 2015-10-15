@@ -148,29 +148,12 @@ class HomeController extends Controller {
      */
     public static function getTerrainValue(){
         $userData = Auth::user();
-        $totalExp = self::totalExp();
-        if ($totalExp>=10) {
+        if (intval($userData->cassowaryExp) + intval($userData->frogExp) + intval($userData->platypusExp)+ intval($userData->cockatooExp) >= 5){
             return 3;
-        } elseif ($totalExp>=5) {
+        } elseif (intval($userData->koalaExp) + intval($userData->wallabyExp) + intval($userData->wombatExp)+ intval($userData->kangarooExp) + intval($userData->bilbyExp) >= 5){
             return 2;
-        } else {
+        } else{
             return 1;
         }
     }
-    /**
-     * Returns total Exp
-     *
-     */
-    public static function totalExp(){
-        $userData = Auth::user();
-        $totalExp = intval($userData->koalaExp) + intval($userData->wallabyExp) 
-        + intval($userData->wombatExp) + intval($userData->platypusExp) 
-        + intval($userData->cassowaryExp) + intval($userData->frogExp) 
-        + intval($userData->whaleExp) + intval($userData->turtleExp) 
-        + intval($userData->sharkExp) + intval($userData->kangarooExp) + intval($userData->bilbyExp);
-
-        return $totalExp;
-    }
- 
-
 }

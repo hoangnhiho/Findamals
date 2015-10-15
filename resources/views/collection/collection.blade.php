@@ -464,9 +464,13 @@
 @include('collection.bilbyCollection')
 @include('collection.wombatCollection')
 @include('collection.koalaCollection')
-
-
-
+@include('collection.cassowaryCollection')
+@include('collection.frogCollection')
+@include('collection.platypusCollection')
+@include('collection.cockatooCollection')
+@include('collection.sharkCollection')
+@include('collection.whaleCollection')
+@include('collection.turtleCollection')
 
 
 

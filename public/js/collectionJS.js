@@ -50,7 +50,26 @@
         $('#bilby').append(wikiExtract);
         }
     });
+    
+    // CASSOWARY
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Southern_cassowary",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[1817004].extract;   
+        $('#cassowary').append(wikiExtract);
+        }
+    });
 
+   // MIST FROG
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Common_mist_frog",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[8256944].extract;   
+        $('#frog').append(wikiExtract);
+        }
+    });
 
    // GET ANIMAL CONTENT FROM TROVE
 
@@ -78,7 +97,7 @@
                 }
             });
 
-           //Koala Image 2
+        //Koala Image 2
            $.ajax({
             url: "http://api.trove.nla.gov.au/work/192302628?key=624l0l7hmjbi5fap&encoding=json",
             dataType: 'jsonp',
@@ -101,7 +120,7 @@
                 }
             });
 
-           //Koala Image 3
+        //Koala Image 3
            $.ajax({
             url: "http://api.trove.nla.gov.au/work/192187465?key=624l0l7hmjbi5fap&encoding=json",
             dataType: 'jsonp',
@@ -124,7 +143,7 @@
                 }
             });
 
-           //Koala Article 1
+        //Koala Article 1
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/21119160?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -137,7 +156,7 @@
             }
           });
 
-           //Koala Article 2
+        //Koala Article 2
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/151900133?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -150,7 +169,7 @@
             }
           });
 
-           //Koala Article 3
+        //Koala Article 3
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/38700993?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -202,7 +221,7 @@
             }
           });
 
-           //wallaby Article 2
+        //wallaby Article 2
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/65193480?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -215,7 +234,7 @@
             }
           });
 
-           //wallaby Article 3
+        //wallaby Article 3
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/93348180?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -243,7 +262,7 @@
             }
           });
 
-           //wombat Article 2
+        //wombat Article 2
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/102072288?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -256,7 +275,7 @@
             }
           });
 
-           //wombat Article 3
+        //wombat Article 3
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/25110032?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -293,7 +312,7 @@
                 }
             });
 
-           //kangaroo Image 2
+        //kangaroo Image 2
            $.ajax({
             url: "http://api.trove.nla.gov.au/work/192325661?key=624l0l7hmjbi5fap&encoding=json",
             dataType: 'jsonp',
@@ -316,7 +335,7 @@
                 }
             });
 
-           //kangaroo Image 3
+        //kangaroo Image 3
            $.ajax({
             url: "http://api.trove.nla.gov.au/work/192314255?key=624l0l7hmjbi5fap&encoding=json",
             dataType: 'jsonp',
@@ -339,7 +358,7 @@
                 }
             });
 
-           //kangaroo Article 1
+        //kangaroo Article 1
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/107080922?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -352,7 +371,7 @@
             }
           });
 
-           //kangaroo Article 2
+        //kangaroo Article 2
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/136942640?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -365,7 +384,7 @@
             }
           });
 
-           //kangaroo Article 3
+        //kangaroo Article 3
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/131747017?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -402,9 +421,8 @@
                 $('#bilbySource1').append(source);
                 }
             });
-
    
-           //bilby Article 1
+        //bilby Article 1
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/18908653?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -417,7 +435,7 @@
             }
           });
 
-           //bilby Article 2
+        //bilby Article 2
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/127511952?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -430,7 +448,7 @@
             }
           });
 
-           //bilby Article 3
+        //bilby Article 3
            $.ajax({
             url: "http://api.trove.nla.gov.au/newspaper/136668225?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
             dataType: "jsonp",
@@ -443,6 +461,70 @@
             }
           });
 
+
+//cassowary
+        //cassowary Image 1
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/192276209?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#cassowaryThumb1').attr('src', thumbImg);
+                $('#cassowaryContent1').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#cassowaryTitle1').append(title);
+                $('#cassowaryContrib1').append(contributor);
+                $('#cassowarySource1').attr('href', source);
+                $('#cassowarySource1').append(source);
+                }
+            });
+
+   
+        //cassowary Article 1
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/136320688?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#cassowaryThumb4").append(results.article.heading);
+            $("#cassowaryHeading1").append(results.article.heading);
+            $("#cassowarySrc1").append(results.article.title.value);
+            $("#cassowaryText1").append(results.article.articleText);
+            }
+          });
+
+        //cassowary Article 2
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/158477932?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#cassowaryThumb5").append(results.article.heading);
+            $("#cassowaryHeading2").append(results.article.heading);
+            $("#cassowarySrc2").append(results.article.title.value);
+            $("#cassowaryText2").append(results.article.articleText);
+            }
+          });
+
+        //cassowary Article 3
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/173198036?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#cassowaryThumb6").append(results.article.heading);
+            $("#cassowaryHeading3").append(results.article.heading);
+            $("#cassowarySrc3").append(results.article.title.value);
+            $("#cassowaryText3").append(results.article.articleText);
+            }
+          });
 
 
    // GET ANIMALS Qld Wildlife Information

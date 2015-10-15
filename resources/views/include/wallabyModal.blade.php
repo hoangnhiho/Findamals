@@ -3,7 +3,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">Wallaby Question 1</h4>
 			</div>
 			<div class="modal-body">
@@ -25,7 +25,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">Wallaby Question 2</h4>
 			</div>
 			<div class="modal-body">
@@ -47,7 +47,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">Wallaby Question 3</h4>
 			</div>
 			<div class="modal-body">
@@ -69,7 +69,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">Wallaby Question 4</h4>
 			</div>
 			<div class="modal-body">
@@ -91,7 +91,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">Wallaby Question 5</h4>
 			</div>
 			<div class="modal-body">
@@ -113,7 +113,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				 
 				<h4 class="modal-title">Wallaby Question 6</h4>
 			</div>
 			<div class="modal-body">

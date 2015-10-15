@@ -131,7 +131,7 @@
 					<p>Findamals is built for kids. The game helps kids:</p>
 					<ul>
 						<li>
-							Learn about extinct native Queensland animals
+							Learn about endangered native Queensland animals
 						</li>
 						<li>
 							Explore their natural habitats
@@ -152,7 +152,7 @@
 				<div class="desc">
 					<h1>About</h1>
 					<p>How It's Built</p>
-					<p>Data is retrieved using API from:</p>
+					<p>Data is retrieved using APIs from:</p>
 					<ul>
 						<li>
 							Trove, the National Library of Australia, for historical articles
@@ -197,7 +197,7 @@
 			<div class="content">
 				<h1>Team</h1>
 				<h2>
-					The great team behind Findamals made the game a reality.
+					The great team behind Findamals who have made the game a reality.
 				</h2>
 				<div class="member">
 					<span class="name">Leila Watson</span>
