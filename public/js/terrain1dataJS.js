@@ -1,5 +1,5 @@
 
-var nearSecret = 0;
+var nearSecret = 0; 
 var colObjects=[];
 var secretObjects=[];
 var terrainChangeObjects=[];
