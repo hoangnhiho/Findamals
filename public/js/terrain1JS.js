@@ -150,7 +150,7 @@ Game.prototype = {
       switch (event.keyCode) {
         case 37: // Left
             if (!$('.modal').hasClass('in')){
-                //refreshIntervalId1 = setInterval(function(){
+                //refreshIntervalId = setInterval(function(){
                     me.moveX(me.leftPos - keyboardSpeed, 'left');
                 //},speed);
                 event.preventDefault();
@@ -192,7 +192,8 @@ Game.prototype = {
       }
       me.revealMenu(me.topPos);
     }).on('keyup',function(){
-        //clearInterval(refreshIntervalId1);
+      //console.log('key up');
+        //clearInterval(refreshIntervalId);
       if(player.attr('class') != '')
         player.removeAttr('class').destroy();
 
