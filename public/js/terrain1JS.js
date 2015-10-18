@@ -209,7 +209,7 @@ Game.prototype = {
       me.hideNotificationBar();
     });
     
-  },
+  }, 
 
   showNotificationsBar: function(notification) {
     var me = this;    
