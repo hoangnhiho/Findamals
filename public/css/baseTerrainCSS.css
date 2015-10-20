@@ -758,3 +758,7 @@ button
 	position: absolute;
 	z-index: 56;
 }
+
+.nav-icon:hover{
+	cursor:pointer;
+}
