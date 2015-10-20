@@ -12,11 +12,10 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,300">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Paytone+One">
 	<link rel="stylesheet" href="../css/helenCSS.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
-
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -40,87 +39,89 @@
 			<a href="#teamPage">Team</a>
 		</li>
 		<li>
-			<a href="#signin">Sign In</a>
+			<a data-toggle="modal" data-target="#loginForm" href="#signin">Sign In</a>
 		</li>
 		<li>
 			<a href="{{ url('/auth/register') }}">Register</a>
 		</li>
 	</ul>
+
+	<div class="modal fade" id="loginForm" tabindex=-1 role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Login</h4>
+				</div>
+				<div class="modal-body">
+					@if (count($errors) > 0)
+						<div class="alert alert-danger">
+							<strong>Whoops!</strong> There were some problems with your input.<br><br>
+							<ul>
+								@foreach ($errors->all() as $error)
+									<li>{{ $error }}</li> 
+								@endforeach
+							</ul>
+						</div>
+					@endif
+                    @if (session('status')) 
+                        <div class="alert alert-success">
+                            {{ Session::get('status') }}
+                        </div>
+                    @endif
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Name</label>
+							<div class="col-md-6">
+								<input type="name" class="form-control" name="name" value="{{ old('name') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Password</label>
+							<div class="col-md-6">
+								<input type="password" class="form-control" name="password">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-6 col-md-offset-4">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="remember"> Remember Me
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-6 col-md-offset-4">
+								<button type="submit" class="btn btn-primary">Login</button>
+
+								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="fullpage">
 		<div class="section active" id="section1">
 			<div id="logo">
 				<img src="../images/findamals-logo.png"/>
 			</div>
-			<img src="../images/login/cockatoo.png" id="parrot"/>
+			
 			<h2>
+				<img src="../images/login/cockatoo.png" id="parrot"/>
 				Discover &amp; play with amazing animals.
 			</h2>
 
-			<div class="button">
-				<a >Play Now</a>
+			<div class="button" data-toggle="modal" data-target="#loginForm">
+				<a>Play Now<a>
 			</div>
-
-			<div class="col-md-8 col-md-offset-2">
-				<div class="panel panel-default">
-					<div class="panel-heading">Login</div>
-					<div class="panel-body">
-						@if (count($errors) > 0)
-							<div class="alert alert-danger">
-								<strong>Whoops!</strong> There were some problems with your input.<br><br>
-								<ul>
-									@foreach ($errors->all() as $error)
-										<li>{{ $error }}</li> 
-									@endforeach
-								</ul>
-							</div>
-						@endif
-	                    @if (session('status')) 
-	                        <div class="alert alert-success">
-	                            {{ Session::get('status') }}
-	                        </div>
-	                    @endif
-						<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
-							<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-							<div class="form-group">
-								<label class="col-md-4 control-label">Name</label>
-								<div class="col-md-6">
-									<input type="name" class="form-control" name="name" value="{{ old('name') }}">
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label class="col-md-4 control-label">Password</label>
-								<div class="col-md-6">
-									<input type="password" class="form-control" name="password">
-								</div>
-							</div>
-
-							<div class="form-group">
-								<div class="col-md-6 col-md-offset-4">
-									<div class="checkbox">
-										<label>
-											<input type="checkbox" name="remember"> Remember Me
-										</label>
-									</div>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<div class="col-md-6 col-md-offset-4">
-									<button type="submit" class="btn btn-primary">Login</button>
-
-									<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-
-
-
-			
 			<img src="../images/login/frog.png" id="frog"/>
 			<img src="../images/login/wombat.png" id="wombat"/>
 		</div>
@@ -166,9 +167,9 @@
 					</ul>
 				</div>
 				<div class="pict">
-					<img src="../images/login/commons.png" id="wiki">
-					<img src="../images/login/wikipedia.png" id="wikipedia">
 					<img src="../images/login/trove.png" id="trove">
+					<img src="../images/login/wikipedia.png" id="wikipedia">
+					<img src="../images/login/commons.png" id="wiki">
 				</div>
 			</div>
 			<div class="slide">
@@ -225,7 +226,7 @@
 					Discover &amp; play with amazing animals.
 				</p>
 				<div class="button">
-					<a >Play Now</a>
+					<a data-toggle="modal" data-target="#loginForm" href="#signin">Play Now</a>
 				</div>
 			</div>
 		</div>

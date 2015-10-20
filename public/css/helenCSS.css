@@ -107,25 +107,44 @@ h2
 }
 #parrot
 {
-	position: fixed;
-	top: 80px;
-	left: 150px;
+    position: relative;
+    top: -20px;
+    left: 30px;
 }
 #frog
 {
-	position: fixed;
-	bottom: 40px;
-	left: 60px;
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
 }
 #wombat
 {
-	position: fixed;
-	right: 120px;
-	bottom: 80px;
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
 }
-
-
-
+#sun
+{
+	position: relative;
+	top: 20px;
+	left: 50%;
+}
+#trove
+{
+	display: block;
+}
+#wikipedia
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	display: block;
+}
+#wiki
+{
+	display: block;
+	margin-top: 10px;
+}
 
 .member
 {

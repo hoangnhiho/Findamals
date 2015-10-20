@@ -71,6 +71,56 @@
         }
     });
 
+   // PLATYPUS
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=platypus",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[23749].extract;   
+        $('#platypus').append(wikiExtract);
+        }
+    });
+
+   // COCKATOO
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Major_Mitchell%27s_cockatoo",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[324896].extract;   
+        $('#cockatoo').append(wikiExtract);
+        }
+    });
+
+   // SHARK
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Sand_tiger_shark",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[1287695].extract;   
+        $('#shark').append(wikiExtract);
+        }
+    });
+
+   // WHALE
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Humpback_whale",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[231728].extract;   
+        $('#whale').append(wikiExtract);
+        }
+    });
+
+   // TURTLE
+   $.ajax({
+    url: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&exsentences=7&titles=Loggerhead_sea_turtle",
+    dataType: 'jsonp',
+    success: function(results){
+        var wikiExtract = results.query.pages[1903166].extract;   
+        $('#turtle').append(wikiExtract);
+        }
+    });
+
    // GET ANIMAL CONTENT FROM TROVE
 
    //KOALA
@@ -181,8 +231,6 @@
             $("#koalaText3").append(results.article.articleText);
             }
           });
-
-
 
 //WALLABY
         //wallaby Image 1
@@ -523,6 +571,382 @@
             $("#cassowaryHeading3").append(results.article.heading);
             $("#cassowarySrc3").append(results.article.title.value);
             $("#cassowaryText3").append(results.article.articleText);
+            }
+          });
+
+
+//platypus
+        //platypus Image 1
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/193320724?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#platypusThumb1').attr('src', thumbImg);
+                $('#platypusContent1').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#platypusTitle1').append(title);
+                $('#platypusContrib1').append(contributor);
+                $('#platypusSource1').attr('href', source);
+                $('#platypusSource1').append(source);
+                }
+            });
+
+           //platypus Image 2
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/192309219?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#platypusThumb2').attr('src', thumbImg);
+                $('#platypusContent2').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#platypusTitle2').append(title);
+                $('#platypusContrib2').append(contributor);
+                $('#platypusSource2').attr('href', source);
+                $('#platypusSource2').append(source);
+                }
+            });
+           //platypus Image 3
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/192213327?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#platypusThumb3').attr('src', thumbImg);
+                $('#platypusContent3').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#platypusTitle3').append(title);
+                $('#platypusContrib3').append(contributor);
+                $('#platypusSource3').attr('href', source);
+                $('#platypusSource3').append(source);
+                }
+            });
+           //platypus Article 2
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/170203571?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#platypusThumb5").append(results.article.heading);
+            $("#platypusHeading2").append(results.article.heading);
+            $("#platypusSrc2").append(results.article.title.value);
+            $("#platypusText2").append(results.article.articleText);
+            }
+          });
+
+        //platypus Article 3
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/168815924?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#platypusThumb6").append(results.article.heading);
+            $("#platypusHeading3").append(results.article.heading);
+            $("#platypusSrc3").append(results.article.title.value);
+            $("#platypusText3").append(results.article.articleText);
+            }
+          });
+
+
+//cockatoo
+           //cockatoo Image 1
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/195053524?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#cockatooThumb1').attr('src', thumbImg);
+                $('#cockatooContent1').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#cockatooTitle1').append(title);
+                $('#cockatooContrib1').append(contributor);
+                $('#cockatooSource1').attr('href', source);
+                $('#cockatooSource1').append(source);
+                }
+            });
+
+           //cockatoo Image 2
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/192228999?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                // var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#cockatooThumb2').attr('src', thumbImg);
+                // $('#cockatooContent2').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#cockatooTitle2').append(title);
+                $('#cockatooContrib2').append(contributor);
+                $('#cockatooSource2').attr('href', source);
+                $('#cockatooSource2').append(source);
+                }
+            });
+
+           //cockatoo Article 2
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/38881114?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#cockatooThumb5").append(results.article.heading);
+            $("#cockatooHeading2").append(results.article.heading);
+            $("#cockatooSrc2").append(results.article.title.value);
+            $("#cockatooText2").append(results.article.articleText);
+            }
+          });
+
+        //cockatoo Article 3
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/37714741?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#cockatooThumb6").append(results.article.heading);
+            $("#cockatooHeading3").append(results.article.heading);
+            $("#cockatooSrc3").append(results.article.title.value);
+            $("#cockatooText3").append(results.article.articleText);
+            }
+          });
+
+//shark
+           //shark Image 5
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/192249864?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#sharkThumb5').attr('src', thumbImg);
+                $('#sharkContent5').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#sharkTitle5').append(title);
+                $('#sharkContrib5').append(contributor);
+                $('#sharkSource5').attr('href', source);
+                $('#sharkSource5').append(source);
+                }
+            });
+
+           //shark Article 3
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/184133119?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#sharkThumb6").append(results.article.heading);
+            $("#sharkHeading3").append(results.article.heading);
+            $("#sharkSrc3").append(results.article.title.value);
+            $("#sharkText3").append(results.article.articleText);
+            }
+          });
+//whale
+        //whale Image 1
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/194211014?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#whaleThumb1').attr('src', thumbImg);
+                $('#whaleContent1').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#whaleTitle1').append(title);
+                $('#whaleContrib1').append(contributor);
+                $('#whaleSource1').attr('href', source);
+                $('#whaleSource1').append(source);
+                }
+            });
+           //whale Article 1
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/170448185?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#whaleThumb4").append(results.article.heading);
+            $("#whaleHeading1").append(results.article.heading);
+            $("#whaleSrc1").append(results.article.title.value);
+            $("#whaleText1").append(results.article.articleText);
+            }
+          });
+
+        //whale Article 2
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/57332871?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#whaleThumb5").append(results.article.heading);
+            $("#whaleHeading2").append(results.article.heading);
+            $("#whaleSrc2").append(results.article.title.value);
+            $("#whaleText2").append(results.article.articleText);
+            }
+          });
+
+        //whale Article 3
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/22369209?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#whaleThumb6").append(results.article.heading);
+            $("#whaleHeading3").append(results.article.heading);
+            $("#whaleSrc3").append(results.article.title.value);
+            $("#whaleText3").append(results.article.articleText);
+            }
+          });
+
+//turtle
+        //turtle Image 1
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/194210864?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#turtleThumb1').attr('src', thumbImg);
+                $('#turtleContent1').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#turtleTitle1').append(title);
+                $('#turtleContrib1').append(contributor);
+                $('#turtleSource1').attr('href', source);
+                $('#turtleSource1').append(source);
+                }
+            });
+
+        //turtle Image 2
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/163113112?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#turtleThumb2').attr('src', thumbImg);
+                $('#turtleContent2').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#turtleTitle2').append(title);
+                $('#turtleContrib2').append(contributor);
+                $('#turtleSource2').attr('href', source);
+                $('#turtleSource2').append(source);
+                }
+            });
+
+        //turtle Image 3
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/work/192235794?key=624l0l7hmjbi5fap&encoding=json",
+            dataType: 'jsonp',
+            success: function(results){
+                var thumbImg = results.work.identifier[1].value;
+                var mainImg = thumbImg.slice(0,-6) + ".jpg";
+                var title = results.work.title;
+                var contributor = results.work.contributor[0];
+                var source = results.work.troveUrl;
+
+                // Display images
+                $('#turtleThumb3').attr('src', thumbImg);
+                $('#turtleContent3').attr('src', mainImg);
+
+                //Display content's info to be displayed in modal
+                $('#turtleTitle3').append(title);
+                $('#turtleContrib3').append(contributor);
+                $('#turtleSource3').attr('href', source);
+                $('#turtleSource3').append(source);
+                }
+            });
+
+        //turtle Article 1
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/207143795?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#turtleThumb4").append(results.article.heading);
+            $("#turtleHeading1").append(results.article.heading);
+            $("#turtleSrc1").append(results.article.title.value);
+            $("#turtleText1").append(results.article.articleText);
+            }
+          });
+
+        //turtle Article 2
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/137167839?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#turtleThumb5").append(results.article.heading);
+            $("#turtleHeading2").append(results.article.heading);
+            $("#turtleSrc2").append(results.article.title.value);
+            $("#turtleText2").append(results.article.articleText);
+            }
+          });
+
+        //turtle Article 3
+           $.ajax({
+            url: "http://api.trove.nla.gov.au/newspaper/176175393?key=624l0l7hmjbi5fap&encoding=json&reclevel=full&include=articletext",
+            dataType: "jsonp",
+            success: function(results){
+            // console.log(results.article.title.value);
+            $("#turtleThumb6").append(results.article.heading);
+            $("#turtleHeading3").append(results.article.heading);
+            $("#turtleSrc3").append(results.article.title.value);
+            $("#turtleText3").append(results.article.articleText);
             }
           });
 

@@ -29,6 +29,7 @@
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
                       <a href="#koalaCarousel" data-slide-to="0"><img class="img-thumb active" id="koalaThumb1" data-toggle="modal" data-target="#koalaContent" data-slide-to="0"></a>
                     </div>
+
                   @endif
 
                   @if ($userData->koalaExp >= 2)
@@ -71,6 +72,12 @@
                         </div>
                       </a>
                     </div>
+                  @endif
+
+                  @if ($userData->koalaExp < 6)
+                      @for ($i=0; $i < 6-$userData->koalaExp; $i++ )
+                        <div class="col-xs-6 col-sm-3 col-md-2"><img class="img-thumb" src="{{ asset('/images/animals/locked.png') }}"></div>
+                      @endfor
                   @endif
                   
                 </div>

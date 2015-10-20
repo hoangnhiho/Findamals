@@ -691,6 +691,21 @@ button
 	background: url(../images/arrow-right.png) no-repeat;
 }
 
+#mtoogle{
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	z-index: 400;
+	border: none;
+	right: 60px;
+	bottom: 60px;
+	display: block !important;
+}
+#mtoogle img{
+	width:100%;
+	height: auto;
+}
+
 #mainRoad {
 	position:absolute;
 	width:auto;

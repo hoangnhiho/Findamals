@@ -12,8 +12,6 @@
   <link type="text/css" rel="stylesheet" href="/css/terrain3CSS.css" /> 
   <link type="text/css" rel="stylesheet" href="/css/exploreModalCSS.css" /> 
   <link type="text/css" href="{{ asset('/css/navCSS.css') }}" rel="stylesheet">  
-  <link rel="stylesheet" type="text/css" href="css/modalWindowDefault.css" />
-  <link rel="stylesheet" type="text/css" href="css/modalWindowComponent.css" />
   
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -22,7 +20,6 @@
       $.event.special.tap.tapholdThreshold = 0;
   });
   </script>
-  <script src="js/modernizr.custom.js"></script>
   <script src="/js/jquery-ui.min.js"></script>
   <script src="/js/jquery.spritely.js" type="text/javascript"></script> 
   <script src="/js/terrain1dataJS.js" type="text/javascript"></script> 
@@ -59,18 +56,7 @@
     </div>
   </div>
 
-  <!-- Navigation -->
-<!--   <nav>
-    <ul class="clearfix">
-      <li><a class="current" href="{{ url('/') }}">Finamals</a></li>
-      <li><a href="{{ url('/leila') }}">Collection Page</a></li>
-            <li><a href="#">?</a></li>
-            <li class="last"><a href="{{ url('/auth/logout') }}">Logout</a></li>
-    </ul>
-  </nav> -->
-  <audio autoplay loop>
-        <source src="/music/music1.mp3">
-  </audio>
+@include('include.audio')
 
   <!-- Notifications Manager -->
   <div id="notifications"><div class="inner"></div><span class="close">x</span></div>
@@ -96,7 +82,7 @@
 
           <li><a href="{{ url('/collection') }}"><img src="{{ asset('/images/nav-collection.png') }}" alt="animal collection icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="My Collection"></a></li>
           <li><img data-toggle="modal" data-target="#howToPlay" src="{{ asset('/images/nav-help.png') }}" alt="help icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="How to Play"></li>
-          <li class="last"><a href="#"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="My Profile"></a></li> 
+          <li class="last"><a href="{{ url('/auth/logout') }}"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Logout"></a></li> 
       </ul>
       </nav>
     </div>
@@ -108,89 +94,109 @@
     <!-- Me -->
     <div id="daniel"></div>
 
+    <div id="startRainForest" class="forest"></div> 
+    <div id="terrain2" class="terrainChange phazeObject"></div>
+
 	<!-- ====All OBJECTS BELOW==== -->
     <!-- Collision OBJECTS BELOW -->
     
-    <!-- Trees -->
-    <div id="treeHeaderLeft" class="colObject leftColObject"></div>
-    <div id="treeHeaderRight" class="colObject rightColObject"></div>
+    <!-- Rocks -->
+    <div id="rockHeaderLeft" class="colObject leftColObject"></div>
+    <div id="rockHeaderRight" class="colObject rightColObject"></div>
 
-    <div id="treeLeft" class="treeBorder"></div>
-    <div id="treeRight" class="treeBorder"></div>
+    <div id="rockLeft" class="rockBorder"></div>
+    <div id="rockRight" class="rockBorder"></div>
 
-    <div id="treeLeft1" class="colObject leftColObject"></div>
-    <div id="treeLeft2" class="colObject leftColObject"></div>
+    <div id="rockLeft1" class="colObject leftColObject"></div>
+    <div id="rockLeft2" class="colObject leftColObject"></div>
     
-    <div id="treeRight1" class="colObject rightColObject"></div>
-    <div id="treeRight2" class="colObject rightColObject"></div>
+    <div id="rockRight1" class="colObject rightColObject"></div>
+    <div id="rockRight2" class="colObject rightColObject"></div>
 
-    <div id="treeFooterLeft" class="colObject leftColObject"></div>
-    <div id="treeFooterRight" class="colObject rightColObject"></div>
+    <div id="rockFooterLeft" class="colObject leftColObject"></div>
+    <div id="rockFooterRight" class="colObject rightColObject"></div>
 
     <!-- Caves -->
-    <div id="cave1" class="colObject rightColObject"></div>
-    <div id="cave2" class="colObject leftColObject"></div>
-    <div id="cave3" class="colObject rightColObject"></div>
-    <div id="cave4" class="colObject leftColObject"></div>
+    <div id="cave1" class="secretObject colObject rightColObject"></div>
+    <div id="cave2" class="colObject leftColObject"></div>    
+    <div id="cave3" class="colObject leftColObject"></div>
+ 
 
     <!-- Rocks -->
     <div id="rock1" class="colObject leftColObject"></div>
     <div id="rock2" class="colObject leftColObject"></div>
     <div id="rock3" class="colObject rightColObject"></div>
+    <div id="rock4" class="colObject leftColObject"></div>
+    <div id="rock5" class="colObject leftColObject"></div>
+    <div id="rock6" class="colObject rightColObject"></div>
+    <div id="rock7" class="colObject leftColObject"></div>
+    <div id="rock8" class="colObject rightColObject"></div>
+    <div id="rock9" class="secretObject colObject leftColObject"></div>
+    
+    <!-- Ferrys -->
+    <div id="ferry1" class="colObject rightColObject"></div>
+    <div id="ferry2" class="secretObject colObject leftColObject"></div>
 
-    <div id="rock4" class="phazeObject"></div>
+    <!-- Shells -->
+    <div id="shell1" class="colObject leftColObject"></div>
+    <div id="shell2" class="colObject leftColObject"></div>
+    <div id="shell3" class="colObject leftColObject"></div>
 	
 	<!-- Phaze OBJECTS BELOW -->
     <!-- Path -->
-    <div id="path" class="phazeObject"></div>
+    
 
     <!-- Grass -->
     <div id="longGrass1" class="phazeObject"></div>
     <div id="longGrass2" class="phazeObject"></div>
+    
+    <!-- Cave -->
+    <div id="cave01" class="phazeObject"></div>
+    <div id="cave02" class="phazeObject"></div>
+    <div id="cave03" class="phazeObject"></div>
+    <div id="cave04" class="phazeObject"></div>
+
 
     <!-- ====End of ALL Objects==== -->
 
-    <!-- Next terrain: Ocean -->
-    <div id="endOcean" class="ocean"></div>   
-
     
   </div>
-
-<img src="../images/wood.png" style="display: none;" />
-
 
 <button type="button" class ="gamePad btn btn-default" id = "arrowUp"></button>
 <button type="button" class ="gamePad btn btn-default" id = "arrowDown"></button>
 <button type="button" class ="gamePad btn btn-default" id = "arrowLeft"> </button>
 <button type="button" class ="gamePad btn btn-default" id = "arrowRight"></button>
-<button class="md-trigger" data-modal="modal-4">Blur</button>
-<!--$('#modal-4').addClass('md-show') $('#modal-4').removeClass('md-show')-->
-<div class="md-modal md-effect-4" id="modal-4">
-  <div class="md-content">
-    <h3>Testing Modal</h3>
-    <div>
-      <p>This is a modal window. You can do the following things with it:</p>
-      <ul>
-        <li><strong>Read:</strong> Modal windows will probably tell you something important so don't forget to read what they say.</li>
-        <li><strong>Look:</strong> A modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-        <li><strong>Close:</strong> Click on the button below to close the modal.</li>
-      </ul>
-      <button class="md-close">Close me!</button>
-    </div>
-  </div>
-</div>
-@include('include.exploreModal')
-<div class="md-overlay"></div><!-- the overlay element -->
-</body>
-  <script src="js/modalCustomJs/classie.js"></script>
-  <script src="js/modalCustomJs/modalEffects.js"></script>
 
-  <!-- for the blur effect -->
-  <!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
-  <script>
-    // this is important for IEs
-    var polyfilter_scriptpath = '/js/';
-  </script>
-  <script src="js/modalCustomJs/cssParser.js"></script>
-  <script src="js/modalCustomJs/css-filters-polyfill.js"></script>
+@include('include.exploreModal')
+
+</body>
+<script type="text/javascript">
+
+$( document ).ready(function() {
+  //this needs needs to be repetitively added to all terrain pages
+  $('.secretObject').click(function(e){
+    if (nearSecret==1){
+      tempString = animalArray[0];//0 is whale as default
+      if(this.id == 'rock9'){
+        randnumber = 0;
+        tempString = animalArray[randnumber];//0 is whale
+      }else if(this.id == 'cave1'){
+        randnumber = 1;
+        tempString = animalArray[randnumber];//1 is turtle
+      }else if(this.id == 'ferry2'){
+        randnumber = 2;
+        tempString = animalArray[randnumber];//2 is shark
+      }
+
+        tempArray = tempString.split(" ");
+        tempAnimal = "#" + tempArray[0] + "Quest" + tempArray[1];
+        var tempURL = globalURL + 'images/animals/' + tempArray[0] + ".png";
+        $('#animalImg').attr('src', tempURL);
+        $('#acceptBtn').attr('href', tempAnimal);
+        $('#acceptModal').modal('show');
+    }
+  });
+
+});
+</script>
 </html>

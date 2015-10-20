@@ -98,6 +98,9 @@ p, li {
 	color: #FF9D00;
 	font-size: 1.2em;
 }
+.noExp {
+	color: #DDD;
+}
 .glyphicon .glyphicon-star {
 	color: #fff;
 }
@@ -177,6 +180,10 @@ p, li {
 	padding: 10px;
 }
 
+.empty {
+	background-color: grey;
+	opacity: 50%;
+}
 
 /*************  Carousel controls  *************/
 

@@ -10,14 +10,14 @@
               <div class="modal-body">
                 <img class="img-small pull-right" src="{{ asset('/images/animals/turtle.png') }}" alt="Findamals turtle Character" style="margin-top:-20px">
 
-                <h3>Turtle Facts</h3>
-                <p>Status: Vulnerable</p>
+                <h3>Loggerhead Turtle Facts</h3>
+                <p>Status: Endangered</p>
 
                 <ul>
-                  <li>turtles usually live in open eucalypt woodlands</li>
-                  <li>They can sleep up to 20 hours a day</li>
-                  <li>The turtle is a worldwide symbol of Australia</li>
-                  <li>The biggest threat to turtles is the destruction of their habitat through urbanisation and agriculture</li>
+                  <li>Loggerhead Turtles construct nests and deposit eggs usually ashore</li>
+                  <li>These animals live in the Atlantic, Indian, and Pacific Oceans and the Mediterranean Sea </li>
+                  <li>Fishing gear is the biggest threat to loggerheads in the open ocean. They often become entangled in longlines or gillnets.</li>
+                  
                 </ul>
 
                 <div>
@@ -72,6 +72,12 @@
                       </a>
                     </div>
                   @endif
+
+                  @if ($userData->turtleExp < 6)
+                      @for ($i=0; $i < 6-$userData->turtleExp; $i++ )
+                        <div class="col-xs-6 col-sm-3 col-md-2"><img class="img-thumb" src="{{ asset('/images/animals/locked.png') }}"></div>
+                      @endfor
+                  @endif
                   
                 </div>
                 <div class="clearfix"></div>
@@ -98,7 +104,7 @@
                   <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
               @endif
-            turtle Discoveries
+            Loggerhead Turtle Discoveries
             @if ($userData->turtleExp >= 2)
               <a class="right carousel-control" href="#turtleCarousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
@@ -138,7 +144,7 @@
 
                       @if ($userData->turtleExp >= 3)
                         <div class="item">
-                          <img class="img-responsive" id="turtleContent3"/>
+                          <img class="img-responsive portrait-img" id="turtleContent3"/>
                           <div class="carousel-caption">
                             <p class="smlCaption" id="turtleTitle3"></p>
                             <p class="smlCaption" id="turtleContrib3">Contributor: </p>

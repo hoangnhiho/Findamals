@@ -55,7 +55,7 @@
 
             <li><a href="#"><img src="{{ asset('/images/nav-collection.png') }}" alt="animal collection icon" class="nav-icon " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="My Collection"></a></li>
             <li><img data-toggle="modal" data-target="#howToPlay" src="{{ asset('/images/nav-help.png') }}" alt="help icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="How to Play"></li>
-            <li class="last"><a href="#"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="My Profile"></a></li>  
+            <li class="last"><a href="{{ url('/auth/logout') }}"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Logout"></a></li>  
         </ul>
     </nav>
   </div>
@@ -77,8 +77,11 @@
               @for ($i=0; $i < $userData->koalaExp; $i++ )
                 &#9733;
               @endfor
-            @else
-              UNKNOWN STARS
+            @endif
+            @if ($userData->koalaExp < 6)
+              @for ($i=0; $i < 6-$userData->koalaExp; $i++ )
+                <span class="noExp">&#9733;</span>
+              @endfor
             @endif
             </p>
           </div>
@@ -107,8 +110,11 @@
                   @for ($i=0; $i < $userData->wallabyExp; $i++ )
                     &#9733;
                   @endfor
-                @else
-                  UNKNOWN STARS
+                @endif
+                @if ($userData->wallabyExp < 6)
+                  @for ($i=0; $i < 6-$userData->wallabyExp; $i++ )
+                    <span class="noExp">&#9733;</span>
+                  @endfor
                 @endif
                 </p>
               </div>
@@ -136,8 +142,11 @@
                     @for ($i=0; $i < $userData->wombatExp; $i++ )
                       &#9733;
                     @endfor
-                  @else
-                    UNKNOWN STARS
+                  @endif
+                  @if ($userData->wombatExp < 6)
+                    @for ($i=0; $i < 6-$userData->wombatExp; $i++ )
+                      <span class="noExp">&#9733;</span>
+                    @endfor
                   @endif
                 </p>
               </div>
@@ -167,8 +176,11 @@
                       @for ($i=0; $i < $userData->kangarooExp; $i++ )
                         &#9733;
                       @endfor
-                    @else
-                      UNKNOWN STARS
+                    @endif
+                    @if ($userData->kangarooExp < 6)
+                      @for ($i=0; $i < 6-$userData->kangarooExp; $i++ )
+                        <span class="noExp">&#9733;</span>
+                      @endfor
                     @endif
                   </p>
               </div>
@@ -198,8 +210,11 @@
                     @for ($i=0; $i < $userData->bilbyExp; $i++ )
                       &#9733;
                     @endfor
-                  @else
-                    UNKNOWN STARS
+                  @endif
+                  @if ($userData->bilbyExp < 6)
+                    @for ($i=0; $i < 6-$userData->bilbyExp; $i++ )
+                      <span class="noExp">&#9733;</span>
+                    @endfor
                   @endif
                 </p>
               </div>
@@ -227,8 +242,11 @@
                     @for ($i=0; $i < $userData->cassowaryExp; $i++ )
                       &#9733;
                     @endfor
-                  @else
-                    UNKNOWN STARS
+                  @endif
+                  @if ($userData->cassowaryExp < 6)
+                    @for ($i=0; $i < 6-$userData->cassowaryExp; $i++ )
+                      <span class="noExp">&#9733;</span>
+                    @endfor
                   @endif
                 </p>
               </div>
@@ -259,8 +277,11 @@
                     @for ($i=0; $i < $userData->frogExp; $i++ )
                       &#9733;
                     @endfor
-                  @else
-                    UNKNOWN STARS
+                  @endif
+                  @if ($userData->frogExp < 6)
+                    @for ($i=0; $i < 6-$userData->frogExp; $i++ )
+                      <span class="noExp">&#9733;</span>
+                    @endfor
                   @endif
                 </p>
               </div>
@@ -288,8 +309,11 @@
                     @for ($i=0; $i < $userData->platypusExp; $i++ )
                       &#9733;
                     @endfor
-                  @else
-                    UNKNOWN STARS
+                  @endif
+                  @if ($userData->platypusExp < 6)
+                    @for ($i=0; $i < 6-$userData->platypusExp; $i++ )
+                      <span class="noExp">&#9733;</span>
+                    @endfor
                   @endif
                 </p>
               </div>
@@ -319,8 +343,11 @@
                     @for ($i=0; $i < $userData->cockatooExp; $i++ )
                       &#9733;
                     @endfor
-                  @else
-                    UNKNOWN STARS
+                  @endif
+                  @if ($userData->cockatooExp < 6)
+                    @for ($i=0; $i < 6-$userData->cockatooExp; $i++ )
+                      <span class="noExp">&#9733;</span>
+                    @endfor
                   @endif
                 </p>
               </div>
@@ -350,8 +377,11 @@
                     @for ($i=0; $i < $userData->sharkExp; $i++ )
                       &#9733;
                     @endfor
-                  @else
-                    UNKNOWN STARS
+                  @endif
+                  @if ($userData->sharkExp < 6)
+                    @for ($i=0; $i < 6-$userData->sharkExp; $i++ )
+                      <span class="noExp">&#9733;</span>
+                    @endfor
                   @endif
                 </p>
               </div>
@@ -380,8 +410,11 @@
                       @for ($i=0; $i < $userData->whaleExp; $i++ )
                         &#9733;
                       @endfor
-                    @else
-                      UNKNOWN STARS
+                    @endif
+                    @if ($userData->whaleExp < 6)
+                      @for ($i=0; $i < 6-$userData->whaleExp; $i++ )
+                        <span class="noExp">&#9733;</span>
+                      @endfor
                     @endif
                   </p>
               </div>
@@ -409,8 +442,11 @@
                     @for ($i=0; $i < $userData->turtleExp; $i++ )
                       &#9733;
                     @endfor
-                  @else
-                    UNKNOWN STARS
+                  @endif
+                  @if ($userData->turtleExp < 6)
+                    @for ($i=0; $i < 6-$userData->turtleExp; $i++ )
+                      <span class="noExp">&#9733;</span>
+                    @endfor
                   @endif
                 </p>
               </div>
@@ -428,8 +464,6 @@
         @endif
 
       <div class="clearfix visible-xs last"></div>
-
-
       
     </div> <!-- end row div -->
     </div>  <!-- end content-wrapper -->

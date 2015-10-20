@@ -11,13 +11,12 @@
                 <img class="img-small pull-right" src="{{ asset('/images/animals/whale.png') }}" alt="Findamals whale Character" style="margin-top:-20px">
 
                 <h3>Humpback Whale Facts</h3>
-                <p>Status: Vulnerable</p>
+                <p>Status: Least Concern</p>
 
                 <ul>
-                  <li>whales usually live in open eucalypt woodlands</li>
-                  <li>They can sleep up to 20 hours a day</li>
-                  <li>The whale is a worldwide symbol of Australia</li>
-                  <li>The biggest threat to whales is the destruction of their habitat through urbanisation and agriculture</li>
+                  <li>Its diet mainly consists of krill and small fish</li>
+                  <li>Humpback whales usually live in oceans and seas</li>
+                  <li>This animal can produce complex songs</li>
                 </ul>
 
                 <div>
@@ -33,13 +32,13 @@
 
                   @if ($userData->whaleExp >= 2)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#whaleCarousel" data-slide-to="1"><img class="img-thumb active" id="whaleThumb2" data-toggle="modal" data-target="#whaleContent" data-slide-to="1"></a>
+                      <a href="#whaleCarousel" data-slide-to="1"><img class="img-thumb active" id="whaleThumb2" data-toggle="modal" data-target="#whaleContent" data-slide-to="1" src="https://upload.wikimedia.org/wikipedia/commons/0/09/Sanc0602.jpg"></a>
                     </div>
                   @endif
 
                   @if ($userData->whaleExp >= 3)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#whaleCarousel" data-slide-to="2"><img class="img-thumb active" id="whaleThumb3" data-toggle="modal" data-target="#whaleContent" data-slide-to="2"></a>
+                      <a href="#whaleCarousel" data-slide-to="2"><img class="img-thumb active" id="whaleThumb3" data-toggle="modal" data-target="#whaleContent" data-slide-to="2" src="https://upload.wikimedia.org/wikipedia/commons/7/75/HumpbackWhaleBreaching.jpg"></a>
                     </div>
                   @endif
 
@@ -72,6 +71,12 @@
                       </a>
                     </div>
                   @endif
+
+                  @if ($userData->whaleExp < 6)
+                      @for ($i=0; $i < 6-$userData->whaleExp; $i++ )
+                        <div class="col-xs-6 col-sm-3 col-md-2"><img class="img-thumb" src="{{ asset('/images/animals/locked.png') }}"></div>
+                      @endfor
+                  @endif
                   
                 </div>
                 <div class="clearfix"></div>
@@ -98,7 +103,7 @@
                   <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
               @endif
-            whale Discoveries
+            Humpback Whale Discoveries
             @if ($userData->whaleExp >= 2)
               <a class="right carousel-control" href="#whaleCarousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
@@ -127,22 +132,22 @@
 
                       @if ($userData->whaleExp >= 2)
                         <div class="item">
-                          <img class="img-responsive" id="whaleContent2"/>
+                          <img class="img-responsive" id="whaleContent2" src="https://upload.wikimedia.org/wikipedia/commons/0/09/Sanc0602.jpg" />
                           <div class="carousel-caption">
-                            <p class="smlCaption" id="whaleTitle2"></p>
-                            <p class="smlCaption" id="whaleContrib2">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="whaleSource2" target="_blank"></a></p>
+                            <p class="smlCaption" id="whaleTitle2">Humpback whales in the singing position</p>
+                            <p class="smlCaption" id="whaleContrib2">Contributor: Dr. Louis M. Herman</p>
+                            <p class="smlCaption"> Source: <a id="whaleSource2" target="_blank" href="http://www.photolib.noaa.gov/htmls/sanc0602.htm">NOAA Photo Library</a></p>
                           </div>
                         </div>
                       @endif
 
                       @if ($userData->whaleExp >= 3)
                         <div class="item">
-                          <img class="img-responsive" id="whaleContent3"/>
+                          <img class="img-responsive" id="whaleContent3" src="https://upload.wikimedia.org/wikipedia/commons/7/75/HumpbackWhaleBreaching.jpg" />
                           <div class="carousel-caption">
-                            <p class="smlCaption" id="whaleTitle3"></p>
-                            <p class="smlCaption" id="whaleContrib3">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="whaleSource3" target="_blank"></a></p>
+                            <p class="smlCaption" id="whaleTitle3">Humpback Whale (Megaptera novaeangliae) breaching.</p>
+                            <p class="smlCaption" id="whaleContrib3">Contributor: Wanetta Ayers</p>
+                            <p class="smlCaption"> Source: <a id="whaleSource3" target="_blank" href="http://www.fhwa.dot.gov/byways/photos/65034">FHWA</a></p>
                           </div>
                         </div>
                       @endif

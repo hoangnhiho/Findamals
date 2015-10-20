@@ -10,14 +10,14 @@
               <div class="modal-body">
                 <img class="img-small pull-right" src="{{ asset('/images/animals/cockatoo.png') }}" alt="Findamals cockatoo Character" style="margin-top:-20px">
 
-                <h3>Cockatoo Facts</h3>
-                <p>Status: Vulnerable</p>
+                <h3>Major Mitchell's Cockatoo Facts</h3>
+                <p>Status: Least Concern</p>
 
                 <ul>
-                  <li>cockatoos usually live in open eucalypt woodlands</li>
-                  <li>They can sleep up to 20 hours a day</li>
-                  <li>The cockatoo is a worldwide symbol of Australia</li>
-                  <li>The biggest threat to cockatoos is the destruction of their habitat through urbanisation and agriculture</li>
+                  <li>Major Mitchell Cockatoo usually lives in Western Australia</li>
+                  <li>It's color is white and pink and has a yellow crest</li>
+                  <li>It usually eats grass seeds, corms, roots, insects, grubs</li>
+                  <li>It is named in honour of <a href="https://en.wikipedia.org/wiki/Thomas_Mitchell_(explorer)" target="blank">Major Sir Thomas Mitchell</a></li>
                 </ul>
 
                 <div>
@@ -39,17 +39,13 @@
 
                   @if ($userData->cockatooExp >= 3)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#cockatooCarousel" data-slide-to="2"><img class="img-thumb active" id="cockatooThumb3" data-toggle="modal" data-target="#cockatooContent" data-slide-to="2"></a>
+                      <a href="#cockatooCarousel" data-slide-to="2"><img class="img-thumb active" id="cockatooThumb3" data-toggle="modal" data-target="#cockatooContent" data-slide-to="2" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Cacatua_leadbeateri_-flying_-Australia_Zoo-8-2cr.jpg"></a>
                     </div>
                   @endif
 
                   @if ($userData->cockatooExp >= 4)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#cockatooCarousel" data-slide-to="3">
-                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#cockatooContent" data-slide-to="3">
-                          <p id="cockatooThumb4"></p>
-                        </div>
-                      </a>
+                      <a href="#cockatooCarousel" data-slide-to="3"><img class="img-thumb active" id="cockatooThumb3" data-toggle="modal" data-target="#cockatooContent" data-slide-to="3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Cacatua_leadbeateri_-two_captive-8a.jpg"></a>
                     </div>
                   @endif
 
@@ -71,6 +67,12 @@
                         </div>
                       </a>
                     </div>
+                  @endif
+
+                  @if ($userData->cockatooExp < 6)
+                      @for ($i=0; $i < 6-$userData->cockatooExp; $i++ )
+                        <div class="col-xs-6 col-sm-3 col-md-2"><img class="img-thumb" src="{{ asset('/images/animals/locked.png') }}"></div>
+                      @endfor
                   @endif
                   
                 </div>
@@ -98,7 +100,7 @@
                   <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
               @endif
-            Cockatoo Discoveries
+      Cockatoo Discoveries
             @if ($userData->cockatooExp >= 2)
               <a class="right carousel-control" href="#cockatooCarousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
@@ -127,7 +129,7 @@
 
                       @if ($userData->cockatooExp >= 2)
                         <div class="item">
-                          <img class="img-responsive" id="cockatooContent2"/>
+                          <img class="img-responsive portrait-img" id="cockatooContent2" src="https://farm8.staticflickr.com/7278/7535222914_b93f2e4231.jpg"/>
                           <div class="carousel-caption">
                             <p class="smlCaption" id="cockatooTitle2"></p>
                             <p class="smlCaption" id="cockatooContrib2">Contributor: </p>
@@ -138,20 +140,23 @@
 
                       @if ($userData->cockatooExp >= 3)
                         <div class="item">
-                          <img class="img-responsive" id="cockatooContent3"/>
+                          <img class="img-responsive" id="cockatooContent3" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Cacatua_leadbeateri_-flying_-Australia_Zoo-8-2cr.jpg" />
                           <div class="carousel-caption">
-                            <p class="smlCaption" id="cockatooTitle3"></p>
-                            <p class="smlCaption" id="cockatooContrib3">Contributor: </p>
-                            <p class="smlCaption"> Source: <a id="cockatooSource3" target="_blank"></a></p>
+                            <p class="smlCaption" id="cockatooTitle3">Major Mitchell's Cockatoo, also known as Leadbeater's Cockatoo or Pink Cockatoo flying at Australia Zoo, Queensland, Australia</p>
+                            <p class="smlCaption" id="cockatooContrib3">Contributor: Richard Fisher</p>
+                            <p class="smlCaption"> Source: <a id="cockatooSource3" target="_blank" href="https://www.flickr.com/photos/26693938@N08/3139755335/">Flickr</a></p>
                           </div>
                         </div>
                       @endif
 
                       @if ($userData->cockatooExp >= 4)
                         <div class="item">
-                          <p id="cockatooHeading1"  class="articleInfo"></p>
-                          <p id="cockatooSrc1" class="articleInfo"></p>
-                          <p id="cockatooText1" class="articleText"></p>
+                          <img class="img-responsive" id="cockatooContent3" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Cacatua_leadbeateri_-two_captive-8a.jpg" />
+                          <div class="carousel-caption">
+                            <p class="smlCaption" id="cockatooTitle4">Major Mitchell's Cockatoo. Two in a cage with a nestbox.</p>
+                            <p class="smlCaption" id="cockatooContrib4">Contributor: TJ Lin</p>
+                            <p class="smlCaption"> Source: <a id="cockatooSource4" target="_blank" href="https://www.flickr.com/photos/36718407@N00/243534175">Flickr</a></p>
+                          </div>
                         </div>
                       @endif
 

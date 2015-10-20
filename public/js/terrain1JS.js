@@ -109,7 +109,7 @@ Game.prototype = {
     }); 
     //=== End of Arrow Controls ===//
 
-    $('.road, .terrainChange, .phazeObject').unbind('click').bind('click', function(e){
+    $('.road, .terrainChange, .phazeObject, #wrapper').unbind('click').bind('click', function(e){
       var x = e.pageX - player.width() / 2;
       var y = e.pageY;
       var canMove = me.canImove(x, y, true);
@@ -209,7 +209,7 @@ Game.prototype = {
       me.hideNotificationBar();
     });
     
-  }, 
+  },
 
   showNotificationsBar: function(notification) {
     var me = this;    

@@ -11,13 +11,13 @@
                 <img class="img-small pull-right" src="{{ asset('/images/animals/platypus.png') }}" alt="Findamals platypus Character" style="margin-top:-20px">
 
                 <h3>Platypus Facts</h3>
-                <p>Status: Vulnerable</p>
+                <p>Status: Least Concern</p>
 
                 <ul>
-                  <li>platypuss usually live in open eucalypt woodlands</li>
-                  <li>They can sleep up to 20 hours a day</li>
-                  <li>The platypus is a worldwide symbol of Australia</li>
-                  <li>The biggest threat to platypuss is the destruction of their habitat through urbanisation and agriculture</li>
+                  <li>The typical habitat of the Platypus is freshwater dams and streams</li>
+                  <li>This animal is dangerous because it has a venom spur on the hind foot capable of causing severe pain to humans</li>
+                  <li>Platypi usually eats small fish, frogs and tadpoles</li>
+                  
                 </ul>
 
                 <div>
@@ -45,11 +45,7 @@
 
                   @if ($userData->platypusExp >= 4)
                     <div class="grow col-xs-6 col-sm-3 col-md-2">
-                      <a href="#platypusCarousel" data-slide-to="3">
-                        <div class="article-thumb img-thumb active" data-toggle="modal" data-target="#platypusContent" data-slide-to="3">
-                          <p id="platypusThumb4"></p>
-                        </div>
-                      </a>
+                      <a href="#platypusCarousel" data-slide-to="3"><img class="img-thumb active" id="platypusThumb3" data-toggle="modal" data-target="#platypusContent" data-slide-to="3" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Platypus_skeleton_Pengo.jpg"></a>
                     </div>
                   @endif
 
@@ -71,6 +67,12 @@
                         </div>
                       </a>
                     </div>
+                  @endif
+
+                  @if ($userData->platypusExp < 6)
+                      @for ($i=0; $i < 6-$userData->platypusExp; $i++ )
+                        <div class="col-xs-6 col-sm-3 col-md-2"><img class="img-thumb" src="{{ asset('/images/animals/locked.png') }}"></div>
+                      @endfor
                   @endif
                   
                 </div>
@@ -98,7 +100,7 @@
                   <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
               @endif
-            platypus Discoveries
+            Platypus Discoveries
             @if ($userData->platypusExp >= 2)
               <a class="right carousel-control" href="#platypusCarousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
@@ -149,9 +151,12 @@
 
                       @if ($userData->platypusExp >= 4)
                         <div class="item">
-                          <p id="platypusHeading1"  class="articleInfo"></p>
-                          <p id="platypusSrc1" class="articleInfo"></p>
-                          <p id="platypusText1" class="articleText"></p>
+                          <img class="img-responsive" id="platypusContent3" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Platypus_skeleton_Pengo.jpg" />
+                          <div class="carousel-caption">
+                            <p class="smlCaption" id="platypusTitle4">Platypus skeleton at Melbourne Museum</p>
+                            <p class="smlCaption" id="platypusContrib4">Contributor: Peter Halasz</p>
+                            <p class="smlCaption"> Source: <a id="platypusSource4" target="_blank" href="https://commons.wikimedia.org/wiki/File:Platypus_skeleton_Pengo.jpg">Wikipedia</a></p>
+                          </div>
                         </div>
                       @endif
 

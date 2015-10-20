@@ -64,9 +64,7 @@
     </div>
   </div>
 
-  <audio autoplay loop>
-        <source src="/music/music1.mp3">
-  </audio>
+@include('include.audio')
 
   <!-- Notifications Manager -->
   <div id="notifications"><div class="inner"></div><span class="close">x</span></div>
@@ -93,7 +91,7 @@
 
           <li><a href="{{ url('/collection') }}"><img src="{{ asset('/images/nav-collection.png') }}" alt="animal collection icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="My Collection"></a></li>
           <li><img data-toggle="modal" data-target="#howToPlay"  src="{{ asset('/images/nav-help.png') }}" alt="help icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="How to Play"></li>
-          <li class="last"><a href="#"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="My Profile"></a></li>  
+          <li class="last"><a href="{{ url('/auth/logout') }}"><img src="{{ asset('/images/nav-user.png') }}" alt=" user account icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Logout"></a></li>  
       </ul>
       </nav>
     </div>

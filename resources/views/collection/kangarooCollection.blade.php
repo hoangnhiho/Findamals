@@ -73,6 +73,12 @@
                       </a>
                     </div>
                   @endif
+
+                  @if ($userData->kangarooExp < 6)
+                      @for ($i=0; $i < 6-$userData->kangarooExp; $i++ )
+                        <div class="col-xs-6 col-sm-3 col-md-2"><img class="img-thumb" src="{{ asset('/images/animals/locked.png') }}"></div>
+                      @endfor
+                  @endif
                   
                 </div>
 
