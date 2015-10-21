@@ -466,8 +466,8 @@ Game.prototype = {
   },
   canImove: function(moveLeft, moveTop, teleported) {
     var player = this.player;
-    var elmLeft = this.leftPos; //moveLeft || this.leftPos; //for teleport
-    var elmTop = this.topPos; //moveTop || this.topPos; //for teleport
+    var elmLeft = moveLeft ||this.leftPos; //moveLeft || this.leftPos; //for teleport
+    var elmTop = moveTop || this.topPos; //moveTop || this.topPos; //for teleport
     
     //console.log(moveLeft);
     if(player.css('display') == 'none' && !teleported) {
