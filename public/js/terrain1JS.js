@@ -118,12 +118,12 @@ Game.prototype = {
         me.revealMenu(y);
       }
       else {
-        me.showNotificationsBar(notifications[0]);
+        //me.showNotificationsBar(notifications[0]);
       }
     });
     
     $('.sea').unbind('click').bind('click', function(e){      
-      me.showNotificationsBar(notifications[3]);
+      //me.showNotificationsBar(notifications[3]);
     });
     
 
@@ -205,35 +205,35 @@ Game.prototype = {
       me.shipSail();
     });
 
-    $("#notifications").find('.close').on('click', function(){
-      me.hideNotificationBar();
-    });
+    // $("#notifications").find('.close').on('click', function(){
+    //   me.hideNotificationBar();
+    // });
     
   },
 
-  showNotificationsBar: function(notification) {
-    var me = this;    
-    $("#notifications").css('bottom', 0);
-    if(!$("#notifications").find('.inner').attr('id') || $("#notifications").find('.inner').text() != notification.text){
-      $("#notifications").find('.inner').attr('id', notification.type).fadeOut('fast', function(){
-        $(this).html('<img src="' + notification.img + '" />' + notification.text).fadeIn('fast');
-      });
-    }
-  },
+  // showNotificationsBar: function(notification) {
+  //   var me = this;    
+  //   $("#notifications").css('bottom', 0);
+  //   if(!$("#notifications").find('.inner').attr('id') || $("#notifications").find('.inner').text() != notification.text){
+  //     $("#notifications").find('.inner').attr('id', notification.type).fadeOut('fast', function(){
+  //       $(this).html('<img src="' + notification.img + '" />' + notification.text).fadeIn('fast');
+  //     });
+  //   }
+  // },
 
-  hideNotificationBar: function() {
-    $("#notifications").css('bottom', '-60px');
-  },
+  // hideNotificationBar: function() {
+  //   $("#notifications").css('bottom', '-60px');
+  // },
 
   revealMenu: function(y) {
     if(y >= 200) {
       $('nav').addClass('show');
       if(y >= 350 && y < 355) {
-        this.showNotificationsBar(notifications[1]);
+        //this.showNotificationsBar(notifications[1]);
       }
-      else if(y > 580 && $("#notifications").find('.inner').text() == notifications[1].text) {
-        this.hideNotificationBar();
-      }
+      // else if(y > 580 && $("#notifications").find('.inner').text() == notifications[1].text) {
+      //   this.hideNotificationBar();
+      // }
     }
     else {
       $('nav').removeClass('show'); 

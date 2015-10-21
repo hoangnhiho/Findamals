@@ -13,6 +13,21 @@
 	left:40px;
 	right:40px;
 }
+#daniel { 
+    background: url(../images/swimmingMe.png) no-repeat 
+}
+#daniel.left {
+    background: url(../images/swimmingMe.png) 0 -32px;
+}
+#daniel.right {
+    background: url(../images/swimmingMe.png) 0 -64px;
+}
+#daniel.up {
+    background: url(../images/swimmingMe.png) 0 -96px;
+}
+#daniel.down {
+    background: url(../images/swimmingMe.png) no-repeat -32px 0;
+}
 /* ==== OBJECTS BELOW ====*/
 
 /* Rocks Objects */
@@ -289,7 +304,7 @@
 }
 
 #longGrass2{
-	background: url(../images/terrain1/grass.png) repeat;
+	background: url(../images/terrain3/grass.png) repeat;
 	background-size: 10% auto;
 	width: 200px;
 	height: 200px;
