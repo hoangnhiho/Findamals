@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
-	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -39,18 +38,18 @@
 			<a href="#teamPage">Team</a>
 		</li>
 		<li>
-			<a data-toggle="modal" data-target="#loginForm" href="#signin">Sign In</a>
+			<a href="#loginForm">Sign In</a>
 		</li>
 		<li>
 			<a href="{{ url('/auth/register') }}">Register</a>
 		</li>
 	</ul>
 
-	<div class="modal fade" id="loginForm" tabindex=-1 role="dialog">
-		<div class="modal-dialog" role="document">
+	<div class="modalDialog" id="loginForm">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h4 class="modal-title">Login</h4>
+					<a href="#close" title="Close" class="close">X</a>
 				</div>
 				<div class="modal-body">
 					@if (count($errors) > 0)
@@ -119,8 +118,8 @@
 				Discover &amp; play with amazing animals.
 			</h2>
 
-			<div class="button" data-toggle="modal" data-target="#loginForm">
-				<a>Play Now<a>
+			<div class="button">
+				<a href="#loginForm">Play Now<a>
 			</div>
 			<img src="../images/login/frog.png" id="frog"/>
 			<img src="../images/login/wombat.png" id="wombat"/>
@@ -129,7 +128,7 @@
 			<div class="slide">
 				<div class="desc">
 					<h1>About</h1>
-					<p>Findamals is built for kids. The game helps kids:</p>
+					<h3>Findamals is built for kids. The game helps kids:</h3>
 					<ul>
 						<li>
 							Learn about endangered native Queensland animals
@@ -152,8 +151,8 @@
 			<div class="slide">
 				<div class="desc">
 					<h1>About</h1>
-					<p>How It's Built</p>
-					<p>Data is retrieved using APIs from:</p>
+					<h3>How It's Built</h3>
+					<h3>Data is retrieved using APIs from:</h3>
 					<ul>
 						<li>
 							Trove, the National Library of Australia, for historical articles
@@ -175,7 +174,7 @@
 			<div class="slide">
 				<div class="desc">
 					<h1>About</h1>
-					<p>What's inside</p>
+					<h3>What's inside</h3>
 					<ul>
 						<li>
 							12 native Queensland animals
@@ -220,13 +219,13 @@
 					<img src="../images/login/helen.png">
 					<span class="role">Designer</span>
 				</div>
-			</div>
-			<div class="foot">
-				<p>
-					Discover &amp; play with amazing animals.
-				</p>
-				<div class="button">
-					<a data-toggle="modal" data-target="#loginForm" href="#signin">Play Now</a>
+				<div class="foot">
+					<h2>
+						Discover &amp; play with amazing animals.
+					</h2>
+					<div class="button">
+						<a href="#loginForm">Play Now</a>
+					</div>
 				</div>
 			</div>
 		</div>

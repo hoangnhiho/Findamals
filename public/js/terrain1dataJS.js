@@ -178,7 +178,7 @@ var notifications = [
 	{
 		id: 2,
 		type: 'info',
-		text: 'If you\'re too lazy to walk, you can teleport me =]',
+		text: ' ',
 		img: 'images/information.png'
 	},
 	{

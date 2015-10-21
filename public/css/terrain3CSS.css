@@ -3,7 +3,7 @@
 	border: 1px solid #c7c7c7;
 	margin: 0 auto;
 	width: 100%;
-	height: 1620px;
+	height: 1215px;
 	position: relative;
 	background: url(../images/terrain3/sea.png) repeat;
 	overflow: hidden;
@@ -39,16 +39,16 @@
 	background-size: auto 100%;
 	width: 30%;
 	height: 40px;
-	top: 60px;
+	top: 50px;
 	left: 50px;
 }
 #rockLeft2 {
 	background: url(../images/terrain3/rock1.png) repeat;
 	background-size: auto 100%;
-	width: 27%;
-	height: 40px;
-	top: 120px;
-	left: 50px;
+	width: 28%;
+	height: 35px;
+	top: 100px;
+	left: 40px;
 }
 
 #rockFooterLeft {
@@ -56,7 +56,7 @@
 	background-size: auto 100%;
 	width: 47%;
 	height: 40px;
-	top: 1440px;
+	top: 1175px;
 	left: 50px;
 }
 
@@ -81,16 +81,16 @@
 	background-size: auto 100%;
 	width: 30%;
 	height: 40px;
-	top: 60px;
+	top: 50px;
 	right: 50px;
 }
 #rockRight2 {
 	background: url(../images/terrain3/rock1.png) repeat;
 	background-size: auto 100%;
-	width: 27%;
-	height: 40px;
-	top: 120px;
-	right: 50px;
+	width: 28%;
+	height: 35px;
+	top: 100px;
+	right: 40px;
 }
 #rockRight3 {
 	background: url(../images/terrain3/rock1.png) repeat;
@@ -106,7 +106,7 @@
 	background-size: auto 100%;
 	width: 47%;
 	height: 40px;
-	top: 1440px;
+	top: 1175px;
 	right: 50px;
 }
 
@@ -202,7 +202,7 @@
 	background-size: 100%;
 	width: 35px;
 	height: 550px;
-	top: 170px;
+	top: 140px;
 	left: 300px;
 }
 #rock2 {
@@ -252,7 +252,7 @@
 #rock7 {
 	background: url(../images/terrain3/rock1.png) repeat;
 	background-size: auto 100%;
-	width: 500px;
+	width: 465px;
 	height: 35px;
 	top: 850px;
 	right: 435px;
@@ -262,7 +262,7 @@
 	background: url(../images/terrain3/rock1.png) repeat;
 	background-size: 100%;
 	width: 35px;
-	height: 500px;
+	height: 395px;
 	top: 600px;
 	right: 400px;
 }
@@ -282,8 +282,8 @@
 	background: url(../images/terrain3/grass.png) repeat;
 	background-size: 10% auto;
 	width: 200px;
-	height: 500px;
-	top: 200px;
+	height: 535px;
+	top: 165px;
 	right: 70px;
 	z-index: 20;
 }

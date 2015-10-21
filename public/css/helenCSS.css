@@ -75,6 +75,53 @@ h1
 	color: white;
 }
 
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 500px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.close {
+	color: #080808;
+	line-height: 25px;
+	position: absolute;
+	right: 15px;
+	text-align: center;
+	top: 20px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.close:hover { 
+	text-decoration: underline;
+	color: #040404;
+}
+
 h2
 {
 	font-family: 'Paytone One', 'Roboto', Helvetica, Arial, sans-serif;
@@ -132,18 +179,34 @@ h2
 #trove
 {
 	display: block;
+    position: relative;
+    width: 140px;
+    left: 40px;
+    top: 20px;
 }
 #wikipedia
 {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	display: block;
+    position: relative;
+    display: block;
+    left: 100px;
+    width: 200px;
+    top: 50px;
 }
 #wiki
 {
-	display: block;
-	margin-top: 10px;
+    display: block;
+    position: relative;
+    width: 70px;
+    left: 20px;
+    top: 80px;
+}
+#queensland
+{
+	right: 10px;
+    top: 10px;
+    width: 120px;
+    position: relative;
+    float: right;
 }
 
 .member
@@ -173,38 +236,45 @@ h2
 }
 #section3 .content
 {
-	height: 85%;
-}
-#section3 .foot
-{
 	position: relative;
-	bottom: 0px;
-	left: 0px;
 	width: 100%;
-	height: 15%;
-	background-color: #C18CD7;
+	height: 100%;
 }
-#section3 .foot p
+#section3 .content .foot
+{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 80px;
+	background-color: #C18CD7;
+	vertical-align: center;
+}
+
+#section3 .foot h2
 {
 	display: inline-block;
-	width: 60%;
-	margin: 10px;
+	margin: 1px;
+	padding: 5px;
+	margin-right:200px;
 }
 #section3 .foot .button
 {
-	display: inline-block;
+	position: absolute;
 	margin: 5px;
 	padding: 12px;
+	right: 15px;
+	bottom: 13px;
 }
 
 .desc
 {
-	width: 40%;
-	margin-left: 60px;
-	margin-top: 100px;
-	display: inline-block;
-	clear: left;
-	color: white;
+    width: 50%;
+    padding-left: 70px;
+    padding-top: 100px;
+    display: block;
+    float: left;
+    color: white;
+    height: 100%;
 }
 
 .desc li
@@ -215,17 +285,32 @@ h2
 	line-height: 1.5em;
 }
 
+.desc h1
+{
+	margin-bottom: 40px;
+}
+
 .pict
 {
-	margin-top: 100px;
-	width:40%;
-	height: 100%;
-	float: right;
+    padding-top: 100px;
+    padding-right: 60px;
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: block;
+}
+
+#platypus
+{
+	width: 45%;
+	right: 5px;
+	bottom: 5px;
 }
 
 .pict img
 {
-	width: 35%;
+	width: 45%;
+	max-height: 45%
 }
 
 .slide:last-of-type

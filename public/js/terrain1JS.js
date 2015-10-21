@@ -114,7 +114,7 @@ Game.prototype = {
       var y = e.pageY;
       var canMove = me.canImove(x, y, true);
       if(canMove === true) {        
-        me.teleport(x, y); //uncomment this to re-enable teleport
+        //me.teleport(x, y); //uncomment this to re-enable teleport
         me.revealMenu(y);
       }
       else {
@@ -275,7 +275,7 @@ Game.prototype = {
     if(canMove) {
       this.topPos = y;
       this.leftPos = x;
-      this.teleport(x, y);
+      //this.teleport(x, y); //uncomment this to activate teleport
     }
   },
   
