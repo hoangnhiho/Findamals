@@ -31,7 +31,7 @@ var refreshIntervalId1;
 
 var Game = function() { 
   this.player = $("#daniel"); 
-  this.topPos = 100;
+  this.topPos = 120;
   this.leftPos = $(window).width() / 2 - this.player.width() / 2;
   this.init();
 }
@@ -459,7 +459,6 @@ Game.prototype = {
               if ((object.top-32) <= elmTop && elmTop <= object.bottom){
                 //console.log(globalURL + object.id);
                 window.location.href = globalURL + object.id;
-
               }
           }
         
@@ -467,9 +466,10 @@ Game.prototype = {
   },
   canImove: function(moveLeft, moveTop, teleported) {
     var player = this.player;
-    var elmLeft = moveLeft || this.leftPos;
-    var elmTop = moveTop || this.topPos;
+    var elmLeft = this.leftPos; //moveLeft || this.leftPos; //for teleport
+    var elmTop = this.topPos; //moveTop || this.topPos; //for teleport
     
+    //console.log(moveLeft);
     if(player.css('display') == 'none' && !teleported) {
       return false;
     }
