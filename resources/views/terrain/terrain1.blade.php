@@ -75,7 +75,7 @@
   <div class="nav-container">
     <nav class="nav">
         <ul>
-        <li><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></li>
+        <li><a href="{{ url('/collection') }}"><img id="nav-logo" src="{{ asset('/images/findamals-logo.png') }}"></a></li>
         <li><a href="#"><img src="{{ asset('/images/nav-bush-icon-active.png') }}" alt="bush terrain icon" class="nav-icon" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Bush Terrain"></a></li>
         @if ($terrainValue >= 2)
         <li><a href="{{ url('/terrain2') }}"><img src="{{ asset('/images/nav-rainforest-icon-active.png') }}" alt="rainforest terrain icon" class="nav-icon inactive" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Rainforest Terrain"></a></li>

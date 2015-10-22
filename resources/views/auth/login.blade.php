@@ -39,12 +39,6 @@
 		<li data-menuanchor="teamPage">
 			<a href="#teamPage">Team</a>
 		</li>
-		<li>
-			<a href="#signin">Sign In</a>
-		</li>
-		<li>
-			<a href="{{ url('/auth/register') }}">Register</a>
-		</li>
 	</ul>
 	<div id="fullpage">
 		<div class="section active" id="section1">
@@ -57,21 +51,29 @@
 					</div>
 					<img src="../images/login/cockatoo.png" id="parrot"/>
 					<h2>
-						Discover &amp; play with amazing animals.
+						Welcome to Findamals.
 					</h2>
+					<ul>
+						<li> Discover and play with amazing animals
+						</li>
+						<li> Learn more about extinct Queensland species
+						</li>
+						<li> Have fun!
+						</li>
+					</ul>
+
 					<!-- End left Content -->
 				</div>
 				<div class="col-sm-4">
 				<!-- login class = col-sm-4 -->
 					<div class="panel panel-default">
-				
 						<div class="panel-body">
 							@if (count($errors) > 0)
 								<div class="alert alert-danger">
 									<strong>Whoops!</strong> There were some problems with your input.<br><br>
 									<ul>
 										@foreach ($errors->all() as $error)
-											<li>{{ $error }}</li> 
+											<li class="error">{{ $error }}</li> 
 										@endforeach
 									</ul>
 								</div>
@@ -107,17 +109,6 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">New to Findamals? Register</div>
 				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
-
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -232,40 +223,33 @@
 		<div class="section" id="section3">
 			<div class="content">
 				<h1>Team</h1>
-				<h2>
-					The great team behind Findamals made the game a reality.
-				</h2>
-				<div class="member">
-					<span class="name">Leila Watson</span>
-					<img src="../images/login/leila.png">
-					<span class="role">Team Leader</span>
-				</div>
-				<div class="member">
-					<span class="name">Nhi Ho</span>
-					<img src="../images/login/nhi.png">
-					<span class="role">Backend Developer</span>
-				</div>
-				<div class="member">
-					<span class="name">Paul Lai</span>
-					<img src="../images/login/paul.png">
-					<span class="role">Designer</span>
-				</div>
-				<div class="member">
-					<span class="name">Helen Nesterenko</span>
-					<img src="../images/login/helen.png">
-					<span class="role">Designer</span>
-				</div>
-			</div>
-			<div class="foot">
-				<p>
-					Discover &amp; play with amazing animals.
-				</p>
-				<div class="button">
-					<a >Play Now</a>
-				</div>
+				<div id="teams">
+					<h2>
+						The great team behind Findamals made the game a reality.
+					</h2>				
+					<div class="member">
+						<span class="name">Leila Watson</span>
+						<img src="../images/login/leila.png">
+						<span class="role">Team Leader</span>
+					</div>
+					<div class="member">
+						<span class="name">Nhi Ho</span>
+						<img src="../images/login/nhi.png">
+						<span class="role">Backend Developer</span>
+					</div>
+					<div class="member">
+						<span class="name">Paul Lai</span>
+						<img src="../images/login/paul.png">
+						<span class="role">Designer</span>
+					</div>
+					<div class="member">
+						<span class="name">Helen Nesterenko</span>
+						<img src="../images/login/helen.png">
+						<span class="role">Designer</span>
+					</div>
+				<div>
 			</div>
 		</div>
 	</div>
-
 	</body>
 </html>
