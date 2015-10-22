@@ -81,6 +81,11 @@ function loadCollection(){
 				 
 				<h4 class="modal-title" id="winModalTitle"></h4>
 			</div>
+			<div class="modal-body">
+				<img class="" id="animalImg" src="images/happy-koala.png" alt="Findamals Koala Character">
+				
+			</div>
+
 			<div class="modal-footer">
 				<button type="button" class="btn btn-primary" data-dismiss="modal">Return to game</button>
 				<a type="button" class="btn btn-default" onclick="loadCollection()">Go to Collection Page</a>
@@ -109,6 +114,8 @@ function loadCollection(){
 </div>
 
 <!-- How to Play Modal-->
+
+<!-- How to Play Modal-->
 <div id="howToPlay" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -118,42 +125,42 @@ function loadCollection(){
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-sm-2">
-						<img src="images/crying.png">
+					<div class="col-sm-2 howToPlayImg">
+						<img src="images/keyboardArrows.png">
 					</div>
-					<div class="col-sm-10">
+					<div class="col-sm-10 howToPlayText">
 						<p>Use the arrow keys or buttons to navigate your avatar and explore the terrains.</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-2">
+					<div class="col-sm-2 howToPlayImg">
 						<img src="images/crying.png">
 					</div>
-					<div class="col-sm-10">
+					<div class="col-sm-10 howToPlayText">
 						<p>Find animals to collect by exploring and tapping on objects in the terrain</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-2">
+					<div class="col-sm-2 howToPlayImg">
 						<img src="images/crying.png">
 					</div>
-					<div class="col-sm-10">
+					<div class="col-sm-10 howToPlayText">
 						<p>Meet animals and get to know them better by learning amazing facts and them and their habitats</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-2">
+					<div class="col-sm-2 howToPlayImg">
 						<img src="images/crying.png">
 					</div>
-					<div class="col-sm-10">
+					<div class="col-sm-10 howToPlayText">
 						<p>Play quizzes to earn stars, add animals to your collection and discover interesting photos and articles!</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-2">
+					<div class="col-sm-2 howToPlayImg">
 						<img src="images/crying.png">
 					</div>
-					<div class="col-sm-10">
+					<div class="col-sm-10 howToPlayText">
 						<p>Unlock terrains with your stars. Explore even more terrains and meet more amazing animals</p>
 					</div>
 				</div>
@@ -166,6 +173,7 @@ function loadCollection(){
 		</div>
 	</div>
 </div>
+
 
 <!-- Accept or Flee Modal-->
 <div id="unlockModal" class="modal fade" role="dialog">
