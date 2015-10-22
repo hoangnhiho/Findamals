@@ -8,10 +8,10 @@
 $('#mtoogle').click(function() {
   if ($('#playTune')[0].paused == false) {
       $('#playTune')[0].pause();
-      $('#audio_img').attr("src","/images/audio_mute.png");;
+      $('#audio_img').attr("src","/images/audio_mute.png");
   } else {
       $('#playTune')[0].play();
-      $('#audio_img').attr("src","/images/audio.png");;
+      $('#audio_img').attr("src","/images/audio.png");
   }
 });
 </script>
