@@ -321,3 +321,7 @@ h2
     background-position: center bottom;
     background-size: 2000px;
 }
+
+.btn{
+	width: 100%;	
+}
