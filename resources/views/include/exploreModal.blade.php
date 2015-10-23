@@ -134,7 +134,7 @@ function loadCollection(){
 				</div>
 				<div class="row">
 					<div class="col-sm-2 howToPlayImg">
-						<img src="images/crying.png">
+						<img src="images/tutorial_find.png">
 					</div>
 					<div class="col-sm-10 howToPlayText">
 						<p>Find animals to collect by exploring and tapping on objects in the terrain</p>
@@ -142,7 +142,7 @@ function loadCollection(){
 				</div>
 				<div class="row">
 					<div class="col-sm-2 howToPlayImg">
-						<img src="images/crying.png">
+						<img src="images/tutorial_fact.png">
 					</div>
 					<div class="col-sm-10 howToPlayText">
 						<p>Meet animals and get to know them better by learning amazing facts and them and their habitats</p>
@@ -150,7 +150,7 @@ function loadCollection(){
 				</div>
 				<div class="row">
 					<div class="col-sm-2 howToPlayImg">
-						<img src="images/crying.png">
+						<img src="images/tutorial_star.png">
 					</div>
 					<div class="col-sm-10 howToPlayText">
 						<p>Play quizzes to earn stars, add animals to your collection and discover interesting photos and articles!</p>
@@ -158,7 +158,7 @@ function loadCollection(){
 				</div>
 				<div class="row">
 					<div class="col-sm-2 howToPlayImg">
-						<img src="images/crying.png">
+						<img src="images/tutorial_keyBlue.png">
 					</div>
 					<div class="col-sm-10 howToPlayText">
 						<p>Unlock terrains with your stars. Explore even more terrains and meet more amazing animals</p>

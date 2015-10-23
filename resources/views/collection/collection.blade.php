@@ -476,19 +476,55 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+         
         <h4 class="modal-title">How to play</h4>
       </div>
       <div class="modal-body">
-              <img src="images/howToPlay.PNG" style="width:100%;">
-      <!--  <p>Use arrow keys to navigate your avatar and explore the terrains.</p>
-        <p>If an object moves, <strong>CLICK IT!!</strong></p>
-        <p>Meet animals and get to know them better by learning amazing facts and them and their habitats.</p>
-        <p>Answer questions and earn stars.</p>
-        <p>Unlock terrains with your stars. Explore even more terrains and meet more amazing animals</p>
-       --></div> 
+        <div class="row">
+          <div class="col-sm-2 howToPlayImg">
+            <img src="images/keyboardArrows.png">
+          </div>
+          <div class="col-sm-10 howToPlayText">
+            <p>Use the arrow keys or buttons to navigate your avatar and explore the terrains.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 howToPlayImg">
+            <img src="images/tutorial_find.png">
+          </div>
+          <div class="col-sm-10 howToPlayText">
+            <p>Find animals to collect by exploring and tapping on objects in the terrain</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 howToPlayImg">
+            <img src="images/tutorial_fact.png">
+          </div>
+          <div class="col-sm-10 howToPlayText">
+            <p>Meet animals and get to know them better by learning amazing facts and them and their habitats</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 howToPlayImg">
+            <img src="images/tutorial_star.png">
+          </div>
+          <div class="col-sm-10 howToPlayText">
+            <p>Play quizzes to earn stars, add animals to your collection and discover interesting photos and articles!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2 howToPlayImg">
+            <img src="images/tutorial_keyBlue.png">
+          </div>
+          <div class="col-sm-10 howToPlayText">
+            <p>Unlock terrains with your stars. Explore even more terrains and meet more amazing animals</p>
+          </div>
+        </div>
+
+        
+      </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
       </div>
     </div>
   </div>
