@@ -50,7 +50,7 @@ $( window ).ready(function() {
 
 	});
 
-	if (terrainValue == 'terrain1'){
+	if (terrainValue == 'terrain1'){ 
 		$('.T1AnimalExp').each(function(i, obj) {
 			tempObject = {
 				name: this.id,
