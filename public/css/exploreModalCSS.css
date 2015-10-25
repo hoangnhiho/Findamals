@@ -53,11 +53,16 @@
 }
 .modal-body h1{
      margin: 0 0 0 0;
+
  }
+
+
 
 .modal-footer {       
     text-align: center;
 }
+
+
 
 #correntAns .modal-dialog .modal-content .modal-body img{
     margin-right: 40px;
@@ -69,6 +74,8 @@
 #acceptModal .modal-dialog .modal-footer .btn{
     width: 90px;
 }
+
+
 
 .animalQuest .modal-dialog .modal-body h1 {
     font-size: 20px;
@@ -105,6 +112,14 @@
 	color: #81cc33;
 }
 
+.animalQuest .modal-dialog .modal-content .modal-header{
+    padding: 9px;
+}
+
+.animalQuest .modal-dialog .modal-content .modal-footer{
+    padding: 10px;
+}
+
 .howToPlayImg img {
     width: 120%;
     
@@ -120,4 +135,12 @@
 #howToPlay .modal-dialog .modal-header h4{
     font-family: 'Paytone One', "Roboto", Helvetica, Arial, sans-serif;
     color: #ff9d00;
+}
+
+#acceptModal .modal-dialog .modal-content .modal-header{
+    border: 0px;
+}
+
+#acceptModal .modal-dialog .modal-content .modal-footer{
+    border: 0px;
 }
