@@ -137,10 +137,6 @@
     color: #ff9d00;
 }
 
-#acceptModal .modal-dialog .modal-content .modal-header{
-    border: 0px;
-}
-
-#acceptModal .modal-dialog .modal-content .modal-footer{
-    border: 0px;
+.modal-body button {
+    margin: 2px 0;
 }

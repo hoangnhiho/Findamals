@@ -10,7 +10,6 @@
   <link type="text/css" rel="stylesheet" href="/css/reset.css" />    
   <link type="text/css" rel="stylesheet" href="/css/baseTerrainCSS.css" /> 
   <link type="text/css" rel="stylesheet" href="/css/terrain1CSS.css" /> 
-  <link type="text/css" href="{{ asset('/css/app.css') }}" rel="stylesheet">
   <link type="text/css" href="{{ asset('/css/navCSS.css') }}" rel="stylesheet"> 
   <link type="text/css" rel="stylesheet" href="/css/exploreModalCSS.css" /> 
 
