@@ -77,7 +77,7 @@
 				<img class="" src="{{ asset('/images/animals/cassowary.png') }}" alt="Findamals Cassowary Character" style="width:40%"></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. In the USA, Peru and Italy</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">2. In South America and Africa</button></br>
-				<button type="button" class="btn btn-default" id="cassowary" onclick="correctAns(this.id)">3. In Indonesia, New Guinea and Northeastern Australia </button></br>
+				<button type="button" class="btn btn-default" id="cassowary" onclick="correctAns(this.id)">3. In Indonesia and Northeastern Australia </button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">4. In Spain, China and India</button></br>
 			</div>
 			<div class="modal-footer">

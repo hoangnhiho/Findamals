@@ -51,7 +51,7 @@
 				<h4 class="modal-title">Wallaby Question 3</h4>
 			</div>
 			<div class="modal-body">
-				<h1>How big is the population of Brush-Tailed Rock Wallabies? </h1>
+				<h1>What is the population of Brush-Tailed Rock Wallabies? </h1>
 				<img class="" src="{{ asset('/images/animals/wallaby.png') }}" alt="Findamals Wallaby Character" style="width:40%"></br>
 				<button type="button" class="btn btn-default" id="wallaby" onclick="correctAns(this.id)">1. Extinct, need human protection</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">2. Consistently growing</button></br>

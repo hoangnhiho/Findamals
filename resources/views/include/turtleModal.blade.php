@@ -56,7 +56,7 @@
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. In small rivers</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">2. In the Arctic and Atlantic Oceans</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">3. In the sea</button></br>
-				<button type="button" class="btn btn-default" id="turtle" onclick="correctAns(this.id)">4. In the Atlantic, Indian, and Pacific Oceans and the Mediterranean Sea</button></br>
+				<button type="button" class="btn btn-default" id="turtle" onclick="correctAns(this.id)">4.  Atlantic, Indian, Pacific, and Mediterranean Sea</button></br>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>
@@ -98,7 +98,7 @@
 				<h1>What color is Loggerhead Turtle’s?</h1>
 				<img class="" src="{{ asset('/images/animals/turtle.png') }}" alt="Findamals Turtle Character" style="width:40%"></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. The skin is green, the shell is brown.</button></br>
-				<button type="button" class="btn btn-default" id="turtle" onclick="correctAns(this.id)">2. The skin - from yellow to brown, the shell is reddish-brown. </button></br>
+				<button type="button" class="btn btn-default" id="turtle" onclick="correctAns(this.id)">2. The skin is yellow-brown, the shell is reddish-brown. </button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">3. The skin is white, the shell is yellow.</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">4. The skin is orange, the shell is blue.</button></br>
 			</div>
@@ -120,7 +120,7 @@
 				<h1>What color is Loggerhead Turtle’s?</h1>
 				<img class="" src="{{ asset('/images/animals/turtle.png') }}" alt="Findamals Turtle Character" style="width:40%"></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. The skin is green, the shell is brown.</button></br>
-				<button type="button" class="btn btn-default" id="turtle" onclick="correctAns(this.id)">2. The skin - from yellow to brown, the shell is reddish-brown. </button></br>
+				<button type="button" class="btn btn-default" id="turtle" onclick="correctAns(this.id)">2. The skin isyellow-brown, the shell is reddish-brown. </button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">3. The skin is white, the shell is yellow.</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">4. The skin is orange, the shell is blue.</button></br>
 			</div>

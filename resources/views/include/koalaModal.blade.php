@@ -100,7 +100,7 @@
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. Victoria</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">2. Tasmania and Queensland</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">3. Western Australia</button></br>
-				<button type="button" class="btn btn-default" id="koala" onclick="correctAns(this.id)">4. Queensland, New South Wales, Victoria, and South Australia </button></br>
+				<button type="button" class="btn btn-default" id="koala" onclick="correctAns(this.id)">4. Queensland, NSW, Victoria, and SA</button></br>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>
@@ -122,7 +122,7 @@
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. Hunting</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">2. Disease</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">3. Wild dogs</button></br>
-				<button type="button" class="btn btn-default" id="koala" onclick="correctAns(this.id)">4. Destruction of their habitat from farming and building</button></br>
+				<button type="button" class="btn btn-default" id="koala" onclick="correctAns(this.id)">4. Destruction of their habitat </button></br>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>

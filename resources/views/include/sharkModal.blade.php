@@ -29,7 +29,7 @@
 				<h4 class="modal-title">Shark Question 2</h4>
 			</div>
 			<div class="modal-body">
-				<h1>Grey Nurse Shark inhabits subtropical and temperate waters:  </h1>
+				<h1>Grey Nurse Sharks inhabit subtropical waters:  </h1>
 				<img class="" src="{{ asset('/images/animals/shark.png') }}" alt="Findamals Shark Character" style="width:40%"></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. Of Africa</button></br>
 				<button type="button" class="btn btn-default" id="shark" onclick="correctAns(this.id)">2. Worldwide</button></br>
@@ -100,7 +100,7 @@
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. Humans</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">2. Sea grass and aquatic invertebrates</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">3. Various insects</button></br>
-				<button type="button" class="btn btn-default" id="shark" onclick="correctAns(this.id)">4. Bony fish, crustaceans, squid, skates and other sharks</button></br>
+				<button type="button" class="btn btn-default" id="shark" onclick="correctAns(this.id)">4. Fish, crustaceans, squid and sharks</button></br>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>
@@ -122,7 +122,7 @@
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. Humans</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">2. Sea grass and aquatic invertebrates</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">3. Various insects</button></br>
-				<button type="button" class="btn btn-default" id="shark" onclick="correctAns(this.id)">4. Bony fish, crustaceans, squid, skates and other sharks</button></br>
+				<button type="button" class="btn btn-default" id="shark" onclick="correctAns(this.id)">4. Fish, crustaceans, squid and sharks</button></br>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Flee</button>

@@ -76,7 +76,7 @@
 				<h1>Why are platypuses dangerous for humans? </h1>
 				<img class="" src="{{ asset('/images/animals/platypus.png') }}" alt="Findamals Platypus Character" style="width:40%"></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">1. Because it is duck-billed mammal</button></br>
-				<button type="button" class="btn btn-default" id="platypus" onclick="correctAns(this.id)">2. Because it has a venom spur on the hind foot capable of causing severe pain to humans</button></br>
+				<button type="button" class="btn btn-default" id="platypus" onclick="correctAns(this.id)">2. It has a venom spur on its foot</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">3. Because it can bite humans</button></br>
 				<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#incorrectAns">4. Because it eats small fish and frogs</button></br>
 			</div>
