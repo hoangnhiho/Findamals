@@ -214,7 +214,7 @@
 					<div class="portfolioBox">
 						<div class="inner">
 							<a class="portfolioImg" href="{{ url('/leila') }}" target="_blank">
-								 <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/11745801_10152890708392172_1281130369865680251_n.jpg?oh=7ae218480f153d83bfe0cc50cad072b6&oe=566B9F0A&__gda__=1446764658_65252261582bfeda0791ff00d6b1485c" alt="Leila" /> 
+								 <img src="../images/login/leila.png" alt="Leila" /> 
 							</a>
 							<h4>Leila</h4>
 							<p>Project leader, time management, front and back-end development, UX, art direction, documentation, final check on documentation</p>
@@ -223,7 +223,7 @@
 					<div class="portfolioBox">
 						<div class="inner">
 							<a class="portfolioImg" href="{{ url('/helen') }}" target="_blank">
-								 <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c180.39.485.485/s160x160/298536_155002077974000_646502131_n.jpg?oh=f6f7d57830af4c917d356e309ff13efe&oe=5637AC1E&__gda__=1450583006_fe0bc3c629b3509beffb0630c1b4dbb3" alt="helen" /> 
+								 <img src="../images/login/helen.png" alt="helen" /> 
 							</a>
 							<h4>Helen</h4>
 							<p>UX, UI, Visual design, user research and testing, documentation, front-end development, content management</p>
@@ -232,7 +232,7 @@
 					<div class="portfolioBox">
 						<div class="inner">
 							<a class="portfolioImg" href="{{ url('/paul') }}" target="_blank">
-								 <img src="https://scontent-lax3-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/p206x206/10399373_1024957919978_2662242_n.jpg?oh=380527360dcb5cbdc7258cab91c4ae3b&oe=56699CAF" alt="paul" /> 
+								 <img src="../images/login/paul.png" alt="paul" /> 
 							</a>
 							<h4>Paul</h4>
 							<p>UX, UI, Visual design, user research and testing, documentation, front-end development</p>
@@ -241,7 +241,7 @@
 					<div class="portfolioBox">
 						<div class="inner">
 							<a class="portfolioImg" href="{{ url('/demo') }}" target="_blank">
-								 <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/p160x160/10846214_10152953124387269_8694827571637277011_n.jpg?oh=11f9854c0ea48d683cde3547c753ff36&oe=566C128D&__gda__=1451018840_2db0afa386c102b1e8b6d9804a9cb0ab" alt="nhi" /> 
+								 <img src="../images/login/nhi.png" alt="nhi" /> 
 							</a>
 							<h4>Nhi</h4>
 							<p>Technical lead, front and back-end development, documentation</p>
