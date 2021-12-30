@@ -41,7 +41,10 @@ class CreateUsersTable extends Migration {
             $table->integer('kangarooExp');
             
 			$table->rememberToken();
-			$table->timestamps();
+			// $table->timestamps();
+			$table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+			$table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+
 		});
 	}
 
