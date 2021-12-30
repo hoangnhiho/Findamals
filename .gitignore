@@ -4,3 +4,4 @@
 sftp-config.json
 
 *.mp3
+.vscode/sftp.json

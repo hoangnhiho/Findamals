@@ -14,7 +14,7 @@
 //=== Static Routes ===//
 Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
-Route::get('demo', 'HomeController@demo');
+Route::get('demo', 'DemoController@demo');
 
 //=== Private Development Routes ===//
 Route::get('leila', 'HomeController@leila');

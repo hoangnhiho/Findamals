@@ -18,27 +18,27 @@ class CreateUsersTable extends Migration {
 			$table->string('name')->unique();
 			$table->string('email')->unique();
 			$table->string('password', 60);
-            $table->integer('userExp');
+            $table->integer('userExp')->default(0);
             
             //=== Bush/woodlands ===//
-            $table->integer('wallabyExp');
-            $table->integer('koalaExp');
-            $table->integer('wombatExp');
-            $table->integer('cockatooExp');
+            $table->integer('wallabyExp')->default(0);
+            $table->integer('koalaExp')->default(0);
+            $table->integer('wombatExp')->default(0);
+            $table->integer('cockatooExp')->default(0);
             
             //=== Rainforest ===//
-            $table->integer('platypusExp');
-            $table->integer('cassowaryExp');
-            $table->integer('frogExp');
+            $table->integer('platypusExp')->default(0);
+            $table->integer('cassowaryExp')->default(0);
+            $table->integer('frogExp')->default(0);
             
             //=== Ocean ===//
-            $table->integer('whaleExp');
-            $table->integer('turtleExp');
-            $table->integer('sharkExp');
+            $table->integer('whaleExp')->default(0);
+            $table->integer('turtleExp')->default(0);
+            $table->integer('sharkExp')->default(0);
             
             //=== Desert ===//
-            $table->integer('bilbyExp');
-            $table->integer('kangarooExp');
+            $table->integer('bilbyExp')->default(0);
+            $table->integer('kangarooExp')->default(0);
             
 			$table->rememberToken();
 			// $table->timestamps();
